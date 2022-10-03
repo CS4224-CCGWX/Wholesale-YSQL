@@ -10,11 +10,13 @@ public abstract class AbstractTransaction {
     }
 
     protected ResultSet executeQuery(String query) throws SQLException {
-        Statement stmt = connection.createStatement();
+        Statement stmt = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
         return stmt.executeQuery(query);
     }
 
     protected ResultSet executeQuery(PreparedStatement stmt) throws SQLException {
         return stmt.executeQuery();
     }
+
+    public abstract void execute();
 }

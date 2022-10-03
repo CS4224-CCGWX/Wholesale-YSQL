@@ -2,13 +2,13 @@ package utils;
 
 public class PreparedQueries {
     public final static String getDistrictWithIDs = """
-            SELECT W_ID, D_ID, D_NAME FROM District
-            WHERE D_ID in (?)
+            SELECT D_W_ID, D_ID, D_NAME FROM District
+            WHERE D_ID = ANY (?)
             """;
 
     public final static String getWarehouseWithIDs = """
             SELECT W_ID, W_NAME FROM Warehouse
-            WHERE W_ID in (?)
+            WHERE W_ID = ANY (?)
             """;
 
     public final static String getCustomerWithTopBalance = """

@@ -24,6 +24,8 @@ public class TopBalanceTransaction extends AbstractTransaction{
         HashMap<Integer, String> districts = new HashMap<>(), warehouses = new HashMap<>();
         try {
             ResultSet customers = this.executeQuery(PreparedQueries.getCustomerWithTopBalance);
+            ResultSetMetaData rsmd = customers.getMetaData();
+            int columnsNumber = rsmd.getColumnCount();
             while (customers.next()) {
                 int districtID = customers.getInt("C_D_ID");
                 int warehouseID = customers.getInt("C_W_ID");
@@ -33,14 +35,22 @@ public class TopBalanceTransaction extends AbstractTransaction{
                 if (!warehouses.containsKey(warehouseID)) {
                     warehouses.put(warehouseID, "");
                 }
+
+                for (int i = 1; i <= columnsNumber; i++) {
+                    if (i > 1) System.out.print(",  ");
+                    String columnValue = customers.getString(i);
+                    System.out.print(columnValue + " " + rsmd.getColumnName(i));
+                }
+                System.out.println("");
             }
 
 
             Thread getDistrictThread = new Thread(() -> {
                 try {
                     PreparedStatement getDistrictStmt = connection.prepareStatement(PreparedQueries.getDistrictWithIDs);
-                    Array districtsArray = getDistrictStmt.getConnection().createArrayOf("INT", districts.keySet().toArray());
+                    Array districtsArray = getDistrictStmt.getConnection().createArrayOf("INTEGER", districts.keySet().toArray());
                     getDistrictStmt.setArray(1, districtsArray);
+                    System.out.println(getDistrictStmt.toString());
                     ResultSet districtRecords = this.executeQuery(getDistrictStmt);
 
                     while (districtRecords.next()) {
@@ -55,7 +65,7 @@ public class TopBalanceTransaction extends AbstractTransaction{
             Thread getWareHouseThread = new Thread(() -> {
                 try {
                     PreparedStatement getWarehouseStmt = connection.prepareStatement(PreparedQueries.getWarehouseWithIDs);
-                    Array warehousesArray = getWarehouseStmt.getConnection().createArrayOf("INT", warehouses.keySet().toArray());
+                    Array warehousesArray = getWarehouseStmt.getConnection().createArrayOf("INTEGER", warehouses.keySet().toArray());
                     getWarehouseStmt.setArray(1, warehousesArray);
                     ResultSet warehouseRecords = this.executeQuery(getWarehouseStmt);
 
