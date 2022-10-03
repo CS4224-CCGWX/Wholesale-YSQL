@@ -1,12 +1,9 @@
 package transactions;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public abstract class AbstractTransaction {
-    Connection connection;
+    protected Connection connection;
 
     AbstractTransaction(Connection connection) {
         this.connection = connection;
@@ -15,5 +12,9 @@ public abstract class AbstractTransaction {
     protected ResultSet executeQuery(String query) throws SQLException {
         Statement stmt = connection.createStatement();
         return stmt.executeQuery(query);
+    }
+
+    protected ResultSet executeQuery(PreparedStatement stmt) throws SQLException {
+        return stmt.executeQuery();
     }
 }
