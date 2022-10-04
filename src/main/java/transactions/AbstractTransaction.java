@@ -23,5 +23,7 @@ public abstract class AbstractTransaction {
         return stmt.executeQuery();
     }
 
-    public abstract void execute();
+    public void execute() {
+        return;
+    };
 }

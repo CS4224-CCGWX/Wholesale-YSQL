@@ -41,7 +41,7 @@ public class NewOrderTransaction extends AbstractTransaction {
         }
     }
 
-    public void execute(List<Integer> itemIds,List<Integer> supplyWarehouseIds, List<Integer> quantities) throws SQLException {
+    public void execute(List<Integer> itemNumber,List<Integer> supplyWarehouseIds, List<Integer> quantities) throws SQLException {
          /*
           1. N denotes the next available order number D_NEXT_O_ID for district (W_ID, D_ID)
           Update district (W_ID, D_ID) by incrementing D_NEXT_O_ID by 1.
@@ -93,12 +93,12 @@ public class NewOrderTransaction extends AbstractTransaction {
         List<Double> itemAmounts = new ArrayList<>();
         List<String> itemNames = new ArrayList<>();
         for(int i=0; i < nOrderLines; ++i) {
-            int itemId = itemIds.get(i);
+            int itemId = itemNumber.get(i);
             int supplyWarehouseId = supplyWarehouseIds.get(i);
             int quantity = quantities.get(i);
 
             /*
-              3.1. S_QUANTITY = stock quantity of itemIds[i] and supplyWarehouseIds[i]
+              3.1. S_QUANTITY = stock quantity of itemNumber[i] and supplyWarehouseIds[i]
               ADJUST_QTY = S_QUANTITY - quantities[i]
               if ADJUST_QTY < 10, then ADJUST_QTY += 100
              */
@@ -114,7 +114,7 @@ public class NewOrderTransaction extends AbstractTransaction {
             adjustQuantities.add(adjustQty);
 
             /*
-            3.2. Update stock for (itemIds[i], supplyWarehouseIds[i]):
+            3.2. Update stock for (itemNumber[i], supplyWarehouseIds[i]):
               - update S_QUANTITY to ADJUST_QUANTITY
               - increment S_YTD by quantities[i]
               - increment S_ORDER_CNT by 1
@@ -128,7 +128,7 @@ public class NewOrderTransaction extends AbstractTransaction {
                 this.executeQuery(formattedUpdateStockQty);
             }
             /*
-              3.3. ITEM_AMOUNT = quantities[i] * I_PRICE, where I_PRICE is price of itemIds[i]
+              3.3. ITEM_AMOUNT = quantities[i] * I_PRICE, where I_PRICE is price of itemNumber[i]
               TOTAL_AMOUNT += ITEM_AMOUNT
              */
             String formattedGetItemPriceAndName = this.stringFormatter(PreparedQueries.getItemPriceAndName, itemId);
@@ -146,7 +146,7 @@ public class NewOrderTransaction extends AbstractTransaction {
               - OL_D_ID = D_ID
               - OL_W_ID = W_ID
               - OL_NUMBER = i
-              - OL_I_ID = itemIds[i]
+              - OL_I_ID = itemNumber[i]
               - OL_SUPPLY_W_ID = supplyWarehouseIds[i]
               - OL_AMOUNT = ITEM_AMOUNT
               - OL_DELIVERY_D = null
@@ -158,7 +158,7 @@ public class NewOrderTransaction extends AbstractTransaction {
             res = this.executeQuery(formattedGetStockDistInfo);
             String distInfo = res.getString(0);
 
-            String formattedCreateNewOrderLine = this.stringFormatter(PreparedQueries.createNewOrderLine, districtId, warehouseId, i, itemId, supplyWarehouseId, itemAmount, distInfo);
+            String formattedCreateNewOrderLine = this.stringFormatter(PreparedQueries.createNewOrderLine, orderId, districtId, warehouseId, i, itemId, supplyWarehouseId, quantity, itemAmount, distInfo);
             this.executeQuery(formattedCreateNewOrderLine);
         }
 
@@ -206,7 +206,7 @@ public class NewOrderTransaction extends AbstractTransaction {
         for (int i = 0; i < nOrderLines; ++i) {
             System.out.printf(
                     "\t ITEM_NUMBER: %d, I_NAME: %s, SUPPLIER_WAREHOUSE: %d, QUANTITY: %d, OL_AMOUNT: %.2f, S_QUANTITY: %d\n",
-                    itemIds.get(i), itemNames.get(i), supplyWarehouseIds.get(i), quantities.get(i), itemAmounts.get(i), adjustQuantities.get(i));
+                    itemNumber.get(i), itemNames.get(i), supplyWarehouseIds.get(i), quantities.get(i), itemAmounts.get(i), adjustQuantities.get(i));
         }
 
     }
