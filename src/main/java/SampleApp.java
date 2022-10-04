@@ -14,7 +14,7 @@ import java.util.Properties;
 public class SampleApp {
     private static final String TABLE_NAME = "wholesale";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
 
         Properties settings = new Properties();
         try {
@@ -49,7 +49,9 @@ public class SampleApp {
         }
 
         AbstractTransaction txn = new TopBalanceTransaction(conn);
+
         txn.execute();
+
     }
 
     private static void createDatabase(Connection conn, String TABLE_NAME) throws SQLException {

@@ -23,7 +23,11 @@ public abstract class AbstractTransaction {
         return stmt.executeQuery();
     }
 
-    public void execute() {
+//    public void execute() {
+//        return;
+//    };
+
+    public void execute() throws SQLException{
         return;
     };
 }
