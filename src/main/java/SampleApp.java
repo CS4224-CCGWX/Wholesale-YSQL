@@ -1,5 +1,6 @@
 import com.yugabyte.ysql.YBClusterAwareDataSource;
 import transactions.AbstractTransaction;
+import transactions.PopularItemTransaction;
 import transactions.StockLevelTransaction;
 import transactions.TopBalanceTransaction;
 
@@ -47,7 +48,8 @@ public class SampleApp {
 
         AbstractTransaction txn1 = new TopBalanceTransaction(conn);
         AbstractTransaction txn2 = new StockLevelTransaction(conn, 1, 2, 10000, 958);
-        txn2.execute();
+        AbstractTransaction txn3 = new PopularItemTransaction(conn, 1, 2, 10);
+        txn3.execute();
     }
 
     private static void createDatabase(Connection conn, String TABLE_NAME) throws SQLException {
