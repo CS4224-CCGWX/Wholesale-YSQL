@@ -154,5 +154,24 @@ public class PreparedQueries {
                 WHERE C_W_ID = ? AND C_D_ID = ? AND C_ID = ?;
                 """;
 
+    public final static String getCustomerFullNameAndBalance = """
+            SELECT C_FIRST, C_MIDDLE, C_LAST, C_BALANCE
+            FROM customer
+            WHERE C_W_ID = ? AND C_D_ID = ? AND C_ID = ?;
+            """;
 
+    public final static String getCustomerLastOrderInfo = """
+            SELECT O_ID, O_CARRIER_ID, O_ENTRY_D
+            FROM customer_order
+            WHERE O_W_ID = ? AND O_D_ID = ? AND O_C_ID = ?
+            ORDER BY O_ID DESC
+            LIMIT 1;
+            """;  // "order" is partitioned by O_W_ID and O_D_ID, and sort by O_ID.
+
+
+    public final static String getCustomerLastOrderItemsInfo = """
+            SELECT OL_I_ID, OL_SUPPLY_W_ID, OL_QUANTITY, OL_AMOUNT, OL_DELIVERY_D
+            FROM order_line
+            WHERE OL_W_ID = ? AND OL_D_ID = ? AND OL_O_ID = ?;
+            """;
 }

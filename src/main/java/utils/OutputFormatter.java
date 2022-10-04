@@ -76,26 +76,33 @@ public class OutputFormatter {
         return sb.toString();
     }
 
-    public String formatCustomerFullNameAndBalance(Row cInfo) {
-        return String.format("Customer name: %s_%s_%s, balance: %.2f",
+    public static String formatCustomerFullNameAndBalance(ResultSet cInfo) throws SQLException {
+        StringBuilder sb = new StringBuilder();
+        sb.append(String.format("Customer name: （%s, %s, %s), balance: %.2f",
                 cInfo.getString("C_FIRST"),
                 cInfo.getString("C_MIDDLE"),
                 cInfo.getString("C_LAST"),
-                cInfo.getDecimal("C_BALANCE").doubleValue());
+                cInfo.getBigDecimal("C_BALANCE").doubleValue()));
+        return sb.toString();
     }
 
-    public String formatLastOrderInfo(int lastOrderId, int carrierId, Date datetime) {
-        return String.format("Last order ID: %d, Carrier ID: %d, Datetime: %s",
-                lastOrderId, carrierId, datetime.toString());
+    public static String formatLastOrderInfo(int lastOrderId, int carrierId, Date datetime)   {
+        StringBuilder sb = new StringBuilder();
+        sb.append(String.format("Last order ID: %d, Carrier ID: %d, Datetime: %s",
+                lastOrderId, carrierId, datetime.toString()));
+        return sb.toString();
     }
 
-    public String formatItemInfo(Row itemInfo) {
-        return String.format("\tItem number: %d, Supply warehouse ID: %d, Quantity: %d, Price: %.2f, Datetime: %s",
+    public static String formatItemInfo(ResultSet itemInfo) throws SQLException {
+
+        StringBuilder sb = new StringBuilder();
+        sb.append(String.format("\tItem number: %d, Supply warehouse ID: %d, Quantity: %d, Price: %.2f, Datetime: %s",
                 itemInfo.getInt("OL_I_ID"),
                 itemInfo.getInt("OL_SUPPLY_W_ID"),
                 itemInfo.getInt("OL_QUANTITY"),
-                itemInfo.getDecimal("OL_AMOUNT").doubleValue(),
-                itemInfo.getTimestamp("OL_DELIVERY_D").toString());
+                itemInfo.getBigDecimal("OL_AMOUNT").doubleValue(),
+                itemInfo.getTimestamp("OL_DELIVERY_D").toString()));
+        return sb.toString();
     }
 
     public String formatStockLevelTransactionOutput(long result, String transactionInfo) {
