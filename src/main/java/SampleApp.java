@@ -1,18 +1,15 @@
-
-
 import com.yugabyte.ysql.YBClusterAwareDataSource;
 import transactions.AbstractTransaction;
+import transactions.StockLevelTransaction;
 import transactions.TopBalanceTransaction;
 
 import java.io.IOException;
 import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 
 public class SampleApp {
-    private static final String TABLE_NAME = "wholesale";
 
     public static void main(String[] args) {
 
@@ -48,8 +45,9 @@ public class SampleApp {
             e.printStackTrace();
         }
 
-        AbstractTransaction txn = new TopBalanceTransaction(conn);
-        txn.execute();
+        AbstractTransaction txn1 = new TopBalanceTransaction(conn);
+        AbstractTransaction txn2 = new StockLevelTransaction(conn, 1, 2, 10000, 958);
+        txn2.execute();
     }
 
     private static void createDatabase(Connection conn, String TABLE_NAME) throws SQLException {

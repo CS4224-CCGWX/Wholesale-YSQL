@@ -18,4 +18,23 @@ public class PreparedQueries {
            LIMIT 10
            """;
 
+    public final static String getNextAvailableOrderNumber = """
+            SELECT D_NEXT_O_ID
+            FROM District
+            WHERE D_W_ID = ? AND D_ID = ?
+            """;
+
+    public final static String getLastOrdersFromDistrict = """
+            SELECT OL_I_ID
+            FROM Order_Line
+            WHERE OL_O_ID >= ? AND OL_O_ID < ?
+            """;
+
+    public final static String getItemStock = """
+            SELECT S_QUANTITY
+            FROM STOCK
+            WHERE S_W_ID = ? AND S_I_ID = ANY (?)
+            """;
+
+
 }
