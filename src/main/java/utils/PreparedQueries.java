@@ -125,5 +125,34 @@ public class PreparedQueries {
                 FROM district WHERE D_W_ID = ? AND D_ID = ?;
                 """;
 
+    public final static String getOrderToDeliverInDistrict = """
+                     SELECT MIN(O_ID) FROM customer_order
+                        WHERE O_W_ID = ? AND O_D_ID = ? AND O_CARRIER_ID IS NULL;
+                """;
+
+    public final static String updateCarrierIdInOrder = """
+                UPDATE customer_order
+                SET O_CARRIER_ID = ?
+                WHERE O_W_ID = ? AND O_D_ID = ? AND O_ID = ?;
+                """;
+
+    public final static String updateDeliveryDateInOrderLine = """
+                UPDATE order_line
+                SET OL_DELIVERY_D = ?
+                WHERE OL_W_ID = ? AND OL_D_ID = ? AND OL_O_ID = ?;
+                """;
+
+    public final static String getOrderTotalPrice = """
+                SELECT SUM(OL_AMOUNT) as total_price
+                FROM order_line
+                WHERE OL_W_ID = ? AND OL_D_ID = ? AND OL_O_ID = ?;
+                """;
+
+    public final static String updateCustomerDeliveryInfo = """
+                UPDATE customer
+                SET C_DELIVERY_CNT = C_DELIVERY_CNT + 1, C_BALANCE = C_BALANCE + ?
+                WHERE C_W_ID = ? AND C_D_ID = ? AND C_ID = ?;
+                """;
+
 
 }
