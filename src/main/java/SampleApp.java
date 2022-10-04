@@ -1,6 +1,9 @@
 
 
 import com.yugabyte.ysql.YBClusterAwareDataSource;
+import transactions.AbstractTransaction;
+import transactions.TopBalanceTransaction;
+
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -24,7 +27,7 @@ public class SampleApp {
         YBClusterAwareDataSource ds = new YBClusterAwareDataSource();
 
         ds.setUrl("jdbc:yugabytedb://" + settings.getProperty("host") + ":"
-                + settings.getProperty("port") + "/yugabyte");
+                + settings.getProperty("port") + "/cs4224");
         ds.setUser(settings.getProperty("dbUser"));
         ds.setPassword(settings.getProperty("dbPassword"));
 
@@ -37,15 +40,16 @@ public class SampleApp {
                 ds.setSslRootCert(settings.getProperty("sslRootCert"));
         }
 
+        Connection conn = null;
         try {
-            Connection conn = ds.getConnection();
+            conn = ds.getConnection();
             System.out.println(">>>> Successfully connected to YugabyteDB!");
-
-            createDatabase(conn, "warehouse");
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+        AbstractTransaction txn = new TopBalanceTransaction(conn);
+        txn.execute();
     }
 
     private static void createDatabase(Connection conn, String TABLE_NAME) throws SQLException {
@@ -66,10 +70,6 @@ public class SampleApp {
                 "W_YTD decimal(12,2), " +
                 "PRIMARY KEY (W_ID)" +
                 ")");
-
-//        stmt.execute("INSERT INTO " + TABLE_NAME + " VALUES" +
-//                "(1, 'Jessica', 28, 'USA', 10000)," +
-//                "(2, 'John', 28, 'Canada', 9000)");
 
         System.out.println(">>>> Successfully created " + TABLE_NAME + " table.");
     }
