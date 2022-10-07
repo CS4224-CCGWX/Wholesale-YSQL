@@ -60,4 +60,12 @@ public class PreparedQueries {
             ORDER BY OL_QUANTITY
             """;
 
+    public final static String getRelatedCustomers = """
+            SELECT t2.OL_C_ID as customerID
+            FROM order-line as t1 INNER JOIN order-line as t2
+            ON t1.OL_I_ID = t2.OL_I_ID
+            WHERE t1.OL_W_ID = ? AND t1.OL_D_ID = ? AND t1.OL_C_ID = ? AND t1.OL_D_ID <> t2.OL_D_ID
+            GROUP BY t2.OL_C_ID
+            HAVING COUNT(*) >= 2
+            """;
 }

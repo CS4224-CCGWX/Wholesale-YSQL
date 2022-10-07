@@ -1,5 +1,6 @@
 package utils;
 
+import javax.xml.transform.Result;
 import java.sql.*;
 import java.util.*;
 
@@ -105,4 +106,20 @@ public class QueryUtils {
         popularItems.add(maxQuantity);
         return popularItems;
     }
+
+    public List<Integer> getRelatedCustomers(int warehouseID, int districtID, int customerID) throws SQLException {
+        PreparedStatement getRelatedCustomerStmt = conn.prepareStatement(PreparedQueries.getRelatedCustomers);
+        getRelatedCustomerStmt.setInt(1, warehouseID);
+        getRelatedCustomerStmt.setInt(2, districtID);
+        getRelatedCustomerStmt.setInt(3, customerID);
+        ResultSet records = this.executeQuery(getRelatedCustomerStmt);
+
+        List<Integer> result = new ArrayList<>();
+        while (records.next()) {
+            result.add(records.getInt("customerID"));
+        }
+
+        return result;
+    }
+
 }
