@@ -59,8 +59,8 @@ CREATE TABLE IF NOT EXISTS customer (
     PRIMARY KEY (C_W_ID, C_D_ID, C_ID)
 );
 
-DROP TABLE IF EXISTS order;
-CREATE TABLE IF NOT EXISTS order (
+DROP TABLE IF EXISTS customer_order;
+CREATE TABLE IF NOT EXISTS customer_order (
     O_W_ID int,
     O_D_ID int,
     O_ID int,

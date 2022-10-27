@@ -1,6 +1,7 @@
 package transactions;
 
 import java.sql.*;
+import java.util.Formatter;
 
 public abstract class AbstractTransaction {
     protected Connection connection;
@@ -14,9 +15,19 @@ public abstract class AbstractTransaction {
         return stmt.executeQuery(query);
     }
 
+    protected String stringFormatter(String format, Object... args) {
+        return new Formatter().format(format, args).toString();
+    }
+
     protected ResultSet executeQuery(PreparedStatement stmt) throws SQLException {
         return stmt.executeQuery();
     }
 
-    public abstract void execute();
+//    public void execute() {
+//        return;
+//    };
+
+    public void execute() throws SQLException{
+        return;
+    };
 }

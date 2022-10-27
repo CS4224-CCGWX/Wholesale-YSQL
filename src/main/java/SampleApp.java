@@ -1,17 +1,25 @@
+
+
 import com.yugabyte.ysql.YBClusterAwareDataSource;
 import transactions.AbstractTransaction;
-import transactions.StockLevelTransaction;
 import transactions.TopBalanceTransaction;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 
-public class SampleApp {
+import parser.DataLoader;
 
-    public static void main(String[] args) {
+public class SampleApp {
+    private static final String TABLE_NAME = "wholesale";
+
+    public static void main(String[] args) throws SQLException {
+        String dataFileDirectory = "/Users/bytedance/Desktop/CS4224/Group_project/Wholesale-YSQL/src/main/project_source/data_files";
+        String schemaDirectory = "/Users/bytedance/Desktop/CS4224/Group_project/Wholesale-YSQL/src/main/resources/";
+        String ysqlPath = "/Users/bytedance/Desktop/CS4224/Group_project/yugabyte/yugabyte-2.15.2.0/bin/ysqlsh";
 
         Properties settings = new Properties();
         try {
@@ -23,8 +31,10 @@ public class SampleApp {
 
         YBClusterAwareDataSource ds = new YBClusterAwareDataSource();
 
+//        ds.setUrl("jdbc:yugabytedb://" + settings.getProperty("host") + ":"
+//                + settings.getProperty("port") + "/cs4224");
         ds.setUrl("jdbc:yugabytedb://" + settings.getProperty("host") + ":"
-                + settings.getProperty("port") + "/cs4224");
+                + settings.getProperty("port") + "/yugabyte");
         ds.setUser(settings.getProperty("dbUser"));
         ds.setPassword(settings.getProperty("dbPassword"));
 
@@ -39,18 +49,27 @@ public class SampleApp {
 
         Connection conn = null;
         try {
+            System.out.println(">>>> before connected to YugabyteDB!");
             conn = ds.getConnection();
             System.out.println(">>>> Successfully connected to YugabyteDB!");
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        AbstractTransaction txn1 = new TopBalanceTransaction(conn);
-        AbstractTransaction txn2 = new StockLevelTransaction(conn, 1, 2, 10000, 958);
-        txn2.execute();
+//        String fileName = "";
+        String schemaName = "schema_v1.ysql";
+        String schemaPath = schemaDirectory + schemaName;
+        DataLoader dataLoader = new DataLoader(conn, schemaPath, dataFileDirectory, ysqlPath, settings);
+        dataLoader.loadAll();
+
+//
+//        AbstractTransaction txn = new TopBalanceTransaction(conn);
+//
+//        txn.execute();
+//        createDatabase(conn, );
     }
 
-    private static void createDatabase(Connection conn, String TABLE_NAME) throws SQLException {
+    private static void createDatabase(Connection conn, String TABLE_NAME, String filePath) throws SQLException {
         Statement stmt = conn.createStatement();
 
         stmt.execute("DROP TABLE IF EXISTS " + TABLE_NAME);
@@ -68,6 +87,9 @@ public class SampleApp {
                 "W_YTD decimal(12,2), " +
                 "PRIMARY KEY (W_ID)" +
                 ")");
+
+        stmt.execute("COPY " + TABLE_NAME + " FROM " + filePath +
+                " WITH (FORMAT CSV DELIMITER ',', HEADER, DISABLE_FK_CHECK) ");
 
         System.out.println(">>>> Successfully created " + TABLE_NAME + " table.");
     }
