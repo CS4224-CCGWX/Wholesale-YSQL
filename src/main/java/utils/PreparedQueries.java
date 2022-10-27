@@ -18,6 +18,24 @@ public class PreparedQueries {
            LIMIT 10
            """;
 
+    public final static String getItemById = """
+            SELECT I_NAME, I_ID
+            FROM Item
+            WHERE I_ID = ?
+            """;
+
+    public final static String getCustomerNameByID = """
+            SELECT C_ID, C_FIRST, C_MIDDLE, C_LAST
+            FROM Customer
+            WHERE C_ID = ?
+            """;
+
+    public final static String getNextAvailableOrderNumber = """
+            SELECT D_NEXT_O_ID
+            FROM District
+            WHERE D_W_ID = ? AND D_ID = ?
+            """;
+
     public final static String getDistrictNextOrderIdAndTax = """
                 SELECT D_NEXT_O_ID, D_TAX
                 FROM district
@@ -41,6 +59,18 @@ public class PreparedQueries {
                 FROM stock
                 WHERE S_W_ID = ?, S_I_ID = ?;
                 """;
+
+    public final static String getLastOrdersFromOrderLine = """
+            SELECT OL_I_ID
+            FROM Order_Line
+            WHERE OL_O_ID >= ? AND OL_O_ID < ? AND OL_W_ID = ? AND OL_D_ID = ?
+            """;
+
+    public final static String getItemStock = """
+            SELECT S_QUANTITY
+            FROM STOCK
+            WHERE S_W_ID = ? AND S_I_ID = ANY (?)
+            """;
 
     public final static String updateStockQtyIncrRemoteCnt = """
                 UPDATE stock
@@ -126,12 +156,12 @@ public class PreparedQueries {
                 """;
 
     public final static String getOrderToDeliverInDistrict = """
-                     SELECT MIN(O_ID) FROM customer_order
+                     SELECT MIN(O_ID) FROM 'order'
                         WHERE O_W_ID = ? AND O_D_ID = ? AND O_CARRIER_ID IS NULL;
                 """;
 
     public final static String updateCarrierIdInOrder = """
-                UPDATE customer_order
+                UPDATE order
                 SET O_CARRIER_ID = ?
                 WHERE O_W_ID = ? AND O_D_ID = ? AND O_ID = ?;
                 """;
@@ -162,16 +192,36 @@ public class PreparedQueries {
 
     public final static String getCustomerLastOrderInfo = """
             SELECT O_ID, O_CARRIER_ID, O_ENTRY_D
-            FROM customer_order
+            FROM "order"
             WHERE O_W_ID = ? AND O_D_ID = ? AND O_C_ID = ?
             ORDER BY O_ID DESC
             LIMIT 1;
             """;  // "order" is partitioned by O_W_ID and O_D_ID, and sort by O_ID.
-
+    public final static String getLastOrdersFromOrder = """
+            SELECT O_ID, O_W_ID, O_D_ID, O_C_ID, O_ENTRY_D
+            FROM "order"
+            WHERE O_ID >= ? AND O_ID < ? AND O_W_ID = ? AND O_D_ID = ?
+            """;
 
     public final static String getCustomerLastOrderItemsInfo = """
             SELECT OL_I_ID, OL_SUPPLY_W_ID, OL_QUANTITY, OL_AMOUNT, OL_DELIVERY_D
             FROM order_line
             WHERE OL_W_ID = ? AND OL_D_ID = ? AND OL_O_ID = ?;
+            """;
+
+    public final static String getPopularItemsFromOrder = """
+            SELECT OL_I_ID, OL_QUANTITY
+            FROM Order_Line
+            WHERE OL_W_ID = ? AND OL_D_ID = ? AND OL_O_ID = ?
+            ORDER BY OL_QUANTITY
+            """;
+
+    public final static String getRelatedCustomers = """
+            SELECT t2.OL_C_ID as customerID
+            FROM order_line as t1 INNER JOIN order_line as t2
+            ON t1.OL_I_ID = t2.OL_I_ID
+            WHERE t1.OL_W_ID = ? AND t1.OL_D_ID = ? AND t1.OL_C_ID = ? AND t1.OL_D_ID <> t2.OL_D_ID
+            GROUP BY t2.OL_C_ID
+            HAVING COUNT(*) >= 2
             """;
 }

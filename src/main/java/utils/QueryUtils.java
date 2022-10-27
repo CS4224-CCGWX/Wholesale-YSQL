@@ -28,9 +28,8 @@ public class QueryUtils {
         ResultSet nextAvailableOrder = this.executeQuery(getNextAvailableOrderNumberStmt);
         if (nextAvailableOrder.next()) {
             return nextAvailableOrder.getInt("D_NEXT_O_ID");
-        } else {
-            throw new SQLException();
         }
+        return 0;
     }
 
     public ResultSet getPastOrdersFromOrderLine(int warehouseID, int districtID, int nextOrderNumber, int pastOrders) throws SQLException {

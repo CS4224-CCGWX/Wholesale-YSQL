@@ -1,6 +1,5 @@
 package transactions;
 
-import com.datastax.driver.core.Row;
 import utils.OutputFormatter;
 import utils.PreparedQueries;
 

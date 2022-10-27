@@ -4,7 +4,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.*;
 
-import com.datastax.driver.core.Row;
 
 public class OutputFormatter {
     private final static String delimiter = "\n";
