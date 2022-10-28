@@ -1,0 +1,9 @@
+Name: libecpg
+Description: PostgreSQL libecpg library
+Url: http://www.postgresql.org/
+Version: 11.2
+Requires: 
+Requires.private: libpq libpgtypes
+Cflags: -I/Users/sanketh/code/yugabyte-db/build/release-clang-dynamic-ninja/postgres/include
+Libs: -L/Users/sanketh/code/yugabyte-db/build/release-clang-dynamic-ninja/postgres/lib -lecpg
+Libs.private: -L/opt/yb-build/thirdparty/yugabyte-db-thirdparty-v2.6-20210619214425-32ba1cdc59-macos/installed/common/lib -lm
