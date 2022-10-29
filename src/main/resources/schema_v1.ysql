@@ -1,8 +1,3 @@
--- DROP KEYSPACE IF EXISTS wholesale;
-CREATE KEYSPACE IF NOT EXISTS wholesale
-    WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 3};
-USE wholesale;
-
 DROP TABLE IF EXISTS warehouse;
 CREATE TABLE IF NOT EXISTS warehouse (
     W_ID int,
@@ -59,8 +54,8 @@ CREATE TABLE IF NOT EXISTS customer (
     PRIMARY KEY (C_W_ID, C_D_ID, C_ID)
 );
 
-DROP TABLE IF EXISTS customer_order;
-CREATE TABLE IF NOT EXISTS customer_order (
+DROP TABLE IF EXISTS "order";
+CREATE TABLE IF NOT EXISTS "order" (
     O_W_ID int,
     O_D_ID int,
     O_ID int,
