@@ -1,124 +1,35 @@
 import com.yugabyte.ysql.YBClusterAwareDataSource;
 import transactions.AbstractTransaction;
-import transactions.PopularItemTransaction;
-import transactions.StockLevelTransaction;
-import transactions.TopBalanceTransaction;
 import transactions.NewOrderTransaction;
 import parser.*;
+
+import utils.*;
+
 
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
-import java.util.Scanner;
 
 import java.util.*;
-import parser.DataLoader;
+import java.util.concurrent.TimeUnit;
 
 public class SampleApp {
 
-        static Connection conn = null;
-//    public static void main(String[] args) throws SQLException {
-//        String dataFileDirectory = "/Users/bytedance/Desktop/CS4224/Group_project/Wholesale-YSQL/src/main/project_source/data_files";
-//        String schemaDirectory = "/Users/bytedance/Desktop/CS4224/Group_project/Wholesale-YSQL/src/main/resources/";
-//        String ysqlPath = "/Users/bytedance/Desktop/CS4224/Group_project/yugabyte/yugabyte-2.15.2.0/bin/ysqlsh";
-//
-//        Properties settings = new Properties();
-//        try {
-//            settings.load(SampleApp.class.getResourceAsStream("app.properties"));
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//            return;
-//        }
-//
-//        YBClusterAwareDataSource ds = new YBClusterAwareDataSource();
-
-//        ds.setUrl("jdbc:yugabytedb://" + settings.getProperty("host") + ":"
-//                + settings.getProperty("port") + "/cs4224");
-//        ds.setUrl("jdbc:yugabytedb://" + settings.getProperty("host") + ":"
-//                + settings.getProperty("port") + "/yugabyte");
-//        ds.setUser(settings.getProperty("dbUser"));
-//        ds.setPassword(settings.getProperty("dbPassword"));
-//
-//        String sslMode = settings.getProperty("sslMode");
-//        if (!sslMode.isEmpty() && !sslMode.equalsIgnoreCase("disable")) {
-//            ds.setSsl(true);
-//            ds.setSslMode(sslMode);
-//
-//            if (!settings.getProperty("sslRootCert").isEmpty())
-//                ds.setSslRootCert(settings.getProperty("sslRootCert"));
-//        }
-//
-//        Connection conn = null;
-//        try {
-//            System.out.println(">>>> before connected to YugabyteDB!");
-//            conn = ds.getConnection();
-//            System.out.println(">>>> Successfully connected to YugabyteDB!");
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//
-////        String fileName = "";
-//        String schemaName = "schema_v1.ysql";
-//        String schemaPath = schemaDirectory + schemaName;
-//        DataLoader dataLoader = new DataLoader(conn, schemaPath, dataFileDirectory, ysqlPath, settings);
-//        dataLoader.loadAll();
-//
-////
-////        AbstractTransaction txn = new TopBalanceTransaction(conn);
-////
-////        txn.execute();
-////        createDatabase(conn, );
-//        AbstractTransaction txn1 = new TopBalanceTransaction(conn);
-//        AbstractTransaction txn2 = new StockLevelTransaction(conn, 1, 2, 10000, 958);
-//        AbstractTransaction txn3 = new PopularItemTransaction(conn, 1, 2, 10);
-//        txn3.execute();
-//    }
-//
-//    private static void createDatabase(Connection conn, String TABLE_NAME, String filePath) throws SQLException {
-//        Statement stmt = conn.createStatement();
-//
-//        stmt.execute("DROP TABLE IF EXISTS " + TABLE_NAME);
-//
-//        stmt.execute("CREATE TABLE IF NOT EXISTS " + TABLE_NAME +
-//                "(" +
-//                "W_ID int," +
-//                "W_NAME varchar(10)," +
-//                "W_STREET_1 varchar(20)," +
-//                "W_STREET_2 varchar(20)," +
-//                "W_CITY varchar(20)," +
-//                "W_STATE char(2)," +
-//                "W_ZIP char(9)," +
-//                "W_TAX decimal(4,4)," +
-//                "W_YTD decimal(12,2), " +
-//                "PRIMARY KEY (W_ID)" +
-//                ")");
-//
-//        stmt.execute("COPY " + TABLE_NAME + " FROM " + filePath +
-//                " WITH (FORMAT CSV DELIMITER ',', HEADER, DISABLE_FK_CHECK) ");
-//
-//        System.out.println(">>>> Successfully created " + TABLE_NAME + " table.");
-//    }
-
+        static Connection conn = getCloudSession();
 
     public static void main(String[] args) throws SQLException {
-        conn = getCloudSession();
-        Scanner sc = new Scanner(System.in);
-        String action = sc.next();
+        String action = args[0];
         switch(action) {
-            case "l": {
+            case "load_data": {
                 loadData(args);
                 break;
             }
-            case "r": {
-                runTransaction();
+            case "run": {
+                run(args);
                 break;
             }
-//            case "run": {
-//                run(args);
-//                break;
-//            }
 //            case "summary": {
 //                summary(args);
 //                break;
@@ -144,56 +55,10 @@ public class SampleApp {
     private static void runNewOrderTransaction() throws SQLException {
         TransactionParser tp =  new TransactionParser(conn);
         String[] newOrderInput = new String[5];
-        newOrderInput[0] = "N";
-        newOrderInput[1] = "1";
-        newOrderInput[2] = "1";
-        newOrderInput[3] = "2";
-        newOrderInput[4] = "1";
-        System.out.println("Start initialize");
         NewOrderTransaction not = tp.parseNewOrderTransaction(newOrderInput);
-        System.out.println("Complete initialize");
         not.execute();
-        System.out.println("Complete Execute");
     }
 
-//    private static void run(String[] args) {
-//        String ip = args[1];
-//        String consistencyLevel = "";
-//
-//        Connection session = getSessionByIp(ip);
-//
-//        TransactionParser transactionParser = new TransactionParser(session);
-//        OutputFormatter outputFormatter = new OutputFormatter();
-//
-//        List<Long> latencyList = new ArrayList<>();
-//        long fileStart, fileEnd, txStart, txEnd, elapsedTime;
-//
-//        fileStart = System.nanoTime();
-//        while (transactionParser.hasNext()) {
-//            AbstractTransaction transaction = transactionParser.parseNextTransaction();
-//            System.out.println(OutputFormatter.linebreak);
-//            System.out.println(outputFormatter.formatTransactionID(latencyList.size()));
-//            if (args.length >= 2) {
-//                consistencyLevel = args[2];
-//                transaction.setDefaultConsistencyLevel(consistencyLevel);
-//            }
-//            txStart = System.nanoTime();
-//            transaction.execute();
-//            txEnd = System.nanoTime();
-//            System.out.println(OutputFormatter.linebreak);
-//
-//            elapsedTime = txEnd - txStart;
-//            latencyList.add(elapsedTime);
-//        }
-//        fileEnd = System.nanoTime();
-//
-//        long totalElapsedTime = TimeUnit.SECONDS.convert(fileEnd - fileStart, TimeUnit.NANOSECONDS);
-//        PerformanceReportGenerator.generatePerformanceReport(latencyList, totalElapsedTime);
-//
-//        session.close();
-//        transactionParser.close();
-//    }
-//
 //    private static void summary(String[] args) {
 //        String ip = args[1];
 //        CqlSession session = getSessionByIp(ip);
@@ -212,6 +77,53 @@ public class SampleApp {
 //                .withKeyspace(CqlIdentifier.fromCql("wholesale"))
 //                .build();
 //    }
+
+    private static void run(String[] args) {
+        String ip = args[1];
+        String consistencyLevel = "";
+
+//        CqlSession session = getSessionByIp(ip);
+
+
+        TransactionParser transactionParser = new TransactionParser(conn);
+        OutputFormatter outputFormatter = new OutputFormatter();
+
+        List<Long> latencyList = new ArrayList<>();
+        long fileStart, fileEnd, txStart, txEnd, elapsedTime;
+
+        fileStart = System.nanoTime();
+        while (transactionParser.hasNext()) {
+            AbstractTransaction transaction = transactionParser.parseNextTransaction();
+            System.out.println(OutputFormatter.linebreak);
+            System.out.println(outputFormatter.formatTransactionID(latencyList.size()));
+            if (args.length >= 2) {
+                consistencyLevel = args[2];
+                transaction.setDefaultConsistencyLevel(consistencyLevel);
+            }
+            txStart = System.nanoTime();
+            try {
+                transaction.execute();
+            } catch (Exception e) {
+                e.printStackTrace();
+                System.err.println("**************************************");
+                System.err.println(transaction.toString());
+//                exit(-1);
+            }
+
+            txEnd = System.nanoTime();
+            System.out.println(OutputFormatter.linebreak);
+
+            elapsedTime = txEnd - txStart;
+            latencyList.add(elapsedTime);
+        }
+        fileEnd = System.nanoTime();
+
+        long totalElapsedTime = TimeUnit.SECONDS.convert(fileEnd - fileStart, TimeUnit.NANOSECONDS);
+        PerformanceReportGenerator.generatePerformanceReport(latencyList, totalElapsedTime);
+
+//        conn.close();
+        transactionParser.close();
+    }
 
     private static Connection getCloudSession() {
 
@@ -240,41 +152,6 @@ public class SampleApp {
 
         return conn;
     }
-
-//    private static SSLContext createSSLHandler(String certfile) {
-//        try {
-//            CertificateFactory cf = CertificateFactory.getInstance("X.509");
-//            FileInputStream fis = new FileInputStream(certfile);
-//            X509Certificate ca;
-//            try {
-//                ca = (X509Certificate) cf.generateCertificate(fis);
-//            } catch (Exception e) {
-//                System.err.println("Exception generating certificate from input file: " + e);
-//                return null;
-//            } finally {
-//                fis.close();
-//            }
-//
-//            // Create a KeyStore containing our trusted CAs
-//            String keyStoreType = KeyStore.getDefaultType();
-//            KeyStore keyStore = KeyStore.getInstance(keyStoreType);
-//            keyStore.load(null, null);
-//            keyStore.setCertificateEntry("ca", ca);
-//
-//            // Create a TrustManager that trusts the CAs in our KeyStore
-//            String tmfAlgorithm = TrustManagerFactory.getDefaultAlgorithm();
-//            TrustManagerFactory tmf = TrustManagerFactory.getInstance(tmfAlgorithm);
-//            tmf.init(keyStore);
-//
-//            SSLContext sslContext = SSLContext.getInstance("TLS");
-//            sslContext.init(null, tmf.getTrustManagers(), null);
-//            return sslContext;
-//        } catch (Exception e) {
-//            System.err.println("Exception creating sslContext: " + e);
-//            return null;
-//        }
-//    }
-
     private static void defSchema(Connection conn) throws SQLException {
         // def schema
         Statement session = conn.createStatement();

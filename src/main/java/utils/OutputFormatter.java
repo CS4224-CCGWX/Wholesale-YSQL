@@ -10,6 +10,8 @@ import com.datastax.driver.core.Row;
 public class OutputFormatter {
     private final static String delimiter = "\n";
 
+    public final static String linebreak = "=======================================";
+
     public static String formatFullCustomerInfo(ResultSet customerInfo, double balance) throws SQLException {
         StringBuilder sb = new StringBuilder();
         sb.append("Customer info: ");
@@ -106,10 +108,39 @@ public class OutputFormatter {
         return sb.toString();
     }
 
+    public String formatTransactionID(int i) {
+        return String.format("Transaction ID: %d", i);
+    }
+
     public String formatStockLevelTransactionOutput(long result, String transactionInfo) {
         StringBuilder sb = new StringBuilder(transactionInfo);
         sb.append(delimiter);
         sb.append(result);
         return sb.toString();
     }
+
+    public String formatTotalTransactions(int count) {
+        return String.format("Total number of transactions: %d\n", count);
+    }
+
+    public String formatTotalElapsedTime(long totalTime) {
+        return String.format("Total elapsed time: %ds\n", totalTime);
+    }
+
+    public String formatThroughput(double throughput) {
+        return String.format("Transaction throughput: %.2f per second\n", throughput);
+    }
+
+    public String formatAverage(double latency) {
+        return String.format("Average latency: %.2fms\n", latency);
+    }
+
+    public String formatMedian(long latency) {
+        return String.format("Median latency: %dms\n", latency);
+    }
+
+    public String formatPercentile(int percentile, long latency) {
+        return String.format("%dth percentile transaction latency: %dms\n", percentile, latency);
+    }
+
 }

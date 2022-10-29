@@ -1,4 +1,4 @@
-schema="/home/stuproj/cs4224i/Wholesale-YSQL/src/main/resources/schema_v1.ycql"
+schema="/home/stuproj/cs4224i/Wholesale-YSQL/src/main/resources/schema_v2.ycql"
 data="/home/stuproj/cs4224i/Wholesale-YSQL/project_files/data_files"
 
 curr_node=$1

@@ -15,7 +15,7 @@ public class DataLoader {
     private final String ORDER_LINE_FILE = "order-line.csv";
     private final String STOCK_FILE = "stock.csv";
 
-    private String YSQLSH_PATH = "/temp/yugabyte-2.14.1.0/bin/ycqlsh";
+    private String YSQLSH_PATH = "/temp/yugabyte-2.14.1.0/bin/ysqlsh";
 
     Connection session;
     String schemaPath;
