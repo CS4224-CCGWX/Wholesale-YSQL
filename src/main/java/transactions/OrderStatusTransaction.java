@@ -4,8 +4,10 @@ import utils.OutputFormatter;
 import utils.PreparedQueries;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.Instant;
 import java.util.Date;
 
 public class OrderStatusTransaction extends AbstractTransaction {
@@ -49,32 +51,58 @@ public class OrderStatusTransaction extends AbstractTransaction {
          */
 
         // Output Customer Name
-        String formattedGetCustomerFullNameAndBalance = this.stringFormatter(PreparedQueries.getCustomerFullNameAndBalance, customerWarehouseId, customerDistrictId, customerId);
+
+        PreparedStatement formattedGetCustomerFullNameAndBalance = connection.prepareStatement(PreparedQueries.getCustomerFullNameAndBalance);
+        formattedGetCustomerFullNameAndBalance.setInt(1, customerWarehouseId);
+        formattedGetCustomerFullNameAndBalance.setInt(2, customerDistrictId);
+        formattedGetCustomerFullNameAndBalance.setInt(3, customerId);
         ResultSet customerRes = this.executeQuery(formattedGetCustomerFullNameAndBalance);
+
+        System.out.println("*** Order Status Transaction Summary ***");
+
+
         String customerInfo = OutputFormatter.formatCustomerFullNameAndBalance(customerRes);
         System.out.println(customerInfo);
 
 
         // Output Customer Last Order
-        String formattedGetCustomerLastOrderInfo = this.stringFormatter(PreparedQueries.getCustomerLastOrderInfo, customerWarehouseId, customerDistrictId, customerId);
+
+        PreparedStatement formattedGetCustomerLastOrderInfo = connection.prepareStatement(PreparedQueries.getCustomerLastOrderInfo);
+        formattedGetCustomerLastOrderInfo.setInt(1, customerWarehouseId);
+        formattedGetCustomerLastOrderInfo.setInt(2, customerDistrictId);
+        formattedGetCustomerLastOrderInfo.setInt(3, customerId);
         ResultSet lastOrderInfo = this.executeQuery(formattedGetCustomerLastOrderInfo);
+
+        if (!lastOrderInfo.next()) {
+            error("formattedGetCustomerLastOrderInfo");
+        }
+
         int lastOrderId = lastOrderInfo.getInt("O_ID");
         int carrierId = lastOrderInfo.getInt("O_CARRIER_ID");
-        Date orderDateTime =  lastOrderInfo.getTimestamp("O_ENTRY_D");
+        Instant orderDateTime = lastOrderInfo.getTimestamp("O_ENTRY_D").toInstant();
         String customerLastOrder = OutputFormatter.formatLastOrderInfo(lastOrderId, carrierId, orderDateTime);
         System.out.println(customerLastOrder);
 
 
 
         // Output Customer Last Order for each item
-        String formattedGetCustomerLastOrderItemsInfo = this.stringFormatter(PreparedQueries.getCustomerLastOrderItemsInfo, customerWarehouseId, customerDistrictId, lastOrderId);
+        PreparedStatement formattedGetCustomerLastOrderItemsInfo = connection.prepareStatement(PreparedQueries.getCustomerLastOrderItemsInfo);
+        formattedGetCustomerLastOrderItemsInfo.setInt(1, customerWarehouseId);
+        formattedGetCustomerLastOrderItemsInfo.setInt(2, customerDistrictId);
+        formattedGetCustomerLastOrderItemsInfo.setInt(3, lastOrderId);
         ResultSet itemsInfo = this.executeQuery(formattedGetCustomerLastOrderItemsInfo);
 
+        System.out.println("Items of last order:");
         while(itemsInfo.next()) {
             System.out.println(OutputFormatter.formatItemInfo(itemsInfo));
         }
 
     }
+
+    public void error(String s) {
+        System.out.println("[Error]: OrderStatus " + s + " are missing");
+    }
+
 
 
 }

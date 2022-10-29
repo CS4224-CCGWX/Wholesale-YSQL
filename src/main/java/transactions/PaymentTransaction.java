@@ -3,6 +3,7 @@ package transactions;
 import utils.PreparedQueries;
 import utils.OutputFormatter;
 
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,6 +18,11 @@ public class PaymentTransaction extends AbstractTransaction{
 
     private double payment;
 
+    private static OutputFormatter outputFormatter = new OutputFormatter();
+
+    private static final String delimiter = "\n";
+
+
     public PaymentTransaction(Connection connection, int cwid, int cdid, int cid, double p) {
         super(connection);
         customerId = cid;
@@ -29,11 +35,45 @@ public class PaymentTransaction extends AbstractTransaction{
     public void execute() throws SQLException {
 
         // 1.  Update the warehouse C W ID by incrementing W YTD by PAYMENT
-        String formattedUpdateWarehouseYearToDateAmount = this.stringFormatter(PreparedQueries.updateWarehouseYearToDateAmount, payment, warehouseId);
+
+        // Output Customer Last Order for each item
+
+        PreparedStatement formattedGetWarehouseAddressAndYtd = connection.prepareStatement(PreparedQueries.getWarehouseAddressAndYtd);
+        formattedGetWarehouseAddressAndYtd.setInt(1, warehouseId);
+
+        ResultSet warehouseResult = this.executeQuery(formattedGetWarehouseAddressAndYtd);
+
+        if (!warehouseResult.next()) {
+            error("formattedGetWarehouseAddressAndYtd");
+            return ;
+        }
+        double warehouseYtd = warehouseResult.getBigDecimal("W_YTD").doubleValue();
+        warehouseYtd += payment;
+
+        PreparedStatement formattedUpdateWarehouseYearToDateAmount = connection.prepareStatement(PreparedQueries.updateWarehouseYearToDateAmount);
+        formattedUpdateWarehouseYearToDateAmount.setBigDecimal(1, BigDecimal.valueOf(warehouseYtd));
+        formattedUpdateWarehouseYearToDateAmount.setInt(2, warehouseId);
         this.executeQuery(formattedUpdateWarehouseYearToDateAmount);
 
+
+        PreparedStatement formattedGetDistrictAddressAndYtd = connection.prepareStatement(PreparedQueries.getDistrictAddressAndYtd);
+        formattedGetDistrictAddressAndYtd.setInt(1, warehouseId);
+        formattedGetDistrictAddressAndYtd.setInt(2, districtId);
+        ResultSet districtResult = this.executeQuery(formattedGetDistrictAddressAndYtd);
+
+        if (!districtResult.next()) {
+            error("formattedGetDistrictAddressAndYtd");
+            return ;
+        }
+        double districtYtd = districtResult.getBigDecimal("D_YTD").doubleValue();
+        districtYtd += payment;
+
         // 2. Update the district (C W ID,C D ID) by incrementing D YTD by PAYMENT
-        String formattedUpdateDistrictYearToDateAmount = this.stringFormatter(PreparedQueries.updateDistrictYearToDateAmount, payment, warehouseId, districtId);
+
+        PreparedStatement formattedUpdateDistrictYearToDateAmount = connection.prepareStatement(PreparedQueries.updateDistrictYearToDateAmount);
+        formattedUpdateDistrictYearToDateAmount.setBigDecimal(1, BigDecimal.valueOf(districtYtd));
+        formattedUpdateDistrictYearToDateAmount.setInt(2, warehouseId);
+        formattedUpdateDistrictYearToDateAmount.setInt(3, districtId);
         this.executeQuery(formattedUpdateDistrictYearToDateAmount);
 
 
@@ -43,37 +83,64 @@ public class PaymentTransaction extends AbstractTransaction{
             • Increment C YTD PAYMENT by PAYMENT
             • Increment C PAYMENT CNT by 1
          */
-        String formattedUpdateCustomerPaymentInfo = this.stringFormatter(PreparedQueries.updateCustomerPaymentInfo, payment, payment, warehouseId, districtId, customerId);
-        this.executeQuery(formattedUpdateCustomerPaymentInfo);
-        PreparedStatement ps;
 
-        System.out.println("********** Payment Transaction *********\n");
-        // Output Customer Information
-        String formattedGetFullCustomerInfo = this.stringFormatter(PreparedQueries.getFullCustomerInfo, warehouseId, districtId, customerId);
+        PreparedStatement formattedGetFullCustomerInfo = connection.prepareStatement(PreparedQueries.getFullCustomerInfo);
+        formattedGetFullCustomerInfo.setInt(1, warehouseId);
+        formattedGetFullCustomerInfo.setInt(2, districtId);
+        formattedGetFullCustomerInfo.setInt(3, customerId);
         ResultSet customerRes = this.executeQuery(formattedGetFullCustomerInfo);
-        String customerInfo = OutputFormatter.formatFullCustomerInfo(customerRes);
-        System.out.println(customerInfo);
+        if (!customerRes.next()) {
+            error("formattedGetFullCustomerInfo");
+            return ;
+        }
 
-        // Output Warehouse Address
-        String formattedGetWarehouseAddress = this.stringFormatter(PreparedQueries.getWarehouseAddress, warehouseId);
-        ResultSet warehouseRes = this.executeQuery(formattedGetWarehouseAddress);
-        String warehouseInfo = OutputFormatter.formatWarehouseAddress(warehouseRes);
-        System.out.println(warehouseInfo);
+        double customerBalance = customerRes.getBigDecimal("C_BALANCE").doubleValue();
+        customerBalance -= payment;
+        float customerYtd = customerRes.getFloat("C_YTD_PAYMENT");
+        customerYtd += payment;
 
+        PreparedStatement formattedUpdateCustomerPaymentInfo = connection.prepareStatement(PreparedQueries.updateCustomerPaymentInfo);
+        formattedUpdateCustomerPaymentInfo.setBigDecimal(1, BigDecimal.valueOf(customerBalance));
+        formattedUpdateCustomerPaymentInfo.setFloat(2, customerYtd);
+        formattedUpdateCustomerPaymentInfo.setInt(3, warehouseId);
+        formattedUpdateCustomerPaymentInfo.setInt(4, districtId);
+        formattedUpdateCustomerPaymentInfo.setInt(5, customerId);
+        this.executeQuery(formattedUpdateCustomerPaymentInfo);
 
-        // Output District Address
-        String formattedGetDistrictAddress = this.stringFormatter(PreparedQueries.getDistrictAddress, warehouseId, districtId);
-        ResultSet districtRes = this.executeQuery(formattedGetDistrictAddress);
-        String districtInfo = OutputFormatter.formatDistrictAddress(districtRes);
-        System.out.println(districtInfo);
+        // Output Customer Information
 
+        StringBuilder sb = new StringBuilder();
 
-        // Output Payment Amount
-        String formattedPayment = this.stringFormatter("Payment: %f", payment);
-        System.out.println(formattedPayment);
+        /*
+         *  1. Customer’s identifier (C W ID, C D ID, C ID), name (C FIRST, C MIDDLE, C LAST), address
+         *    (C STREET 1, C STREET 2, C CITY, C STATE, C ZIP), C PHONE, C SINCE, C CREDIT,
+         *     C CREDIT LIM, C DISCOUNT, C BALANCE
+         */
+//        result = executeQuery(queryFormatter.getFullCustomerInfo(warehouseId, districtId, customerId));
+        sb.append("********** Payment Transaction *********\n");
+        sb.append(outputFormatter.formatFullCustomerInfo(customerRes, customerBalance));
+        sb.append(delimiter);
+
+        // 2. Warehouse’s address (W STREET 1, W STREET 2, W CITY, W STATE, W ZIP)
+        sb.append(outputFormatter.formatWarehouseAddress(warehouseResult));
+        sb.append(delimiter);
+
+        // 3. District’s address (D STREET 1, D STREET 2, D CITY, D STATE, D ZIP)
+        sb.append(outputFormatter.formatDistrictAddress(districtResult));
+        sb.append(delimiter);
+
+        // 4. Payment amount PAYMENT
+        sb.append(String.format("Payment: %.2f", payment));
+        sb.append(delimiter);
+
+        System.out.println(sb);
     }
 
     public String toString() {
         return String.format("Payment transaction info: warehouse: %d, district: %d, customer: %d, payment: %f", warehouseId, districtId, customerId, payment);
+    }
+
+    public void error(String s) {
+        System.out.println("[Error]: Payment " + s + " are missing");
     }
 }

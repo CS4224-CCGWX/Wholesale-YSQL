@@ -9,6 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.sql.*;
 
 public class DeliveryTransaction extends AbstractTransaction {
 
@@ -40,10 +41,16 @@ public class DeliveryTransaction extends AbstractTransaction {
          */
 
         for (int districtNo = 1; districtNo <= TOTAL_DISTRICT; districtNo = districtNo + 1) {
-            String formattedGetOrderToDeliverInDistrict = this.stringFormatter(PreparedQueries.getOrderIdToDeliver, warehouseId, districtNo);
+
+            PreparedStatement formattedGetOrderToDeliverInDistrict = connection.prepareStatement(PreparedQueries.getOrderIdToDeliver);
+            formattedGetOrderToDeliverInDistrict.setInt(1, warehouseId);
+            formattedGetOrderToDeliverInDistrict.setInt(2, districtNo);
             res = this.executeQuery(formattedGetOrderToDeliverInDistrict);
 
-            String formattedUpdateOrderIdToDeliver = this.stringFormatter(PreparedQueries.updateOrderIdToDeliver, warehouseId, districtNo);
+
+            PreparedStatement formattedUpdateOrderIdToDeliver = connection.prepareStatement(PreparedQueries.updateOrderIdToDeliver);
+            formattedUpdateOrderIdToDeliver.setInt(1, warehouseId);
+            formattedUpdateOrderIdToDeliver.setInt(2, districtNo);
             this.executeQuery(formattedUpdateOrderIdToDeliver);
 
             int orderId = -1;
@@ -60,15 +67,17 @@ public class DeliveryTransaction extends AbstractTransaction {
 
              */
 
-            String formattedUpdateCarrierIdInOrder = this.stringFormatter(PreparedQueries.updateCarrierIdInOrder, carrierId, warehouseId, districtNo, orderId);
+            PreparedStatement formattedUpdateCarrierIdInOrder = connection.prepareStatement(PreparedQueries.updateCarrierIdInOrder);
+            formattedUpdateCarrierIdInOrder.setInt(1, carrierId);
+            formattedUpdateCarrierIdInOrder.setInt(2, warehouseId);
+            formattedUpdateCarrierIdInOrder.setInt(3, districtNo);
+            formattedUpdateCarrierIdInOrder.setInt(4, orderId);
             this.executeQuery(formattedUpdateCarrierIdInOrder);
 
             /*
             (c) Update all the order-lines in X by setting OL DELIVERY D to the current date and time
              */
 
-//            String formattedUpdateDeliveryDateInOrderLine = this.stringFormatter(PreparedQueries.updateDeliveryDateInOrderLine, TimeFormatter.getCurrentTimestamp(), warehouseId, districtNo, orderId);
-//            this.executeQuery(formattedUpdateDeliveryDateInOrderLine);
 
             /*
             (d) Update customer C as follows:
@@ -79,7 +88,11 @@ public class DeliveryTransaction extends AbstractTransaction {
 
             double orderAmount = 0;
             ArrayList<Integer> orderLineNums = new ArrayList<>();
-            String formattedGetOrderTotalPrice = this.stringFormatter(PreparedQueries.getOrderLineInOrder, warehouseId, districtNo, orderId);
+
+            PreparedStatement formattedGetOrderTotalPrice = connection.prepareStatement(PreparedQueries.getOrderLineInOrder);
+            formattedGetOrderTotalPrice.setInt(1, warehouseId);
+            formattedGetOrderTotalPrice.setInt(2, districtNo);
+            formattedGetOrderTotalPrice.setInt(3, orderId);
             res = this.executeQuery(formattedGetOrderTotalPrice);
 
             if (!res.next()) {
@@ -96,11 +109,21 @@ public class DeliveryTransaction extends AbstractTransaction {
             }
 
             for (int olNum : orderLineNums) {
-                String formattedUpdateDeliveryDateInOrderLine = this.stringFormatter(PreparedQueries.updateDeliveryDateInOrderLine, TimeFormatter.getCurrentDate().toInstant(), warehouseId, districtNo, orderId, olNum);
+
+                PreparedStatement formattedUpdateDeliveryDateInOrderLine = connection.prepareStatement(PreparedQueries.updateDeliveryDateInOrderLine);
+                formattedUpdateDeliveryDateInOrderLine.setInt(1, warehouseId);
+                formattedUpdateDeliveryDateInOrderLine.setTimestamp(2, Timestamp.from(TimeFormatter.getCurrentDate().toInstant()));
+                formattedUpdateDeliveryDateInOrderLine.setInt(3, warehouseId);
+                formattedUpdateDeliveryDateInOrderLine.setInt(4, districtNo);
+                formattedUpdateDeliveryDateInOrderLine.setInt(5, orderId);
+                formattedUpdateDeliveryDateInOrderLine.setInt(6, olNum);
                 this.executeQuery(formattedUpdateDeliveryDateInOrderLine);
             }
 
-            String formattedGetCustomerBalance = this.stringFormatter(PreparedQueries.getCustomerBalance, warehouseId, districtNo, customerId);
+            PreparedStatement formattedGetCustomerBalance = connection.prepareStatement(PreparedQueries.getCustomerBalance);
+            formattedGetCustomerBalance.setInt(1, warehouseId);
+            formattedGetCustomerBalance.setInt(2, districtNo);
+            formattedGetCustomerBalance.setInt(3, customerId);
             ResultSet customers = this.executeQuery(formattedGetCustomerBalance);
 
             if (!customers.next()) {
@@ -110,7 +133,11 @@ public class DeliveryTransaction extends AbstractTransaction {
 
             double updatedBalance = customers.getBigDecimal(0).doubleValue() + orderAmount;
 
-            String formattedUpdateCustomerDeliveryInfo = this.stringFormatter(PreparedQueries.updateCustomerBalanceAndDcount, BigDecimal.valueOf(updatedBalance), warehouseId, districtNo, customerId);
+            PreparedStatement formattedUpdateCustomerDeliveryInfo = connection.prepareStatement(PreparedQueries.updateCustomerBalanceAndDcount);
+            formattedUpdateCustomerDeliveryInfo.setBigDecimal(1, BigDecimal.valueOf(updatedBalance));
+            formattedUpdateCustomerDeliveryInfo.setInt(2, warehouseId);
+            formattedUpdateCustomerDeliveryInfo.setInt(3, districtNo);
+            formattedUpdateCustomerDeliveryInfo.setInt(4, customerId);
             this.executeQuery(formattedUpdateCustomerDeliveryInfo);
             System.out.println(String.format("Updated the info of customer (%d, %d, %d)", warehouseId, districtNo, customerId));
         }

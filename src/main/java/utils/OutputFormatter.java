@@ -2,6 +2,7 @@ package utils;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.Instant;
 import java.util.*;
 
 import com.datastax.driver.core.Row;
@@ -9,24 +10,24 @@ import com.datastax.driver.core.Row;
 public class OutputFormatter {
     private final static String delimiter = "\n";
 
-    public static String formatFullCustomerInfo(ResultSet customerInfo) throws SQLException {
+    public static String formatFullCustomerInfo(ResultSet customerInfo, double balance) throws SQLException {
         StringBuilder sb = new StringBuilder();
         sb.append("Customer info: ");
         sb.append(delimiter);
 
-        sb.append(String.format("Customer's Identifier: (%d, %d, %d)",
+        sb.append(String.format("Identifier: (%d, %d, %d)",
                 customerInfo.getInt("C_W_ID"),
                 customerInfo.getInt("C_D_ID"),
                 customerInfo.getInt("C_ID")));
         sb.append(delimiter);
 
-        sb.append(String.format("Customer's Name: (%s, %s, %s)",
+        sb.append(String.format("Name: (%s, %s, %s)",
                 customerInfo.getString("C_FIRST"),
                 customerInfo.getString("C_MIDDLE"),
                 customerInfo.getString("C_LAST")));
         sb.append(delimiter);
 
-        sb.append(String.format("Customer's Address: (%s, %s, %s, %s, %s)",
+        sb.append(String.format("Address: (%s, %s, %s, %s, %s)",
                 customerInfo.getString("C_STREET_1"),
                 customerInfo.getString("C_STREET_2"),
                 customerInfo.getString("C_CITY"),
@@ -34,22 +35,22 @@ public class OutputFormatter {
                 customerInfo.getString("C_ZIP")));
         sb.append(delimiter);
 
-        sb.append(String.format("Customer's Phone: %s", customerInfo.getString("C_PHONE")));
+        sb.append(String.format("Phone: %s", customerInfo.getString("C_PHONE")));
         sb.append(delimiter);
 
-        sb.append(String.format("Customer's Since: %s", customerInfo.getString("C_SINCE")));
+        sb.append(String.format("Since: %s", customerInfo.getTimestamp("C_SINCE").toInstant()));
         sb.append(delimiter);
 
-        sb.append(String.format("Customer's Credit status: %s", customerInfo.getString("C_CREDIT")));
+        sb.append(String.format("Credit status: %s", customerInfo.getString("C_CREDIT")));
         sb.append(delimiter);
 
-        sb.append(String.format("Customer's Credit limit: %f", customerInfo.getBigDecimal("C_CREDIT_LIM").doubleValue()));
+        sb.append(String.format("Credit limit: %s", customerInfo.getBigDecimal("C_CREDIT_LIM").doubleValue()));
         sb.append(delimiter);
 
-        sb.append(String.format("Customer's Discount: %f", customerInfo.getBigDecimal("C_DISCOUNT").doubleValue()));
+        sb.append(String.format("Discount: %s", customerInfo.getBigDecimal("C_DISCOUNT").doubleValue()));
         sb.append(delimiter);
 
-        sb.append(String.format("Customer's Balance: %f", customerInfo.getBigDecimal("C_BALANCE").doubleValue()));
+        sb.append(String.format("Balance: %s", balance));
 
         return sb.toString();
     }
@@ -86,7 +87,7 @@ public class OutputFormatter {
         return sb.toString();
     }
 
-    public static String formatLastOrderInfo(int lastOrderId, int carrierId, Date datetime)   {
+    public static String formatLastOrderInfo(int lastOrderId, int carrierId, Instant datetime)   {
         StringBuilder sb = new StringBuilder();
         sb.append(String.format("Last order ID: %d, Carrier ID: %d, Datetime: %s",
                 lastOrderId, carrierId, datetime.toString()));
