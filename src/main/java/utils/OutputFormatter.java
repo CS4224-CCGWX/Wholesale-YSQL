@@ -140,27 +140,27 @@ public class OutputFormatter {
     }
 
     public String formatTotalTransactions(int count) {
-        return String.format("Total number of transactions: %d\n", count);
+        return String.format("%d", count);
     }
 
     public String formatTotalElapsedTime(long totalTime) {
-        return String.format("Total elapsed time: %ds\n", totalTime);
+        return String.format("%ds", totalTime);
     }
 
     public String formatThroughput(double throughput) {
-        return String.format("Transaction throughput: %.2f per second\n", throughput);
+        return String.format("%.2f", throughput);
     }
 
     public String formatAverage(double latency) {
-        return String.format("Average latency: %.2fms\n", latency);
+        return String.format("%.2fms", latency);
     }
 
     public String formatMedian(long latency) {
-        return String.format("Median latency: %dms\n", latency);
+        return String.format("%dms", latency);
     }
 
-    public String formatPercentile(int percentile, long latency) {
-        return String.format("%dth percentile transaction latency: %dms\n", percentile, latency);
+    public String formatPercentile(long latency) {
+        return String.format("%dms", latency);
     }
 
 }
