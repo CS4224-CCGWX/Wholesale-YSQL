@@ -58,7 +58,8 @@ public class PreparedQueries {
             + "SET C_BALANCE = ?, C_YTD_PAYMENT = ?, C_PAYMENT_CNT = C_PAYMENT_CNT + 1 "
             + "WHERE C_W_ID = ? AND C_D_ID = ? AND C_ID = ?;";
 
-    public final static String getFullCustomerInfo = "SELECT C_W_ID, C_D_ID, C_ID, C_FIRST, C_MIDDLE, C_LAST, C_STREET_1, C_STREET_2, "
+    public final static String getFullCustomerInfo =
+            "SELECT C_W_ID, C_D_ID, C_ID, C_FIRST, C_MIDDLE, C_LAST, C_STREET_1, C_STREET_2, "
                     + "C_CITY, C_STATE, C_ZIP, C_PHONE, C_SINCE, C_CREDIT, C_CREDIT_LIM, C_DISCOUNT, C_BALANCE, C_YTD_PAYMENT "
                     + "FROM customer WHERE C_W_ID = ? AND C_D_ID = ? AND C_ID = ?;";
 
