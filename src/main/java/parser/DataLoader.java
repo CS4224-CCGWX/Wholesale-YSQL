@@ -18,7 +18,7 @@ public class DataLoader {
 
     private final String YSQLSH_PATH = "/home/stuproj/cs4224i/yugabyte-2.14.2.0/bin/ysqlsh";
 
-    private final String schemaPath = "/home/stuproj/cs4224i/project_files/data_files/schema.sql";
+    private final String schemaPath = "/home/stuproj/cs4224i/Wholesale-YSQL/src/main/resources/schema.sql";
 
     private final String dataDir = "/home/stuproj/cs4224i/project_files/data_files";
     Connection session;
