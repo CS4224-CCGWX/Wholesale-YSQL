@@ -109,9 +109,9 @@ public class OutputFormatter {
     }
 
     public static String formatItemInfo(ResultSet itemInfo) throws SQLException {
-        if (!itemInfo.next()) {
-            throw new SQLException();
-        }
+//        if (!itemInfo.next()) {
+//            throw new SQLException();
+//        }
 
         StringBuilder sb = new StringBuilder();
         sb.append(String.format("\tItem number: %d, Supply warehouse ID: %d, Quantity: %d, Price: %.2f, Datetime: %s",
