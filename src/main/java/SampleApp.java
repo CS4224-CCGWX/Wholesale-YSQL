@@ -20,50 +20,43 @@ public class SampleApp {
     private static DataLoader dataLoader;
     private static QueryUtils utils;
 
+    /*
+    args[0] - ip     args[1] - port
+     */
     public static void main(String[] args) throws SQLException {
+        if (args.length < 3) {
+            System.err.println("error parameters");
+            return;
+        }
 
-        Properties settings = new Properties();
+        String ip = args[0], port = args[1], dbUser = "yugabyte", action = args[2];
         try {
-            settings.load(SampleApp.class.getResourceAsStream("app.properties"));
-            conn = connectToDB(settings);
+            conn = connectToDB(ip, port);
         } catch (Exception e) {
             e.printStackTrace();
             return;
         }
 
-        dataLoader = new DataLoader(conn, settings);
+        dataLoader = new DataLoader(conn, ip, port, dbUser);
         utils = new QueryUtils(conn);
 
-        String action = args[0];
         if (action.equals("load")) {
             dataLoader.loadAll();
         } else if (action.equals("run")) {
-            run(args, conn);
+            run(conn);
         } else {
             System.err.printf("Action: %s not specified", action);
         }
     }
 
-    private static Connection connectToDB(Properties settings) throws Exception {
+    private static Connection connectToDB(String ip, String port) throws Exception {
         YBClusterAwareDataSource ds = new YBClusterAwareDataSource();
-        ds.setUrl("jdbc:yugabytedb://" + settings.getProperty("host") + ":"
-                + settings.getProperty("port") + "/cs4224");
-        ds.setUser(settings.getProperty("dbUser"));
-        ds.setPassword(settings.getProperty("dbPassword"));
-
-        String sslMode = settings.getProperty("sslMode");
-        if (!sslMode.isEmpty() && !sslMode.equalsIgnoreCase("disable")) {
-            ds.setSsl(true);
-            ds.setSslMode(sslMode);
-
-            if (!settings.getProperty("sslRootCert").isEmpty())
-                ds.setSslRootCert(settings.getProperty("sslRootCert"));
-        }
-
+        ds.setUrl(String.format("jdbc:yugabytedb://%s:%s/yugabyte", ip, port));
+        ds.setUser("yugabyte");
         return ds.getConnection();
     }
 
-    private static void run(String[] args, Connection conn) throws SQLException {
+    private static void run(Connection conn) throws SQLException {
         TransactionParser transactionParser = new TransactionParser(conn, utils);
         OutputFormatter outputFormatter = new OutputFormatter();
 
