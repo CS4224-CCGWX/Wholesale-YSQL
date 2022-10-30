@@ -34,31 +34,20 @@ public class SampleApp {
         dataLoader = new DataLoader(conn, settings);
         utils = new QueryUtils(conn);
 
-
-//        String action = args[0];
-        String action = "run";
-        switch (action) {
-            case "load" -> {
-                dataLoader.loadAll();
-            }
-            case "run" -> {
-                run(args, conn);
-            }
-
-//            case "summary": {
-//                summary(args);
-//                break;
-//            }
-            default -> {
-                System.err.printf("Action: %s not specified", action);
-            }
+        String action = args[0];
+        if (action.equals("load")) {
+            dataLoader.loadAll();
+        } else if (action.equals("run")) {
+            run(args, conn);
+        } else {
+            System.err.printf("Action: %s not specified", action);
         }
     }
 
     private static Connection connectToDB(Properties settings) throws Exception {
         YBClusterAwareDataSource ds = new YBClusterAwareDataSource();
         ds.setUrl("jdbc:yugabytedb://" + settings.getProperty("host") + ":"
-                + settings.getProperty("port") + "/yugabyte");
+                + settings.getProperty("port") + "/cs4224");
         ds.setUser(settings.getProperty("dbUser"));
         ds.setPassword(settings.getProperty("dbPassword"));
 

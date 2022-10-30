@@ -35,17 +35,25 @@ public class TransactionParser {
         String[] inputs = line.split(SEPARATOR);
         String txType = inputs[0];
 
-        return switch (txType) {
-            case "N" -> parseNewOrderTransaction(inputs);
-            case "P" -> parsePaymentTransaction(inputs);
-            case "D" -> parseDeliveryTransaction(inputs);
-            case "O" -> parseOrderStatusTransaction(inputs);
-            case "S" -> parseStockLevelTransaction(inputs);
-            case "I" -> parsePopularItemTransaction(inputs);
-            case "T" -> parseTopBalanceTransaction();
-            case "R" -> parseRelatedCustomerTransaction(inputs);
-            default -> throw new RuntimeException("Invalid type of transaction");
-        };
+        if (txType.equals("N")) {
+            return parseNewOrderTransaction(inputs);
+        } else if (txType.equals("P")) {
+            return parsePaymentTransaction(inputs);
+        } else if (txType.equals("D")) {
+            return parseDeliveryTransaction(inputs);
+        } else if (txType.equals("O")) {
+            return parseOrderStatusTransaction(inputs);
+        } else if (txType.equals("S")) {
+            return parseStockLevelTransaction(inputs);
+        } else if (txType.equals("I")) {
+            return parsePopularItemTransaction(inputs);
+        } else if (txType.equals("T")) {
+            return parseTopBalanceTransaction();
+        } else if (txType.equals("R")) {
+            return parseRelatedCustomerTransaction(inputs);
+        } else {
+            throw new RuntimeException("Invalid type of transaction");
+        }
     }
 
     public NewOrderTransaction parseNewOrderTransaction(String[] inputs) {
