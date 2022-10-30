@@ -168,7 +168,7 @@ public class NewOrderTransaction extends AbstractTransaction {
         formattedNewOrder.setInt(6, nOrderLines);
         formattedNewOrder.setInt(7, isAllLocal);
 
-        this.executeQuery(formattedNewOrder);
+        this.executeUpdate(formattedNewOrder);
 
 
         /*
@@ -287,7 +287,7 @@ public class NewOrderTransaction extends AbstractTransaction {
             formattedCreateNewOrderLine.setBigDecimal(9, BigDecimal.valueOf(itemAmount));
             formattedCreateNewOrderLine.setString(10, distInfo);
 
-            this.executeQuery(formattedCreateNewOrderLine);
+            this.executeUpdate(formattedCreateNewOrderLine);
         }
 
         /*
