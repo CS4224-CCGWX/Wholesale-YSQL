@@ -124,6 +124,8 @@ public class DeliveryTransaction extends AbstractTransaction {
             formattedGetCustomerBalance.setInt(3, customerId);
             ResultSet customers = this.executeQuery(formattedGetCustomerBalance);
 
+            System.out.println("  warehouseId: "  + warehouseId + "  districtNo:  " + districtNo
+            + "  customerId:  " + customerId);
             if (!customers.next()) {
                 error("getCustomerBalance");
                 throw new SQLException();

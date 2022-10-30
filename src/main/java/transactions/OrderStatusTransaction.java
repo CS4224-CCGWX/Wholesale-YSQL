@@ -92,11 +92,8 @@ public class OrderStatusTransaction extends AbstractTransaction {
         formattedGetCustomerLastOrderItemsInfo.setInt(3, lastOrderId);
         ResultSet itemsInfo = this.executeQuery(formattedGetCustomerLastOrderItemsInfo);
 
-        System.out.println("customerWarehouseId: " + customerWarehouseId + "   customerDistrictId : " + customerDistrictId +
-                " lastOrderId:  " + lastOrderId);
         io.println("Items of last order:");
         while(itemsInfo.next()) {
-            System.out.println(itemsInfo);
             io.println(OutputFormatter.formatItemInfo(itemsInfo));
         }
 
