@@ -1,26 +1,35 @@
 package utils;
 
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class PerformanceReportGenerator {
-    public static void generatePerformanceReport(List<Long> latencyList, long totalTime) {
+    private final static String reportFilePath = "/home/stuproj/cs4224i/project_files/report.csv";
+//    private final static String reportFilePath = "/Users/siyuan/Desktop/NUS/cs4224/project/Wholesale-YSQL/project_files/report.csv";
+    private static String performanceFormat = "%d,%s,%s,%s,%s,%s,%s,%s\n";
+
+    static FileWriter fw;
+    public static void generatePerformanceReport(List<Long> latencyList, long totalTime, int client) throws IOException {
         Collections.sort(latencyList);
         int count = latencyList.size();
         long sum = latencyList.stream().mapToLong(Long::longValue).sum();
         OutputFormatter outputFormatter = new OutputFormatter();
 
-        System.err.println(OutputFormatter.linebreak);
-        System.err.println("Performance Report: ");
-        System.err.printf(outputFormatter.formatTotalTransactions(count));
-        System.err.printf(outputFormatter.formatTotalElapsedTime(totalTime));
-        System.err.printf(outputFormatter.formatThroughput((double) count / totalTime));
-        System.err.printf(outputFormatter.formatAverage((double) convertToMs(sum) / count));
-        System.err.printf(outputFormatter.formatMedian(convertToMs(getMedian(latencyList))));
-        System.err.printf(outputFormatter.formatPercentile(95, convertToMs(getByPercentile(latencyList, 95))));
-        System.err.printf(outputFormatter.formatPercentile(99, convertToMs(getByPercentile(latencyList, 99))));
-        System.err.println(OutputFormatter.linebreak);
+        fw = new FileWriter(reportFilePath, true);
+        fw.write(String.format(performanceFormat,client, outputFormatter.formatTotalTransactions(count),
+                outputFormatter.formatTotalElapsedTime(totalTime),
+                outputFormatter.formatThroughput((double) count / totalTime),
+                outputFormatter.formatAverage((double) convertToMs(sum) / count),
+                outputFormatter.formatMedian(convertToMs(getMedian(latencyList))),
+                outputFormatter.formatPercentile(95, convertToMs(getByPercentile(latencyList, 95))),
+                outputFormatter.formatPercentile(99, convertToMs(getByPercentile(latencyList, 99)))
+                )
+        );
+        fw.close();
     }
 
     private static long convertToMs(long nano) {

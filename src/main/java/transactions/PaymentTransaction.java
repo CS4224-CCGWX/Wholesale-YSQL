@@ -1,5 +1,6 @@
 package transactions;
 
+import utils.IO;
 import utils.OutputFormatter;
 import utils.PreparedQueries;
 
@@ -26,8 +27,8 @@ public class PaymentTransaction extends AbstractTransaction{
             formattedGetFullCustomerInfo, formattedUpdateCustomerPaymentInfo;
 
 
-    public PaymentTransaction(Connection connection, int cwid, int cdid, int cid, double p) throws SQLException {
-        super(connection);
+    public PaymentTransaction(Connection connection, IO io, int cwid, int cdid, int cid, double p) throws SQLException {
+        super(connection, io);
         customerId = cid;
         warehouseId = cwid;
         districtId = cdid;
@@ -133,7 +134,7 @@ public class PaymentTransaction extends AbstractTransaction{
         sb.append(String.format("Payment: %.2f", payment));
         sb.append(delimiter);
 
-        System.out.println(sb);
+        io.println(sb);
     }
 
     public String toString() {
@@ -141,6 +142,6 @@ public class PaymentTransaction extends AbstractTransaction{
     }
 
     public void error(String s) {
-        System.out.println("[Error]: Payment " + s + " are missing");
+        System.err.println("[Error]: Payment " + s + " are missing");
     }
 }

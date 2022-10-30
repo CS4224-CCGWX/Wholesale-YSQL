@@ -1,5 +1,6 @@
 package transactions;
 
+import utils.IO;
 import utils.PreparedQueries;
 import utils.TimeFormatter;
 
@@ -29,8 +30,8 @@ public class NewOrderTransaction extends AbstractTransaction {
             formattedGetWarehouseTax, formattedUpdateStockQty, formattedGetStockDistInfo,
             formattedCreateNewOrderLine;
 
-    public NewOrderTransaction(Connection connection, int cid, int wid, int did, int n) throws SQLException {
-        super(connection);
+    public NewOrderTransaction(Connection connection, IO io, int cid, int wid, int did, int n) throws SQLException {
+        super(connection, io);
         customerId = cid;
         warehouseId = wid;
         districtId = did;
@@ -52,9 +53,9 @@ public class NewOrderTransaction extends AbstractTransaction {
         formattedCreateNewOrderLine = connection.prepareStatement(PreparedQueries.createNewOrderLine);
     }
 
-    public NewOrderTransaction(Connection session, int cid, int wid, int did, int n,
+    public NewOrderTransaction(Connection session, IO io, int cid, int wid, int did, int n,
                                List<Integer> itemIds, List<Integer> quantities, List<Integer> supplyWarehouseIds) {
-        super(session);
+        super(session, io);
         customerId = cid;
         warehouseId = wid;
         districtId = did;
@@ -326,16 +327,16 @@ public class NewOrderTransaction extends AbstractTransaction {
         String cLast = cInfo.getString("C_LAST");
         String cCredit = cInfo.getString("C_CREDIT");
 
-        System.out.println("*** New Order Transaction Summary ***");
-        System.out.printf(
+        io.println("*** New Order Transaction Summary ***");
+        io.printf(
                 "Customer ID: (%d, %d, %d), Last name:%s, Credit:%s, C_DISCOUNT:%.4f\n",
                 warehouseId, districtId, customerId, cLast, cCredit, cDiscount);
-        System.out.printf("Warehouse tax:%.4f, District tax:%.4f\n", wTax, dTax);
-        System.out.printf("Order ID:%d, Order entry date:%s\n", orderId, TimeFormatter.formatTime(orderDateTime));
-        System.out.printf("#items:%d, Total amount:%.2f\n", nOrderLines, totalAmount);
-        System.out.println("Items information:");
+        io.printf("Warehouse tax:%.4f, District tax:%.4f\n", wTax, dTax);
+        io.printf("Order ID:%d, Order entry date:%s\n", orderId, TimeFormatter.formatTime(orderDateTime));
+        io.printf("#items:%d, Total amount:%.2f\n", nOrderLines, totalAmount);
+        io.println("Items information:");
         for (int i = 0; i < nOrderLines; ++i) {
-            System.out.printf(
+            io.printf(
                     "\t Item number: %d, name: %s, Supplier warehouse: %d, quantity: %d, Order-line amount: %.2f, Adjusted quantity: %d\n",
                     itemIds.get(i), itemNames.get(i), supplyWarehouseIds.get(i), quantities.get(i), itemAmounts.get(i), adjustQuantities.get(i));
         }
@@ -343,7 +344,7 @@ public class NewOrderTransaction extends AbstractTransaction {
     }
 
     public void error(String s) {
-        System.out.println("[Error]: NewOrder " + s + " are missing");
+        System.err.println("[Error]: NewOrder " + s + " are missing");
     }
 
 }

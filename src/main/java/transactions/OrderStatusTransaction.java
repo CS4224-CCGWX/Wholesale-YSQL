@@ -1,5 +1,6 @@
 package transactions;
 
+import utils.IO;
 import utils.OutputFormatter;
 import utils.PreparedQueries;
 
@@ -19,8 +20,8 @@ public class OrderStatusTransaction extends AbstractTransaction {
     private PreparedStatement formattedGetCustomerLastOrderInfo, formattedGetCustomerFullNameAndBalance,
             formattedGetCustomerLastOrderItemsInfo;
 
-    public OrderStatusTransaction(Connection connection, int cwid, int cdid, int cid) throws SQLException {
-        super(connection);
+    public OrderStatusTransaction(Connection connection, IO io, int cwid, int cdid, int cid) throws SQLException {
+        super(connection, io);
         customerWarehouseId = cwid;
         customerDistrictId = cdid;
         customerId = cid;
@@ -62,10 +63,10 @@ public class OrderStatusTransaction extends AbstractTransaction {
         formattedGetCustomerFullNameAndBalance.setInt(3, customerId);
         ResultSet customerRes = this.executeQuery(formattedGetCustomerFullNameAndBalance);
 
-        System.out.println("*** Order Status Transaction Summary ***");
+        io.println("*** Order Status Transaction Summary ***");
 
         String customerInfo = OutputFormatter.formatCustomerFullNameAndBalance(customerRes);
-        System.out.println(customerInfo);
+        io.println(customerInfo);
 
         // Output Customer Last Order
         formattedGetCustomerLastOrderInfo.setInt(1, customerWarehouseId);
@@ -81,7 +82,7 @@ public class OrderStatusTransaction extends AbstractTransaction {
         int carrierId = lastOrderInfo.getInt("O_CARRIER_ID");
         Instant orderDateTime = lastOrderInfo.getTimestamp("O_ENTRY_D").toInstant();
         String customerLastOrder = OutputFormatter.formatLastOrderInfo(lastOrderId, carrierId, orderDateTime);
-        System.out.println(customerLastOrder);
+        io.println(customerLastOrder);
 
 
         // Output Customer Last Order for each item
@@ -90,15 +91,15 @@ public class OrderStatusTransaction extends AbstractTransaction {
         formattedGetCustomerLastOrderItemsInfo.setInt(3, lastOrderId);
         ResultSet itemsInfo = this.executeQuery(formattedGetCustomerLastOrderItemsInfo);
 
-        System.out.println("Items of last order:");
+        io.println("Items of last order:");
         while(itemsInfo.next()) {
-            System.out.println(OutputFormatter.formatItemInfo(itemsInfo));
+            io.println(OutputFormatter.formatItemInfo(itemsInfo));
         }
 
     }
 
     public void error(String s) {
-        System.out.println("[Error]: OrderStatus " + s + " are missing");
+        System.err.println("[Error]: OrderStatus " + s + " are missing");
     }
 
 }

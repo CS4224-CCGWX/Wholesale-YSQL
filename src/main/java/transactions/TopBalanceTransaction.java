@@ -1,5 +1,6 @@
 package transactions;
 
+import utils.IO;
 import utils.PreparedQueries;
 import utils.QueryUtils;
 
@@ -12,8 +13,8 @@ public class TopBalanceTransaction extends AbstractTransaction {
     PreparedStatement getDistrictStmt, getWarehouseStmt;
 
 
-    public TopBalanceTransaction(Connection connection, QueryUtils utils) throws SQLException {
-        super(connection);
+    public TopBalanceTransaction(Connection connection, IO io, QueryUtils utils) throws SQLException {
+        super(connection, io);
         this.queryUtils = utils;
         getDistrictStmt = connection.prepareStatement(PreparedQueries.getDistrictWithIDs);
         getWarehouseStmt = connection.prepareStatement(PreparedQueries.getWarehouseWithIDs);
@@ -92,7 +93,7 @@ public class TopBalanceTransaction extends AbstractTransaction {
                 ));
                 sb.append("\n");
             }
-            System.out.println(sb);
+            io.println(sb);
         } catch (Exception e) {
             e.printStackTrace();
         }

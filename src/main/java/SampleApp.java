@@ -2,10 +2,13 @@ import com.yugabyte.ysql.YBClusterAwareDataSource;
 import parser.DataLoader;
 import parser.TransactionParser;
 import transactions.AbstractTransaction;
+import utils.IO;
 import utils.OutputFormatter;
 import utils.PerformanceReportGenerator;
 import utils.QueryUtils;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -20,16 +23,29 @@ public class SampleApp {
     private static DataLoader dataLoader;
     private static QueryUtils utils;
 
+    private static IO io;
+
     /*
-    args[0] - ip     args[1] - port
+    args[0] - ip
+    args[1] - port
+    args[2] - client number
+    args[3] - action
      */
-    public static void main(String[] args) throws SQLException {
-        if (args.length < 3) {
+    public static void main(String[] args) throws SQLException, IOException {
+        if (args.length < 4) {
             System.err.println("error parameters");
             return;
         }
 
-        String ip = args[0], port = args[1], dbUser = "yugabyte", action = args[2];
+        String ip = args[0], port = args[1], dbUser = "yugabyte", action = args[3];
+        int client = Integer.parseInt(args[2]);
+        try {
+            io = new IO(client);
+        } catch (FileNotFoundException e) {
+            System.err.println("transaction file not found");
+        }
+
+
         try {
             conn = connectToDB(ip, port);
         } catch (Exception e) {
@@ -43,7 +59,7 @@ public class SampleApp {
         if (action.equals("load")) {
             dataLoader.loadAll();
         } else if (action.equals("run")) {
-            run(conn);
+            run(conn, client);
         } else {
             System.err.printf("Action: %s not specified", action);
         }
@@ -56,8 +72,8 @@ public class SampleApp {
         return ds.getConnection();
     }
 
-    private static void run(Connection conn) throws SQLException {
-        TransactionParser transactionParser = new TransactionParser(conn, utils);
+    private static void run(Connection conn, int client) throws SQLException, IOException {
+        TransactionParser transactionParser = new TransactionParser(conn, utils, io);
         OutputFormatter outputFormatter = new OutputFormatter();
 
         List<Long> latencyList = new ArrayList<>();
@@ -73,8 +89,8 @@ public class SampleApp {
                 continue;
             }
 
-            System.out.println(OutputFormatter.linebreak);
-            System.out.println(outputFormatter.formatTransactionID(latencyList.size()));
+            io.println(OutputFormatter.linebreak);
+            io.println(outputFormatter.formatTransactionID(latencyList.size()));
 
             txStart = System.nanoTime();
             try {
@@ -86,16 +102,16 @@ public class SampleApp {
             }
 
             txEnd = System.nanoTime();
-            System.out.println(OutputFormatter.linebreak);
+            io.println(OutputFormatter.linebreak);
 
             elapsedTime = txEnd - txStart;
             latencyList.add(elapsedTime);
         }
+        io.close();
         fileEnd = System.nanoTime();
 
         long totalElapsedTime = TimeUnit.SECONDS.convert(fileEnd - fileStart, TimeUnit.NANOSECONDS);
-        PerformanceReportGenerator.generatePerformanceReport(latencyList, totalElapsedTime);
+        PerformanceReportGenerator.generatePerformanceReport(latencyList, totalElapsedTime, client);
 
-        transactionParser.close();
     }
 }
