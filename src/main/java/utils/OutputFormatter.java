@@ -113,14 +113,19 @@ public class OutputFormatter {
 //            throw new SQLException();
 //        }
 
-        StringBuilder sb = new StringBuilder();
-        sb.append(String.format("\tItem number: %d, Supply warehouse ID: %d, Quantity: %d, Price: %.2f, Datetime: %s",
+        Instant time = itemInfo.getTimestamp("OL_DELIVERY_D").toInstant();
+        String deliverTime = null;
+        if (time == null) {
+            deliverTime = "Not delivered";
+        } else {
+            deliverTime = TimeFormatter.formatTime(time);
+        }
+        return String.format("Item number: %d, Supply warehouse ID: %d, Quantity: %d, Price: %.2f, Delivery time: %s",
                 itemInfo.getInt("OL_I_ID"),
                 itemInfo.getInt("OL_SUPPLY_W_ID"),
-                itemInfo.getInt("OL_QUANTITY"),
+                itemInfo.getBigDecimal("OL_QUANTITY").intValue(),
                 itemInfo.getBigDecimal("OL_AMOUNT").doubleValue(),
-                itemInfo.getTimestamp("OL_DELIVERY_D").toString()));
-        return sb.toString();
+                deliverTime);
     }
 
     public String formatTransactionID(int i) {

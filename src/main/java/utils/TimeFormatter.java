@@ -2,6 +2,7 @@ package utils;
 
 import java.text.Format;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
@@ -17,8 +18,8 @@ public class TimeFormatter {
         return new Date();
     }
 
-    public static String formatTime(Date dateTime) {
-        return instantFormatter.format(dateTime.toInstant());
+    public static String formatTime(Instant dateTime) {
+        return instantFormatter.format(dateTime);
     }
     public static String getCurrentTimestamp() {
         return dateFormatter.format(new Date());
