@@ -1,5 +1,6 @@
 package transactions;
 
+import utils.IO;
 import utils.PreparedQueries;
 import utils.QueryUtils;
 
@@ -51,9 +52,9 @@ public class RelatedCustomerTransaction extends AbstractTransaction {
 
     PreparedStatement getOrderedItemsByCustomerStmt, getPossibleCustomerStmt;
 
-    public RelatedCustomerTransaction(Connection conn, QueryUtils utils, int warehouseID,
+    public RelatedCustomerTransaction(Connection conn, IO io, QueryUtils utils, int warehouseID,
                                       int districtID, int customerID) throws SQLException {
-        super(conn);
+        super(conn, io);
         this.warehouseID = warehouseID;
         this.districtID = districtID;
         this.customerID = customerID;
@@ -109,7 +110,7 @@ public class RelatedCustomerTransaction extends AbstractTransaction {
             sb.append(c.toString());
             sb.append('\n');
         }
-        System.out.println(sb);
+        io.println(sb);
     }
 
     private boolean isRelatedCustomer(HashMap<Integer, HashSet<Integer>> itemIdByCustomer,

@@ -1,5 +1,6 @@
 package transactions;
 
+import utils.IO;
 import utils.QueryUtils;
 
 import java.sql.Connection;
@@ -12,8 +13,8 @@ public class PopularItemTransaction extends AbstractTransaction {
     int warehouseID, districtID, pastNumberOfOrders;
     QueryUtils queryUtils;
 
-    public PopularItemTransaction(Connection conn, QueryUtils utils, int warehouseID, int districtID, int pastOrders) {
-        super(conn);
+    public PopularItemTransaction(Connection conn, IO io, QueryUtils utils, int warehouseID, int districtID, int pastOrders) {
+        super(conn, io);
         this.warehouseID = warehouseID;
         this.districtID = districtID;
         this.pastNumberOfOrders = pastOrders;
@@ -64,7 +65,7 @@ public class PopularItemTransaction extends AbstractTransaction {
                 sb.append(String.format("%s, %s\n", itemName, percentage));
             }
 
-            System.out.println(sb);
+            io.println(sb);
         } catch (SQLException e) {
             e.printStackTrace();
         }

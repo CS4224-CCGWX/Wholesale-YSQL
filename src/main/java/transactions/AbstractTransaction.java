@@ -1,5 +1,7 @@
 package transactions;
 
+import utils.IO;
+
 import java.sql.*;
 import java.time.Duration;
 import java.util.HashMap;
@@ -10,11 +12,13 @@ public abstract class AbstractTransaction {
 
 //    private ConsistencyLevel defaultConsistencyLevel;
     private final int defaultTimeout = 5;
+    protected IO io;
 
     private static Map<String, PreparedStatement> preparedStatementHashMap = new HashMap<>();
 
-    AbstractTransaction(Connection connection) {
+    AbstractTransaction(Connection connection, IO io) {
         this.connection = connection;
+        this.io = io;
     }
 
     protected ResultSet executeQueryWithTimeout(String query, int timeout, Object... values) throws SQLException {

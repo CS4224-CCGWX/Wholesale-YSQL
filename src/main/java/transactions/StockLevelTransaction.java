@@ -1,5 +1,6 @@
 package transactions;
 
+import utils.IO;
 import utils.PreparedQueries;
 import utils.QueryUtils;
 
@@ -15,9 +16,9 @@ public class StockLevelTransaction extends AbstractTransaction {
 
     PreparedStatement getStockStmt;
 
-    public StockLevelTransaction(Connection conn, QueryUtils utils, int warehouseId, int districtID,
+    public StockLevelTransaction(Connection conn, IO io, QueryUtils utils, int warehouseId, int districtID,
                                  int threshold, int lastOrders) throws SQLException {
-        super(conn);
+        super(conn, io);
         this.warehouseId = warehouseId;
         this.districtID = districtID;
         this.threshold = threshold;
@@ -48,7 +49,7 @@ public class StockLevelTransaction extends AbstractTransaction {
                 }
             }
 
-            System.out.println(total);
+            io.println(total);
         } catch (SQLException e) {
             e.printStackTrace();
         }

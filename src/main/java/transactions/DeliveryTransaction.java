@@ -1,5 +1,6 @@
 package transactions;
 
+import utils.IO;
 import utils.PreparedQueries;
 import utils.TimeFormatter;
 
@@ -18,8 +19,8 @@ public class DeliveryTransaction extends AbstractTransaction {
             formattedUpdateCustomerDeliveryInfo;
 
 
-    public DeliveryTransaction(Connection connection, int wid, int cid) throws SQLException {
-        super(connection);
+    public DeliveryTransaction(Connection connection, IO io, int wid, int cid) throws SQLException {
+        super(connection, io);
         warehouseId = wid;
         carrierId = cid;
 
@@ -33,7 +34,7 @@ public class DeliveryTransaction extends AbstractTransaction {
     }
 
     public void error(String s) {
-        System.out.println("[Error]: Delivery " + s + " are missing");
+        System.err.println("[Error]: Delivery " + s + " are missing");
     }
 
     public void execute() throws SQLException {
@@ -63,8 +64,8 @@ public class DeliveryTransaction extends AbstractTransaction {
                 return;
             }
             orderId = res.getInt("D_NEXT_DELIVER_O_ID");
-            System.out.println("********** Delivery Transaction *********\n");
-            System.out.println(String.format("The next order to deliver in (%d, %d) is %d", warehouseId, districtNo, orderId));
+            io.println("********** Delivery Transaction *********\n");
+            io.println(String.format("The next order to deliver in (%d, %d) is %d", warehouseId, districtNo, orderId));
 
             /*
             (b) Update the order X by setting O CARRIER ID to CARRIER ID
@@ -136,7 +137,7 @@ public class DeliveryTransaction extends AbstractTransaction {
             formattedUpdateCustomerDeliveryInfo.setInt(3, districtNo);
             formattedUpdateCustomerDeliveryInfo.setInt(4, customerId);
             this.executeUpdate(formattedUpdateCustomerDeliveryInfo);
-            System.out.println(String.format("Updated the info of customer (%d, %d, %d)", warehouseId, districtNo, customerId));
+            io.println(String.format("Updated the info of customer (%d, %d, %d)", warehouseId, districtNo, customerId));
         }
 
     }
