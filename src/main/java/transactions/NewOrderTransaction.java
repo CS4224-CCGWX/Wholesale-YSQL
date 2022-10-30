@@ -273,7 +273,7 @@ public class NewOrderTransaction extends AbstractTransaction {
                 return ;
             }
 
-            String distInfo = res.getString(0);
+            String distInfo = res.getString(1);
 
             formattedCreateNewOrderLine.setInt(1, orderId);
             formattedCreateNewOrderLine.setInt(2, districtId);
