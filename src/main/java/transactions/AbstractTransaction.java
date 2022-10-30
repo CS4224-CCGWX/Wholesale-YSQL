@@ -43,6 +43,10 @@ public abstract class AbstractTransaction {
         return stmt.executeQuery();
     }
 
+    protected int executeUpdate(PreparedStatement stmt) throws SQLException {
+        return stmt.executeUpdate();
+    }
+
     public void execute() throws SQLException {
         return;
     }

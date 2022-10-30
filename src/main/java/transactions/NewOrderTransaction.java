@@ -120,7 +120,7 @@ public class NewOrderTransaction extends AbstractTransaction {
         formattedIncrementDistrictNextOrderId.setInt(1, warehouseId);
         formattedIncrementDistrictNextOrderId.setInt(2, districtId);
 
-        this.executeQuery(formattedIncrementDistrictNextOrderId);
+        this.executeUpdate(formattedIncrementDistrictNextOrderId);
 
 
 
@@ -209,14 +209,14 @@ public class NewOrderTransaction extends AbstractTransaction {
                 formattedUpdateStockQtyIncrRemoteCnt.setBigDecimal(2, BigDecimal.valueOf(stockYtd));
                 formattedUpdateStockQtyIncrRemoteCnt.setInt(3, supplyWarehouseId);
                 formattedUpdateStockQtyIncrRemoteCnt.setInt(4, itemId);
-                this.executeQuery(formattedUpdateStockQtyIncrRemoteCnt);
+                this.executeUpdate(formattedUpdateStockQtyIncrRemoteCnt);
 
             } else {
                 formattedUpdateStockQty.setBigDecimal(1, BigDecimal.valueOf(adjustQty));
                 formattedUpdateStockQty.setBigDecimal(2, BigDecimal.valueOf(stockYtd));
                 formattedUpdateStockQty.setInt(3, supplyWarehouseId);
                 formattedUpdateStockQty.setInt(4, itemId);
-                this.executeQuery(formattedUpdateStockQty);
+                this.executeUpdate(formattedUpdateStockQty);
             }
             /*
               3.3. ITEM_AMOUNT = quantities[i] * I_PRICE, where I_PRICE is price of itemNumber[i]

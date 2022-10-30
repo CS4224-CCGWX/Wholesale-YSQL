@@ -55,7 +55,7 @@ public class DeliveryTransaction extends AbstractTransaction {
 
             formattedUpdateOrderIdToDeliver.setInt(1, warehouseId);
             formattedUpdateOrderIdToDeliver.setInt(2, districtNo);
-            this.executeQuery(formattedUpdateOrderIdToDeliver);
+            this.executeUpdate(formattedUpdateOrderIdToDeliver);
 
             int orderId = -1;
             if (!res.next()) {
@@ -74,7 +74,7 @@ public class DeliveryTransaction extends AbstractTransaction {
             formattedUpdateCarrierIdInOrder.setInt(2, warehouseId);
             formattedUpdateCarrierIdInOrder.setInt(3, districtNo);
             formattedUpdateCarrierIdInOrder.setInt(4, orderId);
-            this.executeQuery(formattedUpdateCarrierIdInOrder);
+            this.executeUpdate(formattedUpdateCarrierIdInOrder);
 
             /*
             (c) Update all the order-lines in X by setting OL DELIVERY D to the current date and time
@@ -116,7 +116,7 @@ public class DeliveryTransaction extends AbstractTransaction {
                 formattedUpdateDeliveryDateInOrderLine.setInt(4, districtNo);
                 formattedUpdateDeliveryDateInOrderLine.setInt(5, orderId);
                 formattedUpdateDeliveryDateInOrderLine.setInt(6, olNum);
-                this.executeQuery(formattedUpdateDeliveryDateInOrderLine);
+                this.executeUpdate(formattedUpdateDeliveryDateInOrderLine);
             }
 
             formattedGetCustomerBalance.setInt(1, warehouseId);
@@ -135,7 +135,7 @@ public class DeliveryTransaction extends AbstractTransaction {
             formattedUpdateCustomerDeliveryInfo.setInt(2, warehouseId);
             formattedUpdateCustomerDeliveryInfo.setInt(3, districtNo);
             formattedUpdateCustomerDeliveryInfo.setInt(4, customerId);
-            this.executeQuery(formattedUpdateCustomerDeliveryInfo);
+            this.executeUpdate(formattedUpdateCustomerDeliveryInfo);
             System.out.println(String.format("Updated the info of customer (%d, %d, %d)", warehouseId, districtNo, customerId));
         }
 

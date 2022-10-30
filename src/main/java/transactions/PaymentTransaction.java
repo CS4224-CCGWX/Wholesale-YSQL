@@ -60,7 +60,7 @@ public class PaymentTransaction extends AbstractTransaction{
 
         formattedUpdateWarehouseYearToDateAmount.setBigDecimal(1, BigDecimal.valueOf(warehouseYtd));
         formattedUpdateWarehouseYearToDateAmount.setInt(2, warehouseId);
-        this.executeQuery(formattedUpdateWarehouseYearToDateAmount);
+        this.executeUpdate(formattedUpdateWarehouseYearToDateAmount);
 
 
         formattedGetDistrictAddressAndYtd.setInt(1, warehouseId);
@@ -78,7 +78,7 @@ public class PaymentTransaction extends AbstractTransaction{
         formattedUpdateDistrictYearToDateAmount.setBigDecimal(1, BigDecimal.valueOf(districtYtd));
         formattedUpdateDistrictYearToDateAmount.setInt(2, warehouseId);
         formattedUpdateDistrictYearToDateAmount.setInt(3, districtId);
-        this.executeQuery(formattedUpdateDistrictYearToDateAmount);
+        this.executeUpdate(formattedUpdateDistrictYearToDateAmount);
 
 
         /*
@@ -106,7 +106,7 @@ public class PaymentTransaction extends AbstractTransaction{
         formattedUpdateCustomerPaymentInfo.setInt(3, warehouseId);
         formattedUpdateCustomerPaymentInfo.setInt(4, districtId);
         formattedUpdateCustomerPaymentInfo.setInt(5, customerId);
-        this.executeQuery(formattedUpdateCustomerPaymentInfo);
+        this.executeUpdate(formattedUpdateCustomerPaymentInfo);
 
         // Output Customer Information
 
