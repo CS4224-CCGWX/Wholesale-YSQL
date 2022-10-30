@@ -241,8 +241,6 @@ CREATE TABLE IF NOT EXISTS order_line
     OL_NUMBER
     int,
     OL_C_ID int,
-    OL_I_ID
-    int,
     OL_DELIVERY_D
     timestamp,
     OL_AMOUNT
@@ -261,6 +259,8 @@ CREATE TABLE IF NOT EXISTS order_line
 (
     256
 ),
+    OL_I_ID
+    int,
     PRIMARY KEY
 (
     OL_W_ID,

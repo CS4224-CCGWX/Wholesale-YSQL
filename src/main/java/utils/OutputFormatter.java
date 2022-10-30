@@ -10,9 +10,9 @@ public class OutputFormatter {
     public final static String linebreak = "=======================================";
 
     public static String formatFullCustomerInfo(ResultSet customerInfo, double balance) throws SQLException {
-        if (!customerInfo.next()) {
-            throw new SQLException();
-        }
+//        if (!customerInfo.next()) {
+//            throw new SQLException();
+//        }
 
         StringBuilder sb = new StringBuilder();
         sb.append("Customer info: ");
@@ -59,9 +59,9 @@ public class OutputFormatter {
     }
 
     public static String formatWarehouseAddress(ResultSet warehouseAddress) throws SQLException {
-        if (!warehouseAddress.next()) {
-            throw new SQLException();
-        }
+//        if (!warehouseAddress.next()) {
+//            throw new SQLException();
+//        }
 
         StringBuilder sb = new StringBuilder();
         sb.append(String.format("Warehouse address: (%s, %s, %s, %s, %s)",
@@ -74,9 +74,9 @@ public class OutputFormatter {
     }
 
     public static String formatDistrictAddress(ResultSet districtAddress) throws SQLException {
-        if (!districtAddress.next()) {
-            throw new SQLException();
-        }
+//        if (!districtAddress.next()) {
+//            throw new SQLException();
+//        }
 
         StringBuilder sb = new StringBuilder();
         sb.append(String.format("district address: (%s, %s, %s, %s, %s)",
