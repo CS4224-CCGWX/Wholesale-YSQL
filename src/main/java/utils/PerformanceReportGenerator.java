@@ -24,8 +24,8 @@ public class PerformanceReportGenerator {
                 outputFormatter.formatThroughput((double) count / totalTime),
                 outputFormatter.formatAverage((double) convertToMs(sum) / count),
                 outputFormatter.formatMedian(convertToMs(getMedian(latencyList))),
-                outputFormatter.formatPercentile(95, convertToMs(getByPercentile(latencyList, 95))),
-                outputFormatter.formatPercentile(99, convertToMs(getByPercentile(latencyList, 99)))
+                outputFormatter.formatPercentile(convertToMs(getByPercentile(latencyList, 95))),
+                outputFormatter.formatPercentile(convertToMs(getByPercentile(latencyList, 99)))
                 )
         );
         fw.close();
