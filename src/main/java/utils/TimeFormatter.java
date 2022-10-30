@@ -21,6 +21,11 @@ public class TimeFormatter {
     public static String formatTime(Instant dateTime) {
         return instantFormatter.format(dateTime);
     }
+
+    public static String formatTime(Date dateTime) {
+        return instantFormatter.format(dateTime.toInstant());
+    }
+
     public static String getCurrentTimestamp() {
         return dateFormatter.format(new Date());
     }

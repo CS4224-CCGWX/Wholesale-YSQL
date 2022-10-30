@@ -53,9 +53,9 @@ public class NewOrderTransaction extends AbstractTransaction {
         formattedCreateNewOrderLine = connection.prepareStatement(PreparedQueries.createNewOrderLine);
     }
 
-    public NewOrderTransaction(Connection session, IO io, int cid, int wid, int did, int n,
-                               List<Integer> itemIds, List<Integer> quantities, List<Integer> supplyWarehouseIds) {
-        super(session, io);
+    public NewOrderTransaction(Connection connection, IO io, int cid, int wid, int did, int n,
+                               List<Integer> itemIds, List<Integer> quantities, List<Integer> supplyWarehouseIds) throws SQLException {
+        super(connection, io);
         customerId = cid;
         warehouseId = wid;
         districtId = did;
@@ -63,6 +63,19 @@ public class NewOrderTransaction extends AbstractTransaction {
         this.itemIds = itemIds;
         this.quantities = quantities;
         this.supplyWarehouseIds = supplyWarehouseIds;
+
+
+        formattedNextOrderIdAndTax = connection.prepareStatement(PreparedQueries.getDistrictNextOrderIdAndTax);
+        formattedIncrementDistrictNextOrderId = connection.prepareStatement(PreparedQueries.incrementDistrictNextOrderId);
+        formattedNewOrder = connection.prepareStatement(PreparedQueries.createNewOrder);
+        formattedGetStockQty = connection.prepareStatement(PreparedQueries.getStockQty);
+        formattedUpdateStockQtyIncrRemoteCnt = connection.prepareStatement(PreparedQueries.updateStockQtyIncrRemoteCnt);
+        formattedGetItemPriceAndName = connection.prepareStatement(PreparedQueries.getItemPriceAndName);
+        formattedGetCustomerLastAndCreditAndDiscount = connection.prepareStatement(PreparedQueries.getCustomerLastAndCreditAndDiscount);
+        formattedGetWarehouseTax = connection.prepareStatement(PreparedQueries.getWarehouseTax);
+        formattedUpdateStockQty = connection.prepareStatement(PreparedQueries.updateStockQty);
+        formattedGetStockDistInfo = connection.prepareStatement(PreparedQueries.getStockDistInfo);
+        formattedCreateNewOrderLine = connection.prepareStatement(PreparedQueries.createNewOrderLine);
     }
 
     public String distIdStr(int distId) {
