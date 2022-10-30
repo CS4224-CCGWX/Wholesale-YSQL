@@ -58,7 +58,7 @@ public class SampleApp {
     private static Connection connectToDB(Properties settings) throws Exception {
         YBClusterAwareDataSource ds = new YBClusterAwareDataSource();
         ds.setUrl("jdbc:yugabytedb://" + settings.getProperty("host") + ":"
-                + settings.getProperty("port") + "/cs4224");
+                + settings.getProperty("port") + "/yugabyte");
         ds.setUser(settings.getProperty("dbUser"));
         ds.setPassword(settings.getProperty("dbPassword"));
 
