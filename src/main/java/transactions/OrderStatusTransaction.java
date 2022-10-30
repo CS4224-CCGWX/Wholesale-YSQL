@@ -76,6 +76,7 @@ public class OrderStatusTransaction extends AbstractTransaction {
 
         if (!lastOrderInfo.next()) {
             error("formattedGetCustomerLastOrderInfo");
+            throw new SQLException();
         }
 
         int lastOrderId = lastOrderInfo.getInt("O_ID");

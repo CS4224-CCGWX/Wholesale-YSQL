@@ -61,7 +61,7 @@ public class DeliveryTransaction extends AbstractTransaction {
             int orderId = -1;
             if (!res.next()) {
                 error("updateOrderIdToDeliver");
-                return;
+                throw new SQLException();
             }
             orderId = res.getInt("D_NEXT_DELIVER_O_ID");
             io.println("********** Delivery Transaction *********\n");
@@ -99,7 +99,7 @@ public class DeliveryTransaction extends AbstractTransaction {
 
             if (!res.next()) {
                 error("getOrderLineInOrder");
-                return;
+                throw new SQLException();
             }
 
             int customerId = res.getInt("OL_C_ID");
@@ -126,7 +126,7 @@ public class DeliveryTransaction extends AbstractTransaction {
 
             if (!customers.next()) {
                 error("getCustomerBalance");
-                return ;
+                throw new SQLException();
             }
 
             double updatedBalance = customers.getBigDecimal(1).doubleValue() + orderAmount;

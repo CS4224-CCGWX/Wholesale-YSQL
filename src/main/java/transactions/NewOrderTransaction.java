@@ -126,7 +126,7 @@ public class NewOrderTransaction extends AbstractTransaction {
         ResultSet districtInfo = res;
         if (!res.next()) {
             error("formattedNextOrderIdAndTax");
-            return ;
+            throw new SQLException();
         }
         int orderId = res.getInt("D_NEXT_O_ID");
 
@@ -197,7 +197,7 @@ public class NewOrderTransaction extends AbstractTransaction {
 
             if (!qtyInfo.next()) {
                 error("formattedGetStockQty");
-                return ;
+                throw new SQLException();
             }
 
             int stockQty = qtyInfo.getBigDecimal("S_QUANTITY").intValue();
@@ -241,7 +241,7 @@ public class NewOrderTransaction extends AbstractTransaction {
 
             if (!itemInfo.next()) {
                 error("formattedGetItemPriceAndName");
-                return ;
+                throw new SQLException();
             }
             double price = itemInfo.getBigDecimal("I_PRICE").doubleValue();
             double itemAmount = quantity * price;
@@ -269,7 +269,7 @@ public class NewOrderTransaction extends AbstractTransaction {
 
             if (!res.next()) {
                 error("formattedGetStockDistInfo");
-                return ;
+                throw new SQLException();
             }
 
             String distInfo = res.getString(1);
@@ -303,7 +303,7 @@ public class NewOrderTransaction extends AbstractTransaction {
         if (!res.next()) {
 
             error("formattedGetWarehouseTax");
-            return ;
+            throw new SQLException();
         }
 
         double wTax = res.getBigDecimal("W_TAX").doubleValue();
@@ -317,7 +317,7 @@ public class NewOrderTransaction extends AbstractTransaction {
 
         if (!cInfo.next()) {
             error("formattedGetCustomerLastAndCreditAndDiscount");
-            return ;
+            throw new SQLException();
         }
 
         double cDiscount = cInfo.getBigDecimal("C_DISCOUNT").doubleValue();
