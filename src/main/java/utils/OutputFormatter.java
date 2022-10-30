@@ -10,6 +10,10 @@ public class OutputFormatter {
     public final static String linebreak = "=======================================";
 
     public static String formatFullCustomerInfo(ResultSet customerInfo, double balance) throws SQLException {
+        if (!customerInfo.next()) {
+            throw new SQLException();
+        }
+
         StringBuilder sb = new StringBuilder();
         sb.append("Customer info: ");
         sb.append(delimiter);
@@ -55,6 +59,10 @@ public class OutputFormatter {
     }
 
     public static String formatWarehouseAddress(ResultSet warehouseAddress) throws SQLException {
+        if (!warehouseAddress.next()) {
+            throw new SQLException();
+        }
+
         StringBuilder sb = new StringBuilder();
         sb.append(String.format("Warehouse address: (%s, %s, %s, %s, %s)",
                 warehouseAddress.getString("W_STREET_1"),
@@ -66,6 +74,10 @@ public class OutputFormatter {
     }
 
     public static String formatDistrictAddress(ResultSet districtAddress) throws SQLException {
+        if (!districtAddress.next()) {
+            throw new SQLException();
+        }
+
         StringBuilder sb = new StringBuilder();
         sb.append(String.format("district address: (%s, %s, %s, %s, %s)",
                 districtAddress.getString("D_STREET_1"),
@@ -77,6 +89,9 @@ public class OutputFormatter {
     }
 
     public static String formatCustomerFullNameAndBalance(ResultSet cInfo) throws SQLException {
+        if (!cInfo.next()) {
+            throw new SQLException();
+        }
         StringBuilder sb = new StringBuilder();
         sb.append(String.format("Customer name: （%s, %s, %s), balance: %.2f",
                 cInfo.getString("C_FIRST"),
@@ -94,6 +109,9 @@ public class OutputFormatter {
     }
 
     public static String formatItemInfo(ResultSet itemInfo) throws SQLException {
+        if (!itemInfo.next()) {
+            throw new SQLException();
+        }
 
         StringBuilder sb = new StringBuilder();
         sb.append(String.format("\tItem number: %d, Supply warehouse ID: %d, Quantity: %d, Price: %.2f, Datetime: %s",
