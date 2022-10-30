@@ -2,9 +2,9 @@ package parser;
 
 import transactions.*;
 
+import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.sql.Connection;
 
 public class TransactionParser {
     Scanner scanner = new Scanner(System.in);
@@ -30,26 +30,17 @@ public class TransactionParser {
         String[] inputs = line.split(SEPARATOR);
         String txType = inputs[0];
 
-        switch (txType) {
-            case "N":
-                return parseNewOrderTransaction(inputs);
-            case "P":
-                return parsePaymentTransaction(inputs);
-            case "D":
-                return parseDeliveryTransaction(inputs);
-            case "O":
-                return parseOrderStatusTransaction(inputs);
-//            case "S":
-//                return parseStockLevelTransaction(inputs);
-//            case "I":
-//                return parsePopularItemTransaction(inputs);
-//            case "T":
-//                return parseTopBalanceTransaction();
-//            case "R":
-//                return parseRelatedCustomerTransaction(inputs);
-            default:
-                throw new RuntimeException("Invalid type of transaction");
-        }
+        return switch (txType) {
+            case "N" -> parseNewOrderTransaction(inputs);
+            case "P" -> parsePaymentTransaction(inputs);
+            case "D" -> parseDeliveryTransaction(inputs);
+            case "O" -> parseOrderStatusTransaction(inputs);
+            case "S" -> parseStockLevelTransaction(inputs);
+            case "I" -> parsePopularItemTransaction(inputs);
+            case "T" -> parseTopBalanceTransaction();
+            case "R" -> parseRelatedCustomerTransaction(inputs);
+            default -> throw new RuntimeException("Invalid type of transaction");
+        };
     }
 
     public NewOrderTransaction parseNewOrderTransaction(String[] inputs) {
@@ -97,35 +88,35 @@ public class TransactionParser {
         int c_id = Integer.parseInt(inputs[index++]);
         return new OrderStatusTransaction(session, w_id, d_id, c_id);
     }
-//
-//    private StockLevelTransaction parseStockLevelTransaction(String[] inputs) {
-//        int index = 1;
-//        int w_id = Integer.parseInt(inputs[index++]);
-//        int d_id = Integer.parseInt(inputs[index++]);
-//        double t = Double.parseDouble(inputs[index++]);
-//        int l = Integer.parseInt(inputs[index++]);
-//
-//        return new StockLevelTransaction(session, w_id, d_id, t, l);
-//    }
-//
-//    private PopularItemTransaction parsePopularItemTransaction(String[] inputs) {
-//        int index = 1;
-//        int w_id = Integer.parseInt(inputs[index++]);
-//        int d_id = Integer.parseInt(inputs[index++]);
-//        int l = Integer.parseInt(inputs[index++]);
-//        return new PopularItemTransaction(session, w_id, d_id, l);
-//    }
-//
-//    private TopBalanceTransaction parseTopBalanceTransaction() {
-//        return new TopBalanceTransaction(session);
-//    }
-//
-//    private RelatedCustomerTransaction parseRelatedCustomerTransaction(String[] inputs) {
-//        int index = 1;
-//        int w_id = Integer.parseInt(inputs[index++]);
-//        int d_id = Integer.parseInt(inputs[index++]);
-//        int c_id = Integer.parseInt(inputs[index++]);
-//        return new RelatedCustomerTransaction(session, w_id, d_id, c_id);
-//    }
+
+    private StockLevelTransaction parseStockLevelTransaction(String[] inputs) {
+        int index = 1;
+        int w_id = Integer.parseInt(inputs[index++]);
+        int d_id = Integer.parseInt(inputs[index++]);
+        int t = Integer.parseInt(inputs[index++]);
+        int l = Integer.parseInt(inputs[index++]);
+
+        return new StockLevelTransaction(session, w_id, d_id, t, l);
+    }
+
+    private PopularItemTransaction parsePopularItemTransaction(String[] inputs) {
+        int index = 1;
+        int w_id = Integer.parseInt(inputs[index++]);
+        int d_id = Integer.parseInt(inputs[index++]);
+        int l = Integer.parseInt(inputs[index++]);
+        return new PopularItemTransaction(session, w_id, d_id, l);
+    }
+
+    private TopBalanceTransaction parseTopBalanceTransaction() {
+        return new TopBalanceTransaction(session);
+    }
+
+    private RelatedCustomerTransaction parseRelatedCustomerTransaction(String[] inputs) {
+        int index = 1;
+        int w_id = Integer.parseInt(inputs[index++]);
+        int d_id = Integer.parseInt(inputs[index++]);
+        int c_id = Integer.parseInt(inputs[index++]);
+        return new RelatedCustomerTransaction(session, w_id, d_id, c_id);
+    }
 }
 

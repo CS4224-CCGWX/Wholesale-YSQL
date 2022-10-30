@@ -1,13 +1,10 @@
 package transactions;
 
-import com.datastax.driver.core.BoundStatement;
 import com.datastax.driver.core.ConsistencyLevel;
 
 import java.sql.*;
 import java.time.Duration;
-import java.util.Formatter;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public abstract class AbstractTransaction {
@@ -48,10 +45,6 @@ public abstract class AbstractTransaction {
         return stmt.executeQuery();
     }
 
-//    public void execute() {
-//        return;
-//    };
-
     public void execute() throws SQLException{
         return;
     };
@@ -74,6 +67,4 @@ public abstract class AbstractTransaction {
         }
         this.defaultConsistencyLevel = level;
     }
-
-//    public abstract void execute();
 }

@@ -92,6 +92,5 @@ public class TopBalanceTransaction extends AbstractTransaction{
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 }
