@@ -41,7 +41,7 @@ public class PreparedQueries {
     public final static String getWarehouseTax =  "SELECT W_TAX FROM warehouse WHERE W_ID = ?;";
 
     public final static String getCustomerLastAndCreditAndDiscount = "SELECT C_LAST, C_CREDIT, C_DISCOUNT FROM customer " +
-            "WHERE C_W_ID = ?, C_D_ID = ?, C_ID = ?;";
+            "WHERE C_W_ID = ? AND C_D_ID = ? AND C_ID = ?;";
 
     public final static String updateWarehouseYearToDateAmount = "UPDATE warehouse SET W_YTD = ? WHERE W_ID = ?;";
 

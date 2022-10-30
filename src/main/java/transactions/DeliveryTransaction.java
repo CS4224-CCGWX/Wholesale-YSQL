@@ -129,7 +129,7 @@ public class DeliveryTransaction extends AbstractTransaction {
                 return ;
             }
 
-            double updatedBalance = customers.getBigDecimal(0).doubleValue() + orderAmount;
+            double updatedBalance = customers.getBigDecimal(1).doubleValue() + orderAmount;
 
             formattedUpdateCustomerDeliveryInfo.setBigDecimal(1, BigDecimal.valueOf(updatedBalance));
             formattedUpdateCustomerDeliveryInfo.setInt(2, warehouseId);
