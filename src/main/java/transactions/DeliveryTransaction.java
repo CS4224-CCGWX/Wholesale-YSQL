@@ -111,12 +111,11 @@ public class DeliveryTransaction extends AbstractTransaction {
             }
 
             for (int olNum : orderLineNums) {
-                formattedUpdateDeliveryDateInOrderLine.setInt(1, warehouseId);
-                formattedUpdateDeliveryDateInOrderLine.setTimestamp(2, Timestamp.from(TimeFormatter.getCurrentDate().toInstant()));
-                formattedUpdateDeliveryDateInOrderLine.setInt(3, warehouseId);
-                formattedUpdateDeliveryDateInOrderLine.setInt(4, districtNo);
-                formattedUpdateDeliveryDateInOrderLine.setInt(5, orderId);
-                formattedUpdateDeliveryDateInOrderLine.setInt(6, olNum);
+                formattedUpdateDeliveryDateInOrderLine.setTimestamp(1, Timestamp.from(TimeFormatter.getCurrentDate().toInstant()));
+                formattedUpdateDeliveryDateInOrderLine.setInt(2, warehouseId);
+                formattedUpdateDeliveryDateInOrderLine.setInt(3, districtNo);
+                formattedUpdateDeliveryDateInOrderLine.setInt(4, orderId);
+                formattedUpdateDeliveryDateInOrderLine.setInt(5, olNum);
                 this.executeUpdate(formattedUpdateDeliveryDateInOrderLine);
             }
 

@@ -32,7 +32,7 @@ public class PreparedQueries {
 
     public final static String getItemPriceAndName = "SELECT I_PRICE, I_NAME FROM item WHERE I_ID = ?;";
 
-    public final static String getStockDistInfo = "SELECT ? FROM stock WHERE S_W_ID = ?, S_I_ID = ?;";
+    public final static String getStockDistInfo = "SELECT ? FROM stock WHERE S_W_ID = ? AND S_I_ID = ?;";
 
     public final static String createNewOrderLine =  "INSERT INTO order_line "
             + "(OL_O_ID, OL_D_ID, OL_W_ID, OL_C_ID, OL_NUMBER, OL_I_ID, OL_SUPPLY_W_ID, OL_QUANTITY, OL_AMOUNT, OL_DIST_INFO) "
