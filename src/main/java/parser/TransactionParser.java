@@ -116,7 +116,7 @@ public class TransactionParser {
         return new TopBalanceTransaction(session, utils);
     }
 
-    private RelatedCustomerTransaction parseRelatedCustomerTransaction(String[] inputs) {
+    private RelatedCustomerTransaction parseRelatedCustomerTransaction(String[] inputs) throws SQLException {
         int index = 1;
         int w_id = Integer.parseInt(inputs[index++]);
         int d_id = Integer.parseInt(inputs[index++]);
