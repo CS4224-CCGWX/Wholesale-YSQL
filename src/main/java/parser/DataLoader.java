@@ -26,10 +26,14 @@ public class DataLoader {
 
     Properties settings;
 
+    String host, port, dbUser;
 
-    public DataLoader(Connection session, Properties settings) {
+
+    public DataLoader(Connection session, String host, String port, String dbUser) {
         this.session = session;
-        this.settings = settings;
+        this.host = host;
+        this.port = port;
+        this.dbUser =dbUser;
     }
 
     public void loadAll() {
@@ -70,7 +74,7 @@ public class DataLoader {
         try {
             System.out.println(String.format("YSQL Path: %s \n", YSQLSH_PATH));
             System.out.println(String.format("Schema Path: %s \n", schemaPath));
-            Runtime.getRuntime().exec(String.format("%s -f %s -h %s -p %s -U %s", YSQLSH_PATH, schemaPath, settings.getProperty("host"), settings.getProperty("port"), settings.getProperty("dbUser")));
+            Runtime.getRuntime().exec(String.format("%s -f %s -h %s -p %s -U %s", YSQLSH_PATH, schemaPath, host, port, dbUser));
             System.out.println("successfully load: \n");
         } catch (Exception e) {
             System.err.println(e.toString());
