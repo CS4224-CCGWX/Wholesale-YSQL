@@ -1,19 +1,13 @@
 package transactions;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
-import com.datastax.driver.core.Row;
-import com.datastax.driver.core.Session;
-
 import utils.PreparedQueries;
 import utils.TimeFormatter;
 
-
+import java.math.BigDecimal;
 import java.sql.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 public class NewOrderTransaction extends AbstractTransaction {
 

@@ -1,9 +1,0 @@
-Name: libyb_pgbackend
-Description: PostgreSQL libyb_pgbackend library
-Url: http://www.postgresql.org/
-Version: 11.2
-Requires: 
-Requires.private: 
-Cflags: -I/Users/sanketh/code/yugabyte-db/build/release-clang-dynamic-ninja/postgres/include
-Libs: -L/Users/sanketh/code/yugabyte-db/build/release-clang-dynamic-ninja/postgres/lib -lyb_pgbackend
-Libs.private: -L/Users/sanketh/code/yugabyte-db/build/release-clang-dynamic-ninja/lib -L/opt/yb-build/thirdparty/yugabyte-db-thirdparty-v2.6-20210619214425-32ba1cdc59-macos/installed/common/lib -lssl -lcrypto -lm -lldap -lyb_util -lyb_pggate -lyb_common

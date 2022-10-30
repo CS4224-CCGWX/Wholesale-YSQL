@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.sql.Connection;
 import java.util.Properties;
+
 public class DataLoader {
     private final String DELIM = ",";
     private final String WAREHOUSE_FILE = "warehouse.csv";
