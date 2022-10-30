@@ -16,7 +16,7 @@ public class DeliveryTransaction extends AbstractTransaction {
     private PreparedStatement formattedGetOrderToDeliverInDistrict, formattedUpdateOrderIdToDeliver,
             formattedUpdateCarrierIdInOrder, formattedGetOrderTotalPrice,
             formattedUpdateDeliveryDateInOrderLine, formattedGetCustomerBalance,
-            formattedUpdateCustomerDeliveryInfo;
+            formattedUpdateCustomerDeliveryInfo, formattedRevertNextDeliveryOrderId;
 
 
     public DeliveryTransaction(Connection connection, IO io, int wid, int cid) throws SQLException {
@@ -24,13 +24,15 @@ public class DeliveryTransaction extends AbstractTransaction {
         warehouseId = wid;
         carrierId = cid;
 
-        formattedGetOrderToDeliverInDistrict = connection.prepareStatement(PreparedQueries.getOrderIdToDeliver);
+        formattedGetOrderToDeliverInDistrict = connection.prepareStatement(PreparedQueries.getNextDeliveryOrderId);
         formattedUpdateOrderIdToDeliver = connection.prepareStatement(PreparedQueries.updateOrderIdToDeliver);
         formattedUpdateCarrierIdInOrder = connection.prepareStatement(PreparedQueries.updateCarrierIdInOrder);
         formattedGetOrderTotalPrice = connection.prepareStatement(PreparedQueries.getOrderLineInOrder);
         formattedUpdateDeliveryDateInOrderLine = connection.prepareStatement(PreparedQueries.updateDeliveryDateInOrderLine);
         formattedGetCustomerBalance = connection.prepareStatement(PreparedQueries.getCustomerBalance);
         formattedUpdateCustomerDeliveryInfo = connection.prepareStatement(PreparedQueries.updateCustomerBalanceAndDcount);
+        formattedRevertNextDeliveryOrderId = connection.prepareStatement(PreparedQueries.revertNextDeliveryOrderId);
+
     }
 
     public void error(String s) {
@@ -99,7 +101,10 @@ public class DeliveryTransaction extends AbstractTransaction {
 
             if (!res.next()) {
                 error("getOrderLineInOrder");
-                throw new SQLException();
+                formattedRevertNextDeliveryOrderId.setInt(1, warehouseId);
+                formattedRevertNextDeliveryOrderId.setInt(2, districtNo);
+                this.executeUpdate(formattedRevertNextDeliveryOrderId);
+                continue;
             }
 
             int customerId = res.getInt("OL_C_ID");

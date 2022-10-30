@@ -70,7 +70,7 @@ public class PreparedQueries {
     public final static String getDistrictAddress = "SELECT D_STREET_1, D_STREET_2, D_CITY, D_STATE, D_ZIP" +
                 "FROM district WHERE D_W_ID = ? AND D_ID = ?;";
 
-    public final static String getOrderIdToDeliver = "SELECT D_NEXT_DELIVER_O_ID FROM district " +
+    public final static String getNextDeliveryOrderId = "SELECT D_NEXT_DELIVER_O_ID FROM district " +
                     "WHERE D_W_ID = ? AND D_ID = ?;";
 
     public final static String updateOrderIdToDeliver = "UPDATE district "
@@ -79,6 +79,10 @@ public class PreparedQueries {
     public final static String updateCarrierIdInOrder = "UPDATE \"order\" SET O_CARRIER_ID = ?" +
                 "WHERE O_W_ID = ? AND O_D_ID = ? AND O_ID = ?;";
 
+    public final static String revertNextDeliveryOrderId =
+            "UPDATE district "
+                    + "SET D_NEXT_DELIVER_O_ID = D_NEXT_DELIVER_O_ID - 1 "
+                    + "WHERE D_W_ID = ? AND D_ID = ?;";
     public final static String updateDeliveryDateInOrderLine = "UPDATE order_line SET OL_DELIVERY_D = ? " +
                 "WHERE OL_W_ID = ? AND OL_D_ID = ? AND OL_O_ID = ? AND OL_NUMBER = ?;";
 
