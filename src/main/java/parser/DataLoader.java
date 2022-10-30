@@ -36,6 +36,8 @@ public class DataLoader {
     }
 
     public void loadAll() {
+        System.out.println("Host: " + host);
+        System.out.println("Port: " + port);
         defSchema();
         loadWarehouse();
         loadDistrict();
