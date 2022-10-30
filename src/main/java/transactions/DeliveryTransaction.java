@@ -122,6 +122,8 @@ public class DeliveryTransaction extends AbstractTransaction {
                 formattedUpdateDeliveryDateInOrderLine.setInt(4, orderId);
                 formattedUpdateDeliveryDateInOrderLine.setInt(5, olNum);
                 this.executeUpdate(formattedUpdateDeliveryDateInOrderLine);
+                System.out.println(String.format("Updated order line warehouse %d, district %d, order %d, order line %d", warehouseId, districtNo, orderId, olNum));
+
             }
 
             formattedGetCustomerBalance.setInt(1, warehouseId);
