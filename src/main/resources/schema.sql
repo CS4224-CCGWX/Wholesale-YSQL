@@ -175,8 +175,8 @@ CREATE TABLE IF NOT EXISTS customer
 )
     );
 
-DROP TABLE IF EXISTS customer_order;
-CREATE TABLE IF NOT EXISTS customer_order
+DROP TABLE IF EXISTS "order";
+CREATE TABLE IF NOT EXISTS "order"
 (
     O_W_ID
     int,

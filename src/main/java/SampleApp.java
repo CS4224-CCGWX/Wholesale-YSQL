@@ -35,7 +35,8 @@ public class SampleApp {
         utils = new QueryUtils(conn);
 
 
-        String action = args[0];
+//        String action = args[0];
+        String action = "run";
         switch (action) {
             case "load" -> {
                 dataLoader.loadAll();
@@ -57,7 +58,7 @@ public class SampleApp {
     private static Connection connectToDB(Properties settings) throws Exception {
         YBClusterAwareDataSource ds = new YBClusterAwareDataSource();
         ds.setUrl("jdbc:yugabytedb://" + settings.getProperty("host") + ":"
-                + settings.getProperty("port") + "/yugabyte");
+                + settings.getProperty("port") + "/cs4224");
         ds.setUser(settings.getProperty("dbUser"));
         ds.setPassword(settings.getProperty("dbPassword"));
 

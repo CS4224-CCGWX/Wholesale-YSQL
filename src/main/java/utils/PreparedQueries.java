@@ -128,7 +128,7 @@ public class PreparedQueries {
                     + "SET D_NEXT_DELIVER_O_ID = D_NEXT_DELIVER_O_ID + 1 "
                     + "WHERE D_W_ID = ? AND D_ID = ?;";
     public final static String updateCarrierIdInOrder = """
-                UPDATE customer_order
+                UPDATE "order"
                 SET O_CARRIER_ID = ?
                 WHERE O_W_ID = ? AND O_D_ID = ? AND O_ID = ?;
                 """;
@@ -164,7 +164,7 @@ public class PreparedQueries {
 
     public final static String getCustomerLastOrderInfo = """
             SELECT O_ID, O_CARRIER_ID, O_ENTRY_D
-            FROM customer_order
+            FROM "order"
             WHERE O_W_ID = ? AND O_D_ID = ? AND O_C_ID = ?
             ORDER BY O_ID DESC
             LIMIT 1;
@@ -190,7 +190,7 @@ public class PreparedQueries {
 
     public final static String getLastOrdersFromOrder = """
             SELECT O_ID, O_W_ID, O_D_ID, O_C_ID, O_ENTRY_D
-            FROM customer_order
+            FROM "order"
             WHERE O_ID >= ? AND O_ID < ? AND O_W_ID = ? AND O_D_ID = ?
             """;
 

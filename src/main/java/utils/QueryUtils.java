@@ -20,7 +20,6 @@ public class QueryUtils {
         getCustomerNamesStmt = conn.prepareStatement(PreparedQueries.getCustomerNameByID);
         getItemNamesStmt = conn.prepareStatement(PreparedQueries.getItemById);
         getPopularItemsWithinOrderStmt = conn.prepareStatement(PreparedQueries.getPopularItemsFromOrder);
-        getRelatedCustomerStmt = conn.prepareStatement(PreparedQueries.getRelatedCustomers);
         getPastOrdersFromOrderLineStmt = conn.prepareStatement(PreparedQueries.getLastOrdersFromOrderLine);
         getPastOrdersFromOrderStmt = conn.prepareStatement(PreparedQueries.getLastOrdersFromOrder);
     }
@@ -76,7 +75,7 @@ public class QueryUtils {
 
     public String getItemNameById(int itemID) throws SQLException {
         getItemNamesStmt.setInt(1, itemID);
-        ResultSet result = getCustomerNamesStmt.executeQuery();
+        ResultSet result = getItemNamesStmt.executeQuery();
 
         if (result.next()) {
             return result.getString("I_NAME");
