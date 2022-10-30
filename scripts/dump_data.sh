@@ -34,22 +34,22 @@ fi
 
 # DateTime format reference: https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
 echo "***** Load warehouse table *****"
-$YSQLSH -f "\COPY warehouse FROM '$dataDir/warehouse.csv' DELIMITER '$DELIM';"
+$YSQLSH -c "\COPY warehouse FROM '$dataDir/warehouse.csv' DELIMITER '$DELIM';"
 
 echo "***** Load district table *****"
-$YSQLSH -f "\COPY district FROM '$dataDir/district.csv' DELIMITER '$DELIM';"
+$YSQLSH -c "\COPY district FROM '$dataDir/district.csv' DELIMITER '$DELIM';"
 
 echo "***** Load customer table *****"
-$YSQLSH -f "\COPY customer FROM '$dataDir/customer.csv' DELIMITER '$DELIM';"
+$YSQLSH -c "\COPY customer FROM '$dataDir/customer.csv' DELIMITER '$DELIM';"
 
 echo "***** Load order table *****"
-$YSQLSH -f "\COPY \"order\" FROM '$dataDir/customer.csv' DELIMITER '$DELIM';"
+$YSQLSH -c "\COPY \"order\" FROM '$dataDir/customer.csv' DELIMITER '$DELIM';"
 
 echo "***** Load item table *****"
-$YSQLSH -f "\COPY item FROM '$dataDir/item.csv' DELIMITER '$DELIM';"
+$YSQLSH -c "\COPY item FROM '$dataDir/item.csv' DELIMITER '$DELIM';"
 
 echo "***** Load order_line table *****"
-$YSQLSH -f "\COPY order_line FROM '$dataDir/order_line.csv' DELIMITER '$DELIM';"
+$YSQLSH -c "\COPY order_line FROM '$dataDir/order_line.csv' DELIMITER '$DELIM';"
 
 echo "***** Load stock table *****"
-$YSQLSH -f "\COPY stock FROM '$dataDir/stock.csv' DELIMITER '$DELIM';"
+$YSQLSH -c "\COPY stock FROM '$dataDir/stock.csv' DELIMITER '$DELIM';"
