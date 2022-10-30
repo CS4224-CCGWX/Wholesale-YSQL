@@ -87,6 +87,7 @@ CREATE TABLE IF NOT EXISTS district
     2
 ),
     D_NEXT_O_ID int,
+    D_NEXT_DELIVER_O_ID int,
     PRIMARY KEY
 (
     D_W_ID,
@@ -239,6 +240,7 @@ CREATE TABLE IF NOT EXISTS order_line
     int,
     OL_NUMBER
     int,
+    OL_C_ID int,
     OL_I_ID
     int,
     OL_DELIVERY_D
@@ -259,7 +261,6 @@ CREATE TABLE IF NOT EXISTS order_line
 (
     256
 ),
-    OL_C_ID int,
     PRIMARY KEY
 (
     OL_W_ID,

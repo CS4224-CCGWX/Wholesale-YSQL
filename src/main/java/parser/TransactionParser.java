@@ -59,7 +59,7 @@ public class TransactionParser {
         }
     }
 
-    public NewOrderTransaction parseNewOrderTransaction(String[] inputs) {
+    public NewOrderTransaction parseNewOrderTransaction(String[] inputs) throws SQLException {
         int index = 1;
         int c_id = Integer.parseInt(inputs[index++]);
         int w_id = Integer.parseInt(inputs[index++]);

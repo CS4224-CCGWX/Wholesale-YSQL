@@ -48,7 +48,8 @@ public class PreparedQueries {
     public final static String getDistrictAddressAndYtd = "SELECT D_STREET_1, D_STREET_2, D_CITY, D_STATE, D_ZIP, D_YTD "
                     + "FROM district WHERE D_W_ID = ? AND D_ID = ?;";
 
-    public final static String getWarehouseAddressAndYtd = "SELECT W_STREET_1, W_STREET_2, W_CITY, W_STATE, W_ZIP, W_YTD "
+    public final static String getWarehouseAddressAndYtd =
+            "SELECT W_STREET_1, W_STREET_2, W_CITY, W_STATE, W_ZIP, W_YTD "
                     + "FROM warehouse WHERE W_ID = ?;";
 
     public final static String updateDistrictYearToDateAmount =  "UPDATE district SET D_YTD = ? "
