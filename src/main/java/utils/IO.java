@@ -7,8 +7,8 @@ public class IO extends PrintWriter {
     private BufferedReader r;
     private String line;
 
-//    private String filePath = "/home/stuproj/cs4224i/project_files/xact_files/%d.txt";
-    private String filePath = "/Users/siyuan/Desktop/NUS/cs4224/project/Wholesale-YSQL/project_files/xact_files/%d.txt";
+    private String filePath = "/home/stuproj/cs4224i/project_files/xact_files/%d.txt";
+//    private String filePath = "/Users/siyuan/Desktop/NUS/cs4224/project/Wholesale-YSQL/project_files/xact_files/%d.txt";
     private StringTokenizer st;
     private String token;
 

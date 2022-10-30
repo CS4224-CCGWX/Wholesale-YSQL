@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class PerformanceReportGenerator {
-//    private final static String reportFilePath = "/home/stuproj/cs4224i/project_files";
-    private final static String reportFilePath = "/Users/siyuan/Desktop/NUS/cs4224/project/Wholesale-YSQL/project_files/report.csv";
+    private final static String reportFilePath = "/home/stuproj/cs4224i/project_files/report.csv";
+//    private final static String reportFilePath = "/Users/siyuan/Desktop/NUS/cs4224/project/Wholesale-YSQL/project_files/report.csv";
     private static String performanceFormat = "%d,%s,%s,%s,%s,%s,%s,%s\n";
 
     static FileWriter fw;
