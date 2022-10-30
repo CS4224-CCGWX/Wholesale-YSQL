@@ -2,19 +2,22 @@ package transactions;
 
 import utils.QueryUtils;
 
-import java.sql.*;
-import java.util.*;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.List;
 
 public class PopularItemTransaction extends AbstractTransaction {
     int warehouseID, districtID, pastNumberOfOrders;
     QueryUtils queryUtils;
 
-    public PopularItemTransaction(Connection conn, int warehouseID, int districtID, int pastOrders) {
+    public PopularItemTransaction(Connection conn, QueryUtils utils, int warehouseID, int districtID, int pastOrders) {
         super(conn);
         this.warehouseID = warehouseID;
         this.districtID = districtID;
         this.pastNumberOfOrders = pastOrders;
-        this.queryUtils = new QueryUtils(conn);
+        this.queryUtils = utils;
     }
 
     @Override

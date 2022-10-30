@@ -4,6 +4,7 @@ import parser.TransactionParser;
 import transactions.AbstractTransaction;
 import utils.OutputFormatter;
 import utils.PerformanceReportGenerator;
+import utils.QueryUtils;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -14,9 +15,13 @@ import java.util.concurrent.TimeUnit;
 
 
 public class SampleApp {
+    private static Connection conn;
+
+    private static DataLoader dataLoader;
+    private static QueryUtils utils;
 
     public static void main(String[] args) throws SQLException {
-        Connection conn;
+
         Properties settings = new Properties();
         try {
             settings.load(SampleApp.class.getResourceAsStream("app.properties"));
@@ -26,7 +31,9 @@ public class SampleApp {
             return;
         }
 
-        DataLoader dataLoader = new DataLoader(conn, settings);
+        dataLoader = new DataLoader(conn, settings);
+        utils = new QueryUtils(conn);
+
 
         String action = args[0];
         switch (action) {
@@ -66,16 +73,23 @@ public class SampleApp {
         return ds.getConnection();
     }
 
-    private static void run(String[] args, Connection conn) {
-        TransactionParser transactionParser = new TransactionParser(conn);
+    private static void run(String[] args, Connection conn) throws SQLException {
+        TransactionParser transactionParser = new TransactionParser(conn, utils);
         OutputFormatter outputFormatter = new OutputFormatter();
 
         List<Long> latencyList = new ArrayList<>();
         long fileStart, fileEnd, txStart, txEnd, elapsedTime;
 
         fileStart = System.nanoTime();
+        AbstractTransaction transaction;
         while (transactionParser.hasNext()) {
-            AbstractTransaction transaction = transactionParser.parseNextTransaction();
+            try {
+                transaction = transactionParser.parseNextTransaction();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                continue;
+            }
+
             System.out.println(OutputFormatter.linebreak);
             System.out.println(outputFormatter.formatTransactionID(latencyList.size()));
 

@@ -23,7 +23,13 @@ public class NewOrderTransaction extends AbstractTransaction {
     private static final int STOCK_REFILL_THRESHOLD = 10;
     private static final int STOCK_REFILL_QTY = 100;
 
-    public NewOrderTransaction(Connection connection, int cid, int wid, int did, int n) {
+    PreparedStatement formattedNextOrderIdAndTax, formattedIncrementDistrictNextOrderId,
+            formattedNewOrder, formattedGetStockQty, formattedUpdateStockQtyIncrRemoteCnt,
+            formattedGetItemPriceAndName, formattedGetCustomerLastAndCreditAndDiscount,
+            formattedGetWarehouseTax, formattedUpdateStockQty, formattedGetStockDistInfo,
+            formattedCreateNewOrderLine;
+
+    public NewOrderTransaction(Connection connection, int cid, int wid, int did, int n) throws SQLException {
         super(connection);
         customerId = cid;
         warehouseId = wid;
@@ -33,6 +39,17 @@ public class NewOrderTransaction extends AbstractTransaction {
         quantities = new ArrayList<>();
         supplyWarehouseIds = new ArrayList<>();
 
+        formattedNextOrderIdAndTax = connection.prepareStatement(PreparedQueries.getDistrictNextOrderIdAndTax);
+        formattedIncrementDistrictNextOrderId = connection.prepareStatement(PreparedQueries.incrementDistrictNextOrderId);
+        formattedNewOrder = connection.prepareStatement(PreparedQueries.createNewOrder);
+        formattedGetStockQty = connection.prepareStatement(PreparedQueries.getStockQty);
+        formattedUpdateStockQtyIncrRemoteCnt = connection.prepareStatement(PreparedQueries.updateStockQtyIncrRemoteCnt);
+        formattedGetItemPriceAndName = connection.prepareStatement(PreparedQueries.getItemPriceAndName);
+        formattedGetCustomerLastAndCreditAndDiscount = connection.prepareStatement(PreparedQueries.getCustomerLastAndCreditAndDiscount);
+        formattedGetWarehouseTax = connection.prepareStatement(PreparedQueries.getWarehouseTax);
+        formattedUpdateStockQty = connection.prepareStatement(PreparedQueries.updateStockQty);
+        formattedGetStockDistInfo = connection.prepareStatement(PreparedQueries.getStockDistInfo);
+        formattedCreateNewOrderLine = connection.prepareStatement(PreparedQueries.createNewOrderLine);
     }
 
     public NewOrderTransaction(Connection session, int cid, int wid, int did, int n,
@@ -88,7 +105,6 @@ public class NewOrderTransaction extends AbstractTransaction {
 
         ResultSet res;
 
-        PreparedStatement formattedNextOrderIdAndTax = connection.prepareStatement(PreparedQueries.getDistrictNextOrderIdAndTax);
         formattedNextOrderIdAndTax.setInt(1, warehouseId);
         formattedNextOrderIdAndTax.setInt(2, districtId);
         res = this.executeQuery(formattedNextOrderIdAndTax);
@@ -101,8 +117,6 @@ public class NewOrderTransaction extends AbstractTransaction {
         int orderId = res.getInt("D_NEXT_O_ID");
 
 
-
-        PreparedStatement formattedIncrementDistrictNextOrderId = connection.prepareStatement(PreparedQueries.incrementDistrictNextOrderId);
         formattedIncrementDistrictNextOrderId.setInt(1, warehouseId);
         formattedIncrementDistrictNextOrderId.setInt(2, districtId);
 
@@ -132,7 +146,6 @@ public class NewOrderTransaction extends AbstractTransaction {
 
 
         Date orderDateTime = TimeFormatter.getCurrentDate();
-        PreparedStatement formattedNewOrder = connection.prepareStatement(PreparedQueries.createNewOrder);
         formattedNewOrder.setInt(1, orderId);
         formattedNewOrder.setInt(2, districtId);
         formattedNewOrder.setInt(3, warehouseId);
@@ -163,7 +176,6 @@ public class NewOrderTransaction extends AbstractTransaction {
               if ADJUST_QTY < 10, then ADJUST_QTY += 100
              */
 
-            PreparedStatement formattedGetStockQty = connection.prepareStatement(PreparedQueries.getStockQty);
             formattedGetStockQty.setInt(1, supplyWarehouseId);
             formattedGetStockQty.setInt(2, itemId);
 
@@ -193,8 +205,6 @@ public class NewOrderTransaction extends AbstractTransaction {
               - Increment S_REMOTE_CNT by 1 if supplyWarehouseIds[i] != warehouseID
              */
             if(supplyWarehouseId != warehouseId) {
-
-                PreparedStatement formattedUpdateStockQtyIncrRemoteCnt = connection.prepareStatement(PreparedQueries.updateStockQtyIncrRemoteCnt);
                 formattedUpdateStockQtyIncrRemoteCnt.setBigDecimal(1, BigDecimal.valueOf(adjustQty));
                 formattedUpdateStockQtyIncrRemoteCnt.setBigDecimal(2, BigDecimal.valueOf(stockYtd));
                 formattedUpdateStockQtyIncrRemoteCnt.setInt(3, supplyWarehouseId);
@@ -202,8 +212,6 @@ public class NewOrderTransaction extends AbstractTransaction {
                 this.executeQuery(formattedUpdateStockQtyIncrRemoteCnt);
 
             } else {
-
-                PreparedStatement formattedUpdateStockQty = connection.prepareStatement(PreparedQueries.updateStockQty);
                 formattedUpdateStockQty.setBigDecimal(1, BigDecimal.valueOf(adjustQty));
                 formattedUpdateStockQty.setBigDecimal(2, BigDecimal.valueOf(stockYtd));
                 formattedUpdateStockQty.setInt(3, supplyWarehouseId);
@@ -214,8 +222,6 @@ public class NewOrderTransaction extends AbstractTransaction {
               3.3. ITEM_AMOUNT = quantities[i] * I_PRICE, where I_PRICE is price of itemNumber[i]
               TOTAL_AMOUNT += ITEM_AMOUNT
              */
-
-            PreparedStatement formattedGetItemPriceAndName = connection.prepareStatement(PreparedQueries.getItemPriceAndName);
             formattedGetItemPriceAndName.setInt(1, itemId);
             ResultSet itemInfo = this.executeQuery(formattedGetItemPriceAndName);
 
@@ -243,7 +249,6 @@ public class NewOrderTransaction extends AbstractTransaction {
              */
             String distIdStr = distIdStr(districtId);
 
-            PreparedStatement formattedGetStockDistInfo = connection.prepareStatement(PreparedQueries.getStockDistInfo);
             formattedGetStockDistInfo.setString(1, distIdStr);
             formattedGetStockDistInfo.setInt(2, warehouseId);
             formattedGetStockDistInfo.setInt(3, itemId);
@@ -256,7 +261,6 @@ public class NewOrderTransaction extends AbstractTransaction {
 
             String distInfo = res.getString(0);
 
-            PreparedStatement formattedCreateNewOrderLine = connection.prepareStatement(PreparedQueries.createNewOrderLine);
             formattedCreateNewOrderLine.setInt(1, orderId);
             formattedCreateNewOrderLine.setInt(2, districtId);
             formattedCreateNewOrderLine.setInt(3, warehouseId);
@@ -280,7 +284,6 @@ public class NewOrderTransaction extends AbstractTransaction {
          */
         double dTax = districtInfo.getBigDecimal("D_TAX").doubleValue();
 
-        PreparedStatement formattedGetWarehouseTax = connection.prepareStatement(PreparedQueries.getWarehouseTax);
         formattedGetWarehouseTax.setInt(1, warehouseId);
         res = this.executeQuery(formattedGetWarehouseTax);
 
@@ -292,7 +295,6 @@ public class NewOrderTransaction extends AbstractTransaction {
 
         double wTax = res.getBigDecimal("W_TAX").doubleValue();
 
-        PreparedStatement formattedGetCustomerLastAndCreditAndDiscount = connection.prepareStatement(PreparedQueries.getCustomerLastAndCreditAndDiscount);
         formattedGetCustomerLastAndCreditAndDiscount.setInt(1, warehouseId);
         formattedGetCustomerLastAndCreditAndDiscount.setInt(2, districtId);
         formattedGetCustomerLastAndCreditAndDiscount.setInt(3, customerId);

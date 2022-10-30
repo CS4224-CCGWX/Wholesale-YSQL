@@ -1,14 +1,13 @@
 package transactions;
 
-import utils.PreparedQueries;
 import utils.OutputFormatter;
+import utils.PreparedQueries;
 
 import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.List;
 
 public class PaymentTransaction extends AbstractTransaction{
 
@@ -22,13 +21,24 @@ public class PaymentTransaction extends AbstractTransaction{
 
     private static final String delimiter = "\n";
 
+    private PreparedStatement formattedGetWarehouseAddressAndYtd, formattedUpdateWarehouseYearToDateAmount,
+            formattedGetDistrictAddressAndYtd, formattedUpdateDistrictYearToDateAmount,
+            formattedGetFullCustomerInfo, formattedUpdateCustomerPaymentInfo;
 
-    public PaymentTransaction(Connection connection, int cwid, int cdid, int cid, double p) {
+
+    public PaymentTransaction(Connection connection, int cwid, int cdid, int cid, double p) throws SQLException {
         super(connection);
         customerId = cid;
         warehouseId = cwid;
         districtId = cdid;
         payment = p;
+
+        formattedGetWarehouseAddressAndYtd = connection.prepareStatement(PreparedQueries.getWarehouseAddressAndYtd);
+        formattedUpdateWarehouseYearToDateAmount = connection.prepareStatement(PreparedQueries.updateWarehouseYearToDateAmount);
+        formattedGetDistrictAddressAndYtd = connection.prepareStatement(PreparedQueries.getDistrictAddressAndYtd);
+        formattedUpdateDistrictYearToDateAmount = connection.prepareStatement(PreparedQueries.updateDistrictYearToDateAmount);
+        formattedGetFullCustomerInfo = connection.prepareStatement(PreparedQueries.getFullCustomerInfo);
+        formattedUpdateCustomerPaymentInfo = connection.prepareStatement(PreparedQueries.updateCustomerPaymentInfo);
     }
 
 
@@ -37,8 +47,6 @@ public class PaymentTransaction extends AbstractTransaction{
         // 1.  Update the warehouse C W ID by incrementing W YTD by PAYMENT
 
         // Output Customer Last Order for each item
-
-        PreparedStatement formattedGetWarehouseAddressAndYtd = connection.prepareStatement(PreparedQueries.getWarehouseAddressAndYtd);
         formattedGetWarehouseAddressAndYtd.setInt(1, warehouseId);
 
         ResultSet warehouseResult = this.executeQuery(formattedGetWarehouseAddressAndYtd);
@@ -50,13 +58,11 @@ public class PaymentTransaction extends AbstractTransaction{
         double warehouseYtd = warehouseResult.getBigDecimal("W_YTD").doubleValue();
         warehouseYtd += payment;
 
-        PreparedStatement formattedUpdateWarehouseYearToDateAmount = connection.prepareStatement(PreparedQueries.updateWarehouseYearToDateAmount);
         formattedUpdateWarehouseYearToDateAmount.setBigDecimal(1, BigDecimal.valueOf(warehouseYtd));
         formattedUpdateWarehouseYearToDateAmount.setInt(2, warehouseId);
         this.executeQuery(formattedUpdateWarehouseYearToDateAmount);
 
 
-        PreparedStatement formattedGetDistrictAddressAndYtd = connection.prepareStatement(PreparedQueries.getDistrictAddressAndYtd);
         formattedGetDistrictAddressAndYtd.setInt(1, warehouseId);
         formattedGetDistrictAddressAndYtd.setInt(2, districtId);
         ResultSet districtResult = this.executeQuery(formattedGetDistrictAddressAndYtd);
@@ -69,8 +75,6 @@ public class PaymentTransaction extends AbstractTransaction{
         districtYtd += payment;
 
         // 2. Update the district (C W ID,C D ID) by incrementing D YTD by PAYMENT
-
-        PreparedStatement formattedUpdateDistrictYearToDateAmount = connection.prepareStatement(PreparedQueries.updateDistrictYearToDateAmount);
         formattedUpdateDistrictYearToDateAmount.setBigDecimal(1, BigDecimal.valueOf(districtYtd));
         formattedUpdateDistrictYearToDateAmount.setInt(2, warehouseId);
         formattedUpdateDistrictYearToDateAmount.setInt(3, districtId);
@@ -83,8 +87,6 @@ public class PaymentTransaction extends AbstractTransaction{
             • Increment C YTD PAYMENT by PAYMENT
             • Increment C PAYMENT CNT by 1
          */
-
-        PreparedStatement formattedGetFullCustomerInfo = connection.prepareStatement(PreparedQueries.getFullCustomerInfo);
         formattedGetFullCustomerInfo.setInt(1, warehouseId);
         formattedGetFullCustomerInfo.setInt(2, districtId);
         formattedGetFullCustomerInfo.setInt(3, customerId);
@@ -99,7 +101,6 @@ public class PaymentTransaction extends AbstractTransaction{
         float customerYtd = customerRes.getFloat("C_YTD_PAYMENT");
         customerYtd += payment;
 
-        PreparedStatement formattedUpdateCustomerPaymentInfo = connection.prepareStatement(PreparedQueries.updateCustomerPaymentInfo);
         formattedUpdateCustomerPaymentInfo.setBigDecimal(1, BigDecimal.valueOf(customerBalance));
         formattedUpdateCustomerPaymentInfo.setFloat(2, customerYtd);
         formattedUpdateCustomerPaymentInfo.setInt(3, warehouseId);
@@ -116,7 +117,6 @@ public class PaymentTransaction extends AbstractTransaction{
          *    (C STREET 1, C STREET 2, C CITY, C STATE, C ZIP), C PHONE, C SINCE, C CREDIT,
          *     C CREDIT LIM, C DISCOUNT, C BALANCE
          */
-//        result = executeQuery(queryFormatter.getFullCustomerInfo(warehouseId, districtId, customerId));
         sb.append("********** Payment Transaction *********\n");
         sb.append(outputFormatter.formatFullCustomerInfo(customerRes, customerBalance));
         sb.append(delimiter);

@@ -8,7 +8,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.Instant;
-import java.util.Date;
 
 public class OrderStatusTransaction extends AbstractTransaction {
 
@@ -17,11 +16,18 @@ public class OrderStatusTransaction extends AbstractTransaction {
     private final int customerDistrictId;
     private final int customerId;
 
-    public OrderStatusTransaction(Connection connection, int cwid, int cdid, int cid) {
+    private PreparedStatement formattedGetCustomerLastOrderInfo, formattedGetCustomerFullNameAndBalance,
+            formattedGetCustomerLastOrderItemsInfo;
+
+    public OrderStatusTransaction(Connection connection, int cwid, int cdid, int cid) throws SQLException {
         super(connection);
         customerWarehouseId = cwid;
         customerDistrictId = cdid;
         customerId = cid;
+
+        formattedGetCustomerLastOrderInfo = connection.prepareStatement(PreparedQueries.getCustomerLastOrderInfo);
+        formattedGetCustomerFullNameAndBalance = connection.prepareStatement(PreparedQueries.getCustomerFullNameAndBalance);
+        formattedGetCustomerLastOrderItemsInfo = connection.prepareStatement(PreparedQueries.getCustomerLastOrderItemsInfo);
     }
 
     public String toString() {
@@ -51,8 +57,6 @@ public class OrderStatusTransaction extends AbstractTransaction {
          */
 
         // Output Customer Name
-
-        PreparedStatement formattedGetCustomerFullNameAndBalance = connection.prepareStatement(PreparedQueries.getCustomerFullNameAndBalance);
         formattedGetCustomerFullNameAndBalance.setInt(1, customerWarehouseId);
         formattedGetCustomerFullNameAndBalance.setInt(2, customerDistrictId);
         formattedGetCustomerFullNameAndBalance.setInt(3, customerId);
@@ -60,14 +64,10 @@ public class OrderStatusTransaction extends AbstractTransaction {
 
         System.out.println("*** Order Status Transaction Summary ***");
 
-
         String customerInfo = OutputFormatter.formatCustomerFullNameAndBalance(customerRes);
         System.out.println(customerInfo);
 
-
         // Output Customer Last Order
-
-        PreparedStatement formattedGetCustomerLastOrderInfo = connection.prepareStatement(PreparedQueries.getCustomerLastOrderInfo);
         formattedGetCustomerLastOrderInfo.setInt(1, customerWarehouseId);
         formattedGetCustomerLastOrderInfo.setInt(2, customerDistrictId);
         formattedGetCustomerLastOrderInfo.setInt(3, customerId);
@@ -84,9 +84,7 @@ public class OrderStatusTransaction extends AbstractTransaction {
         System.out.println(customerLastOrder);
 
 
-
         // Output Customer Last Order for each item
-        PreparedStatement formattedGetCustomerLastOrderItemsInfo = connection.prepareStatement(PreparedQueries.getCustomerLastOrderItemsInfo);
         formattedGetCustomerLastOrderItemsInfo.setInt(1, customerWarehouseId);
         formattedGetCustomerLastOrderItemsInfo.setInt(2, customerDistrictId);
         formattedGetCustomerLastOrderItemsInfo.setInt(3, lastOrderId);
@@ -102,7 +100,5 @@ public class OrderStatusTransaction extends AbstractTransaction {
     public void error(String s) {
         System.out.println("[Error]: OrderStatus " + s + " are missing");
     }
-
-
 
 }

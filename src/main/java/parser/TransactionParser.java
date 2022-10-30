@@ -1,18 +1,23 @@
 package parser;
 
 import transactions.*;
+import utils.QueryUtils;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TransactionParser {
     Scanner scanner = new Scanner(System.in);
     Connection session;
+
+    QueryUtils utils;
     final String SEPARATOR = ",";
 
-    public TransactionParser(Connection session) {
+    public TransactionParser(Connection session, QueryUtils utils) {
         this.session = session;
+        this.utils = utils;
     }
 
     public boolean hasNext() {
@@ -23,7 +28,7 @@ public class TransactionParser {
         this.scanner.close();
     }
 
-    public AbstractTransaction parseNextTransaction() {
+    public AbstractTransaction parseNextTransaction() throws SQLException {
         if (!scanner.hasNext()) return null;
 
         String line = scanner.nextLine();
@@ -64,7 +69,7 @@ public class TransactionParser {
         return new NewOrderTransaction(session, c_id, w_id, d_id, m, i_ids, w_ids, quantities);
     }
 
-    public PaymentTransaction parsePaymentTransaction(String[] inputs) {
+    public PaymentTransaction parsePaymentTransaction(String[] inputs) throws SQLException {
         int index = 1;
         int w_id = Integer.parseInt(inputs[index++]);
         int d_id = Integer.parseInt(inputs[index++]);
@@ -74,14 +79,14 @@ public class TransactionParser {
         return new PaymentTransaction(session, w_id, d_id, c_id, payment);
     }
 
-    public DeliveryTransaction parseDeliveryTransaction(String[] inputs) {
+    public DeliveryTransaction parseDeliveryTransaction(String[] inputs) throws SQLException {
         int index = 1;
         int w_id = Integer.parseInt(inputs[index++]);
         int carrier_id = Integer.parseInt(inputs[index++]);
         return new DeliveryTransaction(session, w_id, carrier_id);
     }
 
-    public OrderStatusTransaction parseOrderStatusTransaction(String[] inputs) {
+    public OrderStatusTransaction parseOrderStatusTransaction(String[] inputs) throws SQLException {
         int index = 1;
         int w_id = Integer.parseInt(inputs[index++]);
         int d_id = Integer.parseInt(inputs[index++]);
@@ -89,14 +94,14 @@ public class TransactionParser {
         return new OrderStatusTransaction(session, w_id, d_id, c_id);
     }
 
-    private StockLevelTransaction parseStockLevelTransaction(String[] inputs) {
+    private StockLevelTransaction parseStockLevelTransaction(String[] inputs) throws SQLException {
         int index = 1;
         int w_id = Integer.parseInt(inputs[index++]);
         int d_id = Integer.parseInt(inputs[index++]);
         int t = Integer.parseInt(inputs[index++]);
         int l = Integer.parseInt(inputs[index++]);
 
-        return new StockLevelTransaction(session, w_id, d_id, t, l);
+        return new StockLevelTransaction(session, utils, w_id, d_id, t, l);
     }
 
     private PopularItemTransaction parsePopularItemTransaction(String[] inputs) {
@@ -104,11 +109,11 @@ public class TransactionParser {
         int w_id = Integer.parseInt(inputs[index++]);
         int d_id = Integer.parseInt(inputs[index++]);
         int l = Integer.parseInt(inputs[index++]);
-        return new PopularItemTransaction(session, w_id, d_id, l);
+        return new PopularItemTransaction(session, utils, w_id, d_id, l);
     }
 
-    private TopBalanceTransaction parseTopBalanceTransaction() {
-        return new TopBalanceTransaction(session);
+    private TopBalanceTransaction parseTopBalanceTransaction() throws SQLException {
+        return new TopBalanceTransaction(session, utils);
     }
 
     private RelatedCustomerTransaction parseRelatedCustomerTransaction(String[] inputs) {
@@ -116,7 +121,7 @@ public class TransactionParser {
         int w_id = Integer.parseInt(inputs[index++]);
         int d_id = Integer.parseInt(inputs[index++]);
         int c_id = Integer.parseInt(inputs[index++]);
-        return new RelatedCustomerTransaction(session, w_id, d_id, c_id);
+        return new RelatedCustomerTransaction(session, utils, w_id, d_id, c_id);
     }
 }
 

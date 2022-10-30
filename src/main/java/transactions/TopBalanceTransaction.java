@@ -6,11 +6,17 @@ import utils.QueryUtils;
 import java.sql.*;
 import java.util.HashMap;
 
-public class TopBalanceTransaction extends AbstractTransaction{
+public class TopBalanceTransaction extends AbstractTransaction {
     QueryUtils queryUtils;
-    public TopBalanceTransaction(Connection connection) {
+
+    PreparedStatement getDistrictStmt, getWarehouseStmt;
+
+
+    public TopBalanceTransaction(Connection connection, QueryUtils utils) throws SQLException {
         super(connection);
-        this.queryUtils = new QueryUtils(connection);
+        this.queryUtils = utils;
+        getDistrictStmt = connection.prepareStatement(PreparedQueries.getDistrictWithIDs);
+        getWarehouseStmt = connection.prepareStatement(PreparedQueries.getWarehouseWithIDs);
     }
 
     /**
@@ -40,10 +46,9 @@ public class TopBalanceTransaction extends AbstractTransaction{
 
             Thread getDistrictThread = new Thread(() -> {
                 try {
-                    PreparedStatement getDistrictStmt = connection.prepareStatement(PreparedQueries.getDistrictWithIDs);
                     Array districtsArray = getDistrictStmt.getConnection().createArrayOf("INTEGER", districts.keySet().toArray());
                     getDistrictStmt.setArray(1, districtsArray);
-                    ResultSet districtRecords = queryUtils.executeQuery(getDistrictStmt);
+                    ResultSet districtRecords = getDistrictStmt.executeQuery();
 
                     while (districtRecords.next()) {
                         districts.put(districtRecords.getInt("D_ID"), districtRecords.getString("D_NAME"));
@@ -56,10 +61,9 @@ public class TopBalanceTransaction extends AbstractTransaction{
 
             Thread getWareHouseThread = new Thread(() -> {
                 try {
-                    PreparedStatement getWarehouseStmt = connection.prepareStatement(PreparedQueries.getWarehouseWithIDs);
                     Array warehousesArray = getWarehouseStmt.getConnection().createArrayOf("INTEGER", warehouses.keySet().toArray());
                     getWarehouseStmt.setArray(1, warehousesArray);
-                    ResultSet warehouseRecords = queryUtils.executeQuery(getWarehouseStmt);
+                    ResultSet warehouseRecords = getWarehouseStmt.executeQuery();
 
                     while (warehouseRecords.next()) {
                         warehouses.put(warehouseRecords.getInt("W_ID"), warehouseRecords.getString("W_NAME"));

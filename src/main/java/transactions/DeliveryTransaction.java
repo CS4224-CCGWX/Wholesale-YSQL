@@ -4,25 +4,32 @@ import utils.PreparedQueries;
 import utils.TimeFormatter;
 
 import java.math.BigDecimal;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
 import java.sql.*;
+import java.util.ArrayList;
 
 public class DeliveryTransaction extends AbstractTransaction {
-
     private int warehouseId;
     private int carrierId;
-
     private static final int TOTAL_DISTRICT = 10;
 
+    private PreparedStatement formattedGetOrderToDeliverInDistrict, formattedUpdateOrderIdToDeliver,
+            formattedUpdateCarrierIdInOrder, formattedGetOrderTotalPrice,
+            formattedUpdateDeliveryDateInOrderLine, formattedGetCustomerBalance,
+            formattedUpdateCustomerDeliveryInfo;
 
-    public DeliveryTransaction(Connection connection, int wid, int cid) {
+
+    public DeliveryTransaction(Connection connection, int wid, int cid) throws SQLException {
         super(connection);
         warehouseId = wid;
         carrierId = cid;
+
+        formattedGetOrderToDeliverInDistrict = connection.prepareStatement(PreparedQueries.getOrderIdToDeliver);
+        formattedUpdateOrderIdToDeliver = connection.prepareStatement(PreparedQueries.updateOrderIdToDeliver);
+        formattedUpdateCarrierIdInOrder = connection.prepareStatement(PreparedQueries.updateCarrierIdInOrder);
+        formattedGetOrderTotalPrice = connection.prepareStatement(PreparedQueries.getOrderLineInOrder);
+        formattedUpdateDeliveryDateInOrderLine = connection.prepareStatement(PreparedQueries.updateDeliveryDateInOrderLine);
+        formattedGetCustomerBalance = connection.prepareStatement(PreparedQueries.getCustomerBalance);
+        formattedUpdateCustomerDeliveryInfo = connection.prepareStatement(PreparedQueries.updateCustomerBalanceAndDcount);
     }
 
     public void error(String s) {
@@ -41,14 +48,11 @@ public class DeliveryTransaction extends AbstractTransaction {
          */
 
         for (int districtNo = 1; districtNo <= TOTAL_DISTRICT; districtNo = districtNo + 1) {
-
-            PreparedStatement formattedGetOrderToDeliverInDistrict = connection.prepareStatement(PreparedQueries.getOrderIdToDeliver);
             formattedGetOrderToDeliverInDistrict.setInt(1, warehouseId);
             formattedGetOrderToDeliverInDistrict.setInt(2, districtNo);
             res = this.executeQuery(formattedGetOrderToDeliverInDistrict);
 
 
-            PreparedStatement formattedUpdateOrderIdToDeliver = connection.prepareStatement(PreparedQueries.updateOrderIdToDeliver);
             formattedUpdateOrderIdToDeliver.setInt(1, warehouseId);
             formattedUpdateOrderIdToDeliver.setInt(2, districtNo);
             this.executeQuery(formattedUpdateOrderIdToDeliver);
@@ -64,10 +68,8 @@ public class DeliveryTransaction extends AbstractTransaction {
 
             /*
             (b) Update the order X by setting O CARRIER ID to CARRIER ID
-
              */
 
-            PreparedStatement formattedUpdateCarrierIdInOrder = connection.prepareStatement(PreparedQueries.updateCarrierIdInOrder);
             formattedUpdateCarrierIdInOrder.setInt(1, carrierId);
             formattedUpdateCarrierIdInOrder.setInt(2, warehouseId);
             formattedUpdateCarrierIdInOrder.setInt(3, districtNo);
@@ -89,7 +91,6 @@ public class DeliveryTransaction extends AbstractTransaction {
             double orderAmount = 0;
             ArrayList<Integer> orderLineNums = new ArrayList<>();
 
-            PreparedStatement formattedGetOrderTotalPrice = connection.prepareStatement(PreparedQueries.getOrderLineInOrder);
             formattedGetOrderTotalPrice.setInt(1, warehouseId);
             formattedGetOrderTotalPrice.setInt(2, districtNo);
             formattedGetOrderTotalPrice.setInt(3, orderId);
@@ -109,8 +110,6 @@ public class DeliveryTransaction extends AbstractTransaction {
             }
 
             for (int olNum : orderLineNums) {
-
-                PreparedStatement formattedUpdateDeliveryDateInOrderLine = connection.prepareStatement(PreparedQueries.updateDeliveryDateInOrderLine);
                 formattedUpdateDeliveryDateInOrderLine.setInt(1, warehouseId);
                 formattedUpdateDeliveryDateInOrderLine.setTimestamp(2, Timestamp.from(TimeFormatter.getCurrentDate().toInstant()));
                 formattedUpdateDeliveryDateInOrderLine.setInt(3, warehouseId);
@@ -120,7 +119,6 @@ public class DeliveryTransaction extends AbstractTransaction {
                 this.executeQuery(formattedUpdateDeliveryDateInOrderLine);
             }
 
-            PreparedStatement formattedGetCustomerBalance = connection.prepareStatement(PreparedQueries.getCustomerBalance);
             formattedGetCustomerBalance.setInt(1, warehouseId);
             formattedGetCustomerBalance.setInt(2, districtNo);
             formattedGetCustomerBalance.setInt(3, customerId);
@@ -133,7 +131,6 @@ public class DeliveryTransaction extends AbstractTransaction {
 
             double updatedBalance = customers.getBigDecimal(0).doubleValue() + orderAmount;
 
-            PreparedStatement formattedUpdateCustomerDeliveryInfo = connection.prepareStatement(PreparedQueries.updateCustomerBalanceAndDcount);
             formattedUpdateCustomerDeliveryInfo.setBigDecimal(1, BigDecimal.valueOf(updatedBalance));
             formattedUpdateCustomerDeliveryInfo.setInt(2, warehouseId);
             formattedUpdateCustomerDeliveryInfo.setInt(3, districtNo);
