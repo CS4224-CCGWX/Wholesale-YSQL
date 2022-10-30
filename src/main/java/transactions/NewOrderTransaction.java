@@ -262,7 +262,7 @@ public class NewOrderTransaction extends AbstractTransaction {
               - OL_DIST_INFO = S_DIST_xx where xx=D_ID
              */
             String distIdStr = distIdStr(districtId);
-
+            System.out.println("disrict id: " + distIdStr + "  " + "  ware house id: " + warehouseId + "  item id:  " + itemId);
             formattedGetStockDistInfo.setString(1, distIdStr);
             formattedGetStockDistInfo.setInt(2, warehouseId);
             formattedGetStockDistInfo.setInt(3, itemId);
