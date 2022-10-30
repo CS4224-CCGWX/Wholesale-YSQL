@@ -2,6 +2,8 @@ package utils;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Time;
+import java.sql.Timestamp;
 import java.time.Instant;
 
 public class OutputFormatter {
@@ -113,12 +115,12 @@ public class OutputFormatter {
 //            throw new SQLException();
 //        }
 
-        Instant time = itemInfo.getTimestamp("OL_DELIVERY_D").toInstant();
+        Timestamp time = itemInfo.getTimestamp("OL_DELIVERY_D");
         String deliverTime = null;
         if (time == null) {
             deliverTime = "Not delivered";
         } else {
-            deliverTime = TimeFormatter.formatTime(time);
+            deliverTime = TimeFormatter.formatTime(time.toInstant());
         }
         return String.format("Item number: %d, Supply warehouse ID: %d, Quantity: %d, Price: %.2f, Delivery time: %s",
                 itemInfo.getInt("OL_I_ID"),
