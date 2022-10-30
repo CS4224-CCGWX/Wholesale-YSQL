@@ -32,6 +32,8 @@ public class SampleApp {
     args[3] - action
      */
     public static void main(String[] args) throws SQLException, IOException {
+
+
         if (args.length < 4) {
             System.err.println("error parameters");
             return;
