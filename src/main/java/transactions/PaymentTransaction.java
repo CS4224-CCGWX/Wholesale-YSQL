@@ -54,7 +54,7 @@ public class PaymentTransaction extends AbstractTransaction{
 
         if (!warehouseResult.next()) {
             error("formattedGetWarehouseAddressAndYtd");
-            return ;
+            throw new SQLException();
         }
         double warehouseYtd = warehouseResult.getBigDecimal("W_YTD").doubleValue();
         warehouseYtd += payment;
@@ -70,7 +70,7 @@ public class PaymentTransaction extends AbstractTransaction{
 
         if (!districtResult.next()) {
             error("formattedGetDistrictAddressAndYtd");
-            return ;
+            throw new SQLException();
         }
         double districtYtd = districtResult.getBigDecimal("D_YTD").doubleValue();
         districtYtd += payment;
@@ -94,7 +94,7 @@ public class PaymentTransaction extends AbstractTransaction{
         ResultSet customerRes = this.executeQuery(formattedGetFullCustomerInfo);
         if (!customerRes.next()) {
             error("formattedGetFullCustomerInfo");
-            return ;
+            throw new SQLException();
         }
 
         double customerBalance = customerRes.getBigDecimal("C_BALANCE").doubleValue();

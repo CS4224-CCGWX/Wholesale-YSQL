@@ -2,6 +2,8 @@ package utils;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Time;
+import java.sql.Timestamp;
 import java.time.Instant;
 
 public class OutputFormatter {
@@ -10,9 +12,9 @@ public class OutputFormatter {
     public final static String linebreak = "=======================================";
 
     public static String formatFullCustomerInfo(ResultSet customerInfo, double balance) throws SQLException {
-        if (!customerInfo.next()) {
-            throw new SQLException();
-        }
+//        if (!customerInfo.next()) {
+//            throw new SQLException();
+//        }
 
         StringBuilder sb = new StringBuilder();
         sb.append("Customer info: ");
@@ -59,9 +61,9 @@ public class OutputFormatter {
     }
 
     public static String formatWarehouseAddress(ResultSet warehouseAddress) throws SQLException {
-        if (!warehouseAddress.next()) {
-            throw new SQLException();
-        }
+//        if (!warehouseAddress.next()) {
+//            throw new SQLException();
+//        }
 
         StringBuilder sb = new StringBuilder();
         sb.append(String.format("Warehouse address: (%s, %s, %s, %s, %s)",
@@ -74,9 +76,9 @@ public class OutputFormatter {
     }
 
     public static String formatDistrictAddress(ResultSet districtAddress) throws SQLException {
-        if (!districtAddress.next()) {
-            throw new SQLException();
-        }
+//        if (!districtAddress.next()) {
+//            throw new SQLException();
+//        }
 
         StringBuilder sb = new StringBuilder();
         sb.append(String.format("district address: (%s, %s, %s, %s, %s)",
@@ -113,12 +115,12 @@ public class OutputFormatter {
 //            throw new SQLException();
 //        }
 
-        Instant time = itemInfo.getTimestamp("OL_DELIVERY_D").toInstant();
+        Timestamp time = itemInfo.getTimestamp("OL_DELIVERY_D");
         String deliverTime = null;
         if (time == null) {
             deliverTime = "Not delivered";
         } else {
-            deliverTime = TimeFormatter.formatTime(time);
+            deliverTime = TimeFormatter.formatTime(time.toInstant());
         }
         return String.format("Item number: %d, Supply warehouse ID: %d, Quantity: %d, Price: %.2f, Delivery time: %s",
                 itemInfo.getInt("OL_I_ID"),

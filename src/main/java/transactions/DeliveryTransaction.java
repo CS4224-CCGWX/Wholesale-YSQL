@@ -16,7 +16,7 @@ public class DeliveryTransaction extends AbstractTransaction {
     private PreparedStatement formattedGetOrderToDeliverInDistrict, formattedUpdateOrderIdToDeliver,
             formattedUpdateCarrierIdInOrder, formattedGetOrderTotalPrice,
             formattedUpdateDeliveryDateInOrderLine, formattedGetCustomerBalance,
-            formattedUpdateCustomerDeliveryInfo;
+            formattedUpdateCustomerDeliveryInfo, formattedRevertNextDeliveryOrderId;
 
 
     public DeliveryTransaction(Connection connection, IO io, int wid, int cid) throws SQLException {
@@ -24,13 +24,15 @@ public class DeliveryTransaction extends AbstractTransaction {
         warehouseId = wid;
         carrierId = cid;
 
-        formattedGetOrderToDeliverInDistrict = connection.prepareStatement(PreparedQueries.getOrderIdToDeliver);
+        formattedGetOrderToDeliverInDistrict = connection.prepareStatement(PreparedQueries.getNextDeliveryOrderId);
         formattedUpdateOrderIdToDeliver = connection.prepareStatement(PreparedQueries.updateOrderIdToDeliver);
         formattedUpdateCarrierIdInOrder = connection.prepareStatement(PreparedQueries.updateCarrierIdInOrder);
         formattedGetOrderTotalPrice = connection.prepareStatement(PreparedQueries.getOrderLineInOrder);
         formattedUpdateDeliveryDateInOrderLine = connection.prepareStatement(PreparedQueries.updateDeliveryDateInOrderLine);
         formattedGetCustomerBalance = connection.prepareStatement(PreparedQueries.getCustomerBalance);
         formattedUpdateCustomerDeliveryInfo = connection.prepareStatement(PreparedQueries.updateCustomerBalanceAndDcount);
+        formattedRevertNextDeliveryOrderId = connection.prepareStatement(PreparedQueries.revertNextDeliveryOrderId);
+
     }
 
     public void error(String s) {
@@ -61,7 +63,7 @@ public class DeliveryTransaction extends AbstractTransaction {
             int orderId = -1;
             if (!res.next()) {
                 error("updateOrderIdToDeliver");
-                return;
+                throw new SQLException();
             }
             orderId = res.getInt("D_NEXT_DELIVER_O_ID");
             io.println("********** Delivery Transaction *********\n");
@@ -99,7 +101,10 @@ public class DeliveryTransaction extends AbstractTransaction {
 
             if (!res.next()) {
                 error("getOrderLineInOrder");
-                return;
+                formattedRevertNextDeliveryOrderId.setInt(1, warehouseId);
+                formattedRevertNextDeliveryOrderId.setInt(2, districtNo);
+                this.executeUpdate(formattedRevertNextDeliveryOrderId);
+                continue;
             }
 
             int customerId = res.getInt("OL_C_ID");
@@ -111,13 +116,14 @@ public class DeliveryTransaction extends AbstractTransaction {
             }
 
             for (int olNum : orderLineNums) {
-                formattedUpdateDeliveryDateInOrderLine.setInt(1, warehouseId);
-                formattedUpdateDeliveryDateInOrderLine.setTimestamp(2, Timestamp.from(TimeFormatter.getCurrentDate().toInstant()));
-                formattedUpdateDeliveryDateInOrderLine.setInt(3, warehouseId);
-                formattedUpdateDeliveryDateInOrderLine.setInt(4, districtNo);
-                formattedUpdateDeliveryDateInOrderLine.setInt(5, orderId);
-                formattedUpdateDeliveryDateInOrderLine.setInt(6, olNum);
+                formattedUpdateDeliveryDateInOrderLine.setTimestamp(1, Timestamp.from(TimeFormatter.getCurrentDate().toInstant()));
+                formattedUpdateDeliveryDateInOrderLine.setInt(2, warehouseId);
+                formattedUpdateDeliveryDateInOrderLine.setInt(3, districtNo);
+                formattedUpdateDeliveryDateInOrderLine.setInt(4, orderId);
+                formattedUpdateDeliveryDateInOrderLine.setInt(5, olNum);
                 this.executeUpdate(formattedUpdateDeliveryDateInOrderLine);
+                System.out.println(String.format("Updated order line warehouse %d, district %d, order %d, order line %d", warehouseId, districtNo, orderId, olNum));
+
             }
 
             formattedGetCustomerBalance.setInt(1, warehouseId);
@@ -127,10 +133,10 @@ public class DeliveryTransaction extends AbstractTransaction {
 
             if (!customers.next()) {
                 error("getCustomerBalance");
-                return ;
+                throw new SQLException();
             }
 
-            double updatedBalance = customers.getBigDecimal(0).doubleValue() + orderAmount;
+            double updatedBalance = customers.getBigDecimal(1).doubleValue() + orderAmount;
 
             formattedUpdateCustomerDeliveryInfo.setBigDecimal(1, BigDecimal.valueOf(updatedBalance));
             formattedUpdateCustomerDeliveryInfo.setInt(2, warehouseId);

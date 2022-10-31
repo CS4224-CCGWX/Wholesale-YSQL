@@ -32,7 +32,7 @@ public class PreparedQueries {
 
     public final static String getItemPriceAndName = "SELECT I_PRICE, I_NAME FROM item WHERE I_ID = ?;";
 
-    public final static String getStockDistInfo = "SELECT ? FROM stock WHERE S_W_ID = ?, S_I_ID = ?;";
+    public final static String getStockDistInfo = "SELECT ? FROM stock WHERE S_W_ID = ? AND S_I_ID = ?;";
 
     public final static String createNewOrderLine =  "INSERT INTO order_line "
             + "(OL_O_ID, OL_D_ID, OL_W_ID, OL_C_ID, OL_NUMBER, OL_I_ID, OL_SUPPLY_W_ID, OL_QUANTITY, OL_AMOUNT, OL_DIST_INFO) "
@@ -41,7 +41,7 @@ public class PreparedQueries {
     public final static String getWarehouseTax =  "SELECT W_TAX FROM warehouse WHERE W_ID = ?;";
 
     public final static String getCustomerLastAndCreditAndDiscount = "SELECT C_LAST, C_CREDIT, C_DISCOUNT FROM customer " +
-            "WHERE C_W_ID = ?, C_D_ID = ?, C_ID = ?;";
+            "WHERE C_W_ID = ? AND C_D_ID = ? AND C_ID = ?;";
 
     public final static String updateWarehouseYearToDateAmount = "UPDATE warehouse SET W_YTD = ? WHERE W_ID = ?;";
 
@@ -70,7 +70,7 @@ public class PreparedQueries {
     public final static String getDistrictAddress = "SELECT D_STREET_1, D_STREET_2, D_CITY, D_STATE, D_ZIP" +
                 "FROM district WHERE D_W_ID = ? AND D_ID = ?;";
 
-    public final static String getOrderIdToDeliver = "SELECT D_NEXT_DELIVER_O_ID FROM district " +
+    public final static String getNextDeliveryOrderId = "SELECT D_NEXT_DELIVER_O_ID FROM district " +
                     "WHERE D_W_ID = ? AND D_ID = ?;";
 
     public final static String updateOrderIdToDeliver = "UPDATE district "
@@ -79,6 +79,10 @@ public class PreparedQueries {
     public final static String updateCarrierIdInOrder = "UPDATE \"order\" SET O_CARRIER_ID = ?" +
                 "WHERE O_W_ID = ? AND O_D_ID = ? AND O_ID = ?;";
 
+    public final static String revertNextDeliveryOrderId =
+            "UPDATE district "
+                    + "SET D_NEXT_DELIVER_O_ID = D_NEXT_DELIVER_O_ID - 1 "
+                    + "WHERE D_W_ID = ? AND D_ID = ?;";
     public final static String updateDeliveryDateInOrderLine = "UPDATE order_line SET OL_DELIVERY_D = ? " +
                 "WHERE OL_W_ID = ? AND OL_D_ID = ? AND OL_O_ID = ? AND OL_NUMBER = ?;";
 

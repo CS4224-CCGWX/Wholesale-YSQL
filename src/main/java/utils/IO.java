@@ -6,7 +6,9 @@ import java.util.StringTokenizer;
 public class IO extends PrintWriter {
     private BufferedReader r;
     private String line;
+
     private String filePath;
+
     private StringTokenizer st;
     private String token;
     private int client;

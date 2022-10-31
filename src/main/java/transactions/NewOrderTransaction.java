@@ -90,9 +90,9 @@ public class NewOrderTransaction extends AbstractTransaction {
 
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("*** New Order Transaction Information ***\n");
+        sb.append("**** New Order Transaction Information ****\n");
         sb.append(String.format("CID:%d, WID:%d, DID:%d, num order-lines:%d\n", customerId, warehouseId, districtId, nOrderLines));
-        sb.append("Item IDs:");
+        sb.append("Item IDs are:");
         for (int id : itemIds) {
             sb.append(",").append(id);
         }
@@ -126,7 +126,7 @@ public class NewOrderTransaction extends AbstractTransaction {
         ResultSet districtInfo = res;
         if (!res.next()) {
             error("formattedNextOrderIdAndTax");
-            return ;
+            throw new SQLException();
         }
         int orderId = res.getInt("D_NEXT_O_ID");
 
@@ -168,7 +168,7 @@ public class NewOrderTransaction extends AbstractTransaction {
         formattedNewOrder.setInt(6, nOrderLines);
         formattedNewOrder.setInt(7, isAllLocal);
 
-        this.executeQuery(formattedNewOrder);
+        this.executeUpdate(formattedNewOrder);
 
 
         /*
@@ -197,7 +197,7 @@ public class NewOrderTransaction extends AbstractTransaction {
 
             if (!qtyInfo.next()) {
                 error("formattedGetStockQty");
-                return ;
+                throw new SQLException();
             }
 
             int stockQty = qtyInfo.getBigDecimal("S_QUANTITY").intValue();
@@ -241,7 +241,7 @@ public class NewOrderTransaction extends AbstractTransaction {
 
             if (!itemInfo.next()) {
                 error("formattedGetItemPriceAndName");
-                return ;
+                throw new SQLException();
             }
             double price = itemInfo.getBigDecimal("I_PRICE").doubleValue();
             double itemAmount = quantity * price;
@@ -262,7 +262,6 @@ public class NewOrderTransaction extends AbstractTransaction {
               - OL_DIST_INFO = S_DIST_xx where xx=D_ID
              */
             String distIdStr = distIdStr(districtId);
-
             formattedGetStockDistInfo.setString(1, distIdStr);
             formattedGetStockDistInfo.setInt(2, warehouseId);
             formattedGetStockDistInfo.setInt(3, itemId);
@@ -270,10 +269,10 @@ public class NewOrderTransaction extends AbstractTransaction {
 
             if (!res.next()) {
                 error("formattedGetStockDistInfo");
-                return ;
+                throw new SQLException();
             }
 
-            String distInfo = res.getString(0);
+            String distInfo = res.getString(1);
 
             formattedCreateNewOrderLine.setInt(1, orderId);
             formattedCreateNewOrderLine.setInt(2, districtId);
@@ -287,7 +286,7 @@ public class NewOrderTransaction extends AbstractTransaction {
             formattedCreateNewOrderLine.setBigDecimal(9, BigDecimal.valueOf(itemAmount));
             formattedCreateNewOrderLine.setString(10, distInfo);
 
-            this.executeQuery(formattedCreateNewOrderLine);
+            this.executeUpdate(formattedCreateNewOrderLine);
         }
 
         /*
@@ -304,7 +303,7 @@ public class NewOrderTransaction extends AbstractTransaction {
         if (!res.next()) {
 
             error("formattedGetWarehouseTax");
-            return ;
+            throw new SQLException();
         }
 
         double wTax = res.getBigDecimal("W_TAX").doubleValue();
@@ -318,7 +317,7 @@ public class NewOrderTransaction extends AbstractTransaction {
 
         if (!cInfo.next()) {
             error("formattedGetCustomerLastAndCreditAndDiscount");
-            return ;
+            throw new SQLException();
         }
 
         double cDiscount = cInfo.getBigDecimal("C_DISCOUNT").doubleValue();
