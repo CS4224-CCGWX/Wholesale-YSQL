@@ -117,6 +117,7 @@ public class NewOrderTransaction extends AbstractTransaction {
           Update district (W_ID, D_ID) by incrementing D_NEXT_O_ID by 1.
          */
 
+        this.executeQuery("BEGIN TRANSACTION;");
         ResultSet res;
 
         formattedNextOrderIdAndTax.setInt(1, warehouseId);
@@ -353,6 +354,7 @@ public class NewOrderTransaction extends AbstractTransaction {
                     itemIds.get(i), itemNames.get(i), supplyWarehouseIds.get(i), quantities.get(i), itemAmounts.get(i), adjustQuantities.get(i));
         }
 
+        this.executeQuery("END TRANSACTION;");
     }
 
     public void error(String s) {
