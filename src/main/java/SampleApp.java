@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
+import java.util.*;
 
 public class SampleApp {
     private static Connection conn;
@@ -22,6 +22,8 @@ public class SampleApp {
     private static QueryUtils utils;
 
     private static IO io;
+
+    private static Map<String, Long> hm = new HashMap<>();
 
     /*
     args[0] - ip
@@ -73,7 +75,7 @@ public class SampleApp {
         OutputFormatter outputFormatter = new OutputFormatter();
 
         List<Long> latencyList = new ArrayList<>();
-        long fileStart, fileEnd, txStart, txEnd, elapsedTime;
+        long fileStart, fileEnd, txStart, txEnd, elapsedTime, txIndividualStart, txIndividualEnd, elapsedTimeForIndividual;
 
         fileStart = System.nanoTime();
         AbstractTransaction transaction;
@@ -90,7 +92,11 @@ public class SampleApp {
 
             txStart = System.nanoTime();
             try {
+                txIndividualStart = System.nanoTime();
                 transaction.execute();
+                txIndividualEnd = System.nanoTime();
+                elapsedTimeForIndividual = txIndividualEnd - txIndividualStart;
+                System.out.println("Time used: " + elapsedTimeForIndividual);
             } catch (Exception e) {
                 e.printStackTrace();
                 System.err.println("**************************************");
