@@ -42,7 +42,8 @@ CREATE TABLE IF NOT EXISTS warehouse
 (
     W_ID
 )
-    );
+    )
+    PARTITION BY RANGE (W_ID) ;
 
 DROP TABLE IF EXISTS district;
 CREATE TABLE IF NOT EXISTS district
@@ -93,7 +94,7 @@ CREATE TABLE IF NOT EXISTS district
     D_W_ID,
     D_ID
 )
-    );
+    ) PARTITION BY RANGE (D_W_ID, D_ID);
 
 DROP TABLE IF EXISTS customer;
 CREATE TABLE IF NOT EXISTS customer
@@ -174,7 +175,8 @@ CREATE TABLE IF NOT EXISTS customer
     C_D_ID,
     C_ID
 )
-    );
+    ) PARTITION BY RANGE (C_W_ID, C_D_ID)
+CREATE INDEX ON customer (C_BALANCE);
 
 DROP TABLE IF EXISTS "order";
 CREATE TABLE IF NOT EXISTS "order"
@@ -207,7 +209,7 @@ CREATE TABLE IF NOT EXISTS "order"
     O_D_ID,
     O_ID
 )
-    );
+    ) PARTITION BY RANGE (O_W_ID, O_D_ID) ;
 
 DROP TABLE IF EXISTS item;
 CREATE TABLE IF NOT EXISTS item
@@ -227,7 +229,7 @@ CREATE TABLE IF NOT EXISTS item
 (
     I_ID
 )
-    );
+    ) PARTITION BY RANGE (I_ID) ;
 
 DROP TABLE IF EXISTS order_line;
 CREATE TABLE IF NOT EXISTS order_line
@@ -268,7 +270,7 @@ CREATE TABLE IF NOT EXISTS order_line
     OL_O_ID,
     OL_NUMBER
 )
-    );
+    ) PARTITION BY RANGE (OL_W_ID, OL_D_ID) ;
 
 DROP TABLE IF EXISTS stock;
 CREATE TABLE IF NOT EXISTS stock
@@ -339,4 +341,4 @@ CREATE TABLE IF NOT EXISTS stock
     S_W_ID,
     S_I_ID
 )
-    );
+    ) PARTITION BY RANGE (S_W_ID, S_I_ID);
