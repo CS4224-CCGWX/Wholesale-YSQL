@@ -1,4 +1,3 @@
-import com.yugabyte.ysql.YBClusterAwareDataSource;
 import parser.DataLoader;
 import parser.TransactionParser;
 import transactions.AbstractTransaction;
@@ -10,6 +9,7 @@ import utils.QueryUtils;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,8 +32,6 @@ public class SampleApp {
     args[3] - action
      */
     public static void main(String[] args) throws SQLException, IOException {
-
-
         if (args.length < 4) {
             System.err.println("error parameters");
             return;
@@ -41,20 +39,20 @@ public class SampleApp {
 
         String ip = args[0], port = args[1], dbUser = "yugabyte", action = args[3];
         int client = Integer.parseInt(args[2]);
+        Properties settings = new Properties();
         try {
+
+            settings.load(SampleApp.class.getResourceAsStream("app.properties"));
             io = new IO(client);
-        } catch (FileNotFoundException e) {
-            System.err.println("transaction file not found");
-        }
-
-
-        try {
+            io.setFilePath(settings.getProperty("inputFilePath"));
             conn = connectToDB(ip, port);
         } catch (Exception e) {
             e.printStackTrace();
-            return;
+            System.err.println("initialize error");
         }
 
+
+        PerformanceReportGenerator.setFilePath(settings.getProperty("reportFilePath"));
         dataLoader = new DataLoader(conn, ip, port, dbUser);
         utils = new QueryUtils(conn);
 
@@ -68,10 +66,8 @@ public class SampleApp {
     }
 
     private static Connection connectToDB(String ip, String port) throws Exception {
-        YBClusterAwareDataSource ds = new YBClusterAwareDataSource();
-        ds.setUrl(String.format("jdbc:yugabytedb://%s:%s/yugabyte", ip, port));
-        ds.setUser("yugabyte");
-        return ds.getConnection();
+        String url = String.format("jdbc:postgresql://%s:%s/yugabyte", ip, port);
+        return DriverManager.getConnection(url, "yugabyte", "");
     }
 
     private static void run(Connection conn, int client) throws SQLException, IOException {

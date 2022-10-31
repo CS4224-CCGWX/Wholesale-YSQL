@@ -6,16 +6,18 @@ import java.util.StringTokenizer;
 public class IO extends PrintWriter {
     private BufferedReader r;
     private String line;
-
-//    private String filePath = "/home/stuproj/cs4224i/Wholesale-YSQL/project_files/xact_files/%d.txt";
-
-    private String filePath = "/Users/bytedance/Desktop/CS4224/Group_project/recourse/xact_files/%d.txt";
-
+    private String filePath;
     private StringTokenizer st;
     private String token;
+    private int client;
 
-    public IO(int client) throws FileNotFoundException {
+    public IO(int client) {
         super(new BufferedOutputStream(System.out));
+        this.client = client;
+    }
+
+    public void setFilePath(String path) throws FileNotFoundException {
+        this.filePath = path;
         File file = new File(String.format(filePath, client));
         r = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
     }

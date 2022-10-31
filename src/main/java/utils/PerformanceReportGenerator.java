@@ -5,13 +5,18 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class PerformanceReportGenerator {
-    private final static String reportFilePath = "/home/stuproj/cs4224i/Wholesale-YSQL/project_files/report.csv";
+    private static String reportFilePath;
     private static String performanceFormat = "%d,%s,%s,%s,%s,%s,%s,%s\n";
 
     static FileWriter fw;
+
+    public static void setFilePath(String path) {
+        reportFilePath = path;
+    }
     public static void generatePerformanceReport(List<Long> latencyList, long totalTime, int client) throws IOException {
         Collections.sort(latencyList);
         int count = latencyList.size();
