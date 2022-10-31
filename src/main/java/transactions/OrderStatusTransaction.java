@@ -17,18 +17,11 @@ public class OrderStatusTransaction extends AbstractTransaction {
     private final int customerDistrictId;
     private final int customerId;
 
-    private PreparedStatement formattedGetCustomerLastOrderInfo, formattedGetCustomerFullNameAndBalance,
-            formattedGetCustomerLastOrderItemsInfo;
-
     public OrderStatusTransaction(Connection connection, IO io, int cwid, int cdid, int cid) throws SQLException {
         super(connection, io);
         customerWarehouseId = cwid;
         customerDistrictId = cdid;
         customerId = cid;
-
-        formattedGetCustomerLastOrderInfo = connection.prepareStatement(PreparedQueries.getCustomerLastOrderInfo);
-        formattedGetCustomerFullNameAndBalance = connection.prepareStatement(PreparedQueries.getCustomerFullNameAndBalance);
-        formattedGetCustomerLastOrderItemsInfo = connection.prepareStatement(PreparedQueries.getCustomerLastOrderItemsInfo);
     }
 
     public String toString() {
@@ -58,10 +51,10 @@ public class OrderStatusTransaction extends AbstractTransaction {
          */
 
         // Output Customer Name
-        formattedGetCustomerFullNameAndBalance.setInt(1, customerWarehouseId);
-        formattedGetCustomerFullNameAndBalance.setInt(2, customerDistrictId);
-        formattedGetCustomerFullNameAndBalance.setInt(3, customerId);
-        ResultSet customerRes = this.executeQuery(formattedGetCustomerFullNameAndBalance);
+        PreparedQueries.getCustomerFullNameAndBalance.setInt(1, customerWarehouseId);
+        PreparedQueries.getCustomerFullNameAndBalance.setInt(2, customerDistrictId);
+        PreparedQueries.getCustomerFullNameAndBalance.setInt(3, customerId);
+        ResultSet customerRes = this.executeQuery(PreparedQueries.getCustomerFullNameAndBalance);
 
         io.println("*** Order Status Transaction Summary ***");
 
@@ -69,13 +62,13 @@ public class OrderStatusTransaction extends AbstractTransaction {
         io.println(customerInfo);
 
         // Output Customer Last Order
-        formattedGetCustomerLastOrderInfo.setInt(1, customerWarehouseId);
-        formattedGetCustomerLastOrderInfo.setInt(2, customerDistrictId);
-        formattedGetCustomerLastOrderInfo.setInt(3, customerId);
-        ResultSet lastOrderInfo = this.executeQuery(formattedGetCustomerLastOrderInfo);
+        PreparedQueries.getCustomerLastOrderInfo.setInt(1, customerWarehouseId);
+        PreparedQueries.getCustomerLastOrderInfo.setInt(2, customerDistrictId);
+        PreparedQueries.getCustomerLastOrderInfo.setInt(3, customerId);
+        ResultSet lastOrderInfo = this.executeQuery(PreparedQueries.getCustomerLastOrderInfo);
 
         if (!lastOrderInfo.next()) {
-            error("formattedGetCustomerLastOrderInfo");
+            error("PreparedQueries.getCustomerLastOrderInfo");
             throw new SQLException();
         }
 
@@ -87,10 +80,10 @@ public class OrderStatusTransaction extends AbstractTransaction {
 
 
         // Output Customer Last Order for each item
-        formattedGetCustomerLastOrderItemsInfo.setInt(1, customerWarehouseId);
-        formattedGetCustomerLastOrderItemsInfo.setInt(2, customerDistrictId);
-        formattedGetCustomerLastOrderItemsInfo.setInt(3, lastOrderId);
-        ResultSet itemsInfo = this.executeQuery(formattedGetCustomerLastOrderItemsInfo);
+        PreparedQueries.getCustomerLastOrderItemsInfo.setInt(1, customerWarehouseId);
+        PreparedQueries.getCustomerLastOrderItemsInfo.setInt(2, customerDistrictId);
+        PreparedQueries.getCustomerLastOrderItemsInfo.setInt(3, lastOrderId);
+        ResultSet itemsInfo = this.executeQuery(PreparedQueries.getCustomerLastOrderItemsInfo);
 
         io.println("Items of last order:");
         while(itemsInfo.next()) {

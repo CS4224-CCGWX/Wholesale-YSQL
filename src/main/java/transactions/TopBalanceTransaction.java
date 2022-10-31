@@ -10,14 +10,9 @@ import java.util.HashMap;
 public class TopBalanceTransaction extends AbstractTransaction {
     QueryUtils queryUtils;
 
-    PreparedStatement getDistrictStmt, getWarehouseStmt;
-
-
     public TopBalanceTransaction(Connection connection, IO io, QueryUtils utils) throws SQLException {
         super(connection, io);
         this.queryUtils = utils;
-        getDistrictStmt = connection.prepareStatement(PreparedQueries.getDistrictWithIDs);
-        getWarehouseStmt = connection.prepareStatement(PreparedQueries.getWarehouseWithIDs);
     }
 
     /**
@@ -33,7 +28,7 @@ public class TopBalanceTransaction extends AbstractTransaction {
     public void execute() {
         HashMap<Integer, String> districts = new HashMap<>(), warehouses = new HashMap<>();
         try {
-            ResultSet customers = queryUtils.executeQuery(PreparedQueries.getCustomerWithTopBalance);
+            ResultSet customers = PreparedQueries.getCustomerWithTopBalance.executeQuery();
             while (customers.next()) {
                 int districtID = customers.getInt("C_D_ID");
                 int warehouseID = customers.getInt("C_W_ID");
@@ -47,9 +42,9 @@ public class TopBalanceTransaction extends AbstractTransaction {
 
             Thread getDistrictThread = new Thread(() -> {
                 try {
-                    Array districtsArray = getDistrictStmt.getConnection().createArrayOf("INTEGER", districts.keySet().toArray());
-                    getDistrictStmt.setArray(1, districtsArray);
-                    ResultSet districtRecords = getDistrictStmt.executeQuery();
+                    Array districtsArray = PreparedQueries.getDistrictWithIDs.getConnection().createArrayOf("INTEGER", districts.keySet().toArray());
+                    PreparedQueries.getDistrictWithIDs.setArray(1, districtsArray);
+                    ResultSet districtRecords = PreparedQueries.getDistrictWithIDs.executeQuery();
 
                     while (districtRecords.next()) {
                         districts.put(districtRecords.getInt("D_ID"), districtRecords.getString("D_NAME"));
@@ -62,9 +57,9 @@ public class TopBalanceTransaction extends AbstractTransaction {
 
             Thread getWareHouseThread = new Thread(() -> {
                 try {
-                    Array warehousesArray = getWarehouseStmt.getConnection().createArrayOf("INTEGER", warehouses.keySet().toArray());
-                    getWarehouseStmt.setArray(1, warehousesArray);
-                    ResultSet warehouseRecords = getWarehouseStmt.executeQuery();
+                    Array warehousesArray = PreparedQueries.getWarehouseWithIDs.getConnection().createArrayOf("INTEGER", warehouses.keySet().toArray());
+                    PreparedQueries.getWarehouseWithIDs.setArray(1, warehousesArray);
+                    ResultSet warehouseRecords = PreparedQueries.getWarehouseWithIDs.executeQuery();
 
                     while (warehouseRecords.next()) {
                         warehouses.put(warehouseRecords.getInt("W_ID"), warehouseRecords.getString("W_NAME"));

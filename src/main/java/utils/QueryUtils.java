@@ -8,32 +8,16 @@ import java.util.List;
 public class QueryUtils {
     Connection conn;
 
-    PreparedStatement getNextAvailableOrderNumberStmt, getCustomerNamesStmt,
-            getItemNamesStmt, getPopularItemsWithinOrderStmt,
-            getRelatedCustomerStmt, getPastOrdersFromOrderLineStmt,
-            getPastOrdersFromOrderStmt;
 
-    public QueryUtils(Connection conn) throws SQLException {
+    public QueryUtils(Connection conn) {
         this.conn = conn;
-
-        getNextAvailableOrderNumberStmt = conn.prepareStatement(PreparedQueries.getNextAvailableOrderNumber);
-        getCustomerNamesStmt = conn.prepareStatement(PreparedQueries.getCustomerNameByID);
-        getItemNamesStmt = conn.prepareStatement(PreparedQueries.getItemById);
-        getPopularItemsWithinOrderStmt = conn.prepareStatement(PreparedQueries.getPopularItemsFromOrder);
-        getPastOrdersFromOrderLineStmt = conn.prepareStatement(PreparedQueries.getLastOrdersFromOrderLine);
-        getPastOrdersFromOrderStmt = conn.prepareStatement(PreparedQueries.getLastOrdersFromOrder);
     }
-
-    public ResultSet executeQuery(String query) throws SQLException {
-        Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
-        return stmt.executeQuery(query);
-    }
-
+    
     public int getNextAvailableOrderNumber(int warehouseID, int districtID) throws SQLException {
-        getNextAvailableOrderNumberStmt.setInt(1, warehouseID);
-        getNextAvailableOrderNumberStmt.setInt(2, districtID);
+        PreparedQueries.getNextAvailableOrderNumber.setInt(1, warehouseID);
+        PreparedQueries.getNextAvailableOrderNumber.setInt(2, districtID);
 
-        ResultSet nextAvailableOrder = getNextAvailableOrderNumberStmt.executeQuery();
+        ResultSet nextAvailableOrder = PreparedQueries.getNextAvailableOrderNumber.executeQuery();
         if (nextAvailableOrder.next()) {
             return nextAvailableOrder.getInt("D_NEXT_O_ID");
         } else {
@@ -42,11 +26,11 @@ public class QueryUtils {
     }
 
     public ResultSet getPastOrdersFromOrderLine(int warehouseID, int districtID, int nextOrderNumber, int pastOrders) throws SQLException {
-        return getPastOrders(getPastOrdersFromOrderLineStmt, warehouseID, districtID, nextOrderNumber, pastOrders);
+        return getPastOrders(PreparedQueries.getLastOrdersFromOrderLine, warehouseID, districtID, nextOrderNumber, pastOrders);
     }
 
     public ResultSet getPastOrdersFromOrder(int warehouseID, int districtID, int nextOrderNumber, int pastOrders) throws SQLException {
-        return getPastOrders(getPastOrdersFromOrderStmt, warehouseID, districtID, nextOrderNumber, pastOrders);
+        return getPastOrders(PreparedQueries.getLastOrdersFromOrder, warehouseID, districtID, nextOrderNumber, pastOrders);
     }
 
     private ResultSet getPastOrders(PreparedStatement getPastOrdersStmt, int warehouseID, int districtID, int nextOrderNumber, int pastOrders) throws SQLException {
@@ -58,8 +42,8 @@ public class QueryUtils {
     }
 
     public String getCustomerNameById(int customerID) throws SQLException {
-        getCustomerNamesStmt.setInt(1, customerID);
-        ResultSet result = getCustomerNamesStmt.executeQuery();
+        PreparedQueries.getCustomerNameByID.setInt(1, customerID);
+        ResultSet result = PreparedQueries.getCustomerNameByID.executeQuery();
 
         if (result.next()) {
             return String.format("%s, %s, %s",
@@ -74,8 +58,8 @@ public class QueryUtils {
 
 
     public String getItemNameById(int itemID) throws SQLException {
-        getItemNamesStmt.setInt(1, itemID);
-        ResultSet result = getItemNamesStmt.executeQuery();
+        PreparedQueries.getItemById.setInt(1, itemID);
+        ResultSet result = PreparedQueries.getItemById.executeQuery();
 
         if (result.next()) {
             return result.getString("I_NAME");
@@ -86,10 +70,10 @@ public class QueryUtils {
 
     public List<Integer> getPopularItemWithinOrder(int warehouseID, int districtID, int orderID,
                                                    HashMap<Integer, Integer> itemFrequency) throws SQLException {
-        getPopularItemsWithinOrderStmt.setInt(1, warehouseID);
-        getPopularItemsWithinOrderStmt.setInt(2, districtID);
-        getPopularItemsWithinOrderStmt.setInt(3, orderID);
-        ResultSet result = getPopularItemsWithinOrderStmt.executeQuery();
+        PreparedQueries.getPopularItemsFromOrder.setInt(1, warehouseID);
+        PreparedQueries.getPopularItemsFromOrder.setInt(2, districtID);
+        PreparedQueries.getPopularItemsFromOrder.setInt(3, orderID);
+        ResultSet result = PreparedQueries.getPopularItemsFromOrder.executeQuery();
         ArrayList<Integer> popularItems = new ArrayList<>();
 
         int maxQuantity = 0, itemId = 0;
@@ -108,20 +92,6 @@ public class QueryUtils {
 
         popularItems.add(maxQuantity);
         return popularItems;
-    }
-
-    public List<Integer> getRelatedCustomers(int warehouseID, int districtID, int customerID) throws SQLException {
-        getRelatedCustomerStmt.setInt(1, warehouseID);
-        getRelatedCustomerStmt.setInt(2, districtID);
-        getRelatedCustomerStmt.setInt(3, customerID);
-        ResultSet records = getCustomerNamesStmt.executeQuery();
-
-        List<Integer> result = new ArrayList<>();
-        while (records.next()) {
-            result.add(records.getInt("customerID"));
-        }
-
-        return result;
     }
 
 }

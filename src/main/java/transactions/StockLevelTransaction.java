@@ -14,7 +14,6 @@ public class StockLevelTransaction extends AbstractTransaction {
     int warehouseId, districtID, threshold, lastOrders;
     QueryUtils queryUtils;
 
-    PreparedStatement getStockStmt;
 
     public StockLevelTransaction(Connection conn, IO io, QueryUtils utils, int warehouseId, int districtID,
                                  int threshold, int lastOrders) throws SQLException {
@@ -24,8 +23,6 @@ public class StockLevelTransaction extends AbstractTransaction {
         this.threshold = threshold;
         this.lastOrders = lastOrders;
         queryUtils = utils;
-
-        getStockStmt = connection.prepareStatement(PreparedQueries.getItemStock);
     }
 
     public void execute() {
@@ -38,9 +35,9 @@ public class StockLevelTransaction extends AbstractTransaction {
                 itemIds.add(pastOrders.getInt("OL_I_ID"));
             }
 
-            getStockStmt.setInt(1, warehouseId);
-            getStockStmt.setArray(2, connection.createArrayOf("INTEGER", itemIds.toArray()));
-            ResultSet stocks = getStockStmt.executeQuery();
+            PreparedQueries.getItemStock.setInt(1, warehouseId);
+            PreparedQueries.getItemStock.setArray(2, connection.createArrayOf("INTEGER", itemIds.toArray()));
+            ResultSet stocks = PreparedQueries.getItemStock.executeQuery();
 
             int total = 0;
             while (stocks.next()) {
