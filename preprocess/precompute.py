@@ -3,15 +3,15 @@
 import pandas as pd 
 import os
 dataDir="/home/stuproj/cs4224i/project_files/data_files/"
-
+outputDir = "/home/stuproj/cs4224i/Wholesale-YSQL/project_files/data_files/"
 # source file
 order_path = dataDir + "order.csv"
 order_line_path = dataDir + "order-line.csv"
 district_path = dataDir + "district.csv"
 
 # target file
-order_lines_with_cid_path = dataDir+ "order-line-with-cid.csv"
-district_with_delivery_path = dataDir+ "district-with-delivery.csv"
+order_lines_with_cid_path = outputDir+ "order_line.csv"
+district_with_delivery_path = outputDir+ "district.csv"
 
 def get_cid_in_order_line():
     

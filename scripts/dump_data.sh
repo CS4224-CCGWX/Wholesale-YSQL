@@ -9,8 +9,7 @@ dataDir="/home/stuproj/cs4224i/Wholesale-YSQL/project_files/data_files"
 bsz=500
 
 
-echo "***** Remove null in dataset *****"
-python preprocess/precompute.py
+# python preprocess/precompute.py
 
 echo "***** Start dump data *****"
 echo "Defining schema"
@@ -36,22 +35,22 @@ fi
 
 # DateTime format reference: https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
 echo "***** Load warehouse table *****"
-$YSQLSH  -c "\COPY warehouse FROM '$dataDir/warehouse.csv' DELIMITER '$DELIM';" -h $ip -p $port
+$YSQLSH  -c "\COPY warehouse FROM '$dataDir/warehouse.csv' WITH (FORMAT CSV, NULL 'null');" -h $ip -p $port
 
 echo "***** Load district table *****"
-$YSQLSH -c "\COPY district FROM '$dataDir/district.csv' DELIMITER '$DELIM';" -h $ip -p $port
+$YSQLSH -c "\COPY district FROM '$dataDir/district.csv' WITH (FORMAT CSV, NULL 'null');" -h $ip -p $port
 
 echo "***** Load customer table *****"
-$YSQLSH -c "\COPY customer FROM '$dataDir/customer.csv' DELIMITER '$DELIM';" -h $ip -p $port
+$YSQLSH -c "\COPY customer FROM '$dataDir/customer.csv' WITH (FORMAT CSV, NULL 'null');" -h $ip -p $port
 
 echo "***** Load order table *****"
-$YSQLSH -c "\COPY \"order\" FROM '$dataDir/customer.csv' DELIMITER '$DELIM';" -h $ip -p $port
+$YSQLSH -c "\COPY \"order\" FROM '$dataDir/order.csv' WITH (FORMAT CSV, NULL 'null');" -h $ip -p $port
 
 echo "***** Load item table *****"
-$YSQLSH -c "\COPY item FROM '$dataDir/item.csv' DELIMITER '$DELIM';" -h $ip -p $port
+$YSQLSH -c "\COPY item FROM '$dataDir/item.csv' DELIMITER WITH (FORMAT CSV, NULL 'null');" -h $ip -p $port
 
 echo "***** Load order_line table *****"
-$YSQLSH -c "\COPY order_line FROM '$dataDir/order_line.csv' DELIMITER '$DELIM';" -h $ip -p $port
+$YSQLSH -c "\COPY order_line FROM '$dataDir/order_line.csv' WITH (FORMAT CSV, NULL '');" -h $ip -p $port
 
 echo "***** Load stock table *****"
-$YSQLSH -c "\COPY stock FROM '$dataDir/stock.csv' DELIMITER '$DELIM';" -h $ip -p $port
+$YSQLSH -c "\COPY stock FROM '$dataDir/stock.csv' WITH (FORMAT CSV, NULL 'null');" -h $ip -p $port
