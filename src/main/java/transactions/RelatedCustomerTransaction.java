@@ -50,8 +50,6 @@ public class RelatedCustomerTransaction extends AbstractTransaction {
     int warehouseID, districtID, customerID;
     QueryUtils queryUtils;
 
-    PreparedStatement getOrderedItemsByCustomerStmt, getPossibleCustomerStmt;
-
     public RelatedCustomerTransaction(Connection conn, IO io, QueryUtils utils, int warehouseID,
                                       int districtID, int customerID) throws SQLException {
         super(conn, io);
@@ -59,16 +57,13 @@ public class RelatedCustomerTransaction extends AbstractTransaction {
         this.districtID = districtID;
         this.customerID = customerID;
         this.queryUtils = utils;
-
-        getOrderedItemsByCustomerStmt = conn.prepareStatement(PreparedQueries.getOrderedItemsByCustomerStmt);
-        getPossibleCustomerStmt = conn.prepareStatement(PreparedQueries.getPossibleCustomerStmt);
     }
 
     @Override
     public void execute() throws SQLException {
-        getOrderedItemsByCustomerStmt.setInt(1, warehouseID);
-        getOrderedItemsByCustomerStmt.setInt(2, districtID);
-        getOrderedItemsByCustomerStmt.setInt(3, customerID);
+        PreparedQueries.getOrderedItemsByCustomerStmt.setInt(1, warehouseID);
+        PreparedQueries.getOrderedItemsByCustomerStmt.setInt(2, districtID);
+        PreparedQueries.getOrderedItemsByCustomerStmt.setInt(3, customerID);
 
         // get items purchased by the customer and the associated order id
         HashMap<Integer, HashSet<Integer>> orderToItemsMap = new HashMap<>();
@@ -125,7 +120,7 @@ public class RelatedCustomerTransaction extends AbstractTransaction {
     }
 
     private void getTargetCustomerOrderItems(HashMap<Integer, HashSet<Integer>> orderToItemsMap) throws SQLException {
-        ResultSet itemsPurchasedByCustomer = getOrderedItemsByCustomerStmt.executeQuery();
+        ResultSet itemsPurchasedByCustomer = PreparedQueries.getOrderedItemsByCustomerStmt.executeQuery();
         while (itemsPurchasedByCustomer.next()) {
             int itemId = itemsPurchasedByCustomer.getInt("OL_I_ID"),
                     orderId = itemsPurchasedByCustomer.getInt("OL_O_ID");
@@ -138,8 +133,8 @@ public class RelatedCustomerTransaction extends AbstractTransaction {
 
     private void getPossibleCustomersOrderItems(HashMap<Customer,
             HashMap<Integer, HashSet<Integer>>> customerToItemsMap) throws SQLException {
-        getPossibleCustomerStmt.setInt(1, warehouseID);
-        ResultSet possibleRelatedCustomerResult = getPossibleCustomerStmt.executeQuery();
+        PreparedQueries.getPossibleCustomerStmt.setInt(1, warehouseID);
+        ResultSet possibleRelatedCustomerResult = PreparedQueries.getPossibleCustomerStmt.executeQuery();
 
         while (possibleRelatedCustomerResult.next()) {
             int wid = possibleRelatedCustomerResult.getInt("OL_W_ID"),

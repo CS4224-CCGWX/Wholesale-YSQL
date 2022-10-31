@@ -22,24 +22,12 @@ public class PaymentTransaction extends AbstractTransaction{
 
     private static final String delimiter = "\n";
 
-    private PreparedStatement formattedGetWarehouseAddressAndYtd, formattedUpdateWarehouseYearToDateAmount,
-            formattedGetDistrictAddressAndYtd, formattedUpdateDistrictYearToDateAmount,
-            formattedGetFullCustomerInfo, formattedUpdateCustomerPaymentInfo;
-
-
     public PaymentTransaction(Connection connection, IO io, int cwid, int cdid, int cid, double p) throws SQLException {
         super(connection, io);
         customerId = cid;
         warehouseId = cwid;
         districtId = cdid;
         payment = p;
-
-        formattedGetWarehouseAddressAndYtd = connection.prepareStatement(PreparedQueries.getWarehouseAddressAndYtd);
-        formattedUpdateWarehouseYearToDateAmount = connection.prepareStatement(PreparedQueries.updateWarehouseYearToDateAmount);
-        formattedGetDistrictAddressAndYtd = connection.prepareStatement(PreparedQueries.getDistrictAddressAndYtd);
-        formattedUpdateDistrictYearToDateAmount = connection.prepareStatement(PreparedQueries.updateDistrictYearToDateAmount);
-        formattedGetFullCustomerInfo = connection.prepareStatement(PreparedQueries.getFullCustomerInfo);
-        formattedUpdateCustomerPaymentInfo = connection.prepareStatement(PreparedQueries.updateCustomerPaymentInfo);
     }
 
 
@@ -48,9 +36,9 @@ public class PaymentTransaction extends AbstractTransaction{
         // 1.  Update the warehouse C W ID by incrementing W YTD by PAYMENT
 
         // Output Customer Last Order for each item
-        formattedGetWarehouseAddressAndYtd.setInt(1, warehouseId);
+        PreparedQueries.getWarehouseAddressAndYtd.setInt(1, warehouseId);
 
-        ResultSet warehouseResult = this.executeQuery(formattedGetWarehouseAddressAndYtd);
+        ResultSet warehouseResult = this.executeQuery(PreparedQueries.getWarehouseAddressAndYtd);
 
         if (!warehouseResult.next()) {
             error("formattedGetWarehouseAddressAndYtd");
@@ -59,14 +47,14 @@ public class PaymentTransaction extends AbstractTransaction{
         double warehouseYtd = warehouseResult.getBigDecimal("W_YTD").doubleValue();
         warehouseYtd += payment;
 
-        formattedUpdateWarehouseYearToDateAmount.setBigDecimal(1, BigDecimal.valueOf(warehouseYtd));
-        formattedUpdateWarehouseYearToDateAmount.setInt(2, warehouseId);
-        this.executeUpdate(formattedUpdateWarehouseYearToDateAmount);
+        PreparedQueries.updateWarehouseYearToDateAmount.setBigDecimal(1, BigDecimal.valueOf(warehouseYtd));
+        PreparedQueries.updateWarehouseYearToDateAmount.setInt(2, warehouseId);
+        this.executeUpdate(PreparedQueries.updateWarehouseYearToDateAmount);
 
 
-        formattedGetDistrictAddressAndYtd.setInt(1, warehouseId);
-        formattedGetDistrictAddressAndYtd.setInt(2, districtId);
-        ResultSet districtResult = this.executeQuery(formattedGetDistrictAddressAndYtd);
+        PreparedQueries.getDistrictAddressAndYtd.setInt(1, warehouseId);
+        PreparedQueries.getDistrictAddressAndYtd.setInt(2, districtId);
+        ResultSet districtResult = this.executeQuery(PreparedQueries.getDistrictAddressAndYtd);
 
         if (!districtResult.next()) {
             error("formattedGetDistrictAddressAndYtd");
@@ -76,10 +64,10 @@ public class PaymentTransaction extends AbstractTransaction{
         districtYtd += payment;
 
         // 2. Update the district (C W ID,C D ID) by incrementing D YTD by PAYMENT
-        formattedUpdateDistrictYearToDateAmount.setBigDecimal(1, BigDecimal.valueOf(districtYtd));
-        formattedUpdateDistrictYearToDateAmount.setInt(2, warehouseId);
-        formattedUpdateDistrictYearToDateAmount.setInt(3, districtId);
-        this.executeUpdate(formattedUpdateDistrictYearToDateAmount);
+        PreparedQueries.updateDistrictYearToDateAmount.setBigDecimal(1, BigDecimal.valueOf(districtYtd));
+        PreparedQueries.updateDistrictYearToDateAmount.setInt(2, warehouseId);
+        PreparedQueries.updateDistrictYearToDateAmount.setInt(3, districtId);
+        this.executeUpdate(PreparedQueries.updateDistrictYearToDateAmount);
 
 
         /*
@@ -88,10 +76,10 @@ public class PaymentTransaction extends AbstractTransaction{
             • Increment C YTD PAYMENT by PAYMENT
             • Increment C PAYMENT CNT by 1
          */
-        formattedGetFullCustomerInfo.setInt(1, warehouseId);
-        formattedGetFullCustomerInfo.setInt(2, districtId);
-        formattedGetFullCustomerInfo.setInt(3, customerId);
-        ResultSet customerRes = this.executeQuery(formattedGetFullCustomerInfo);
+        PreparedQueries.getFullCustomerInfo.setInt(1, warehouseId);
+        PreparedQueries.getFullCustomerInfo.setInt(2, districtId);
+        PreparedQueries.getFullCustomerInfo.setInt(3, customerId);
+        ResultSet customerRes = this.executeQuery(PreparedQueries.getFullCustomerInfo);
         if (!customerRes.next()) {
             error("formattedGetFullCustomerInfo");
             throw new SQLException();
@@ -102,12 +90,12 @@ public class PaymentTransaction extends AbstractTransaction{
         float customerYtd = customerRes.getFloat("C_YTD_PAYMENT");
         customerYtd += payment;
 
-        formattedUpdateCustomerPaymentInfo.setBigDecimal(1, BigDecimal.valueOf(customerBalance));
-        formattedUpdateCustomerPaymentInfo.setFloat(2, customerYtd);
-        formattedUpdateCustomerPaymentInfo.setInt(3, warehouseId);
-        formattedUpdateCustomerPaymentInfo.setInt(4, districtId);
-        formattedUpdateCustomerPaymentInfo.setInt(5, customerId);
-        this.executeUpdate(formattedUpdateCustomerPaymentInfo);
+        PreparedQueries.updateCustomerPaymentInfo.setBigDecimal(1, BigDecimal.valueOf(customerBalance));
+        PreparedQueries.updateCustomerPaymentInfo.setFloat(2, customerYtd);
+        PreparedQueries.updateCustomerPaymentInfo.setInt(3, warehouseId);
+        PreparedQueries.updateCustomerPaymentInfo.setInt(4, districtId);
+        PreparedQueries.updateCustomerPaymentInfo.setInt(5, customerId);
+        this.executeUpdate(PreparedQueries.updateCustomerPaymentInfo);
 
         // Output Customer Information
 

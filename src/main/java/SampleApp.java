@@ -1,15 +1,13 @@
 import parser.DataLoader;
 import parser.TransactionParser;
 import transactions.AbstractTransaction;
-import utils.IO;
-import utils.OutputFormatter;
-import utils.PerformanceReportGenerator;
-import utils.QueryUtils;
+import utils.*;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -46,11 +44,11 @@ public class SampleApp {
             io = new IO(client);
             io.setFilePath(settings.getProperty("inputFilePath"));
             conn = connectToDB(ip, port);
+            PreparedQueries.init(conn);
         } catch (Exception e) {
             e.printStackTrace();
             System.err.println("initialize error");
         }
-
 
         PerformanceReportGenerator.setFilePath(settings.getProperty("reportFilePath"));
         dataLoader = new DataLoader(conn, ip, port, dbUser);

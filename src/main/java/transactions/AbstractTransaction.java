@@ -10,7 +10,6 @@ import java.util.Map;
 public abstract class AbstractTransaction {
     protected Connection connection;
 
-//    private ConsistencyLevel defaultConsistencyLevel;
     private final int defaultTimeout = 5;
     protected IO io;
 
