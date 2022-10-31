@@ -19,15 +19,15 @@ $YSQLSH -f $schema
 
 curr_node=$1
 port=$2
-if [[ $curr_node == "xcnd20" ]]; then
+if [ $curr_node == "xcnd20" ]; then
     ip="192.168.48.239"
-elif [[ $curr_node == "xcnd21" ]]; then
+elif [ $curr_node == "xcnd21" ]; then
     ip="192.168.48.240"
-elif [[ $curr_node == "xcnd22" ]]; then
+elif [ $curr_node == "xcnd22" ]; then
     ip="192.168.48.241"
-elif [[ $curr_node == "xcnd23" ]]; then
+elif [ $curr_node == "xcnd23" ]; then
     ip="192.168.48.242"
-elif [[ $curr_node == "xcnd24" ]]; then
+elif [ $curr_node == "xcnd24" ]; then
     ip="192.168.48.243"
 else
     echo "Using default node xcnd20"
