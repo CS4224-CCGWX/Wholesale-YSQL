@@ -30,7 +30,7 @@ public class PreparedQueries {
         getDistrictNextOrderIdAndTax = conn.prepareStatement("SELECT D_NEXT_O_ID, D_TAX FROM district WHERE D_W_ID = ? AND D_ID = ?;");
         getPossibleCustomerStmt = conn.prepareStatement( "SELECT OL_W_ID, OL_D_ID, OL_C_ID, OL_O_ID, OL_I_ID " +
                 "FROM order_line WHERE OL_W_ID <> ?;");
-        getOrderedItemsByCustomerStmt = conn.prepareStatement("SELECT OL_I_ID, OL_O_ID FROM order_lineB " +
+        getOrderedItemsByCustomerStmt = conn.prepareStatement("SELECT OL_I_ID, OL_O_ID FROM order_line " +
                 "WHERE OL_W_ID = ? AND OL_D_ID = ? AND OL_C_ID = ?;");
         getPopularItemsFromOrder = conn.prepareStatement("SELECT OL_I_ID, OL_QUANTITY FROM Order_Line " +
                 "WHERE OL_W_ID = ? AND OL_D_ID = ? AND OL_O_ID = ? ORDER BY OL_QUANTITY;");

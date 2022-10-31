@@ -12,7 +12,7 @@ public class QueryUtils {
     public QueryUtils(Connection conn) {
         this.conn = conn;
     }
-    
+
     public int getNextAvailableOrderNumber(int warehouseID, int districtID) throws SQLException {
         PreparedQueries.getNextAvailableOrderNumber.setInt(1, warehouseID);
         PreparedQueries.getNextAvailableOrderNumber.setInt(2, districtID);

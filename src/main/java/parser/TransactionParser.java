@@ -134,5 +134,7 @@ public class TransactionParser {
         int c_id = Integer.parseInt(inputs[index++]);
         return new RelatedCustomerTransaction(session, io, utils, w_id, d_id, c_id);
     }
+
+
 }
 

@@ -76,7 +76,7 @@ public class NewOrderTransaction extends AbstractTransaction {
           Update district (W_ID, D_ID) by incrementing D_NEXT_O_ID by 1.
          */
 
-        this.executeQuery("BEGIN TRANSACTION;");
+//        this.executeQuery("BEGIN TRANSACTION;");
         ResultSet res;
 
         PreparedQueries.getDistrictNextOrderIdAndTax.setInt(1, warehouseId);
@@ -300,20 +300,19 @@ public class NewOrderTransaction extends AbstractTransaction {
         String cCredit = cInfo.getString("C_CREDIT");
 
         io.println("*** New Order Transaction Summary ***");
-        io.printf(
-                "Customer ID: (%d, %d, %d), Last name:%s, Credit:%s, C_DISCOUNT:%.4f\n",
-                warehouseId, districtId, customerId, cLast, cCredit, cDiscount);
-        io.printf("Warehouse tax:%.4f, District tax:%.4f\n", wTax, dTax);
-        io.printf("Order ID:%d, Order entry date:%s\n", orderId, TimeFormatter.formatTime(orderDateTime));
-        io.printf("#items:%d, Total amount:%.2f\n", nOrderLines, totalAmount);
+        io.println(
+                String.format("Customer ID: (%d, %d, %d), Last name:%s, Credit:%s, C_DISCOUNT:%.4f\n",
+                warehouseId, districtId, customerId, cLast, cCredit, cDiscount));
+        io.println(String.format("Warehouse tax:%.4f, District tax:%.4f\n", wTax, dTax));
+        io.println(String.format("Order ID:%d, Order entry date:%s\n", orderId, TimeFormatter.formatTime(orderDateTime)));
+        io.println(String.format("#items:%d, Total amount:%.2f\n", nOrderLines, totalAmount));
         io.println("Items information:");
         for (int i = 0; i < nOrderLines; ++i) {
-            io.printf(
-                    "\t Item number: %d, name: %s, Supplier warehouse: %d, quantity: %d, Order-line amount: %.2f, Adjusted quantity: %d\n",
-                    itemIds.get(i), itemNames.get(i), supplyWarehouseIds.get(i), quantities.get(i), itemAmounts.get(i), adjustQuantities.get(i));
+            io.println(
+                    String.format("\t Item number: %d, name: %s, Supplier warehouse: %d, quantity: %d, Order-line amount: %.2f, Adjusted quantity: %d\n",
+                    itemIds.get(i), itemNames.get(i), supplyWarehouseIds.get(i), quantities.get(i), itemAmounts.get(i), adjustQuantities.get(i)));
         }
 
-        this.executeQuery("END TRANSACTION;");
     }
 
     public void error(String s) {
