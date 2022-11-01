@@ -28,3 +28,5 @@ target/*
 .idea/*
 project_files/*
 .DS_Store
+./src/main/resources/app.properties
+

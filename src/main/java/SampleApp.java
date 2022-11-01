@@ -52,7 +52,7 @@ public class SampleApp {
             System.err.println("initialize error");
         }
 
-        PerformanceReportGenerator.setFilePath(settings.getProperty("reportFilePath"));
+        PerformanceReportGenerator.setFilePath(settings.getProperty("reportFilePath"), client);
         dataLoader = new DataLoader(conn, ip, port, dbUser);
         utils = new QueryUtils(conn);
 

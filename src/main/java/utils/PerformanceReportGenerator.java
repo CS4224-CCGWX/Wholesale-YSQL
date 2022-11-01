@@ -1,8 +1,6 @@
 package utils;
 
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.Collections;
 import java.util.List;
 import java.util.Properties;
@@ -14,9 +12,15 @@ public class PerformanceReportGenerator {
 
     static FileWriter fw;
 
-    public static void setFilePath(String path) {
-        reportFilePath = path;
+    public int client;
+
+    public static void setFilePath(String path, int client) {
+        reportFilePath = String.format(path, client);
     }
+
+//    public static void setFilePath(String path) {
+//        reportFilePath = path;
+//    }
     public static void generatePerformanceReport(List<Long> latencyList, long totalTime, int client) throws IOException {
         Collections.sort(latencyList);
         int count = latencyList.size();
