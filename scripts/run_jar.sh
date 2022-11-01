@@ -27,6 +27,6 @@ fi
 output_path="./log/"$tx".out"
 err_path="./log/"{$tx}".err"
 
-echo "Run transaction file at node: {$curr_node}"
+echo "Run transaction file at node: $curr_node"
 java -jar target/yugabyte-simple-java-app-1.0-SNAPSHOT.jar $curr_node $port $tx run > $output_path 2>$err_path
 exit 0
