@@ -37,9 +37,11 @@ public class RelatedCustomerTransaction extends AbstractTransaction {
         getTargetCustomerOrderItems(orderToItemsMap);
         for (int id = 1; id <= 10; id += 2){
             if (id == warehouseID) {
-                getPossibleCustomersOrderItems(customerToItemsMap, id, id + 1);
-            } else {
+                getPossibleCustomersOrderItems(customerToItemsMap, id + 1, id + 1);
+            } else if (id + 1 == warehouseID){
                 getPossibleCustomersOrderItems(customerToItemsMap, id, id);
+            } else {
+                getPossibleCustomersOrderItems(customerToItemsMap, id, id + 1);
             }
         }
 
