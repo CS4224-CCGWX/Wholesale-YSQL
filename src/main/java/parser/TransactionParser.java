@@ -115,7 +115,7 @@ public class TransactionParser {
         return new StockLevelTransaction(session, io, utils, w_id, d_id, t, l);
     }
 
-    private PopularItemTransaction parsePopularItemTransaction(String[] inputs) {
+    private PopularItemTransaction parsePopularItemTransaction(String[] inputs) throws SQLException {
         int index = 1;
         int w_id = Integer.parseInt(inputs[index++]);
         int d_id = Integer.parseInt(inputs[index++]);
