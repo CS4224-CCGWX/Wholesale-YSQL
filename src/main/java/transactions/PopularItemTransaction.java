@@ -14,7 +14,7 @@ public class PopularItemTransaction extends AbstractTransaction {
     int warehouseID, districtID, pastNumberOfOrders;
     QueryUtils queryUtils;
 
-    public PopularItemTransaction(Connection conn, IO io, QueryUtils utils, int warehouseID, int districtID, int pastOrders) {
+    public PopularItemTransaction(Connection conn, IO io, QueryUtils utils, int warehouseID, int districtID, int pastOrders) throws SQLException {
         super(conn, io);
         this.warehouseID = warehouseID;
         this.districtID = districtID;
@@ -28,7 +28,9 @@ public class PopularItemTransaction extends AbstractTransaction {
     }
 
     @Override
-    public void execute() {
+    public void execute() throws SQLException {
+
+        this.executeUpdate(beginTransaction);
         try {
             int nextOrderNumber = queryUtils.getNextAvailableOrderNumber(warehouseID, districtID);
             ResultSet pastOrders = queryUtils.getPastOrdersFromOrder(
@@ -102,5 +104,8 @@ public class PopularItemTransaction extends AbstractTransaction {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+        this.executeUpdate(endTransaction);
+
     }
 }

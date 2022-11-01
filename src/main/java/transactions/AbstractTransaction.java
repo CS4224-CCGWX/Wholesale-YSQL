@@ -13,11 +13,16 @@ public abstract class AbstractTransaction {
     private final int defaultTimeout = 5;
     protected IO io;
 
+    PreparedStatement beginTransaction;
+    PreparedStatement endTransaction;
+
     private static Map<String, PreparedStatement> preparedStatementHashMap = new HashMap<>();
 
-    AbstractTransaction(Connection connection, IO io) {
+    AbstractTransaction(Connection connection, IO io) throws SQLException {
         this.connection = connection;
         this.io = io;
+        beginTransaction = connection.prepareStatement("BEGIN;");
+        endTransaction = connection.prepareStatement("COMMIT;");
     }
 
     protected ResultSet executeQueryWithTimeout(String query, int timeout, Object... values) throws SQLException {

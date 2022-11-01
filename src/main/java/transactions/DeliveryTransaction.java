@@ -24,7 +24,7 @@ public class DeliveryTransaction extends AbstractTransaction {
     }
 
     public void execute() throws SQLException {
-
+        this.executeUpdate(beginTransaction);
         ResultSet res;
         /*
         (a) Let N denote the value of the smallest order number O ID for district (W ID,DISTRICT NO)
@@ -130,6 +130,7 @@ public class DeliveryTransaction extends AbstractTransaction {
             io.println(String.format("Updated the info of customer (%d, %d, %d)", warehouseId, districtNo, customerId));
         }
 
+        this.executeUpdate(endTransaction);
     }
 
     @Override

@@ -33,6 +33,8 @@ public class PaymentTransaction extends AbstractTransaction{
 
     public void execute() throws SQLException {
 
+        this.executeUpdate(beginTransaction);
+
         // 1.  Update the warehouse C W ID by incrementing W YTD by PAYMENT
 
         // Output Customer Last Order for each item
@@ -123,6 +125,9 @@ public class PaymentTransaction extends AbstractTransaction{
         sb.append(delimiter);
 
         io.println(sb);
+
+        this.executeUpdate(endTransaction);
+
     }
 
     public String toString() {

@@ -32,6 +32,8 @@ public class RelatedCustomerTransaction extends AbstractTransaction {
 
     @Override
     public void execute() throws SQLException {
+        this.executeUpdate(beginTransaction);
+
         PreparedQueries.getOrderedItemsByCustomerStmt.setInt(1, warehouseID);
         PreparedQueries.getOrderedItemsByCustomerStmt.setInt(2, districtID);
         PreparedQueries.getOrderedItemsByCustomerStmt.setInt(3, customerID);
@@ -63,6 +65,9 @@ public class RelatedCustomerTransaction extends AbstractTransaction {
             sb.append('\n');
         }
         io.println(sb);
+
+        this.executeUpdate(endTransaction);
+
     }
 
     private boolean isRelatedCustomer(HashMap<Integer, HashSet<Integer>> itemIdByCustomer,

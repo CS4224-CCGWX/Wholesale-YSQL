@@ -33,7 +33,10 @@ public class TopBalanceTransaction extends AbstractTransaction {
      * (2) Select all the district_id and warehouse_id from the list
      * (3) Made queries to warehouse table and district table separately to get their names
      */
-    public void execute() {
+    public void execute() throws SQLException {
+
+        this.executeUpdate(beginTransaction);
+
         HashMap<Integer, String> districts = new HashMap<>(), warehouses = new HashMap<>();
         try {
             ResultSet customers = PreparedQueries.getCustomerWithTopBalance.executeQuery();
@@ -100,5 +103,7 @@ public class TopBalanceTransaction extends AbstractTransaction {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        this.executeUpdate(endTransaction);
     }
 }

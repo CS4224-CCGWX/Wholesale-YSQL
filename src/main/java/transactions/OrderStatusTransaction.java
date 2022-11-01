@@ -33,6 +33,7 @@ public class OrderStatusTransaction extends AbstractTransaction {
 
     public void execute() throws SQLException {
 
+        this.executeUpdate(beginTransaction);
         /*
         This transaction queries the status of the last order of a customer.
         Input: Customer identifier (C W ID, C D ID, C ID)
@@ -89,6 +90,8 @@ public class OrderStatusTransaction extends AbstractTransaction {
         while(itemsInfo.next()) {
             io.println(OutputFormatter.formatItemInfo(itemsInfo));
         }
+
+        this.executeUpdate(endTransaction);
 
     }
 

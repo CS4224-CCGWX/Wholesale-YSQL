@@ -30,7 +30,9 @@ public class StockLevelTransaction extends AbstractTransaction {
                 warehouseId, districtID, threshold, lastOrders);
     }
 
-    public void execute() {
+    public void execute() throws SQLException {
+        this.executeUpdate(beginTransaction);
+
         try {
             int nextOrderNumber = queryUtils.getNextAvailableOrderNumber(warehouseId, districtID);
 
@@ -55,5 +57,8 @@ public class StockLevelTransaction extends AbstractTransaction {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+        this.executeUpdate(endTransaction);
+
     }
 }

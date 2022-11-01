@@ -71,6 +71,8 @@ public class NewOrderTransaction extends AbstractTransaction {
     }
 
     public void execute() throws SQLException {
+
+        this.executeUpdate(beginTransaction);
          /*
           1. N denotes the next available order number D_NEXT_O_ID for district (W_ID, D_ID)
           Update district (W_ID, D_ID) by incrementing D_NEXT_O_ID by 1.
@@ -312,6 +314,8 @@ public class NewOrderTransaction extends AbstractTransaction {
                     String.format("\t Item number: %d, name: %s, Supplier warehouse: %d, quantity: %d, Order-line amount: %.2f, Adjusted quantity: %d\n",
                     itemIds.get(i), itemNames.get(i), supplyWarehouseIds.get(i), quantities.get(i), itemAmounts.get(i), adjustQuantities.get(i)));
         }
+
+        this.executeUpdate(endTransaction);
 
     }
 
