@@ -5,45 +5,11 @@ import utils.PreparedQueries;
 import utils.QueryUtils;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
-
-
-class Customer {
-    int warehouseId, districtId, customerId;
-
-    Customer(int warehouseId, int districtId, int customerID) {
-        this.warehouseId = warehouseId;
-        this.districtId = districtId;
-        this.customerId = customerID;
-    }
-
-    @Override
-    public int hashCode() {
-        return Integer.valueOf(warehouseId).hashCode()
-                + Integer.valueOf(districtId).hashCode()
-                + Integer.valueOf(customerId).hashCode();
-    }
-
-    @Override
-    public boolean equals(Object c) {
-        if (!(c instanceof Customer)) return false;
-        Customer customer = (Customer) c;
-
-        return customer.warehouseId == this.warehouseId &&
-                customer.districtId == this.districtId &&
-                customer.customerId == this.customerId;
-    }
-
-    @Override
-    public String toString() {
-        return String.format("%d, %d, %d", warehouseId, districtId, customerId);
-    }
-}
 
 public class RelatedCustomerTransaction extends AbstractTransaction {
     Connection conn;
@@ -67,42 +33,26 @@ public class RelatedCustomerTransaction extends AbstractTransaction {
 
         // get items purchased by the customer and the associated order id
         HashMap<Integer, HashSet<Integer>> orderToItemsMap = new HashMap<>();
-        HashMap<Customer, HashMap<Integer, HashSet<Integer>>> customerToItemsMap = new HashMap<>();
-        Thread getTargetCustomerOrderItemsThread = new Thread(() -> {
-            try {
-                getTargetCustomerOrderItems(orderToItemsMap);
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
+        HashMap<String, HashMap<Integer, HashSet<Integer>>> customerToItemsMap = new HashMap<>();
+        getTargetCustomerOrderItems(orderToItemsMap);
+        for (int id = 1; id <= 10; id += 2){
+            if (id == warehouseID) {
+                getPossibleCustomersOrderItems(customerToItemsMap, id, id + 1);
+            } else {
+                getPossibleCustomersOrderItems(customerToItemsMap, id, id);
             }
-        });
-
-        Thread getPossibleCustomersOrderItemsThread = new Thread(() -> {
-            try {
-                getPossibleCustomersOrderItems(customerToItemsMap);
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
-        });
-
-        getTargetCustomerOrderItemsThread.start();
-        getPossibleCustomersOrderItemsThread.start();
-        try {
-            getTargetCustomerOrderItemsThread.join();
-            getPossibleCustomersOrderItemsThread.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
         }
 
-        HashSet<Customer> result = new HashSet<>();
-        for (Map.Entry<Customer, HashMap<Integer, HashSet<Integer>>> entry : customerToItemsMap.entrySet()) {
+        HashSet<String> result = new HashSet<>();
+        for (Map.Entry<String, HashMap<Integer, HashSet<Integer>>> entry : customerToItemsMap.entrySet()) {
             if (isRelatedCustomer(orderToItemsMap, entry.getValue())) {
                 result.add(entry.getKey());
             }
         }
 
         StringBuilder sb = new StringBuilder();
-        for (Customer c : result) {
-            sb.append(c.toString());
+        for (String c : result) {
+            sb.append(c);
             sb.append('\n');
         }
         io.println(sb);
@@ -131,9 +81,12 @@ public class RelatedCustomerTransaction extends AbstractTransaction {
         }
     }
 
-    private void getPossibleCustomersOrderItems(HashMap<Customer,
-            HashMap<Integer, HashSet<Integer>>> customerToItemsMap) throws SQLException {
-        PreparedQueries.getPossibleCustomerStmt.setInt(1, warehouseID);
+    private void getPossibleCustomersOrderItems(HashMap<String,
+            HashMap<Integer, HashSet<Integer>>> customerToItemsMap, int id1, int id2) throws SQLException {
+        PreparedQueries.getPossibleCustomerStmt.setInt(1, id1);
+        PreparedQueries.getPossibleCustomerStmt.setInt(2, id2);
+
+
         ResultSet possibleRelatedCustomerResult = PreparedQueries.getPossibleCustomerStmt.executeQuery();
 
         while (possibleRelatedCustomerResult.next()) {
@@ -143,7 +96,7 @@ public class RelatedCustomerTransaction extends AbstractTransaction {
                     oid = possibleRelatedCustomerResult.getInt("OL_O_ID"),
                     iid = possibleRelatedCustomerResult.getInt("OL_I_ID");
 
-            Customer c = new Customer(wid, did, cid);
+            String c = String.format("(%d, %d, %d)", wid, did, cid);
             if (!customerToItemsMap.containsKey(c)) {
                 customerToItemsMap.put(c, new HashMap<>());
             }

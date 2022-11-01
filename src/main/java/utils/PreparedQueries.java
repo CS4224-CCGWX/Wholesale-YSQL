@@ -30,7 +30,7 @@ public class PreparedQueries {
                 "FROM CUSTOMER ORDER BY C_BALANCE DESC LIMIT 10;", ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
         getDistrictNextOrderIdAndTax = conn.prepareStatement("SELECT D_NEXT_O_ID, D_TAX FROM district WHERE D_W_ID = ? AND D_ID = ?;");
         getPossibleCustomerStmt = conn.prepareStatement( "SELECT OL_W_ID, OL_D_ID, OL_C_ID, OL_O_ID, OL_I_ID " +
-                "FROM order_line WHERE OL_W_ID <> ?;");
+                "FROM order_line WHERE OL_W_ID = ? OR OL_W_ID = ?;");
         getOrderedItemsByCustomerStmt = conn.prepareStatement("SELECT OL_I_ID, OL_O_ID FROM order_line " +
                 "WHERE OL_W_ID = ? AND OL_D_ID = ? AND OL_C_ID = ?;");
         getMaxQuantity = conn.prepareStatement("SELECT OL_O_ID, MAX(OL_QUANTITY) AS max_quantity FROM Order_Line " +
