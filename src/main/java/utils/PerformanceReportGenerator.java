@@ -50,6 +50,7 @@ public class PerformanceReportGenerator {
             fw.write(String.format(individualTransactionPerformance, curTrans, tTime, transCount));
             fw.write("\n");
         }
+        System.out.println(individual_time.size());
         fw.close();
     }
 
