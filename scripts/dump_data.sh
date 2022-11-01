@@ -1,40 +1,39 @@
-# to change crlf to lf 
-# sed -i 's/\r$//' filename
-# https://stackoverflow.com/questions/11616835/r-command-not-found-bashrc-bash-profile
-
 schema="/home/stuproj/cs4224i/Wholesale-YSQL/src/main/resources/schema.sql"
 DELIM=","
 YSQLSH="/temp/yugabyte-2.14.1.0/bin/ysqlsh"
+root_dir=/home/stuproj/cs4224i/Wholesale-YSQL
 dataDir="/home/stuproj/cs4224i/Wholesale-YSQL/project_files/data_files"
-bsz=500
+base_node=20
+
+#create csv file for measurement
+cd $root_dir
+if [[ -e report.csv ]]; then
+    rm -f report.csv
+fi
+
+curr_node=$1
+port=$2
+if [ $curr_node == "xcnd20" ]; then
+    ip="192.168.48.239"
+elif [ $curr_node == "xcnd21" ]; then
+    ip="192.168.48.240"
+elif [ $curr_node == "xcnd22" ]; then
+    ip="192.168.48.241"
+elif [ $curr_node == "xcnd23" ]; then
+    ip="192.168.48.242"
+elif [ $curr_node == "xcnd24" ]; then
+    ip="192.168.48.243"
+else
+    echo "Using default node xcnd20"
+    ip="192.168.48.239"
+fi
 
 
-# python preprocess/precompute.py
-
-ip="192.168.48.239"
-port=5433
 
 echo "***** Start dump data *****"
 echo "Defining schema"
 $YSQLSH -f $schema -h $ip
 
-
-#curr_node=$1
-#port=$2
-#if [ $curr_node == "xcnd20" ]; then
-#    ip="192.168.48.239"
-#elif [ $curr_node == "xcnd21" ]; then
-#    ip="192.168.48.240"
-#elif [ $curr_node == "xcnd22" ]; then
-#    ip="192.168.48.241"
-#elif [ $curr_node == "xcnd23" ]; then
-#    ip="192.168.48.242"
-#elif [ $curr_node == "xcnd24" ]; then
-#    ip="192.168.48.243"
-#else
-#    echo "Using default node xcnd20"
-#    ip="192.168.48.239"
-#fi
 
 # DateTime format reference: https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
 echo "***** Load warehouse table *****"
