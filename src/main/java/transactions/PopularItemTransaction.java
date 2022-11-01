@@ -66,7 +66,7 @@ public class PopularItemTransaction extends AbstractTransaction {
                 PreparedQueries.getPopularItemInOrderLine.setInt(3, orderId);
                 PreparedQueries.getPopularItemInOrderLine.setInt(4, currentOrdermaxQuantity);
                 ResultSet popularItems = PreparedQueries.getPopularItemInOrderLine.executeQuery();
-                System.out.println("check1");
+                
                 Set<Integer> popularItemPerOrder = new HashSet<>();
                 while (popularItems.next()) {
                     int itemId = popularItems.getInt("OL_I_ID");
