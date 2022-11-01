@@ -47,7 +47,7 @@ echo "***** Load customer table *****"
 $YSQLSH -c "\COPY customer FROM '$dataDir/customer.csv' WITH (FORMAT CSV, NULL 'null');" -h $ip -p $port
 
 echo "***** Load order table *****"
-$YSQLSH -c "\COPY \"order\" FROM '$dataDir/order.csv' WITH (FORMAT CSV, NULL 'null');" -h $ip -p $port
+$YSQLSH -c "\COPY \"order\" FROM '$dataDir/order.csv' WITH (FORMAT CSV, NULL '');" -h $ip -p $port
 
 echo "***** Load item table *****"
 $YSQLSH -c "\COPY item FROM '$dataDir/item.csv' WITH (FORMAT CSV, NULL 'null');" -h $ip -p $port
