@@ -18,16 +18,17 @@ else
 fi
 
 cd /home/stuproj/cs4224i/Wholesale-YSQL
-mvn install
+# mvn install
 
 
-if [[ -e log ]]; then
-    rm -rf log
-fi
-mkdir log
-output_path="./log/"$tx".out"
-err_path="./log/"{$tx}".err"
+# if [[ -e log ]]; then
+#     rm -rf log
+# fi
+# mkdir log
+
+output_path=/home/stuproj/cs4224i/Wholesale-YSQL/log/$tx.out
+err_path=/home/stuproj/cs4224i/Wholesale-YSQL/log/$tx.err
 
 echo "Run transaction file at node: $curr_node"
-java -jar target/yugabyte-simple-java-app-1.0-SNAPSHOT.jar $curr_node $port $tx run > $output_path 2>$err_path
+tmux new-session -d -s client$tx "java -jar target/yugabyte-simple-java-app-1.0-SNAPSHOT.jar $curr_node $port $tx run > $output_path 2>$err_path"
 exit 0
