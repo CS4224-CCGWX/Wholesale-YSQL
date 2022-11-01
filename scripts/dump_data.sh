@@ -11,9 +11,12 @@ bsz=500
 
 # python preprocess/precompute.py
 
+ip="192.168.48.239"
+port=5433
+
 echo "***** Start dump data *****"
 echo "Defining schema"
-$YSQLSH -f $schema
+$YSQLSH -f $schema -h $ip
 
 
 #curr_node=$1
@@ -32,9 +35,6 @@ $YSQLSH -f $schema
 #    echo "Using default node xcnd20"
 #    ip="192.168.48.239"
 #fi
-
-ip="192.168.48.239"
-port=5433
 
 # DateTime format reference: https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
 echo "***** Load warehouse table *****"
