@@ -38,7 +38,7 @@ port=5433
 
 # DateTime format reference: https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
 echo "***** Load warehouse table *****"
-$YSQLSH  -c "\COPY warehouse FROM '$dataDir/warehouse.csv' WITH (FORMAT CSV, NULL 'null');" -h $ip -p $port
+$YSQLSH  -c "\COPY warehouse FROM '$dataDir/warehouse.csv' WITH (FORMAT CSV, NULL 'null');" -h $ip
 
 echo "***** Load district table *****"
 $YSQLSH -c "\COPY district FROM '$dataDir/district.csv' WITH (FORMAT CSV, NULL 'null');" -h $ip -p $port
