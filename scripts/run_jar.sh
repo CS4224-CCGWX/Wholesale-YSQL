@@ -17,13 +17,14 @@ else
     exit -1
 fi
 
-cd ..
+cd /home/stuproj/cs4224i/Wholesale-YSQL
 mvn install
 
 
-if [[ ! -d log ]]; then
-    mkdir log
+if [[ -e log ]]; then
+    rm -rf log
 fi
+mkdir log
 output_path="./log/"$tx".out"
 err_path="./log/"{$tx}".err"
 

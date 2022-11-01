@@ -9,13 +9,14 @@ submit_job() {
   
   node_id="xcnd$(($base_node + (($job_id % $num_nodes))))"
   
-  echo "the job will be submitted to node: {$node_id}"
+  echo "the job will be submitted to node: $node_id"
 
-  ssh "cs4224i@$node_id.comp.nus.edu.sg" cd "Wholesale-YSQL && ./scripts/run_jar.sh $node_id $port_id $job_id"
+  ssh "cs4224i@$node_id.comp.nus.edu.sg" ./Wholesale-YSQL/scripts/run_jar.sh $node_id $port_id $job_id
 }
 
 load_data() {
-    ssh "cs4224i@xcnd20.comp.nus.edu.sg" cd "Wholesale-YSQL && ./scripts/dump_data.sh $node_id $port_id"
+    ssh "cs4224i@xcnd20.comp.nus.edu.sg" ./Wholesale-YSQL/scripts/dump_data.sh xcnd20 $port_id
+    echo ./Wholesale-YSQL/scripts/dump_data.sh $node_id $port_id
 }
 
 
