@@ -339,8 +339,6 @@ CREATE TABLE IF NOT EXISTS order_line
     )
 PARTITION BY RANGE (OL_W_ID);
 
-CREATE INDEX c_order_line ON order_line USING HASH (OL_W_ID);
-
 CREATE TABLE order_line01 PARTITION OF order_line
     FOR VALUES FROM (1) TO (3);
 
