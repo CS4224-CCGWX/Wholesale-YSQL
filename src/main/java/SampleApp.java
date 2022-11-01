@@ -96,7 +96,7 @@ public class SampleApp {
                 transaction.execute();
                 txIndividualEnd = System.nanoTime();
                 elapsedTimeForIndividual = txIndividualEnd - txIndividualStart;
-                System.out.println("Time used: " + elapsedTimeForIndividual);
+                System.out.println("Time used: " + TimeUnit.SECONDS.convert(elapsedTimeForIndividual, TimeUnit.NANOSECONDS));
             } catch (Exception e) {
                 e.printStackTrace();
                 System.err.println("**************************************");

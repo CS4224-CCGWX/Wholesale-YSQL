@@ -14,17 +14,18 @@ public class PreparedQueries {
             getDistrictAddressAndYtd, getWarehouseAddressAndYtd, updateDistrictYearToDateAmount,
             updateCustomerPaymentInfo, getFullCustomerInfo, getNextDeliveryOrderId, updateOrderIdToDeliver,
             updateCarrierIdInOrder, updateDeliveryDateInOrderLine, getPossibleCustomerStmt,
-            getPopularItemsFromOrder, getOrderedItemsByCustomerStmt, getItemStock, getLastOrdersFromOrder,
+            getMaxQuantity, getOrderedItemsByCustomerStmt, getItemStock, getLastOrdersFromOrder,
             getLastOrdersFromOrderLine, getNextAvailableOrderNumber, getCustomerLastOrderItemsInfo,
             getCustomerLastOrderInfo, getCustomerFullNameAndBalance, updateCustomerBalanceAndDcount,
-            getOrderLineInOrder, getCustomerBalance, revertNextDeliveryOrderId;
+            getOrderLineInOrder, getCustomerBalance, revertNextDeliveryOrderId, getPopularItemInOrderLine;
 
 
     public static void init(Connection conn) throws SQLException {
-        getItemById = conn.prepareStatement("SELECT I_NAME, I_ID FROM Item WHERE I_ID = ?;");
+        getItemById = conn.prepareStatement("SELECT I_NAME, I_ID FROM Item WHERE I_ID = ANY (?);");
         getDistrictWithIDs = conn.prepareStatement("SELECT D_W_ID, D_ID, D_NAME FROM District WHERE D_ID = ANY (?);");
         getWarehouseWithIDs = conn.prepareStatement("SELECT W_ID, W_NAME FROM Warehouse WHERE W_ID = ANY (?);");
-        getCustomerNameByID = conn.prepareStatement("SELECT C_ID, C_FIRST, C_MIDDLE, C_LAST FROM Customer WHERE C_ID = ?;");
+        getCustomerNameByID = conn.prepareStatement("SELECT C_ID, C_FIRST, C_MIDDLE, C_LAST " +
+                "FROM Customer WHERE C_W_ID = ? AND C_D_ID = ? AND C_ID = ?;");
         getCustomerWithTopBalance = conn.prepareStatement("SELECT C_W_ID, C_D_ID, C_FIRST, C_MIDDLE, C_LAST, C_BALANCE " +
                 "FROM CUSTOMER ORDER BY C_BALANCE DESC LIMIT 10;", ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
         getDistrictNextOrderIdAndTax = conn.prepareStatement("SELECT D_NEXT_O_ID, D_TAX FROM district WHERE D_W_ID = ? AND D_ID = ?;");
@@ -32,8 +33,8 @@ public class PreparedQueries {
                 "FROM order_line WHERE OL_W_ID <> ?;");
         getOrderedItemsByCustomerStmt = conn.prepareStatement("SELECT OL_I_ID, OL_O_ID FROM order_line " +
                 "WHERE OL_W_ID = ? AND OL_D_ID = ? AND OL_C_ID = ?;");
-        getPopularItemsFromOrder = conn.prepareStatement("SELECT OL_I_ID, OL_QUANTITY FROM Order_Line " +
-                "WHERE OL_W_ID = ? AND OL_D_ID = ? AND OL_O_ID = ? ORDER BY OL_QUANTITY;");
+        getMaxQuantity = conn.prepareStatement("SELECT OL_O_ID, MAX(OL_QUANTITY) AS max_quantity FROM Order_Line " +
+                "WHERE OL_W_ID = ? AND OL_D_ID = ? AND OL_O_ID < ? AND OL_O_ID >= ? GROUP BY OL_O_ID;");
         incrementDistrictNextOrderId = conn.prepareStatement("UPDATE district SET D_NEXT_O_ID = D_NEXT_O_ID + 1" +
                 "WHERE D_W_ID = ? AND D_ID = ?;");
         createNewOrder = conn.prepareStatement("INSERT INTO \"order\"(O_ID, O_D_ID, O_W_ID, O_C_ID, O_ENTRY_D, " +
@@ -42,7 +43,7 @@ public class PreparedQueries {
         updateStockQtyIncrRemoteCnt = conn.prepareStatement("UPDATE stock SET S_QUANTITY = ?, S_YTD = ?, S_ORDER_CNT = S_ORDER_CNT + 1, " +
                 "S_REMOTE_CNT = S_REMOTE_CNT + 1 WHERE S_W_ID = ? AND S_I_ID = ?;");
         getItemStock = conn.prepareStatement("SELECT S_QUANTITY FROM STOCK WHERE S_W_ID = ? AND S_I_ID = ANY (?);");
-        getLastOrdersFromOrder = conn.prepareStatement("SELECT O_ID, O_W_ID, O_D_ID, O_C_ID, O_ENTRY_D FROM \"order\" " +
+        getLastOrdersFromOrder = conn.prepareStatement("SELECT O_ID, O_W_ID, O_D_ID, O_C_ID, O_W_ID, O_D_ID, O_C_ID, O_ENTRY_D FROM \"order\" " +
                 "WHERE O_ID >= ? AND O_ID < ? AND O_W_ID = ? AND O_D_ID = ?;");
         updateStockQty = conn.prepareStatement(" UPDATE stock SET S_QUANTITY = ?, S_YTD = ?, S_ORDER_CNT = S_ORDER_CNT + 1 "
                 + "WHERE S_W_ID = ? AND S_I_ID = ?;");
@@ -93,5 +94,7 @@ public class PreparedQueries {
                 "WHERE OL_W_ID = ? AND OL_D_ID = ? AND OL_O_ID = ? AND OL_NUMBER = ?;");
         updateDeliveryDateInOrderLine = conn.prepareStatement("UPDATE order_line SET OL_DELIVERY_D = ? " +
                 "WHERE OL_W_ID = ? AND OL_D_ID = ? AND OL_O_ID = ? AND OL_NUMBER = ?;");
+        getPopularItemInOrderLine = conn.prepareStatement("SELECT OL_I_ID FROM order_line WHERE OL_W_ID = ? " +
+                "AND OL_D_ID = ? AND OL_O_ID = ? AND OL_QUANTITY = ?;");
     }
 }

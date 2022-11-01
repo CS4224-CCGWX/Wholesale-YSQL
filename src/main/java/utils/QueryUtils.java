@@ -56,42 +56,4 @@ public class QueryUtils {
         }
     }
 
-
-    public String getItemNameById(int itemID) throws SQLException {
-        PreparedQueries.getItemById.setInt(1, itemID);
-        ResultSet result = PreparedQueries.getItemById.executeQuery();
-
-        if (result.next()) {
-            return result.getString("I_NAME");
-        } else {
-            throw new SQLException();
-        }
-    }
-
-    public List<Integer> getPopularItemWithinOrder(int warehouseID, int districtID, int orderID,
-                                                   HashMap<Integer, Integer> itemFrequency) throws SQLException {
-        PreparedQueries.getPopularItemsFromOrder.setInt(1, warehouseID);
-        PreparedQueries.getPopularItemsFromOrder.setInt(2, districtID);
-        PreparedQueries.getPopularItemsFromOrder.setInt(3, orderID);
-        ResultSet result = PreparedQueries.getPopularItemsFromOrder.executeQuery();
-        ArrayList<Integer> popularItems = new ArrayList<>();
-
-        int maxQuantity = 0, itemId = 0;
-        if (result.next()) {
-            maxQuantity = result.getInt("OL_QUANTITY");
-            itemId = result.getInt("OL_I_ID");
-            itemFrequency.put(itemId, itemFrequency.getOrDefault(itemId, 0) + 1);
-        }
-
-
-        while (result.next() && result.getInt("OL_QUANTITY") >= maxQuantity) {
-            itemId = result.getInt("OL_I_ID");
-            popularItems.add(itemId);
-            itemFrequency.put(itemId, itemFrequency.getOrDefault(itemId, 0) + 1);
-        }
-
-        popularItems.add(maxQuantity);
-        return popularItems;
-    }
-
 }

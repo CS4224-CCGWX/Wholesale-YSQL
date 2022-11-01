@@ -1,13 +1,14 @@
 package transactions;
 
 import utils.IO;
+import utils.PreparedQueries;
 import utils.QueryUtils;
 
+import java.sql.Array;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class PopularItemTransaction extends AbstractTransaction {
     int warehouseID, districtID, pastNumberOfOrders;
@@ -27,45 +28,72 @@ public class PopularItemTransaction extends AbstractTransaction {
             int nextOrderNumber = queryUtils.getNextAvailableOrderNumber(warehouseID, districtID);
             ResultSet pastOrders = queryUtils.getPastOrdersFromOrder(
                     warehouseID, districtID, nextOrderNumber, this.pastNumberOfOrders);
-            HashMap<Integer, Integer> itemFrequency = new HashMap<>();
-            HashMap<Integer, String> itemIDToName = new HashMap<>();
+
+            PreparedQueries.getMaxQuantity.setInt(1, warehouseID);
+            PreparedQueries.getMaxQuantity.setInt(2, districtID);
+            PreparedQueries.getMaxQuantity.setInt(3, nextOrderNumber);
+            HashMap<Integer, Integer> maxQuantityForEachOrder = new HashMap<>();
+            PreparedQueries.getMaxQuantity.setInt(4, nextOrderNumber - pastNumberOfOrders);
+            ResultSet maxQuantity = PreparedQueries.getMaxQuantity.executeQuery();
+            while (maxQuantity.next()) {
+                int orderId = maxQuantity.getInt("OL_O_ID");
+                maxQuantityForEachOrder.put(orderId, maxQuantity.getInt("max_quantity"));
+            }
+
+
+
+            HashMap<Integer, String> allPopularItems = new HashMap<>();
+            List<Set<Integer>> ItemsAmongAllOrders = new ArrayList<>();
+
             StringBuilder sb = new StringBuilder();
 
             while (pastOrders.next()) {
-                String customerName = queryUtils.getCustomerNameById(pastOrders.getInt("O_C_ID"));
-                List<Integer> popularItems = queryUtils.getPopularItemWithinOrder(warehouseID, districtID,
-                        pastOrders.getInt("O_ID"), itemFrequency);
+                int orderId = pastOrders.getInt("O_ID");
+                PreparedQueries.getCustomerNameByID.setInt(1, warehouseID);
+                PreparedQueries.getCustomerNameByID.setInt(2, districtID);
+                PreparedQueries.getCustomerNameByID.setInt(3, orderId);
+                ResultSet customerName = PreparedQueries.getCustomerNameByID.executeQuery();
 
-                sb.append(String.format(
-                        "Order Examined: %s, %s\n Customer placed: %s",
-                        pastOrders.getInt("O_ID"),
-                        pastOrders.getString("O_ENTRY_D"),
-                        customerName
-                ));
-
-                int maxQuantity = popularItems.get(popularItems.size() - 1);
-                for (int i = 0; i < popularItems.size() - 1; i++) {
-                    int itemId = popularItems.get(i);
-                    String itemName;
-                    if (itemIDToName.containsKey(itemId)) {
-                        itemName = itemIDToName.get(itemId);
-                    } else {
-                        itemName = queryUtils.getItemNameById(itemId);
-                        itemIDToName.put(itemId, itemName);
-                    }
-                    sb.append(String.format("Popular item: %s, %s\n", itemName, maxQuantity));
+                sb.append(String.format("order id: %d", orderId));
+                if (customerName.next()) {
+                    sb.append(String.format("Customer name: %s, %s, %s", customerName.getString("C_FIRST"),
+                            customerName.getString("C_MIDDLE"), customerName.getString("C_LAST")));
                 }
-                sb.append("\n");
-            }
 
-            sb.append("\n\n Percentage of popular items");
-            for (int itemId: itemFrequency.keySet()) {
-                String itemName = itemIDToName.get(itemId);
-                double percentage = itemFrequency.get(itemId) * 1.0 / pastNumberOfOrders;
-                sb.append(String.format("%s, %s\n", itemName, percentage));
-            }
+                int currentOrdermaxQuantity = maxQuantityForEachOrder.get(orderId);
+                PreparedQueries.getPopularItemInOrderLine.setInt(1, warehouseID);
+                PreparedQueries.getPopularItemInOrderLine.setInt(2, districtID);
+                PreparedQueries.getPopularItemInOrderLine.setInt(3, orderId);
+                PreparedQueries.getPopularItemInOrderLine.setInt(4, currentOrdermaxQuantity);
+                ResultSet popularItems = PreparedQueries.getPopularItemInOrderLine.executeQuery();
+                System.out.println("check1");
+                Set<Integer> popularItemPerOrder = new HashSet<>();
+                while (popularItems.next()) {
+                    int itemId = popularItems.getInt("OL_I_ID");
+                    popularItemPerOrder.add(itemId);
+                }
+                Array popularItemPerOrderArray = PreparedQueries.getItemById.getConnection().createArrayOf("INTEGER", popularItemPerOrder.toArray());
+                PreparedQueries.getItemById.setArray(1, popularItemPerOrderArray);
+                ResultSet items = PreparedQueries.getItemById.executeQuery();
 
-            io.println(sb);
+                while (items.next()) {
+                    String itemName = items.getString("I_NAME");
+                    int itemId = items.getInt("I_ID");
+                    allPopularItems.putIfAbsent(itemId, itemName);
+                    sb.append(String.format("popular item: %s quantity:%d\n", itemName, currentOrdermaxQuantity));
+                }
+                ItemsAmongAllOrders.add(popularItemPerOrder);
+            }
+            for (Map.Entry<Integer, String> item: allPopularItems.entrySet()) {
+                int count = 0;
+                for (Set<Integer> order : ItemsAmongAllOrders) {
+                    if (order.contains(item.getKey())) count++;
+                }
+
+                double ratio = count * 1.0 / allPopularItems.size();
+                sb.append(String.format("item name:%s, ratio: %f\n", item.getValue(), ratio));
+            }
+            io.println(sb.toString());
         } catch (SQLException e) {
             e.printStackTrace();
         }
