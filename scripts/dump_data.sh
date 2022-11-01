@@ -33,7 +33,7 @@ $YSQLSH -f $schema
 #    ip="192.168.48.239"
 #fi
 
-curr_node="192.168.48.239"
+ip="192.168.48.239"
 
 # DateTime format reference: https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
 echo "***** Load warehouse table *****"
