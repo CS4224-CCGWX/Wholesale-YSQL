@@ -97,7 +97,7 @@ public class SampleApp {
                 txIndividualStart = System.nanoTime();
                 transaction.execute();
                 txIndividualEnd = System.nanoTime();
-                elapsedTimeForIndividual = txIndividualEnd - txIndividualStart;
+                elapsedTimeForIndividual = TimeUnit.SECONDS.convert(txIndividualEnd - txIndividualStart, TimeUnit.NANOSECONDS);;
                 String[] s = transaction.toString().split(" ");
                 String curS = s[0];
                 long defaultValue = 0;
