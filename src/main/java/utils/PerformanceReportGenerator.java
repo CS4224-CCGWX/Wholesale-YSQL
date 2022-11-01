@@ -5,10 +5,14 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+import java.util.*;
 
 public class PerformanceReportGenerator {
     private static String reportFilePath;
-    private static String performanceFormat = "%d,%s,%s,%s,%s,%s,%s,%s\n";
+    private static String performanceFormat = "Transaction files: %d, Total Count: %s," +
+            "Time Taken: %s, Throughput: %s, Average: %s, Median: %s, 95: %s, 99: %s\n";
+
+    private static String individualTransactionPerformance = "Transaction name: %s, Total time: %d, Total count: %d \n";
 
     static FileWriter fw;
 
@@ -21,7 +25,8 @@ public class PerformanceReportGenerator {
 //    public static void setFilePath(String path) {
 //        reportFilePath = path;
 //    }
-    public static void generatePerformanceReport(List<Long> latencyList, long totalTime, int client) throws IOException {
+    public static void generatePerformanceReport(List<Long> latencyList, long totalTime, int client,
+                                                 Map<String, Long> individual_time, Map<String, Long> individual_count) throws IOException {
         Collections.sort(latencyList);
         int count = latencyList.size();
         long sum = latencyList.stream().mapToLong(Long::longValue).sum();
@@ -37,6 +42,14 @@ public class PerformanceReportGenerator {
                 outputFormatter.formatPercentile(convertToMs(getByPercentile(latencyList, 99)))
                 )
         );
+        for (Map.Entry<String, Long> set :
+                individual_time.entrySet()) {
+            String curTrans = set.getKey();
+            long tTime = individual_time.get(curTrans);
+            long transCount = individual_count.get(curTrans);
+            fw.write(String.format(individualTransactionPerformance, curTrans, tTime, transCount));
+            fw.write("\n");
+        }
         fw.close();
     }
 

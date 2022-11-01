@@ -25,6 +25,8 @@ public class SampleApp {
 
     private static Map<String, Long> hm = new HashMap<>();
 
+    private static Map<String, Long> hm_count = new HashMap<>();
+
     /*
     args[0] - ip
     args[1] - port
@@ -96,6 +98,12 @@ public class SampleApp {
                 transaction.execute();
                 txIndividualEnd = System.nanoTime();
                 elapsedTimeForIndividual = txIndividualEnd - txIndividualStart;
+                String[] s = transaction.toString().split(" ");
+                String curS = s[0];
+                long defaultValue = 0;
+                hm.put(curS, hm.getOrDefault(curS, defaultValue) + elapsedTimeForIndividual);
+                hm_count.put(curS, hm_count.getOrDefault(curS, defaultValue) + 1);
+
                 System.out.println("Time used: " + TimeUnit.SECONDS.convert(elapsedTimeForIndividual, TimeUnit.NANOSECONDS));
             } catch (Exception e) {
                 e.printStackTrace();
@@ -113,7 +121,7 @@ public class SampleApp {
         fileEnd = System.nanoTime();
 
         long totalElapsedTime = TimeUnit.SECONDS.convert(fileEnd - fileStart, TimeUnit.NANOSECONDS);
-        PerformanceReportGenerator.generatePerformanceReport(latencyList, totalElapsedTime, client);
+        PerformanceReportGenerator.generatePerformanceReport(latencyList, totalElapsedTime, client, hm, hm_count);
 
     }
 }

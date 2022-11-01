@@ -49,7 +49,7 @@ public class NewOrderTransaction extends AbstractTransaction {
 
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("**** New Order Transaction Information ****\n");
+        sb.append("New **** New Order Transaction Information ****\n");
         sb.append(String.format("CID:%d, WID:%d, DID:%d, num order-lines:%d\n", customerId, warehouseId, districtId, nOrderLines));
         sb.append("Item IDs are:");
         for (int id : itemIds) {

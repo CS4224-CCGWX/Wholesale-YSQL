@@ -26,7 +26,7 @@ public class OrderStatusTransaction extends AbstractTransaction {
 
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("*** Order Status Transaction Information ***\n");
+        sb.append("Ord *** Order Status Transaction Information ***\n");
         sb.append(String.format("C_W_ID:%d, C_D_ID:%d, C_ID:%d\n", customerWarehouseId, customerDistrictId, customerId));
         return sb.toString();
     }

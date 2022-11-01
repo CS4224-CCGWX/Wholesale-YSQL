@@ -22,6 +22,11 @@ public class PopularItemTransaction extends AbstractTransaction {
         this.queryUtils = utils;
     }
 
+    public String toString() {
+        return String.format("Pop *** Popular Item transaction info: warehouse: %d, district: %d, pastNumberOfOrder: %d *** \n",
+                warehouseID, districtID, pastNumberOfOrders);
+    }
+
     @Override
     public void execute() {
         try {

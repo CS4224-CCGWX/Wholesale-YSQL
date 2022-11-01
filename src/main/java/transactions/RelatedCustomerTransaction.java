@@ -25,6 +25,11 @@ public class RelatedCustomerTransaction extends AbstractTransaction {
         this.queryUtils = utils;
     }
 
+    public String toString() {
+        return String.format("Rel *** Related  Customer transaction info: warehouse: %d, district: %d, customer id: %d *** \n",
+                warehouseID, districtID, customerID);
+    }
+
     @Override
     public void execute() throws SQLException {
         PreparedQueries.getOrderedItemsByCustomerStmt.setInt(1, warehouseID);

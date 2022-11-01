@@ -126,7 +126,7 @@ public class PaymentTransaction extends AbstractTransaction{
     }
 
     public String toString() {
-        return String.format("Payment transaction info: warehouse: %d, district: %d, customer: %d, payment: %f", warehouseId, districtId, customerId, payment);
+        return String.format("Pay *** Payment transaction info: warehouse: %d, district: %d, customer: %d, payment: %f *** \n", warehouseId, districtId, customerId, payment);
     }
 
     public void error(String s) {

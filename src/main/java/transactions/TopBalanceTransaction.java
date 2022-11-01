@@ -15,6 +15,14 @@ public class TopBalanceTransaction extends AbstractTransaction {
         this.queryUtils = utils;
     }
 
+
+    public String toString() {
+        String s = "Top *** Top Balance transaction info*** \n";
+        return s;
+    }
+
+
+
     /**
      * This transaction finds the top-10 customers ranked in descending order of their outstanding balance payments.
      *

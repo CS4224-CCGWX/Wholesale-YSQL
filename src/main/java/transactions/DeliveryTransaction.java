@@ -134,7 +134,7 @@ public class DeliveryTransaction extends AbstractTransaction {
 
     @Override
     public String toString() {
-        return String.format("Delivery Transaction info: warehouseId: %d, carrierId: %d", warehouseId, carrierId);
+        return String.format("Del **** Delivery Transaction info: warehouseId: %d, carrierId: %d ****\n", warehouseId, carrierId);
     }
 
 }

@@ -25,6 +25,11 @@ public class StockLevelTransaction extends AbstractTransaction {
         queryUtils = utils;
     }
 
+    public String toString() {
+        return String.format("Sto *** Stock  Level transaction info: warehouse: %d, district: %d, threshold: %d, lastOrders: %d *** \n",
+                warehouseId, districtID, threshold, lastOrders);
+    }
+
     public void execute() {
         try {
             int nextOrderNumber = queryUtils.getNextAvailableOrderNumber(warehouseId, districtID);
