@@ -1,6 +1,6 @@
 curr_node=$1
-tx=$2
-port=$3
+tx=$3
+port=$2
 
 if [[ $curr_node == "xcnd20" ]]; then
     ip="192.168.48.239"
