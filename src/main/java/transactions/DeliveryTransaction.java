@@ -26,7 +26,7 @@ public class DeliveryTransaction extends AbstractTransaction {
     public void execute() throws SQLException {
         try {
             connection.setAutoCommit(false);
-            connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
+            connection.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
             ResultSet res;
         /*
         (a) Let N denote the value of the smallest order number O ID for district (W ID,DISTRICT NO)
@@ -86,7 +86,7 @@ public class DeliveryTransaction extends AbstractTransaction {
                 res = this.executeQuery(PreparedQueries.getOrderLineInOrder);
 
                 if (!res.next()) {
-//                    error("getOrderLineInOrder");
+                    error("getOrderLineInOrder");
                     System.err.println("warehouse id: " + warehouseId);
                     System.err.println("District id id: " + districtNo);
                     System.err.println("order id id: " + orderId);
