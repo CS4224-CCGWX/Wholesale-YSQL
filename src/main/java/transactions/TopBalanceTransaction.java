@@ -37,6 +37,7 @@ public class TopBalanceTransaction extends AbstractTransaction {
 
         HashMap<Integer, String> districts = new HashMap<>(), warehouses = new HashMap<>();
         try {
+            connection.setReadOnly(true);
             connection.setAutoCommit(false);
             connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
             ResultSet customers = PreparedQueries.getCustomerWithTopBalance.executeQuery();

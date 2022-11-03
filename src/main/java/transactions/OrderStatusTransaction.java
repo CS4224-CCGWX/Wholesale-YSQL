@@ -34,6 +34,7 @@ public class OrderStatusTransaction extends AbstractTransaction {
     public void execute() throws SQLException {
 
         try {
+            connection.setReadOnly(true);
             connection.setAutoCommit(false);
             connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
 

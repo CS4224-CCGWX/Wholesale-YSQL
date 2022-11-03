@@ -33,6 +33,7 @@ public class StockLevelTransaction extends AbstractTransaction {
     public void execute() throws SQLException {
 
         try {
+            connection.setReadOnly(true);
             connection.setAutoCommit(false);
             connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
             int nextOrderNumber = queryUtils.getNextAvailableOrderNumber(warehouseId, districtID);
