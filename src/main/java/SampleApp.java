@@ -43,7 +43,6 @@ public class SampleApp {
         int client = Integer.parseInt(args[2]);
         Properties settings = new Properties();
         try {
-
             settings.load(SampleApp.class.getResourceAsStream("app.properties"));
             io = new IO(client);
             io.setFilePath(settings.getProperty("inputFilePath"));
@@ -57,6 +56,7 @@ public class SampleApp {
         PerformanceReportGenerator.setFilePath(settings.getProperty("reportFilePath"), client);
         dataLoader = new DataLoader(conn, ip, port, dbUser);
         utils = new QueryUtils(conn);
+        conn.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
 
         if (action.equals("load")) {
             dataLoader.loadAll();
@@ -104,7 +104,7 @@ public class SampleApp {
                 hm.put(curS, hm.getOrDefault(curS, defaultValue) + elapsedTimeForIndividual);
                 hm_count.put(curS, hm_count.getOrDefault(curS, defaultValue) + 1);
 
-                System.out.println("Time used: " + TimeUnit.SECONDS.convert(elapsedTimeForIndividual, TimeUnit.NANOSECONDS));
+                System.out.println("Time used: " + elapsedTimeForIndividual);
             } catch (Exception e) {
                 e.printStackTrace();
                 System.err.println("**************************************");

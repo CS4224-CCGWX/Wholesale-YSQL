@@ -31,9 +31,9 @@ public class StockLevelTransaction extends AbstractTransaction {
     }
 
     public void execute() throws SQLException {
-        this.executeUpdate(beginTransaction);
 
         try {
+            connection.setAutoCommit(false);
             int nextOrderNumber = queryUtils.getNextAvailableOrderNumber(warehouseId, districtID);
 
             ResultSet pastOrders = queryUtils.getPastOrdersFromOrderLine(warehouseId, districtID, nextOrderNumber, lastOrders);
@@ -45,7 +45,7 @@ public class StockLevelTransaction extends AbstractTransaction {
             PreparedQueries.getItemStock.setInt(1, warehouseId);
             PreparedQueries.getItemStock.setArray(2, connection.createArrayOf("INTEGER", itemIds.toArray()));
             ResultSet stocks = PreparedQueries.getItemStock.executeQuery();
-
+            connection.commit();
             int total = 0;
             while (stocks.next()) {
                 if (stocks.getInt("S_QUANTITY") < threshold) {
@@ -54,11 +54,8 @@ public class StockLevelTransaction extends AbstractTransaction {
             }
 
             io.println(total);
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            connection.rollback();
         }
-
-        this.executeUpdate(endTransaction);
-
     }
 }

@@ -29,9 +29,8 @@ public class PopularItemTransaction extends AbstractTransaction {
 
     @Override
     public void execute() throws SQLException {
-
-        this.executeUpdate(beginTransaction);
         try {
+            connection.setAutoCommit(false);
             int nextOrderNumber = queryUtils.getNextAvailableOrderNumber(warehouseID, districtID);
             ResultSet pastOrders = queryUtils.getPastOrdersFromOrder(
                     warehouseID, districtID, nextOrderNumber, this.pastNumberOfOrders);
@@ -46,7 +45,6 @@ public class PopularItemTransaction extends AbstractTransaction {
                 int orderId = maxQuantity.getInt("OL_O_ID");
                 maxQuantityForEachOrder.put(orderId, maxQuantity.getInt("max_quantity"));
             }
-
 
 
             HashMap<Integer, String> allPopularItems = new HashMap<>();
@@ -91,6 +89,7 @@ public class PopularItemTransaction extends AbstractTransaction {
                 }
                 ItemsAmongAllOrders.add(popularItemPerOrder);
             }
+            connection.commit();
             for (Map.Entry<Integer, String> item: allPopularItems.entrySet()) {
                 int count = 0;
                 for (Set<Integer> order : ItemsAmongAllOrders) {
@@ -101,11 +100,10 @@ public class PopularItemTransaction extends AbstractTransaction {
                 sb.append(String.format("item name:%s, ratio: %f\n", item.getValue(), ratio));
             }
             io.println(sb.toString());
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            connection.rollback();
         }
 
-        this.executeUpdate(endTransaction);
 
     }
 }

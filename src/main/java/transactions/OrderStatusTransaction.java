@@ -33,7 +33,9 @@ public class OrderStatusTransaction extends AbstractTransaction {
 
     public void execute() throws SQLException {
 
-        this.executeUpdate(beginTransaction);
+        try {
+            connection.setAutoCommit(false);
+
         /*
         This transaction queries the status of the last order of a customer.
         Input: Customer identifier (C W ID, C D ID, C ID)
@@ -51,48 +53,49 @@ public class OrderStatusTransaction extends AbstractTransaction {
             (e) Data and time of delivery OL DELIVERY D
          */
 
-        // Output Customer Name
-        PreparedQueries.getCustomerFullNameAndBalance.setInt(1, customerWarehouseId);
-        PreparedQueries.getCustomerFullNameAndBalance.setInt(2, customerDistrictId);
-        PreparedQueries.getCustomerFullNameAndBalance.setInt(3, customerId);
-        ResultSet customerRes = this.executeQuery(PreparedQueries.getCustomerFullNameAndBalance);
+            // Output Customer Name
+            PreparedQueries.getCustomerFullNameAndBalance.setInt(1, customerWarehouseId);
+            PreparedQueries.getCustomerFullNameAndBalance.setInt(2, customerDistrictId);
+            PreparedQueries.getCustomerFullNameAndBalance.setInt(3, customerId);
+            ResultSet customerRes = this.executeQuery(PreparedQueries.getCustomerFullNameAndBalance);
 
-        io.println("*** Order Status Transaction Summary ***");
+            io.println("*** Order Status Transaction Summary ***");
 
-        String customerInfo = OutputFormatter.formatCustomerFullNameAndBalance(customerRes);
-        io.println(customerInfo);
+            String customerInfo = OutputFormatter.formatCustomerFullNameAndBalance(customerRes);
+            io.println(customerInfo);
 
-        // Output Customer Last Order
-        PreparedQueries.getCustomerLastOrderInfo.setInt(1, customerWarehouseId);
-        PreparedQueries.getCustomerLastOrderInfo.setInt(2, customerDistrictId);
-        PreparedQueries.getCustomerLastOrderInfo.setInt(3, customerId);
-        ResultSet lastOrderInfo = this.executeQuery(PreparedQueries.getCustomerLastOrderInfo);
+            // Output Customer Last Order
+            PreparedQueries.getCustomerLastOrderInfo.setInt(1, customerWarehouseId);
+            PreparedQueries.getCustomerLastOrderInfo.setInt(2, customerDistrictId);
+            PreparedQueries.getCustomerLastOrderInfo.setInt(3, customerId);
+            ResultSet lastOrderInfo = this.executeQuery(PreparedQueries.getCustomerLastOrderInfo);
 
-        if (!lastOrderInfo.next()) {
-            error("PreparedQueries.getCustomerLastOrderInfo");
-            throw new SQLException();
+            if (!lastOrderInfo.next()) {
+                error("PreparedQueries.getCustomerLastOrderInfo");
+                throw new SQLException();
+            }
+
+            int lastOrderId = lastOrderInfo.getInt("O_ID");
+            int carrierId = lastOrderInfo.getInt("O_CARRIER_ID");
+            Instant orderDateTime = lastOrderInfo.getTimestamp("O_ENTRY_D").toInstant();
+            String customerLastOrder = OutputFormatter.formatLastOrderInfo(lastOrderId, carrierId, orderDateTime);
+            io.println(customerLastOrder);
+
+
+            // Output Customer Last Order for each item
+            PreparedQueries.getCustomerLastOrderItemsInfo.setInt(1, customerWarehouseId);
+            PreparedQueries.getCustomerLastOrderItemsInfo.setInt(2, customerDistrictId);
+            PreparedQueries.getCustomerLastOrderItemsInfo.setInt(3, lastOrderId);
+            ResultSet itemsInfo = this.executeQuery(PreparedQueries.getCustomerLastOrderItemsInfo);
+            connection.commit();
+
+            io.println("Items of last order:");
+            while (itemsInfo.next()) {
+                io.println(OutputFormatter.formatItemInfo(itemsInfo));
+            }
+        } catch (Exception e) {
+            connection.rollback();
         }
-
-        int lastOrderId = lastOrderInfo.getInt("O_ID");
-        int carrierId = lastOrderInfo.getInt("O_CARRIER_ID");
-        Instant orderDateTime = lastOrderInfo.getTimestamp("O_ENTRY_D").toInstant();
-        String customerLastOrder = OutputFormatter.formatLastOrderInfo(lastOrderId, carrierId, orderDateTime);
-        io.println(customerLastOrder);
-
-
-        // Output Customer Last Order for each item
-        PreparedQueries.getCustomerLastOrderItemsInfo.setInt(1, customerWarehouseId);
-        PreparedQueries.getCustomerLastOrderItemsInfo.setInt(2, customerDistrictId);
-        PreparedQueries.getCustomerLastOrderItemsInfo.setInt(3, lastOrderId);
-        ResultSet itemsInfo = this.executeQuery(PreparedQueries.getCustomerLastOrderItemsInfo);
-
-        io.println("Items of last order:");
-        while(itemsInfo.next()) {
-            io.println(OutputFormatter.formatItemInfo(itemsInfo));
-        }
-
-        this.executeUpdate(endTransaction);
-
     }
 
     public void error(String s) {

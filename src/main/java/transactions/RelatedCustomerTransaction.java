@@ -12,7 +12,6 @@ import java.util.HashSet;
 import java.util.Map;
 
 public class RelatedCustomerTransaction extends AbstractTransaction {
-    Connection conn;
     int warehouseID, districtID, customerID;
     QueryUtils queryUtils;
 
@@ -32,42 +31,43 @@ public class RelatedCustomerTransaction extends AbstractTransaction {
 
     @Override
     public void execute() throws SQLException {
-        this.executeUpdate(beginTransaction);
+        try {
+            connection.setAutoCommit(false);
+            PreparedQueries.getOrderedItemsByCustomerStmt.setInt(1, warehouseID);
+            PreparedQueries.getOrderedItemsByCustomerStmt.setInt(2, districtID);
+            PreparedQueries.getOrderedItemsByCustomerStmt.setInt(3, customerID);
 
-        PreparedQueries.getOrderedItemsByCustomerStmt.setInt(1, warehouseID);
-        PreparedQueries.getOrderedItemsByCustomerStmt.setInt(2, districtID);
-        PreparedQueries.getOrderedItemsByCustomerStmt.setInt(3, customerID);
-
-        // get items purchased by the customer and the associated order id
-        HashMap<Integer, HashSet<Integer>> orderToItemsMap = new HashMap<>();
-        HashMap<String, HashMap<Integer, HashSet<Integer>>> customerToItemsMap = new HashMap<>();
-        getTargetCustomerOrderItems(orderToItemsMap);
-        for (int id = 1; id <= 10; id += 2){
-            if (id == warehouseID) {
-                getPossibleCustomersOrderItems(customerToItemsMap, id + 1, id + 1);
-            } else if (id + 1 == warehouseID){
-                getPossibleCustomersOrderItems(customerToItemsMap, id, id);
-            } else {
-                getPossibleCustomersOrderItems(customerToItemsMap, id, id + 1);
+            // get items purchased by the customer and the associated order id
+            HashMap<Integer, HashSet<Integer>> orderToItemsMap = new HashMap<>();
+            HashMap<String, HashMap<Integer, HashSet<Integer>>> customerToItemsMap = new HashMap<>();
+            getTargetCustomerOrderItems(orderToItemsMap);
+            for (int id = 1; id <= 10; id += 2) {
+                if (id == warehouseID) {
+                    getPossibleCustomersOrderItems(customerToItemsMap, id + 1, id + 1);
+                } else if (id + 1 == warehouseID) {
+                    getPossibleCustomersOrderItems(customerToItemsMap, id, id);
+                } else {
+                    getPossibleCustomersOrderItems(customerToItemsMap, id, id + 1);
+                }
             }
-        }
+            connection.commit();
 
-        HashSet<String> result = new HashSet<>();
-        for (Map.Entry<String, HashMap<Integer, HashSet<Integer>>> entry : customerToItemsMap.entrySet()) {
-            if (isRelatedCustomer(orderToItemsMap, entry.getValue())) {
-                result.add(entry.getKey());
+            HashSet<String> result = new HashSet<>();
+            for (Map.Entry<String, HashMap<Integer, HashSet<Integer>>> entry : customerToItemsMap.entrySet()) {
+                if (isRelatedCustomer(orderToItemsMap, entry.getValue())) {
+                    result.add(entry.getKey());
+                }
             }
+
+            StringBuilder sb = new StringBuilder();
+            for (String c : result) {
+                sb.append(c);
+                sb.append('\n');
+            }
+            io.println(sb);
+        } catch (Exception e) {
+            this.connection.rollback();
         }
-
-        StringBuilder sb = new StringBuilder();
-        for (String c : result) {
-            sb.append(c);
-            sb.append('\n');
-        }
-        io.println(sb);
-
-        this.executeUpdate(endTransaction);
-
     }
 
     private boolean isRelatedCustomer(HashMap<Integer, HashSet<Integer>> itemIdByCustomer,
