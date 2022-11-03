@@ -162,10 +162,10 @@ public class NewOrderTransaction extends AbstractTransaction {
 
                 if (!qtyInfo.next()) {
                     error("formattedGetStockQty");
-                    System.out.println("SupplyWarehouseId: " + supplyWarehouseId);
-                    System.out.println("ItemId: " + itemId);
-                    System.out.println("ToString info: " + this.toString());
-                    System.out.println("\n");
+                    System.err.println("SupplyWarehouseId: " + supplyWarehouseId);
+                    System.err.println("ItemId: " + itemId);
+                    System.err.println("ToString info: " + this.toString());
+                    System.err.println("\n");
                     throw new SQLException();
                 }
 

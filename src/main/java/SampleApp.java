@@ -80,7 +80,7 @@ public class SampleApp {
 
         fileStart = System.nanoTime();
         AbstractTransaction transaction;
-        System.out.println("******** Current Client: " + client + " **********");
+        System.err.println("******** Current Client: " + client + " **********");
         while (transactionParser.hasNext()) {
             try {
                 transaction = transactionParser.parseNextTransaction();
