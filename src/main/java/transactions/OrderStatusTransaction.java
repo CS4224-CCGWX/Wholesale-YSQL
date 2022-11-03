@@ -35,6 +35,7 @@ public class OrderStatusTransaction extends AbstractTransaction {
 
         try {
             connection.setAutoCommit(false);
+            connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
 
         /*
         This transaction queries the status of the last order of a customer.

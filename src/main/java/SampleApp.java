@@ -56,7 +56,6 @@ public class SampleApp {
         PerformanceReportGenerator.setFilePath(settings.getProperty("reportFilePath"), client);
         dataLoader = new DataLoader(conn, ip, port, dbUser);
         utils = new QueryUtils(conn);
-        conn.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
 
         if (action.equals("load")) {
             dataLoader.loadAll();

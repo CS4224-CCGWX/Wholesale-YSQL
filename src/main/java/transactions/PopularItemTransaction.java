@@ -31,6 +31,7 @@ public class PopularItemTransaction extends AbstractTransaction {
     public void execute() throws SQLException {
         try {
             connection.setAutoCommit(false);
+            connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
             int nextOrderNumber = queryUtils.getNextAvailableOrderNumber(warehouseID, districtID);
             ResultSet pastOrders = queryUtils.getPastOrdersFromOrder(
                     warehouseID, districtID, nextOrderNumber, this.pastNumberOfOrders);

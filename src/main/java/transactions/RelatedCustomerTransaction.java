@@ -33,6 +33,7 @@ public class RelatedCustomerTransaction extends AbstractTransaction {
     public void execute() throws SQLException {
         try {
             connection.setAutoCommit(false);
+            connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
             PreparedQueries.getOrderedItemsByCustomerStmt.setInt(1, warehouseID);
             PreparedQueries.getOrderedItemsByCustomerStmt.setInt(2, districtID);
             PreparedQueries.getOrderedItemsByCustomerStmt.setInt(3, customerID);

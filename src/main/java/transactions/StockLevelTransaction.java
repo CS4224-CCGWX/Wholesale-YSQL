@@ -34,6 +34,7 @@ public class StockLevelTransaction extends AbstractTransaction {
 
         try {
             connection.setAutoCommit(false);
+            connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
             int nextOrderNumber = queryUtils.getNextAvailableOrderNumber(warehouseId, districtID);
 
             ResultSet pastOrders = queryUtils.getPastOrdersFromOrderLine(warehouseId, districtID, nextOrderNumber, lastOrders);

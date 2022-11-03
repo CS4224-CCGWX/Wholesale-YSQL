@@ -35,6 +35,7 @@ public class PaymentTransaction extends AbstractTransaction{
 
         try {
             connection.setAutoCommit(false);
+            connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
 
             // 1.  Update the warehouse C W ID by incrementing W YTD by PAYMENT
 
