@@ -276,7 +276,7 @@ public class NewOrderTransaction extends AbstractTransaction {
             PreparedQueries.getCustomerLastAndCreditAndDiscount.setInt(2, districtId);
             PreparedQueries.getCustomerLastAndCreditAndDiscount.setInt(3, customerId);
             res = this.executeQuery(PreparedQueries.getCustomerLastAndCreditAndDiscount);
-            connection.commit();
+
 
             ResultSet cInfo = res;
 
@@ -317,6 +317,7 @@ public class NewOrderTransaction extends AbstractTransaction {
                         String.format("\t Item number: %d, name: %s, Supplier warehouse: %d, quantity: %d, Order-line amount: %.2f, Adjusted quantity: %d\n",
                                 itemIds.get(i), itemNames.get(i), supplyWarehouseIds.get(i), quantities.get(i), itemAmounts.get(i), adjustQuantities.get(i)));
             }
+            connection.commit();
         } catch (Exception e) {
             connection.rollback();
         }
