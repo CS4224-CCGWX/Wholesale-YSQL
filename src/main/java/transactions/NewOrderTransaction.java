@@ -161,11 +161,11 @@ public class NewOrderTransaction extends AbstractTransaction {
                 ResultSet qtyInfo = this.executeQuery(PreparedQueries.getStockQty);
 
                 if (!qtyInfo.next()) {
-                    error("formattedGetStockQty");
-                    System.err.println("SupplyWarehouseId: " + supplyWarehouseId);
-                    System.err.println("ItemId: " + itemId);
-                    System.err.println("ToString info: " + this.toString());
-                    System.err.println("\n");
+                    error("getStockQty");
+//                    System.err.println("SupplyWarehouseId: " + supplyWarehouseId);
+//                    System.err.println("ItemId: " + itemId);
+//                    System.err.println("ToString info: " + this.toString());
+//                    System.err.println("\n");
                     throw new SQLException();
                 }
 
