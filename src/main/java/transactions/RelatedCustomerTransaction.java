@@ -68,6 +68,9 @@ public class RelatedCustomerTransaction extends AbstractTransaction {
             }
             io.println(sb);
         } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("[Error]:  Related Customer Abort " + this.toString());
+            System.err.println("[Error]: Related Customer Abort " + this.toString());
             this.connection.rollback();
         }
     }

@@ -139,6 +139,9 @@ public class DeliveryTransaction extends AbstractTransaction {
             }
             connection.commit();
         } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("[Error]: Delivery Abort " + this.toString());
+            System.err.println("[Error]: Delivery Abort " + this.toString());
             connection.rollback();
         }
     }

@@ -324,6 +324,9 @@ public class NewOrderTransaction extends AbstractTransaction {
             }
             connection.commit();
         } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("[Error]:  New Order Abort " + this.toString());
+            System.err.println("[Error]: New Order Abort " + this.toString());
             connection.rollback();
         }
 

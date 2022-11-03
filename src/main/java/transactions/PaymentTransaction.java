@@ -129,6 +129,9 @@ public class PaymentTransaction extends AbstractTransaction{
 
             io.println(sb);
         } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("[Error]:  Payment Abort " + this.toString());
+            System.err.println("[Error]: Payment Abort " + this.toString());
             connection.rollback();
         }
 

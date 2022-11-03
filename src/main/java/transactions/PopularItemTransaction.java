@@ -103,6 +103,9 @@ public class PopularItemTransaction extends AbstractTransaction {
             }
             io.println(sb.toString());
         } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("[Error]:  Popular Item Abort " + this.toString());
+            System.err.println("[Error]: Popular Item Abort " + this.toString());
             connection.rollback();
         }
 

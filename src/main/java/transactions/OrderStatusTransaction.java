@@ -96,6 +96,9 @@ public class OrderStatusTransaction extends AbstractTransaction {
                 io.println(OutputFormatter.formatItemInfo(itemsInfo));
             }
         } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("[Error]:  Order Status Abort " + this.toString());
+            System.err.println("[Error]: Order Status Abort " + this.toString());
             connection.rollback();
         }
     }

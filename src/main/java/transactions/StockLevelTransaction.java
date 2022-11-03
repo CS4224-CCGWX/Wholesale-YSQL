@@ -57,6 +57,11 @@ public class StockLevelTransaction extends AbstractTransaction {
 
             io.println(total);
         } catch (Exception e) {
+
+            e.printStackTrace();
+            System.out.println("[Error]:  Stock level Abort " + this.toString());
+            System.err.println("[Error]: Stock level Abort " + this.toString());
+
             connection.rollback();
         }
     }
