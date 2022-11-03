@@ -86,7 +86,13 @@ public class DeliveryTransaction extends AbstractTransaction {
                 res = this.executeQuery(PreparedQueries.getOrderLineInOrder);
 
                 if (!res.next()) {
-                    error("getOrderLineInOrder");
+//                    error("getOrderLineInOrder");
+                    System.out.println("warehouse id: " + warehouseId);
+                    System.out.println("District id id: " + districtNo);
+                    System.out.println("order id id: " + orderId);
+                    System.out.println("ToString info: " + this.toString());
+
+                    System.out.println("\n");
                     PreparedQueries.revertNextDeliveryOrderId.setInt(1, warehouseId);
                     PreparedQueries.revertNextDeliveryOrderId.setInt(2, districtNo);
                     this.executeUpdate(PreparedQueries.revertNextDeliveryOrderId);
