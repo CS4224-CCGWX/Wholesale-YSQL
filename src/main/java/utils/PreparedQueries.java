@@ -36,17 +36,17 @@ public class PreparedQueries {
         getMaxQuantity = conn.prepareStatement("SELECT OL_O_ID, MAX(OL_QUANTITY) AS max_quantity FROM Order_Line " +
                 "WHERE OL_W_ID = ? AND OL_D_ID = ? AND OL_O_ID < ? AND OL_O_ID >= ? GROUP BY OL_O_ID;");
         incrementDistrictNextOrderId = conn.prepareStatement("UPDATE district SET D_NEXT_O_ID = D_NEXT_O_ID + 1" +
-                "WHERE D_W_ID = ? AND D_ID = ?; IF EXISTS;");
+                "WHERE D_W_ID = ? AND D_ID = ?;");
         createNewOrder = conn.prepareStatement("INSERT INTO \"order\"(O_ID, O_D_ID, O_W_ID, O_C_ID, O_ENTRY_D, " +
-                "O_OL_CNT, O_ALL_LOCAL) VALUES (?, ?, ?, ?, ?, ?, ?); IF NOT EXISTS;");
+                "O_OL_CNT, O_ALL_LOCAL) VALUES (?, ?, ?, ?, ?, ?, ?);");
         getStockQty = conn.prepareStatement("SELECT S_QUANTITY, S_YTD FROM stock WHERE S_W_ID = ? AND S_I_ID = ?;");
         updateStockQtyIncrRemoteCnt = conn.prepareStatement("UPDATE stock SET S_QUANTITY = ?, S_YTD = ?, S_ORDER_CNT = S_ORDER_CNT + 1, " +
-                "S_REMOTE_CNT = S_REMOTE_CNT + 1 WHERE S_W_ID = ? AND S_I_ID = ?; IF EXISTS;");
+                "S_REMOTE_CNT = S_REMOTE_CNT + 1 WHERE S_W_ID = ? AND S_I_ID = ?;");
         getItemStock = conn.prepareStatement("SELECT S_QUANTITY FROM STOCK WHERE S_W_ID = ? AND S_I_ID = ANY (?);");
         getLastOrdersFromOrder = conn.prepareStatement("SELECT O_ID, O_W_ID, O_D_ID, O_C_ID, O_W_ID, O_D_ID, O_C_ID, O_ENTRY_D FROM \"order\" " +
                 "WHERE O_ID >= ? AND O_ID < ? AND O_W_ID = ? AND O_D_ID = ?;");
         updateStockQty = conn.prepareStatement(" UPDATE stock SET S_QUANTITY = ?, S_YTD = ?, S_ORDER_CNT = S_ORDER_CNT + 1 "
-                + "WHERE S_W_ID = ? AND S_I_ID = ?; IF EXISTS;");
+                + "WHERE S_W_ID = ? AND S_I_ID = ?;");
         getItemPriceAndName = conn.prepareStatement("SELECT I_PRICE, I_NAME FROM item WHERE I_ID = ?;");
         getStockDistInfo = conn.prepareStatement("SELECT ? FROM stock WHERE S_W_ID = ? AND S_I_ID = ?;");
         getLastOrdersFromOrderLine = conn.prepareStatement("SELECT OL_I_ID FROM Order_Line " +
@@ -54,11 +54,11 @@ public class PreparedQueries {
         getNextAvailableOrderNumber = conn.prepareStatement("SELECT D_NEXT_O_ID FROM District WHERE D_W_ID = ? AND D_ID = ?;");
         createNewOrderLine =  conn.prepareStatement("INSERT INTO order_line "
                 + "(OL_O_ID, OL_D_ID, OL_W_ID, OL_C_ID, OL_NUMBER, OL_I_ID, OL_SUPPLY_W_ID, OL_QUANTITY, OL_AMOUNT, OL_DIST_INFO) "
-                + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?); IF NOT EXISTS;");
+                + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
         getWarehouseTax =  conn.prepareStatement("SELECT W_TAX FROM warehouse WHERE W_ID = ?;");
         getCustomerLastAndCreditAndDiscount = conn.prepareStatement("SELECT C_LAST, C_CREDIT, C_DISCOUNT FROM customer " +
                 "WHERE C_W_ID = ? AND C_D_ID = ? AND C_ID = ?;");
-        updateWarehouseYearToDateAmount = conn.prepareStatement("UPDATE warehouse SET W_YTD = ? WHERE W_ID = ?; IF EXISTS;");
+        updateWarehouseYearToDateAmount = conn.prepareStatement("UPDATE warehouse SET W_YTD = ? WHERE W_ID = ?;");
         getDistrictAddressAndYtd = conn.prepareStatement("SELECT D_STREET_1, D_STREET_2, D_CITY, D_STATE, D_ZIP, D_YTD "
                 + "FROM district WHERE D_W_ID = ? AND D_ID = ?;");
         getWarehouseAddressAndYtd = conn.prepareStatement("SELECT W_STREET_1, W_STREET_2, W_CITY, W_STATE, W_ZIP, W_YTD "
@@ -70,28 +70,28 @@ public class PreparedQueries {
         getCustomerFullNameAndBalance = conn.prepareStatement("SELECT C_FIRST, C_MIDDLE, C_LAST, C_BALANCE FROM customer" +
                 " WHERE C_W_ID = ? AND C_D_ID = ? AND C_ID = ?;");
         updateCustomerBalanceAndDcount = conn.prepareStatement("UPDATE customer SET C_BALANCE = ? , C_DELIVERY_CNT = C_DELIVERY_CNT + 1 "
-                + "WHERE C_W_ID = ? AND C_D_ID = ? AND C_ID = ?; IF EXISTS;");
+                + "WHERE C_W_ID = ? AND C_D_ID = ? AND C_ID = ?;");
         updateDistrictYearToDateAmount =  conn.prepareStatement("UPDATE district SET D_YTD = ? "
-                + "WHERE D_W_ID = ? AND D_ID = ?; IF EXISTS;");
+                + "WHERE D_W_ID = ? AND D_ID = ?;");
         getOrderLineInOrder = conn.prepareStatement("SELECT OL_AMOUNT, OL_C_ID, OL_NUMBER FROM order_line " +
                 "WHERE OL_W_ID = ? AND OL_D_ID = ? AND OL_O_ID = ?;");
         getCustomerBalance = conn.prepareStatement("SELECT C_BALANCE FROM customer WHERE C_W_ID = ? AND C_D_ID = ? AND C_ID = ?;");
         updateCustomerPaymentInfo =  conn.prepareStatement("UPDATE customer "
                 + "SET C_BALANCE = ?, C_YTD_PAYMENT = ?, C_PAYMENT_CNT = C_PAYMENT_CNT + 1 "
-                + "WHERE C_W_ID = ? AND C_D_ID = ? AND C_ID = ?; IF EXISTS;");
+                + "WHERE C_W_ID = ? AND C_D_ID = ? AND C_ID = ?;");
         getFullCustomerInfo = conn.prepareStatement("SELECT C_W_ID, C_D_ID, C_ID, C_FIRST, C_MIDDLE, C_LAST, C_STREET_1, C_STREET_2, "
                         + "C_CITY, C_STATE, C_ZIP, C_PHONE, C_SINCE, C_CREDIT, C_CREDIT_LIM, C_DISCOUNT, C_BALANCE, C_YTD_PAYMENT "
                         + "FROM customer WHERE C_W_ID = ? AND C_D_ID = ? AND C_ID = ?;");
         revertNextDeliveryOrderId = conn.prepareStatement("UPDATE district SET D_NEXT_DELIVER_O_ID = D_NEXT_DELIVER_O_ID - 1 "
-                        + "WHERE D_W_ID = ? AND D_ID = ?; IF EXISTS;");
+                        + "WHERE D_W_ID = ? AND D_ID = ?;");
         getNextDeliveryOrderId = conn.prepareStatement("SELECT D_NEXT_DELIVER_O_ID FROM district " +
                 "WHERE D_W_ID = ? AND D_ID = ?;");
         updateOrderIdToDeliver = conn.prepareStatement("UPDATE district SET D_NEXT_DELIVER_O_ID = D_NEXT_DELIVER_O_ID + 1 "
-                + "WHERE D_W_ID = ? AND D_ID = ?; IF EXISTS;");
+                + "WHERE D_W_ID = ? AND D_ID = ?;");
         updateCarrierIdInOrder = conn.prepareStatement("UPDATE \"order\" SET O_CARRIER_ID = ?" +
-                "WHERE O_W_ID = ? AND O_D_ID = ? AND O_ID = ?; IF EXISTS;");
+                "WHERE O_W_ID = ? AND O_D_ID = ? AND O_ID = ?;");
         updateDeliveryDateInOrderLine = conn.prepareStatement("UPDATE order_line SET OL_DELIVERY_D = ? " +
-                "WHERE OL_W_ID = ? AND OL_D_ID = ? AND OL_O_ID = ? AND OL_NUMBER = ?; IF EXISTS;");
+                "WHERE OL_W_ID = ? AND OL_D_ID = ? AND OL_O_ID = ? AND OL_NUMBER = ?;");
         updateDeliveryDateInOrderLine = conn.prepareStatement("UPDATE order_line SET OL_DELIVERY_D = ? " +
                 "WHERE OL_W_ID = ? AND OL_D_ID = ? AND OL_O_ID = ? AND OL_NUMBER = ?;");
         getPopularItemInOrderLine = conn.prepareStatement("SELECT OL_I_ID FROM order_line WHERE OL_W_ID = ? " +
