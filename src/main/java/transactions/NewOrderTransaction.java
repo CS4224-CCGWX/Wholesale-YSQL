@@ -75,7 +75,7 @@ public class NewOrderTransaction extends AbstractTransaction {
         try {
             connection.setReadOnly(false);
             connection.setAutoCommit(false);
-            connection.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
+            connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
 
          /*
           1. N denotes the next available order number D_NEXT_O_ID for district (W_ID, D_ID)

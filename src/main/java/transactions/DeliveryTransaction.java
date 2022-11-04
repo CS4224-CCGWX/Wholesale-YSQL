@@ -27,7 +27,7 @@ public class DeliveryTransaction extends AbstractTransaction {
         try {
             connection.setReadOnly(false);
             connection.setAutoCommit(false);
-            connection.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
+            connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
             ResultSet res;
         /*
         (a) Let N denote the value of the smallest order number O ID for district (W ID,DISTRICT NO)
