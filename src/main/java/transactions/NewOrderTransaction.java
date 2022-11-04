@@ -73,6 +73,7 @@ public class NewOrderTransaction extends AbstractTransaction {
     public void execute() throws SQLException {
 
         try {
+            connection.setReadOnly(false);
             connection.setAutoCommit(false);
             connection.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
 
