@@ -56,6 +56,7 @@ public class SampleApp {
         PerformanceReportGenerator.setFilePath(settings.getProperty("reportFilePath"), client);
         dataLoader = new DataLoader(conn, ip, port, dbUser);
         utils = new QueryUtils(conn);
+        
 
         if (action.equals("load")) {
             dataLoader.loadAll();
@@ -81,7 +82,9 @@ public class SampleApp {
         fileStart = System.nanoTime();
         AbstractTransaction transaction;
         System.err.println("******** Current Client: " + client + " **********");
+        int totalTransaction = 0;
         while (transactionParser.hasNext()) {
+            totalTransaction += 1;
             try {
                 transaction = transactionParser.parseNextTransaction();
             } catch (SQLException e) {
@@ -121,7 +124,7 @@ public class SampleApp {
         fileEnd = System.nanoTime();
 
         long totalElapsedTime = TimeUnit.SECONDS.convert(fileEnd - fileStart, TimeUnit.NANOSECONDS);
-        PerformanceReportGenerator.generatePerformanceReport(latencyList, totalElapsedTime, client, hm, hm_count);
+        PerformanceReportGenerator.generatePerformanceReport(latencyList, totalElapsedTime, client, hm, hm_count, totalTransaction);
 
     }
 }

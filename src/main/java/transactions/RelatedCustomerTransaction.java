@@ -32,9 +32,6 @@ public class RelatedCustomerTransaction extends AbstractTransaction {
     @Override
     public void execute() throws SQLException {
         try {
-            connection.setReadOnly(true);
-            connection.setAutoCommit(false);
-            connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
             PreparedQueries.getOrderedItemsByCustomerStmt.setInt(1, warehouseID);
             PreparedQueries.getOrderedItemsByCustomerStmt.setInt(2, districtID);
             PreparedQueries.getOrderedItemsByCustomerStmt.setInt(3, customerID);
@@ -52,7 +49,6 @@ public class RelatedCustomerTransaction extends AbstractTransaction {
                     getPossibleCustomersOrderItems(customerToItemsMap, id, id + 1);
                 }
             }
-            connection.commit();
 
             HashSet<String> result = new HashSet<>();
             for (Map.Entry<String, HashMap<Integer, HashSet<Integer>>> entry : customerToItemsMap.entrySet()) {
@@ -71,7 +67,6 @@ public class RelatedCustomerTransaction extends AbstractTransaction {
             e.printStackTrace();
             System.out.println("[Error]:  Related Customer Abort " + this.toString());
             System.err.println("[Error]: Related Customer Abort " + this.toString());
-            this.connection.rollback();
         }
     }
 

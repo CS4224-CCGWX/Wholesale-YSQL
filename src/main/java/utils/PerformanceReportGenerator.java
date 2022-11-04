@@ -26,7 +26,8 @@ public class PerformanceReportGenerator {
 //        reportFilePath = path;
 //    }
     public static void generatePerformanceReport(List<Long> latencyList, long totalTime, int client,
-                                                 Map<String, Long> individual_time, Map<String, Long> individual_count) throws IOException {
+                                                 Map<String, Long> individual_time, Map<String, Long> individual_count,
+                                                 int totalTransaction) throws IOException {
         Collections.sort(latencyList);
         int count = latencyList.size();
         long sum = latencyList.stream().mapToLong(Long::longValue).sum();
@@ -50,6 +51,7 @@ public class PerformanceReportGenerator {
             fw.write(String.format(individualTransactionPerformance, curTrans, tTime, transCount));
             fw.write("\n");
         }
+        fw.write("Total transaction count: " + totalTransaction + "\n");
         System.out.println(individual_time.size());
         fw.close();
     }

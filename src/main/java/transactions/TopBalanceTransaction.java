@@ -37,9 +37,6 @@ public class TopBalanceTransaction extends AbstractTransaction {
 
         HashMap<Integer, String> districts = new HashMap<>(), warehouses = new HashMap<>();
         try {
-            connection.setReadOnly(true);
-            connection.setAutoCommit(false);
-            connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
             ResultSet customers = PreparedQueries.getCustomerWithTopBalance.executeQuery();
             while (customers.next()) {
                 int districtID = customers.getInt("C_D_ID");
@@ -84,7 +81,6 @@ public class TopBalanceTransaction extends AbstractTransaction {
 
             getDistrictThread.join();
             getWareHouseThread.join();
-            connection.rollback();
             StringBuilder sb = new StringBuilder();
             customers.beforeFirst();
             while (customers.next()) {
