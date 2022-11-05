@@ -30,8 +30,8 @@ do
 	client=`expr $c \* 5  + $tx`
 	output_path=/home/stuproj/cs4224i/Wholesale-YSQL/log/$client.out
 	err_path=/home/stuproj/cs4224i/Wholesale-YSQL/log/$client.err
-	
-	echo "Run transaction file at node: $curr_node"
+
+	echo "Run transaction file $client at node: $curr_node"
 	tmux new-session -d -s client$client "java -jar target/yugabyte-simple-java-app-1.0-SNAPSHOT.jar $ip $port $client run > $output_path 2>$err_path"
 done
 exit 0

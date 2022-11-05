@@ -9,6 +9,7 @@ import java.util.HashMap;
 
 public class TopBalanceTransaction extends AbstractTransaction {
     QueryUtils queryUtils;
+    int counter = 0;
 
     public TopBalanceTransaction(Connection connection, IO io, QueryUtils utils) throws SQLException {
         super(connection, io);
@@ -37,6 +38,7 @@ public class TopBalanceTransaction extends AbstractTransaction {
 
         HashMap<Integer, String> districts = new HashMap<>(), warehouses = new HashMap<>();
         try {
+            counter = counter + 1;
             connection.setAutoCommit(true);
             ResultSet customers = PreparedQueries.getCustomerWithTopBalance.executeQuery();
             while (customers.next()) {
@@ -101,8 +103,14 @@ public class TopBalanceTransaction extends AbstractTransaction {
         } catch (Exception e) {
 
             e.printStackTrace();
-            System.out.println("[Error]:  Top Balance Abort " + this.toString());
-            System.err.println("[Error]: Top Balance Abort " + this.toString());
+
+            System.out.println("[Error out]: Top Balance Abort " + " Counter: " + counter + this.toString());
+            System.err.println("[Error err]: Top Balance Abort " + " Counter: " + counter+ this.toString());
+            if (counter >= 3) {
+                System.out.println( "[Out] transaction " + this.toString() + "fails after 3 attempts");
+                System.err.println( "[err] transaction " + this.toString() + "fails after 3 attempts");
+            }
+
         }
     }
 }

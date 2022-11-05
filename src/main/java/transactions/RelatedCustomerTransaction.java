@@ -14,6 +14,7 @@ import java.util.Map;
 public class RelatedCustomerTransaction extends AbstractTransaction {
     int warehouseID, districtID, customerID;
     QueryUtils queryUtils;
+    int counter = 0;
 
     public RelatedCustomerTransaction(Connection conn, IO io, QueryUtils utils, int warehouseID,
                                       int districtID, int customerID) throws SQLException {
@@ -31,6 +32,7 @@ public class RelatedCustomerTransaction extends AbstractTransaction {
 
     @Override
     public void execute() throws SQLException {
+        counter = counter + 1;
         StringBuilder sb = new StringBuilder();
         sb.append(String.format("Customer id: (%d, %d, %d)\n", warehouseID, districtID, customerID));
         try {
@@ -67,8 +69,12 @@ public class RelatedCustomerTransaction extends AbstractTransaction {
             io.println(sb);
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("[Error]:  Related Customer Abort " + this.toString());
-            System.err.println("[Error]: Related Customer Abort " + this.toString());
+            System.out.println("[Error out]:  Related Customer Abort " + " Counter: " + counter + this.toString());
+            System.err.println("[Error out]:  Related Customer Abort " + " Counter: " + counter + this.toString());
+            if (counter >= 3) {
+                System.out.println( "[Out] transaction " + this.toString() + "fails after 3 attempts");
+                System.err.println( "[err] transaction " + this.toString() + "fails after 3 attempts");
+            }
         }
     }
 

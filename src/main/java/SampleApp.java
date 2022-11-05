@@ -120,12 +120,16 @@ public class SampleApp {
                     System.err.println("[err]retry counter: " + i);
                     System.out.println(transaction.toString());
                     System.err.println(transaction.toString());
+                    io.println("[io]retry counter: " + i);
                     e.printStackTrace();
+                    io.println("**************************************");
                     System.out.println("**************************************");
                     System.err.println("**************************************");
                 }
             }
             if (i > retryTimes) {
+                System.out.println("transaction " + transaction.toString() + "fails after 3 attempts");
+                io.println("transaction " + transaction.toString() + "fails after 3 attempts");
                 System.err.println("transaction " + transaction.toString() + "fails after 3 attempts");
             }
 

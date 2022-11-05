@@ -12,6 +12,7 @@ public class DeliveryTransaction extends AbstractTransaction {
     private int warehouseId;
     private int carrierId;
     private static final int TOTAL_DISTRICT = 10;
+    int counter = 0;
 
     public DeliveryTransaction(Connection connection, IO io, int wid, int cid) throws SQLException {
         super(connection, io);
@@ -25,6 +26,7 @@ public class DeliveryTransaction extends AbstractTransaction {
 
     public void execute() throws SQLException {
         try {
+            counter = counter + 1;
             connection.setReadOnly(false);
             connection.setAutoCommit(false);
             connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
@@ -141,8 +143,12 @@ public class DeliveryTransaction extends AbstractTransaction {
             connection.commit();
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("[Error]: Delivery Abort " + this.toString());
-            System.err.println("[Error]: Delivery Abort " + this.toString());
+            System.out.println("[Error out]: Delivery Abort " + " Counter: " + counter + this.toString());
+            System.err.println("[Error err]: Delivery Abort " + " Counter: " + counter+ this.toString());
+            if (counter >= 3) {
+                System.out.println( "[Out] transaction " + this.toString() + "fails after 3 attempts");
+                System.err.println( "[err] transaction " + this.toString() + "fails after 3 attempts");
+            }
             connection.rollback();
         }
     }

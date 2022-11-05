@@ -6,7 +6,6 @@ import utils.PreparedQueries;
 
 import java.math.BigDecimal;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -21,6 +20,7 @@ public class PaymentTransaction extends AbstractTransaction{
     private static OutputFormatter outputFormatter = new OutputFormatter();
 
     private static final String delimiter = "\n";
+    int counter = 1;
 
     public PaymentTransaction(Connection connection, IO io, int cwid, int cdid, int cid, double p) throws SQLException {
         super(connection, io);
@@ -34,6 +34,7 @@ public class PaymentTransaction extends AbstractTransaction{
     public void execute() throws SQLException {
 
         try {
+            counter = counter + 1;
             connection.setReadOnly(false);
             connection.setAutoCommit(false);
             connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
@@ -131,8 +132,12 @@ public class PaymentTransaction extends AbstractTransaction{
             io.println(sb);
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("[Error]:  Payment Abort " + this.toString());
-            System.err.println("[Error]: Payment Abort " + this.toString());
+            System.out.println("[Error out]: Payment Abort " + " Counter: " + counter + this.toString());
+            System.err.println("[Error err]: Payment Abort " + " Counter: " + counter+ this.toString());
+            if (counter >= 3) {
+                System.out.println( "[Out] transaction " + this.toString() + "fails after 3 attempts");
+                System.err.println( "[err] transaction " + this.toString() + "fails after 3 attempts");
+            }
             connection.rollback();
         }
 

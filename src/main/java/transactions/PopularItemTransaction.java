@@ -14,6 +14,7 @@ import java.util.*;
 public class PopularItemTransaction extends AbstractTransaction {
     int warehouseID, districtID, pastNumberOfOrders;
     QueryUtils queryUtils;
+    int counter = 0;
 
     public PopularItemTransaction(Connection conn, IO io, QueryUtils utils, int warehouseID, int districtID, int pastOrders) throws SQLException {
         super(conn, io);
@@ -31,6 +32,7 @@ public class PopularItemTransaction extends AbstractTransaction {
     @Override
     public void execute() throws SQLException {
         try {
+            counter = counter + 1;
             connection.setReadOnly(true);
             connection.setAutoCommit(false);
             connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
@@ -106,8 +108,14 @@ public class PopularItemTransaction extends AbstractTransaction {
             io.println(sb.toString());
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("[Error]:  Popular Item Abort " + this.toString());
-            System.err.println("[Error]: Popular Item Abort " + this.toString());
+
+            System.out.println("[Error out]: Popular Item Abort " + " Counter: " + counter + this.toString());
+            System.err.println("[Error err]: Popular Item Abort " + " Counter: " + counter+ this.toString());
+            if (counter >= 3) {
+                System.out.println( "[Out] transaction " + this.toString() + "fails after 3 attempts");
+                System.err.println( "[err] transaction " + this.toString() + "fails after 3 attempts");
+            }
+
             connection.rollback();
         }
 

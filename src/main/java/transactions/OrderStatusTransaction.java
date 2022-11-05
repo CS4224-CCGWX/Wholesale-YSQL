@@ -5,7 +5,6 @@ import utils.OutputFormatter;
 import utils.PreparedQueries;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.Instant;
@@ -16,6 +15,7 @@ public class OrderStatusTransaction extends AbstractTransaction {
     private final int customerWarehouseId;
     private final int customerDistrictId;
     private final int customerId;
+    int counter = 0;
 
     public OrderStatusTransaction(Connection connection, IO io, int cwid, int cdid, int cid) throws SQLException {
         super(connection, io);
@@ -34,6 +34,7 @@ public class OrderStatusTransaction extends AbstractTransaction {
     public void execute() throws SQLException {
 
         try {
+             counter = counter + 1;
             connection.setReadOnly(true);
             connection.setAutoCommit(false);
             connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
@@ -97,8 +98,14 @@ public class OrderStatusTransaction extends AbstractTransaction {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("[Error]:  Order Status Abort " + this.toString());
-            System.err.println("[Error]: Order Status Abort " + this.toString());
+
+            System.out.println("[Error out]: Order Status Abort " + " Counter: " + counter + this.toString());
+            System.err.println("[Error err]: Order Status Abort " + " Counter: " + counter+ this.toString());
+            if (counter >= 3) {
+                System.out.println( "[Out] transaction " + this.toString() + "fails after 3 attempts");
+                System.err.println( "[err] transaction " + this.toString() + "fails after 3 attempts");
+            }
+
             connection.rollback();
         }
     }

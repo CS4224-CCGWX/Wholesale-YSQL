@@ -23,6 +23,7 @@ public class NewOrderTransaction extends AbstractTransaction {
 
     private static final int STOCK_REFILL_THRESHOLD = 10;
     private static final int STOCK_REFILL_QTY = 100;
+    int counter = 0;
 
 
     public NewOrderTransaction(Connection connection, IO io, int cid, int wid, int did, int n,
@@ -73,6 +74,7 @@ public class NewOrderTransaction extends AbstractTransaction {
     public void execute() throws SQLException {
 
         try {
+            counter = counter + 1;
             connection.setReadOnly(false);
             connection.setAutoCommit(false);
             connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
@@ -326,8 +328,14 @@ public class NewOrderTransaction extends AbstractTransaction {
             connection.commit();
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("[Error]:  New Order Abort " + this.toString());
-            System.err.println("[Error]: New Order Abort " + this.toString());
+
+            System.out.println("[Error out]: New Order Abort " + " Counter: " + counter + this.toString());
+            System.err.println("[Error err]: New Order Abort " + " Counter: " + counter+ this.toString());
+            if (counter >= 3) {
+                System.out.println( "[Out] transaction " + this.toString() + "fails after 3 attempts");
+                System.err.println( "[err] transaction " + this.toString() + "fails after 3 attempts");
+            }
+
             connection.rollback();
         }
 
