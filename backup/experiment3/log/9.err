@@ -1,0 +1,1563 @@
+******** Current Client: 9 **********
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667633674815854 } local_limit: { physical: 1667633674815854 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 10, customer id: 859 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667633679020196 } local_limit: { physical: 1667633679020196 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 7, customer id: 2791 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667633703715117 } local_limit: { physical: 1667633703715117 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 9, customer id: 2242 *** 
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:1787, WID:5, DID:8, num order-lines:9
+Item IDs are:,5803,16034,32355,46823,54374,56039,56639,61903,73315
+Quantities:,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,4,2,3,1,1,18,10,2,2
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:276, WID:5, DID:9, num order-lines:18
+Item IDs are:,38222,16085,93415,79526,77261,71135,96807,48440,80598,15009,30162,51943,56023,56991,81638,87526,93493,98014
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,2,6,1,1,4,7,6,6,8,2,6,1,6,8,16,5,5,10
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:523, WID:5, DID:8, num order-lines:19
+Item IDs are:,97451,70883,73437,36351,39079,96950,86502,10055,12967,15061,21047,21987,24279,31399,32320,34527,48735,64545,69094
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,2,8,3,6,7,5,9,7,6,1,6,19,8,2,7,3,6,6,10
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667633722745704 } local_limit: { physical: 1667633722745704 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 6, customer id: 1537 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667633727190859 } local_limit: { physical: 1667633727190859 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 9, customer id: 642 *** 
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:2291, WID:5, DID:10, num order-lines:13
+Item IDs are:,44758,36579,44647,2532,6199,15327,23207,48231,52901,54630,70181,83653,85221
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,10,5,4,4,10,17,8,7,2,5,8,4,2
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:2307, WID:5, DID:10, num order-lines:10
+Item IDs are:,36439,11875,11943,31331,48743,58771,71615,71973,81573,86999
+Quantities:,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,10,4,4,3,15,10,5,5,10,5
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667633754303923 } local_limit: { physical: 1667633754303923 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 8, customer id: 2291 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667633796793651 } local_limit: { physical: 1667633796793651 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 10, customer id: 264 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667633800424975 } local_limit: { physical: 1667633800424975 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 10, customer id: 1282 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667633808765339 } local_limit: { physical: 1667633808765339 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 10, customer id: 325 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667633839839562 } local_limit: { physical: 1667633839839562 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 8, customer id: 331 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667633848749830 } local_limit: { physical: 1667633848749830 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 9, customer id: 1999 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667633875155344 } local_limit: { physical: 1667633875155344 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 6, customer id: 1139 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667633891130197 } local_limit: { physical: 1667633891130197 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 6, customer id: 267 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667633896462973 } local_limit: { physical: 1667633896462973 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 10, customer id: 329 *** 
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:2016, WID:5, DID:10, num order-lines:7
+Item IDs are:,10311,22343,27299,64739,87264,97762,98015
+Quantities:,5,5,5,5,5,5,5
+Supply warehouse IDs:,18,9,4,5,5,1,10
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:635, WID:5, DID:7, num order-lines:14
+Item IDs are:,32455,89815,89703,13825,23775,54179,76367,76515,79587,80797,85505,97415,97510,98022
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,15,1,2,6,3,8,9,9,7,4,5,3,5,4
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:192, WID:5, DID:10, num order-lines:18
+Item IDs are:,44583,60033,97223,63199,72807,40314,65251,56275,9776,16087,23715,24287,46307,48804,69963,87717,89053,89831
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,4,4,4,4,10,1,4,1,7,4,2,3,10,9,6,6,2,14
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:2306, WID:5, DID:9, num order-lines:15
+Item IDs are:,89539,87814,64199,73371,806,6179,11830,22166,28379,40670,48615,65254,87703,89823,90163
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,3,9,4,9,2,3,6,3,6,6,7,14,6,1,3
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:297, WID:5, DID:7, num order-lines:13
+Item IDs are:,81609,821,4533,13735,14933,19345,20067,23103,32990,48703,62183,89543,89731
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,5,9,6,7,9,3,7,10,5,2,2,4,11
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667633930769631 } local_limit: { physical: 1667633930769631 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 8, customer id: 1266 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667633957209172 } local_limit: { physical: 1667633957209172 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 6, customer id: 1083 *** 
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:211, WID:5, DID:10, num order-lines:13
+Item IDs are:,29855,15335,52967,13445,15027,45603,51927,56005,65223,68807,89690,97991,97999
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,6,16,5,10,3,7,5,1,6,2,2,7,1
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667633977014909 } local_limit: { physical: 1667633977014909 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 7, customer id: 331 *** 
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:493, WID:5, DID:9, num order-lines:18
+Item IDs are:,60517,93911,5570,51363,75494,48313,40677,15591,67173,21891,23845,32855,39527,44711,56037,56677,96397,97870
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,8,5,5,5,5,5,5
+Supply warehouse IDs:,7,14,2,9,2,7,3,5,1,7,9,1,8,7,1,7,2,7
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:1241, WID:5, DID:10, num order-lines:16
+Item IDs are:,40407,73167,47703,40583,54213,48271,1787,13543,16084,16101,40419,40679,48167,52823,81619,85671
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,1,5,5
+Supply warehouse IDs:,1,9,2,3,4,4,4,5,5,4,5,14,8,3,5,8
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:2561, WID:5, DID:6, num order-lines:14
+Item IDs are:,65191,69076,81611,73061,2693,16103,24039,26211,40378,56739,72415,81127,81383,85607
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,2,1,1,1,6,14,4,8,5,7,7,10,1,7
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:43, WID:5, DID:8, num order-lines:7
+Item IDs are:,53457,57063,62951,68323,80295,85075,96455
+Quantities:,5,5,5,5,5,5,5
+Supply warehouse IDs:,3,11,1,8,6,5,3
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667633997105189 } local_limit: { physical: 1667633997105189 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 6, customer id: 1027 *** 
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:1251, WID:5, DID:6, num order-lines:15
+Item IDs are:,64975,20967,28091,24039,4039,6215,10309,15271,22167,44758,65247,72375,72918,73191,94437
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,2,2,1,2,2,4,7,8,4,4,13,3,10,4,7
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634042359266 } local_limit: { physical: 1667634042359266 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 7, customer id: 325 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634077008084 } local_limit: { physical: 1667634077008084 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 8, customer id: 882 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634096322640 } local_limit: { physical: 1667634096322640 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 7, customer id: 2940 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634110501058 } local_limit: { physical: 1667634110501058 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 7, customer id: 291 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634132861358 } local_limit: { physical: 1667634132861358 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 6, customer id: 943 *** 
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:247, WID:5, DID:8, num order-lines:13
+Item IDs are:,64703,23703,77513,69222,4481,14007,40415,60098,65223,80445,89829,92375,96919
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,10,2,7,6,9,10,6,6,2,7,14,6,4
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:1237, WID:5, DID:7, num order-lines:19
+Item IDs are:,10919,41029,45911,32215,80764,6213,23495,52772,40615,39655,32487,36468,43219,44699,66201,73309,78883,81637,84711
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,1,4,6,3,9,7,3,4,16,2,2,1,6,8,4,6,7,2,10
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:2095, WID:5, DID:6, num order-lines:15
+Item IDs are:,3123,57046,46805,64910,76511,11687,13733,20166,28126,37863,40679,48611,64871,71017,81119
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,10,5,1,2,8,9,6,4,8,11,6,5,4,4,10
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:1667, WID:5, DID:8, num order-lines:13
+Item IDs are:,88445,39655,15926,16097,23647,24167,27875,31123,43493,60867,77078,84135,89831
+Quantities:,5,5,9,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,10,5,9,10,1,2,4,5,10,3,2,9,16
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:2303, WID:5, DID:8, num order-lines:18
+Item IDs are:,5639,54916,38435,25747,40391,38023,38358,34503,11463,11967,15551,24242,55015,64220,71367,72245,75919,89823
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,1,1,5,9,9,8,5,8,4,5,3,3,4,10,15,1,2,3
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634240656612 } local_limit: { physical: 1667634240656612 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 9, customer id: 1249 *** 
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:266, WID:5, DID:8, num order-lines:16
+Item IDs are:,64798,11315,32454,48263,65123,89813,5666,24295,44703,57046,57063,65253,72278,81630,88784,98023
+Quantities:,5,5,5,5,5,5,5,5,5,5,1,5,2,5,5,5
+Supply warehouse IDs:,6,2,5,5,3,5,2,7,3,7,15,9,3,3,7,3
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:931, WID:5, DID:8, num order-lines:16
+Item IDs are:,30391,72919,73735,88290,65247,56527,3719,9831,24262,26591,40678,57062,71365,76518,97474,97991
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,7,9,9,8,1,7,3,2,9,10,7,13,9,6,10,5
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:265, WID:5, DID:6, num order-lines:4
+Item IDs are:,5667,31271,61091,89767
+Quantities:,5,5,5,5
+Supply warehouse IDs:,8,1,6,14
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634297477386 } local_limit: { physical: 1667634297477386 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 7, customer id: 1659 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634327133552 } local_limit: { physical: 1667634327133552 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 10, customer id: 769 *** 
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:2210, WID:5, DID:7, num order-lines:9
+Item IDs are:,24231,31933,40672,44705,55007,65183,79203,85606,87527
+Quantities:,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,14,1,4,10,10,10,1,4,7
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:290, WID:5, DID:6, num order-lines:16
+Item IDs are:,95974,70336,89731,28391,81638,31203,78371,74471,39635,40550,52519,60883,62037,75495,77539,89831
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,8,6,2,9,6,6,1,8,4,2,6,2,4,5,9,11
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:307, WID:5, DID:8, num order-lines:19
+Item IDs are:,64643,98023,58983,36135,13792,68321,56767,93735,89791,24275,16007,23781,52910,78691,81415,93926,96487,96999,97511
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,4,12,5,10,4,9,4,8,4,4,2,1,6,1,10,2,3,9,3
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:995, WID:5, DID:9, num order-lines:14
+Item IDs are:,81495,40595,78999,20195,22727,33447,57057,65191,81635,88037,88763,88791,88807,89790
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,8,4,6,1,10,4,6,16,10,4,1,6,4,6
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634396170783 } local_limit: { physical: 1667634396170783 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 6, customer id: 1217 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634399224975 } local_limit: { physical: 1667634399224975 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 10, customer id: 2819 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634410852005 } local_limit: { physical: 1667634410852005 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 7, customer id: 1267 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634413136087 } local_limit: { physical: 1667634413136087 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 10, customer id: 1279 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634418149797 } local_limit: { physical: 1667634418149797 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 8, customer id: 2499 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634427441173 } local_limit: { physical: 1667634427441173 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 10, customer id: 1217 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634437245368 logical: 1 } local_limit: { physical: 1667634437245368 logical: 1 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 8, customer id: 191 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634441766998 } local_limit: { physical: 1667634441766998 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 7, customer id: 2171 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634445459949 } local_limit: { physical: 1667634445459949 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 8, customer id: 1261 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634452307602 logical: 1 } local_limit: { physical: 1667634452307602 logical: 1 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 10, customer id: 313 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634463372535 } local_limit: { physical: 1667634463372535 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 8, customer id: 2177 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634465939940 } local_limit: { physical: 1667634465939940 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 6, customer id: 1155 *** 
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:1279, WID:5, DID:8, num order-lines:17
+Item IDs are:,96983,98023,60902,70879,65127,35558,11943,3648,16103,19363,32470,32982,80861,85222,86559,93283,93883
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,5,16,4,8,5,2,5,9,3,7,8,4,4,7,10,7,1
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634480026968 logical: 1 } local_limit: { physical: 1667634480026968 logical: 1 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 7, customer id: 1279 *** 
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:1887, WID:5, DID:7, num order-lines:19
+Item IDs are:,32231,32325,73141,11948,95718,65190,39654,995,2103,16103,17375,22751,32226,32415,38875,64179,73255,81511,93926
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,10,9,1,9,10,8,3,9,5,8,3,7,2,10,10,10,10,1,12
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634482977801 } local_limit: { physical: 1667634482977801 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 9, customer id: 1787 *** 
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:314, WID:5, DID:10, num order-lines:5
+Item IDs are:,15078,24039,32486,65075,89823
+Quantities:,5,5,5,5,5
+Supply warehouse IDs:,7,15,6,9,1
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:299, WID:5, DID:9, num order-lines:19
+Item IDs are:,24037,11920,12007,29734,32357,5798,64739,5829,8135,11351,21981,24103,32242,32358,51983,56655,57039,61158,89267
+Quantities:,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,6,10,5,5,3,8,2,8,8,9,1,7,8,1,1,4,9,6,14
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:1235, WID:5, DID:7, num order-lines:18
+Item IDs are:,3331,63143,45207,21714,52709,77493,89125,3559,6203,15465,19687,24216,38559,40515,47845,56533,73143,81615
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,10,3,6,8,9,9,10,9,8,8,9,2,7,2,9,5,14,6
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:38, WID:5, DID:7, num order-lines:12
+Item IDs are:,35551,5924,5957,23519,25691,29927,32487,60135,64927,65183,70095,96663
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,8,1,3,4,6,16,2,8,5,8,10,7
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:2113, WID:5, DID:6, num order-lines:19
+Item IDs are:,6134,4,47813,9027,97767,40359,15079,19655,29647,36038,81375,40511,44230,44519,54213,56357,65158,74935,89271
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,6,10,5,2,2,1,8,10,4,2,10,7,5,4,10,8,4,7,11
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:267, WID:5, DID:8, num order-lines:17
+Item IDs are:,92771,9959,72739,73191,11943,89831,71271,31431,7107,16047,39909,40517,56423,71141,71389,85734,90511
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,4,2,3,8,10,11,9,6,1,6,1,10,1,7,7,9,7
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:311, WID:5, DID:8, num order-lines:18
+Item IDs are:,62817,15812,5630,89815,12993,55462,89783,77507,1860,3598,16095,38279,50903,59878,77490,79039,83039,87783
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,1,4,7,15,2,7,1,3,6,2,1,4,3,6,2,7,10,7
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:2307, WID:5, DID:9, num order-lines:17
+Item IDs are:,46559,57057,45638,78821,10151,14006,16103,23612,23655,26015,31461,39623,40165,40423,72670,97985,98023
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,9,4,9,4,4,1,16,7,8,1,8,9,5,8,4,10,7
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:287, WID:5, DID:7, num order-lines:16
+Item IDs are:,72367,72405,64847,67022,40821,6175,19302,23271,32231,48565,52967,62689,65127,65245,73427,93399
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,8,6,10,1,5,9,10,2,10,8,7,6,11,9,3,2
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634807977113 } local_limit: { physical: 1667634807977113 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 10, customer id: 59 *** 
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:186, WID:5, DID:8, num order-lines:12
+Item IDs are:,85703,80478,5635,12007,15374,26695,40655,46167,64998,66055,77139,80870
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,7,9,7,5,3,2,4,10,17,6,9,1
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:318, WID:5, DID:6, num order-lines:10
+Item IDs are:,4613,16091,21735,23127,28709,32487,44750,62111,81315,97507
+Quantities:,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,5,7,6,10,6,11,6,8,5,8
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634872852951 } local_limit: { physical: 1667634872852951 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:48)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 8, customer id: 328 *** 
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:1570, WID:5, DID:10, num order-lines:13
+Item IDs are:,56806,80967,3043,5759,10310,15781,24295,63197,64966,71126,77415,89575,92226
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,3,8,8,5,9,5,6,13,4,8,4,3,9
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634907597075 } local_limit: { physical: 1667634907597075 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 8, customer id: 1279 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634917457856 logical: 1 } local_limit: { physical: 1667634917457856 logical: 1 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 6, customer id: 2152 *** 
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:139, WID:5, DID:7, num order-lines:14
+Item IDs are:,58079,46747,36532,80868,50647,15589,23062,37975,40055,64475,65119,66270,81638,97697
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,3,5,5,8,9,2,9,5,1,4,4,9,11,5
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:1241, WID:5, DID:8, num order-lines:17
+Item IDs are:,64215,89829,36207,47709,50119,3299,62861,16039,20454,23911,24285,40679,50908,56805,65245,85223,87762
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,3,4,3,5,8,10,8,3,7,1,9,11,9,1,10,5,5
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634987332011 } local_limit: { physical: 1667634987332011 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 7, customer id: 947 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634994710156 } local_limit: { physical: 1667634994710156 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 10, customer id: 2239 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667634997256932 } local_limit: { physical: 1667634997256932 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 8, customer id: 255 *** 
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:251, WID:5, DID:7, num order-lines:13
+Item IDs are:,80837,25766,77403,5095,16087,19669,23143,40534,51292,70887,86565,89527,97106
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,3,4,5,2,7,1,3,14,8,3,8,4,10
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667635026035647 } local_limit: { physical: 1667635026035647 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 6, customer id: 327 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667635030610783 } local_limit: { physical: 1667635030610783 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 9, customer id: 199 *** 
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:1235, WID:5, DID:7, num order-lines:14
+Item IDs are:,56963,24295,31206,28351,1982,15827,22245,24227,40611,44767,48288,80595,89445,98015
+Quantities:,5,5,5,5,5,5,5,9,5,5,5,5,5,5
+Supply warehouse IDs:,4,5,1,3,10,6,5,4,1,4,6,10,8,15
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667635036567415 } local_limit: { physical: 1667635036567415 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 8, customer id: 819 *** 
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:1259, WID:5, DID:10, num order-lines:15
+Item IDs are:,89570,93927,72807,82750,97511,5191,5702,19393,34463,43431,55967,71143,81639,88805,97503
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,1,3,7,1,3,3,9,2,7,8,6,7,19,2,3
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:1027, WID:5, DID:8, num order-lines:10
+Item IDs are:,23703,24278,48847,65250,73191,81575,81639,85125,88670,90598
+Quantities:,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,10,10,8,7,18,2,9,10,10,7
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:1271, WID:5, DID:7, num order-lines:17
+Item IDs are:,81347,21222,20199,97959,16099,31749,4165,6180,11678,22470,28367,48359,48863,54983,65254,87650,89831
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,6,5,9,10,4,4,7,7,7,5,1,7,12,4,7,8,6
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:1275, WID:5, DID:9, num order-lines:19
+Item IDs are:,26339,59103,55183,81591,97511,56486,92831,35047,46483,6087,24231,31783,32455,34174,38519,48753,71335,87254,98000
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,2,1,6,6,1,2,9,7,10,17,7,8,5,5,5,4,10,2,3
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:1139, WID:5, DID:8, num order-lines:19
+Item IDs are:,54661,66279,3981,4016,84675,89830,4115,6167,13351,15043,17507,22247,23151,31975,32470,46476,85415,95969,97981
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,4,5,6,10,9,6,2,8,7,9,5,16,3,5,4,7,7,6,10
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:330, WID:5, DID:8, num order-lines:16
+Item IDs are:,40406,52326,56863,81463,62079,97382,16039,4833,29703,44770,54739,55502,64230,64697,73301,79517
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,8,4,6,8,9,9,13,5,5,4,8,4,10,7,9,4
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:1279, WID:5, DID:6, num order-lines:11
+Item IDs are:,96583,24129,16031,27325,35521,40103,47845,70300,87239,87558,89467
+Quantities:,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,1,6,4,2,1,7,12,10,10,3,8
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667635245991689 } local_limit: { physical: 1667635245991689 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 7, customer id: 2099 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667635254833697 } local_limit: { physical: 1667635254833697 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 6, customer id: 1634 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667635260101924 } local_limit: { physical: 1667635260101924 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 7, customer id: 2813 *** 
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:2806, WID:5, DID:8, num order-lines:19
+Item IDs are:,32486,65206,64999,68323,82949,34747,44359,40423,3527,5959,6199,13379,24295,40391,62366,77413,88805,95239,98019
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,8,3,3,2,1,5,8,1,8,5,8,4,16,6,10,2,6,8,10
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667635278125741 } local_limit: { physical: 1667635278125741 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 8, customer id: 1283 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667635310047485 } local_limit: { physical: 1667635310047485 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:48)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 9, customer id: 2743 *** 
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:2290, WID:5, DID:6, num order-lines:18
+Item IDs are:,30020,15263,48855,47558,80151,16093,13927,26312,11879,15576,23655,32220,40615,41695,42666,48615,73431,84678
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,1,1,11,10,5,5,10,2,5,10,5,8,10,8,3,5,1,1
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:1154, WID:5, DID:10, num order-lines:5
+Item IDs are:,14342,15075,32415,32483,48063
+Quantities:,5,5,5,5,5
+Supply warehouse IDs:,6,4,7,13,1
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667635328756321 } local_limit: { physical: 1667635328756321 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 7, customer id: 323 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667635332195898 } local_limit: { physical: 1667635332195898 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 7, customer id: 1279 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667635349929100 } local_limit: { physical: 1667635349929100 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 7, customer id: 138 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667635353875721 } local_limit: { physical: 1667635353875721 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 9, customer id: 1283 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667635359384014 } local_limit: { physical: 1667635359384014 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 9, customer id: 2275 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667635365877321 } local_limit: { physical: 1667635365877321 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 7, customer id: 1275 *** 
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:753, WID:5, DID:6, num order-lines:14
+Item IDs are:,38113,48335,69279,5911,13959,15487,22247,48803,49754,55525,73063,73214,73415,89829
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,5,1,9,8,3,3,20,9,8,10,7,5,10,6
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:2750, WID:5, DID:8, num order-lines:17
+Item IDs are:,79534,54981,38567,60635,72894,34647,81638,15814,24279,47572,55751,63067,69435,78183,87493,87699,87783
+Quantities:,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+Supply warehouse IDs:,9,4,3,1,8,7,9,7,12,5,10,7,6,3,9,6,1
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667635407721437 } local_limit: { physical: 1667635407721437 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 6, customer id: 1281 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667635414061352 } local_limit: { physical: 1667635414061352 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 6, customer id: 2431 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667635421881410 } local_limit: { physical: 1667635421881410 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 6, customer id: 2817 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667635480267518 } local_limit: { physical: 1667635480267518 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 9, customer id: 2290 *** 
+
+org.postgresql.util.PSQLException: ERROR: Query error: Restart read required at: { read: { physical: 1667635495268554 } local_limit: { physical: 1667635495268554 } global_limit: <min> in_txn_limit: <max> serial_no: 0 }
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+	at transactions.RelatedCustomerTransaction.getPossibleCustomersOrderItems(RelatedCustomerTransaction.java:104)
+	at transactions.RelatedCustomerTransaction.execute(RelatedCustomerTransaction.java:52)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: Related Customer Abort Rel *** Related  Customer transaction info: warehouse: 5, district: 8, customer id: 251 *** 
+

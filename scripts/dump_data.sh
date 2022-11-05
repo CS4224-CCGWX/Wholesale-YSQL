@@ -32,7 +32,7 @@ fi
 
 echo "***** Start dump data *****"
 echo "Defining schema"
-$YSQLSH -f $schema -h $ip
+$YSQLSH -f $schema -h $ip -p $port
 
 
 # DateTime format reference: https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html

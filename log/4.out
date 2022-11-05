@@ -1,0 +1,3750 @@
+Time used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+=======================================
+Transaction ID: 0
+*** New Order Transaction Summary ***
+Customer ID: (3, 4, 329), Last name:PRIABLEATION, Credit:GC, C_DISCOUNT:0.2198
+
+Warehouse tax:0.0552, District tax:0.1367
+
+Order ID:3001, Order entry date:2022-11-05 17:31:27.481
+
+#items:7, Total amount:950.89
+
+Items information:
+	 Item number: 13332, name: nqczwddivrqssbblbyrrpa, Supplier warehouse: 2, quantity: 3, Order-line amount: 206.04, Adjusted quantity: 16
+
+	 Item number: 24101, name: bcaqdapufltpntccpgc, Supplier warehouse: 4, quantity: 3, Order-line amount: 231.42, Adjusted quantity: 79
+
+	 Item number: 38595, name: ehwiztjylywgcq, Supplier warehouse: 6, quantity: 3, Order-line amount: 19.65, Adjusted quantity: 76
+
+	 Item number: 72933, name: ucjjzbqeciuvdb, Supplier warehouse: 6, quantity: 3, Order-line amount: 42.27, Adjusted quantity: 36
+
+	 Item number: 73408, name: ylkalzegkhjldpmuvlygw, Supplier warehouse: 6, quantity: 3, Order-line amount: 173.07, Adjusted quantity: 20
+
+	 Item number: 79462, name: zreftvchaiztcgccr, Supplier warehouse: 8, quantity: 3, Order-line amount: 180.81, Adjusted quantity: 17
+
+	 Item number: 81638, name: fdjctkzirjpwagj, Supplier warehouse: 9, quantity: 3, Order-line amount: 169.29, Adjusted quantity: 90
+
+=======================================
+=======================================
+Transaction ID: 1
+*** New Order Transaction Summary ***
+Customer ID: (3, 1, 47), Last name:BARPRESANTI, Credit:GC, C_DISCOUNT:0.4548
+
+Warehouse tax:0.0552, District tax:0.0769
+
+Order ID:3001, Order entry date:2022-11-05 17:31:27.666
+
+#items:5, Total amount:433.12
+
+Items information:
+	 Item number: 4639, name: jfnjauqrtojzymjdunsxf, Supplier warehouse: 2, quantity: 3, Order-line amount: 85.29, Adjusted quantity: 42
+
+	 Item number: 61118, name: mmiozopvbcwhnrchshtjo, Supplier warehouse: 2, quantity: 3, Order-line amount: 12.63, Adjusted quantity: 91
+
+	 Item number: 81551, name: twefpbjnhtqkjycxhykcv, Supplier warehouse: 2, quantity: 3, Order-line amount: 198.18, Adjusted quantity: 68
+
+	 Item number: 96660, name: tktyxqpqkbrjuyqhvchlaa, Supplier warehouse: 2, quantity: 3, Order-line amount: 145.95, Adjusted quantity: 18
+
+	 Item number: 97915, name: nviagrstqsoyfpbbzcuock, Supplier warehouse: 1, quantity: 3, Order-line amount: 259.68, Adjusted quantity: 58
+
+=======================================
+=======================================
+Transaction ID: 2
+*** New Order Transaction Summary ***
+Customer ID: (3, 2, 2303), Last name:EINGBARPRI, Credit:GC, C_DISCOUNT:0.3596
+
+Warehouse tax:0.0552, District tax:0.0718
+
+Order ID:3001, Order entry date:2022-11-05 17:31:27.722
+
+#items:10, Total amount:1511.95
+
+Items information:
+	 Item number: 4614, name: qrnimhqmodngduadsyyrlax, Supplier warehouse: 4, quantity: 3, Order-line amount: 213.96, Adjusted quantity: 51
+
+	 Item number: 15938, name: gatmmuagdaevdvy, Supplier warehouse: 4, quantity: 3, Order-line amount: 282.24, Adjusted quantity: 41
+
+	 Item number: 20171, name: ndinulubjhhjulwce, Supplier warehouse: 2, quantity: 3, Order-line amount: 249.66, Adjusted quantity: 86
+
+	 Item number: 32471, name: tyqtvvyvysweyao, Supplier warehouse: 5, quantity: 3, Order-line amount: 250.77, Adjusted quantity: 86
+
+	 Item number: 48103, name: edysfqampraosbbucgxe, Supplier warehouse: 9, quantity: 3, Order-line amount: 270.57, Adjusted quantity: 23
+
+	 Item number: 72103, name: aywqbnrtvhdlwka, Supplier warehouse: 9, quantity: 3, Order-line amount: 100.77, Adjusted quantity: 60
+
+	 Item number: 75415, name: xoaomzbdgtnsxtcjpmks, Supplier warehouse: 9, quantity: 3, Order-line amount: 76.35, Adjusted quantity: 70
+
+	 Item number: 80609, name: hbdsvidgdonhncy, Supplier warehouse: 9, quantity: 3, Order-line amount: 153.87, Adjusted quantity: 10
+
+	 Item number: 91877, name: igvopizesdmtqvlsnvjcc, Supplier warehouse: 9, quantity: 3, Order-line amount: 224.46, Adjusted quantity: 15
+
+	 Item number: 97509, name: rqvykzbivqvvfekez, Supplier warehouse: 6, quantity: 3, Order-line amount: 272.25, Adjusted quantity: 14
+
+=======================================
+=======================================
+Transaction ID: 3
+*** New Order Transaction Summary ***
+Customer ID: (3, 4, 1663), Last name:ATIONATIONPRI, Credit:GC, C_DISCOUNT:0.2016
+
+Warehouse tax:0.0552, District tax:0.1367
+
+Order ID:3002, Order entry date:2022-11-05 17:31:27.828
+
+#items:19, Total amount:2472.39
+
+Items information:
+	 Item number: 14535, name: kksxtrzahqxvthg, Supplier warehouse: 9, quantity: 3, Order-line amount: 78.54, Adjusted quantity: 29
+
+	 Item number: 32231, name: iqblcziookmmkrwvuu, Supplier warehouse: 4, quantity: 4, Order-line amount: 354.16, Adjusted quantity: 55
+
+	 Item number: 87775, name: nfddthvidtmteiauhocf, Supplier warehouse: 6, quantity: 3, Order-line amount: 95.13, Adjusted quantity: 17
+
+	 Item number: 88227, name: jyqlzonartnwvjba, Supplier warehouse: 9, quantity: 3, Order-line amount: 8.34, Adjusted quantity: 83
+
+	 Item number: 68583, name: ghmxvbyolgokmi, Supplier warehouse: 2, quantity: 3, Order-line amount: 186.09, Adjusted quantity: 34
+
+	 Item number: 87258, name: xtibrpdkmsgawwpf, Supplier warehouse: 7, quantity: 3, Order-line amount: 37.20, Adjusted quantity: 68
+
+	 Item number: 61159, name: kggweyfphndxqmt, Supplier warehouse: 4, quantity: 3, Order-line amount: 10.50, Adjusted quantity: 56
+
+	 Item number: 13913, name: dnwcbxtzndrngi, Supplier warehouse: 1, quantity: 3, Order-line amount: 107.46, Adjusted quantity: 96
+
+	 Item number: 60053, name: yxuvalluzzbrncgwqarycs, Supplier warehouse: 5, quantity: 3, Order-line amount: 267.30, Adjusted quantity: 61
+
+	 Item number: 12004, name: brizqcdjqdtrablrqaorrz, Supplier warehouse: 1, quantity: 3, Order-line amount: 168.57, Adjusted quantity: 82
+
+	 Item number: 15199, name: gxbslmlqntrsubk, Supplier warehouse: 10, quantity: 3, Order-line amount: 171.78, Adjusted quantity: 87
+
+	 Item number: 15942, name: wfusttpkocuefmmpurjq, Supplier warehouse: 6, quantity: 3, Order-line amount: 76.80, Adjusted quantity: 81
+
+	 Item number: 24287, name: utxbmdwbuysomizfo, Supplier warehouse: 7, quantity: 3, Order-line amount: 226.20, Adjusted quantity: 12
+
+	 Item number: 38117, name: curwofcmdamcqubycwm, Supplier warehouse: 8, quantity: 3, Order-line amount: 98.34, Adjusted quantity: 37
+
+	 Item number: 44450, name: afidkehgabwhttwt, Supplier warehouse: 9, quantity: 3, Order-line amount: 121.86, Adjusted quantity: 44
+
+	 Item number: 52959, name: qllrrgwcbakuaakbhksal, Supplier warehouse: 8, quantity: 3, Order-line amount: 220.20, Adjusted quantity: 95
+
+	 Item number: 56285, name: necywbmrywggpsw, Supplier warehouse: 7, quantity: 3, Order-line amount: 145.95, Adjusted quantity: 72
+
+	 Item number: 77533, name: agmjaktidryxd, Supplier warehouse: 7, quantity: 3, Order-line amount: 5.58, Adjusted quantity: 85
+
+	 Item number: 97895, name: ixvcfdficeywkmymfabu, Supplier warehouse: 3, quantity: 3, Order-line amount: 218.10, Adjusted quantity: 51
+
+=======================================
+=======================================
+Transaction ID: 4
+*** New Order Transaction Summary ***
+Customer ID: (3, 1, 1155), Last name:EINGABLEABLE, Credit:GC, C_DISCOUNT:0.4201
+
+Warehouse tax:0.0552, District tax:0.0769
+
+Order ID:3002, Order entry date:2022-11-05 17:31:28.017
+
+#items:16, Total amount:1798.07
+
+Items information:
+	 Item number: 71906, name: zpzrkplnkuwbofjmxkxjqt, Supplier warehouse: 2, quantity: 3, Order-line amount: 196.71, Adjusted quantity: 20
+
+	 Item number: 56524, name: hwbmcmqrxqxbuwjnbdsi, Supplier warehouse: 9, quantity: 3, Order-line amount: 212.40, Adjusted quantity: 58
+
+	 Item number: 40677, name: zclaaviyjlzvvtuvy, Supplier warehouse: 7, quantity: 3, Order-line amount: 111.24, Adjusted quantity: 57
+
+	 Item number: 79419, name: tpvacpefpnaxaviammokp, Supplier warehouse: 7, quantity: 3, Order-line amount: 299.91, Adjusted quantity: 24
+
+	 Item number: 39366, name: tcuykmlvmznpcaxrhnrzf, Supplier warehouse: 6, quantity: 3, Order-line amount: 141.21, Adjusted quantity: 45
+
+	 Item number: 32219, name: qqliylocrtblai, Supplier warehouse: 3, quantity: 3, Order-line amount: 101.46, Adjusted quantity: 48
+
+	 Item number: 38050, name: exfrrsmlexrgdnruolxvllp, Supplier warehouse: 6, quantity: 3, Order-line amount: 17Time used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+2.89, Adjusted quantity: 68
+
+	 Item number: 6176, name: bstdpsggyuaqbvqqfusjhb, Supplier warehouse: 9, quantity: 3, Order-line amount: 277.41, Adjusted quantity: 24
+
+	 Item number: 15587, name: weapicwydwetrwq, Supplier warehouse: 1, quantity: 3, Order-line amount: 248.67, Adjusted quantity: 36
+
+	 Item number: 42493, name: lyznfgfdzzefbwdzkeqeikl, Supplier warehouse: 5, quantity: 3, Order-line amount: 18.45, Adjusted quantity: 74
+
+	 Item number: 48836, name: alqegxdznggnrzmgwv, Supplier warehouse: 1, quantity: 3, Order-line amount: 133.05, Adjusted quantity: 81
+
+	 Item number: 54723, name: vxnqkungteiocfzv, Supplier warehouse: 3, quantity: 3, Order-line amount: 24.72, Adjusted quantity: 45
+
+	 Item number: 64679, name: vtspvxqnorhaagnapv, Supplier warehouse: 10, quantity: 3, Order-line amount: 245.70, Adjusted quantity: 48
+
+	 Item number: 71331, name: kyhgvgkjehnlgusaxzgqbm, Supplier warehouse: 6, quantity: 3, Order-line amount: 130.38, Adjusted quantity: 82
+
+	 Item number: 81063, name: jdzgkzkjbuohthmq, Supplier warehouse: 6, quantity: 3, Order-line amount: 171.45, Adjusted quantity: 48
+
+	 Item number: 91839, name: agkxijqmbdqhmze, Supplier warehouse: 3, quantity: 3, Order-line amount: 253.20, Adjusted quantity: 40
+
+=======================================
+=======================================
+Transaction ID: 5
+*** New Order Transaction Summary ***
+Customer ID: (3, 4, 1265), Last name:EINGOUGHTANTI, Credit:GC, C_DISCOUNT:0.1027
+
+Warehouse tax:0.0552, District tax:0.1367
+
+Order ID:3003, Order entry date:2022-11-05 17:31:28.197
+
+#items:14, Total amount:2277.47
+
+Items information:
+	 Item number: 56932, name: xfdfznqekphszsjbtuplz, Supplier warehouse: 8, quantity: 3, Order-line amount: 155.25, Adjusted quantity: 28
+
+	 Item number: 24211, name: soprsvkxjupbfirshpvrsn, Supplier warehouse: 10, quantity: 3, Order-line amount: 152.01, Adjusted quantity: 78
+
+	 Item number: 93407, name: pswokyshdxhkylxncd, Supplier warehouse: 6, quantity: 3, Order-line amount: 81.30, Adjusted quantity: 35
+
+	 Item number: 773, name: mkqkgeblxowpmmbnkjn, Supplier warehouse: 10, quantity: 3, Order-line amount: 222.72, Adjusted quantity: 20
+
+	 Item number: 6211, name: bmroxqpzwcefcknnenaho, Supplier warehouse: 2, quantity: 3, Order-line amount: 233.40, Adjusted quantity: 27
+
+	 Item number: 16101, name: ywylqbpbbyzbzjao, Supplier warehouse: 2, quantity: 3, Order-line amount: 74.37, Adjusted quantity: 73
+
+	 Item number: 31167, name: ayhecorrbtqmlpjwdbbsa, Supplier warehouse: 5, quantity: 3, Order-line amount: 4.32, Adjusted quantity: 46
+
+	 Item number: 32103, name: nosueijcjzphkj, Supplier warehouse: 8, quantity: 3, Order-line amount: 183.90, Adjusted quantity: 57
+
+	 Item number: 48803, name: ljasolgttxnwdzsif, Supplier warehouse: 2, quantity: 3, Order-line amount: 48.12, Adjusted quantity: 16
+
+	 Item number: 72423, name: hlohnvvtpotpp, Supplier warehouse: 2, quantity: 3, Order-line amount: 213.39, Adjusted quantity: 33
+
+	 Item number: 73159, name: ngjtbmbosybdyvjol, Supplier warehouse: 9, quantity: 3, Order-line amount: 285.21, Adjusted quantity: 26
+
+	 Item number: 77153, name: vzczxdhswelreymrariufo, Supplier warehouse: 4, quantity: 3, Order-line amount: 223.71, Adjusted quantity: 24
+
+	 Item number: 81637, name: rzrmdjjhhpsgleguftvs, Supplier warehouse: 7, quantity: 3, Order-line amount: 111.33, Adjusted quantity: 53
+
+	 Item number: 95958, name: lqawwhvymoiqcqzuradpdg, Supplier warehouse: 3, quantity: 3, Order-line amount: 140.46, Adjusted quantity: 39
+
+=======================================
+=======================================
+Transaction ID: 6
+*** New Order Transaction Summary ***
+Customer ID: (3, 3, 283), Last name:ABLEATIONABLE, Credit:GC, C_DISCOUNT:0.0077
+
+Warehouse tax:0.0552, District tax:0.1168
+
+Order ID:3001, Order entry date:2022-11-05 17:31:28.342
+
+#items:15, Total amount:3059.09
+
+Items information:
+	 Item number: 87117, name: gqpuexdslnligwmpywn, Supplier warehouse: 6, quantity: 3, Order-line amount: 16.17, Adjusted quantity: 67
+
+	 Item number: 91845, name: shdoechecpfozzfkutfwxw, Supplier warehouse: 10, quantity: 3, Order-line amount: 168.27, Adjusted quantity: 17
+
+	 Item number: 96231, name: kyzohyarfnccaigjef, Supplier warehouse: 10, quantity: 3, Order-line amount: 208.26, Adjusted quantity: 72
+
+	 Item number: 89831, name: kvtfkvuukmgihdmkbpotpjl, Supplier warehouse: 2, quantity: 3, Order-line amount: 138.33, Adjusted quantity: 74
+
+	 Item number: 13797, name: hmtghdhkjckixpgz, Supplier warehouse: 1, quantity: 3, Order-line amount: 193.29, Adjusted quantity: 63
+
+	 Item number: 15078, name: jkiwjonnzgclvruzuxr, Supplier warehouse: 6, quantity: 3, Order-line amount: 266.19, Adjusted quantity: 36
+
+	 Item number: 22855, name: wxbfrumhvvqzni, Supplier warehouse: 2, quantity: 3, Order-line amount: 164.46, Adjusted quantity: 69
+
+	 Item number: 23942, name: asqxgrkzdjblrwawqp, Supplier warehouse: 2, quantity: 3, Order-line amount: 16.17, Adjusted quantity: 90
+
+	 Item number: 29903, name: qzwnucughjlrhuyheoypr, Supplier warehouse: 6, quantity: 3, Order-line amount: 269.22, Adjusted quantity: 33
+
+	 Item number: 32231, name: iqblcziookmmkrwvuu, Supplier warehouse: 9, quantity: 3, Order-line amount: 265.62, Adjusted quantity: 80
+
+	 Item number: 63077, name: qthiuhhjxtysf, Supplier warehouse: 9, quantity: 3, Order-line amount: 250.86, Adjusted quantity: 37
+
+	 Item number: 72517, name: vnlvlghvjnzgvuvo, Supplier warehouse: 3, quantity: 3, Order-line amount: 155.70, Adjusted quantity: 33
+
+	 Item number: 81471, name: dwzyfblkpxgliqkdovvjj, Supplier warehouse: 5, quantity: 3, Order-line amount: 264.90, Adjusted quantity: 50
+
+	 Item number: 85157, name: rbwiyzncpfxrwl, Supplier warehouse: 5, quantity: 3, Order-line amount: 139.02, Adjusted quantity: 18
+
+	 Item number: 88519, name: dztxhwekuzyrhmmfiren, Supplier warehouse: 4, quantity: 3, Order-line amount: 113.94, Adjusted quantity: 12
+
+=======================================
+=======================================
+Transaction ID: 7
+*** New Order Transaction Summary ***
+Customer ID: (3, 2, 2299), Last name:EINGOUGHTANTI, Credit:GC, C_DISCOUNT:0.4667
+
+Warehouse tax:0.0552, District tax:0.0718
+
+Order ID:3002, Order entry date:2022-11-05 17:31:28.504
+
+#items:10, Total amount:1002.32
+
+Items information:
+	 Item number: 5953, name: vudllsyssrgpgjfx, Supplier warehouse: 10, quantity: 3, Order-line amount: 127.29, Adjusted quantity: 39
+
+	 Item number: 29779, name: qibvhstbmxrhgujjdycjtuh, Supplier warehouse: 8, quantity: 3, Order-line amount: 228.72, Adjusted quantity: 18
+
+	 Item number: 49895, name: zlpeleetplzlvk, Supplier warehouse: 9, quantity: 3, Order-line amount: 292.35, Adjusted quantity: 48
+
+	 Item number: 52967, name: syfetiiminznjf, Supplier warehouse: 3, quantity: 3, Order-line amount: 33.93, Adjusted quantity: 109
+
+	 Item number: 55718, name: zxwtaecvxlozdljgjbee, Supplier warehouse: 10, quantity: 3, Order-line amount: 78.36, Adjusted quantity: 70
+
+	 Item number: 56055, name: evqcpkjbucjogcmgbkogi, Supplier warehouse: 6, quantity: 3, Order-line amount: 263.49, Adjusted quantity: 85
+
+	 Item number: 71267, name: aqpcbpeqrhgvvv, Supplier warehouse: 9, quantity: 3, Order-line amount: 110.16, Adjusted quantity: 58
+
+	 Item number: 72229, name: vunxnlfpzejqpsdfrs, Supplier warehouse: 1, quantity: 3, Order-line amount: 277.20, Adjusted quantity: 36
+
+	 Item number: 72420, name: swxnqjsplfqodfatqtdriqe, Supplier warehouse: 3, quantity: 3, Order-line amount: 123.54, Adjusted quantity: 63
+
+	 Item number: 72885, name: cfijoohumnatzasgizqqyd, Supplier warehouse: 1, quantity: 3, Order-line amount: 132.63, Adjusted quantity: 81
+
+=======================================
+=======================================
+Transaction ID: 8
+*** New Order Transaction Summary ***
+Customer ID: (3, 5, 515), Last name:ESEOUGHTPRES, Credit:GC, C_DISCOUNT:0.4809
+
+Warehouse tax:0.0552, District tax:0.0285
+
+Order ID:3001, Order entry date:2022-11-05 17:31:28.610
+
+#items:10, Total amount:768.62
+
+Items information:
+	 Item number: 4679, name: pdeauhjklcwyointzsa, Supplier warehouse: 4, quantity: 3, Order-line amount: 234.15, Adjusted quantity: 41
+
+	 Item number: 6183, name: yesaphctzmsxwyt, Supplier warehouse: 7, quantity: 3, Order-line amount: 141.78, ATime used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+djusted quantity: 107
+
+	 Item number: 13366, name: eqiehmswxrydttzejrx, Supplier warehouse: 5, quantity: 3, Order-line amount: 88.92, Adjusted quantity: 64
+
+	 Item number: 23166, name: vtreusxooejza, Supplier warehouse: 10, quantity: 3, Order-line amount: 192.27, Adjusted quantity: 28
+
+	 Item number: 43748, name: cummjymlkynxfvlm, Supplier warehouse: 10, quantity: 3, Order-line amount: 294.66, Adjusted quantity: 70
+
+	 Item number: 46373, name: dlfdhbmaawsvvtrtt, Supplier warehouse: 9, quantity: 3, Order-line amount: 66.90, Adjusted quantity: 67
+
+	 Item number: 48855, name: ymcueinpcecjexsbyxby, Supplier warehouse: 9, quantity: 3, Order-line amount: 151.02, Adjusted quantity: 23
+
+	 Item number: 72871, name: eokhqttrhjxuoidpl, Supplier warehouse: 7, quantity: 3, Order-line amount: 54.63, Adjusted quantity: 109
+
+	 Item number: 85653, name: lkckynouynblnzjhqkrs, Supplier warehouse: 5, quantity: 3, Order-line amount: 49.02, Adjusted quantity: 43
+
+	 Item number: 89723, name: gkjolmlsikiwzpqvnq, Supplier warehouse: 9, quantity: 3, Order-line amount: 92.97, Adjusted quantity: 14
+
+=======================================
+=======================================
+Transaction ID: 9
+*** New Order Transaction Summary ***
+Customer ID: (3, 4, 329), Last name:PRIABLEATION, Credit:GC, C_DISCOUNT:0.2198
+
+Warehouse tax:0.0552, District tax:0.1367
+
+Order ID:3004, Order entry date:2022-11-05 17:31:28.709
+
+#items:19, Total amount:2061.22
+
+Items information:
+	 Item number: 12003, name: lzutohddpcxcyxenllhk, Supplier warehouse: 1, quantity: 3, Order-line amount: 79.41, Adjusted quantity: 65
+
+	 Item number: 89669, name: kjpvcgnwulmnlxegkoeup, Supplier warehouse: 3, quantity: 3, Order-line amount: 85.86, Adjusted quantity: 20
+
+	 Item number: 61735, name: gtscoljauuiqlnkulavyhb, Supplier warehouse: 8, quantity: 3, Order-line amount: 27.06, Adjusted quantity: 76
+
+	 Item number: 46403, name: cfgyaeoeuvnvwigao, Supplier warehouse: 4, quantity: 3, Order-line amount: 131.28, Adjusted quantity: 25
+
+	 Item number: 23853, name: kehrbjguakqpslromhhwjz, Supplier warehouse: 7, quantity: 3, Order-line amount: 234.75, Adjusted quantity: 18
+
+	 Item number: 32471, name: tyqtvvyvysweyao, Supplier warehouse: 9, quantity: 3, Order-line amount: 250.77, Adjusted quantity: 91
+
+	 Item number: 35479, name: hfomzlqnmdomxx, Supplier warehouse: 2, quantity: 3, Order-line amount: 139.56, Adjusted quantity: 92
+
+	 Item number: 85319, name: ymdmzpbhmjkhkpmcbuvfour, Supplier warehouse: 7, quantity: 3, Order-line amount: 205.26, Adjusted quantity: 13
+
+	 Item number: 5575, name: xghdczsdfaybpiqz, Supplier warehouse: 1, quantity: 3, Order-line amount: 44.76, Adjusted quantity: 92
+
+	 Item number: 6207, name: idafnlyfbckrnlwoe, Supplier warehouse: 8, quantity: 3, Order-line amount: 4.56, Adjusted quantity: 60
+
+	 Item number: 19548, name: tzvmkxprvvtoiylotgrmzx, Supplier warehouse: 2, quantity: 3, Order-line amount: 35.67, Adjusted quantity: 91
+
+	 Item number: 27943, name: tdhpjmklmlrvkrrnq, Supplier warehouse: 8, quantity: 3, Order-line amount: 187.41, Adjusted quantity: 93
+
+	 Item number: 31925, name: mriusedtesfmznbvzcy, Supplier warehouse: 9, quantity: 3, Order-line amount: 93.57, Adjusted quantity: 52
+
+	 Item number: 56965, name: abkswyualsymvwffhpdnhhj, Supplier warehouse: 5, quantity: 3, Order-line amount: 44.79, Adjusted quantity: 108
+
+	 Item number: 63627, name: irdukpgrqcnredbzj, Supplier warehouse: 4, quantity: 3, Order-line amount: 94.11, Adjusted quantity: 51
+
+	 Item number: 69862, name: hxieadzyocokwnrazpf, Supplier warehouse: 5, quantity: 3, Order-line amount: 82.74, Adjusted quantity: 90
+
+	 Item number: 72931, name: sckkpmnhftttjzycfbfm, Supplier warehouse: 6, quantity: 3, Order-line amount: 216.84, Adjusted quantity: 96
+
+	 Item number: 89797, name: fapowdumaefeklydznnxn, Supplier warehouse: 10, quantity: 3, Order-line amount: 33.30, Adjusted quantity: 84
+
+	 Item number: 97753, name: naewbgnwvniwcqdidjnkz, Supplier warehouse: 8, quantity: 3, Order-line amount: 224.85, Adjusted quantity: 17
+
+=======================================
+=======================================
+Transaction ID: 10
+*** New Order Transaction Summary ***
+Customer ID: (3, 2, 195), Last name:OUGHTEINGPRES, Credit:GC, C_DISCOUNT:0.1988
+
+Warehouse tax:0.0552, District tax:0.0718
+
+Order ID:3003, Order entry date:2022-11-05 17:31:28.891
+
+#items:7, Total amount:913.26
+
+Items information:
+	 Item number: 14950, name: uxsvpnnefxyawgmb, Supplier warehouse: 1, quantity: 3, Order-line amount: 28.77, Adjusted quantity: 67
+
+	 Item number: 15591, name: iamxswwpbarmzgvgifgb, Supplier warehouse: 8, quantity: 3, Order-line amount: 171.69, Adjusted quantity: 79
+
+	 Item number: 40551, name: uawhoiweipvbznoceq, Supplier warehouse: 2, quantity: 3, Order-line amount: 268.62, Adjusted quantity: 69
+
+	 Item number: 55847, name: vxgegnhvfzfnzkeeyicg, Supplier warehouse: 1, quantity: 3, Order-line amount: 46.71, Adjusted quantity: 31
+
+	 Item number: 57062, name: zaifxztzecbykkrdofplyc, Supplier warehouse: 5, quantity: 3, Order-line amount: 143.22, Adjusted quantity: 62
+
+	 Item number: 63691, name: edkocumkoigiawelpoeqks, Supplier warehouse: 1, quantity: 3, Order-line amount: 280.65, Adjusted quantity: 28
+
+	 Item number: 97922, name: kwkcqwzvycrjmqsdpoydljc, Supplier warehouse: 5, quantity: 3, Order-line amount: 71.76, Adjusted quantity: 108
+
+=======================================
+=======================================
+Transaction ID: 11
+*** New Order Transaction Summary ***
+Customer ID: (3, 1, 327), Last name:PRIABLEANTI, Credit:GC, C_DISCOUNT:0.0959
+
+Warehouse tax:0.0552, District tax:0.0769
+
+Order ID:3003, Order entry date:2022-11-05 17:31:28.960
+
+#items:16, Total amount:2904.48
+
+Items information:
+	 Item number: 6208, name: pbiyihirvvcxxud, Supplier warehouse: 8, quantity: 3, Order-line amount: 264.60, Adjusted quantity: 43
+
+	 Item number: 2045, name: yinidvchapwmymxsd, Supplier warehouse: 8, quantity: 3, Order-line amount: 223.92, Adjusted quantity: 28
+
+	 Item number: 40420, name: zrchgnhmpmsmid, Supplier warehouse: 3, quantity: 3, Order-line amount: 193.92, Adjusted quantity: 60
+
+	 Item number: 98019, name: uajafoajeffrtmr, Supplier warehouse: 9, quantity: 3, Order-line amount: 242.04, Adjusted quantity: 64
+
+	 Item number: 52198, name: toqxcopomykbuiiwkwfm, Supplier warehouse: 2, quantity: 3, Order-line amount: 8.61, Adjusted quantity: 85
+
+	 Item number: 44510, name: vkzbpskhsieiewnnnqfknov, Supplier warehouse: 1, quantity: 3, Order-line amount: 168.27, Adjusted quantity: 78
+
+	 Item number: 22631, name: uhsmumlezbvttsfzebw, Supplier warehouse: 4, quantity: 3, Order-line amount: 85.44, Adjusted quantity: 70
+
+	 Item number: 24143, name: irgihhnstkowepufbb, Supplier warehouse: 5, quantity: 3, Order-line amount: 262.38, Adjusted quantity: 97
+
+	 Item number: 28327, name: huuvbxypfoxnnezcw, Supplier warehouse: 9, quantity: 3, Order-line amount: 54.57, Adjusted quantity: 56
+
+	 Item number: 32120, name: ichngzuyvlesszactjn, Supplier warehouse: 1, quantity: 3, Order-line amount: 116.55, Adjusted quantity: 20
+
+	 Item number: 34375, name: kqwompvjmqoiu, Supplier warehouse: 2, quantity: 3, Order-line amount: 294.69, Adjusted quantity: 55
+
+	 Item number: 46295, name: vajrgshcpdasrgpe, Supplier warehouse: 10, quantity: 3, Order-line amount: 140.97, Adjusted quantity: 64
+
+	 Item number: 63079, name: husscswixpldscnvpgyq, Supplier warehouse: 7, quantity: 3, Order-line amount: 169.56, Adjusted quantity: 19
+
+	 Item number: 64998, name: troekmmssijbfjv, Supplier warehouse: 10, quantity: 3, Order-line amount: 152.73, Adjusted quantity: 87
+
+	 Item number: 81624, name: creraeufgydvs, Supplier warehouse: 2, quantity: 3, Order-line amount: 190.05, Adjusted quantity: 25
+
+	 Item number: 89767, name: qymgtqykyxemmkztwz, Supplier warehouse: 7, quantity: 3, Order-line amount: 269.40, Adjusted quantity: 91
+
+=======================================
+=======================================
+Transaction ID: 12
+*** New Order Transaction Summary ***
+Customer ID: (3, 2, 2306), Last name:BARPRIANTI, Credit:GC, C_DISCOUNT:0.3343
+
+Warehouse tax:0.0552, District tax:0.0718
+
+Order ID:3004, Order entry date:2022-11-05 17:31:29.106
+
+#items:7, Total amount:672.36
+
+Items information:
+Time used: 0
+[Error]:  New Order Abort New **** New Order Transaction Information ****
+CID:267, WID:3, DID:3, num order-lines:11
+Item IDs are:,15967,15998,24159,40071,61115,61159,64199,65250,71142,89447,92902
+Quantities:,3,3,3,3,3,3,3,3,3,3,3
+Supply warehouse IDs:,6,3,10,9,6,12,1,2,9,4,4
+
+Time used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+	 Item number: 5697, name: mgdrryuxdfynmjefd, Supplier warehouse: 2, quantity: 3, Order-line amount: 209.01, Adjusted quantity: 62
+
+	 Item number: 23766, name: koojmhcwdryozxwlqwtnelx, Supplier warehouse: 4, quantity: 3, Order-line amount: 290.16, Adjusted quantity: 28
+
+	 Item number: 61155, name: egmwkhkijxlylqkgptfso, Supplier warehouse: 1, quantity: 3, Order-line amount: 31.11, Adjusted quantity: 27
+
+	 Item number: 73447, name: saielrtcwoirukygivtndk, Supplier warehouse: 3, quantity: 3, Order-line amount: 23.52, Adjusted quantity: 92
+
+	 Item number: 85456, name: irxejysylcsdxhhdfxvztc, Supplier warehouse: 8, quantity: 3, Order-line amount: 136.08, Adjusted quantity: 108
+
+	 Item number: 86190, name: crfphkampocctaflxfj, Supplier warehouse: 8, quantity: 3, Order-line amount: 91.02, Adjusted quantity: 11
+
+	 Item number: 88787, name: zgslpxzdeeagcu, Supplier warehouse: 8, quantity: 3, Order-line amount: 115.29, Adjusted quantity: 81
+
+=======================================
+=======================================
+Transaction ID: 13
+*** New Order Transaction Summary ***
+Customer ID: (3, 4, 1283), Last name:ESECALLYATION, Credit:GC, C_DISCOUNT:0.3517
+
+Warehouse tax:0.0552, District tax:0.1367
+
+Order ID:3005, Order entry date:2022-11-05 17:31:29.176
+
+#items:15, Total amount:1821.14
+
+Items information:
+	 Item number: 43694, name: zxtcsoplgqxsebtevwiu, Supplier warehouse: 5, quantity: 3, Order-line amount: 299.25, Adjusted quantity: 38
+
+	 Item number: 73349, name: msbvsbqhrhytyqbjdur, Supplier warehouse: 4, quantity: 3, Order-line amount: 218.04, Adjusted quantity: 95
+
+	 Item number: 51775, name: fjqzhfglblmpaeostwbylkj, Supplier warehouse: 9, quantity: 3, Order-line amount: 243.60, Adjusted quantity: 65
+
+	 Item number: 97701, name: myncxmxipcbibzzrubsfh, Supplier warehouse: 4, quantity: 3, Order-line amount: 240.90, Adjusted quantity: 42
+
+	 Item number: 88735, name: ieseigaefhzcuxjyx, Supplier warehouse: 6, quantity: 3, Order-line amount: 233.22, Adjusted quantity: 87
+
+	 Item number: 56934, name: tbsufdfdthkrkcnamuaqfr, Supplier warehouse: 6, quantity: 3, Order-line amount: 90.12, Adjusted quantity: 97
+
+	 Item number: 14984, name: jcaimnjjmiggybprluj, Supplier warehouse: 1, quantity: 3, Order-line amount: 223.14, Adjusted quantity: 82
+
+	 Item number: 20197, name: rqoaeieoxsafkttmvnlgp, Supplier warehouse: 3, quantity: 3, Order-line amount: 85.41, Adjusted quantity: 83
+
+	 Item number: 54071, name: djmscelzryzdqxxec, Supplier warehouse: 4, quantity: 3, Order-line amount: 76.32, Adjusted quantity: 33
+
+	 Item number: 65210, name: nzmgoxzjcqrmdkfyxubdrr, Supplier warehouse: 9, quantity: 3, Order-line amount: 119.04, Adjusted quantity: 56
+
+	 Item number: 71207, name: fcbnunonxgicscdkyhqlno, Supplier warehouse: 3, quantity: 3, Order-line amount: 9.96, Adjusted quantity: 25
+
+	 Item number: 80101, name: mtacqxkspcgcoxhatlsuzue, Supplier warehouse: 2, quantity: 3, Order-line amount: 264.51, Adjusted quantity: 12
+
+	 Item number: 80866, name: cuhcsklptaxxrlnqu, Supplier warehouse: 2, quantity: 3, Order-line amount: 38.79, Adjusted quantity: 83
+
+	 Item number: 84710, name: stjlibrrwbdbwz, Supplier warehouse: 1, quantity: 3, Order-line amount: 76.20, Adjusted quantity: 66
+
+	 Item number: 89831, name: kvtfkvuukmgihdmkbpotpjl, Supplier warehouse: 1, quantity: 3, Order-line amount: 138.33, Adjusted quantity: 80
+
+=======================================
+=======================================
+Transaction ID: 14
+*** New Order Transaction Summary ***
+Customer ID: (3, 1, 47), Last name:BARPRESANTI, Credit:GC, C_DISCOUNT:0.4548
+
+Warehouse tax:0.0552, District tax:0.0769
+
+Order ID:3004, Order entry date:2022-11-05 17:31:29.297
+
+#items:13, Total amount:943.74
+
+Items information:
+	 Item number: 38071, name: pgmdiybpkxxkfws, Supplier warehouse: 1, quantity: 3, Order-line amount: 173.97, Adjusted quantity: 92
+
+	 Item number: 78807, name: bksfxqnkdzrqpgu, Supplier warehouse: 8, quantity: 3, Order-line amount: 97.89, Adjusted quantity: 89
+
+	 Item number: 2085, name: bazdtdsuufpgroynabc, Supplier warehouse: 6, quantity: 3, Order-line amount: 98.79, Adjusted quantity: 27
+
+	 Item number: 20263, name: idpmgwhjbktrh, Supplier warehouse: 4, quantity: 3, Order-line amount: 175.17, Adjusted quantity: 12
+
+	 Item number: 26191, name: yskbpjihzawsd, Supplier warehouse: 3, quantity: 3, Order-line amount: 108.72, Adjusted quantity: 10
+
+	 Item number: 32303, name: maujapevnhyrcwahsei, Supplier warehouse: 8, quantity: 3, Order-line amount: 120.54, Adjusted quantity: 89
+
+	 Item number: 32375, name: gnakiazbupxhwnhzbjlfvjp, Supplier warehouse: 5, quantity: 3, Order-line amount: 167.10, Adjusted quantity: 34
+
+	 Item number: 50262, name: pgyislzpekmerwdank, Supplier warehouse: 8, quantity: 3, Order-line amount: 4.53, Adjusted quantity: 62
+
+	 Item number: 59103, name: eviweaqxydhtcjlhpuyr, Supplier warehouse: 10, quantity: 3, Order-line amount: 175.38, Adjusted quantity: 32
+
+	 Item number: 73447, name: saielrtcwoirukygivtndk, Supplier warehouse: 4, quantity: 3, Order-line amount: 23.52, Adjusted quantity: 16
+
+	 Item number: 80099, name: jmeoknapwmxngyr, Supplier warehouse: 3, quantity: 3, Order-line amount: 16.53, Adjusted quantity: 48
+
+	 Item number: 93667, name: yntylnmmikdauokg, Supplier warehouse: 7, quantity: 3, Order-line amount: 282.63, Adjusted quantity: 59
+
+	 Item number: 98023, name: hkpnpdbkyneouq, Supplier warehouse: 5, quantity: 3, Order-line amount: 84.24, Adjusted quantity: 50
+
+=======================================
+=======================================
+Transaction ID: 15
+*** New Order Transaction Summary ***
+Customer ID: (3, 3, 2295), Last name:EINGABLEABLE, Credit:GC, C_DISCOUNT:0.0741
+
+Warehouse tax:0.0552, District tax:0.1168
+
+Order ID:3002, Order entry date:2022-11-05 17:31:29.412
+
+#items:9, Total amount:1142.83
+
+Items information:
+	 Item number: 15952, name: tzlqgujjkggqtrosmuqv, Supplier warehouse: 1, quantity: 3, Order-line amount: 48.93, Adjusted quantity: 57
+
+	 Item number: 16101, name: ywylqbpbbyzbzjao, Supplier warehouse: 5, quantity: 3, Order-line amount: 74.37, Adjusted quantity: 18
+
+	 Item number: 22247, name: ksnxpdqgcilpxcbt, Supplier warehouse: 3, quantity: 3, Order-line amount: 245.49, Adjusted quantity: 30
+
+	 Item number: 24132, name: thdvkamxrpqufwoqzwiwh, Supplier warehouse: 10, quantity: 3, Order-line amount: 80.82, Adjusted quantity: 79
+
+	 Item number: 25703, name: xptxkyxaxqepk, Supplier warehouse: 5, quantity: 3, Order-line amount: 44.46, Adjusted quantity: 68
+
+	 Item number: 43205, name: lwsafdqhwhqzeaypi, Supplier warehouse: 4, quantity: 3, Order-line amount: 217.05, Adjusted quantity: 46
+
+	 Item number: 65191, name: sinfjotbxoojyaopxw, Supplier warehouse: 4, quantity: 3, Order-line amount: 14.49, Adjusted quantity: 61
+
+	 Item number: 89318, name: qrfbeojlhlfoe, Supplier warehouse: 10, quantity: 3, Order-line amount: 94.20, Adjusted quantity: 32
+
+	 Item number: 97879, name: faqbgtwwjzjwnnascboh, Supplier warehouse: 6, quantity: 3, Order-line amount: 233.34, Adjusted quantity: 92
+
+=======================================
+=======================================
+Transaction ID: 16
+*** New Order Transaction Summary ***
+Customer ID: (3, 2, 1519), Last name:BARPRESCALLY, Credit:GC, C_DISCOUNT:0.0546
+
+Warehouse tax:0.0552, District tax:0.0718
+
+Order ID:3005, Order entry date:2022-11-05 17:31:29.490
+
+#items:10, Total amount:2001.87
+
+Items information:
+	 Item number: 5425, name: kpunvndscdnkvigtf, Supplier warehouse: 5, quantity: 3, Order-line amount: 281.40, Adjusted quantity: 15
+
+	 Item number: 16087, name: fiuvfhpxvwwnrjwwxsc, Supplier warehouse: 3, quantity: 3, Order-line amount: 188.19, Adjusted quantity: 109
+
+	 Item number: 22909, name: dtvombyoovgpdhkrmitq, Supplier warehouse: 2, quantity: 3, Order-line amount: 246.87, Adjusted quantity: 43
+
+	 Item number: 31879, name: gecpcmsbejejydyeaftb, Supplier warehouse: 9, quantity: 3, Order-line amount: 86.31, Adjusted quantity: 97
+
+	 Item number: 40540, name: ieyxpaukvrzhszhaklguzbc, Supplier warehouse: 7, quantity: 3, Order-line amount: 238.56, Adjusted quantity: 18
+
+	 Item number: 44503, name: cwglgfvvzfbikmwq, Supplier warehouse: 10, quantity: 3, Order-line amount: 240.48, Adjusted quantity: 109
+
+	 Item Time used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+number: 56357, name: vmabmczwuwqsxbgpfwwsf, Supplier warehouse: 10, quantity: 3, Order-line amount: 133.92, Adjusted quantity: 53
+
+	 Item number: 69335, name: lmejczdejdympfb, Supplier warehouse: 10, quantity: 3, Order-line amount: 7.59, Adjusted quantity: 89
+
+	 Item number: 81510, name: bxubywmrfdhhqhelb, Supplier warehouse: 5, quantity: 3, Order-line amount: 199.50, Adjusted quantity: 27
+
+	 Item number: 89465, name: lqxrigjgmoyxmxcnw, Supplier warehouse: 1, quantity: 3, Order-line amount: 256.05, Adjusted quantity: 53
+
+=======================================
+=======================================
+Transaction ID: 17
+=======================================
+=======================================
+Transaction ID: 18
+*** New Order Transaction Summary ***
+Customer ID: (3, 4, 1047), Last name:OUGHTATIONBAR, Credit:GC, C_DISCOUNT:0.4833
+
+Warehouse tax:0.0552, District tax:0.1367
+
+Order ID:3006, Order entry date:2022-11-05 17:31:29.673
+
+#items:8, Total amount:697.70
+
+Items information:
+	 Item number: 5185, name: otyhnfaojxuypys, Supplier warehouse: 7, quantity: 3, Order-line amount: 70.20, Adjusted quantity: 69
+
+	 Item number: 13250, name: uctmihxjnijomsaufmog, Supplier warehouse: 5, quantity: 3, Order-line amount: 105.51, Adjusted quantity: 13
+
+	 Item number: 19687, name: khndtmwssbdpezge, Supplier warehouse: 7, quantity: 3, Order-line amount: 52.26, Adjusted quantity: 34
+
+	 Item number: 21915, name: ahozlwjlumzrbfsvvmk, Supplier warehouse: 1, quantity: 3, Order-line amount: 79.80, Adjusted quantity: 81
+
+	 Item number: 23783, name: yrgqnkkizpirhpc, Supplier warehouse: 5, quantity: 3, Order-line amount: 262.83, Adjusted quantity: 57
+
+	 Item number: 76767, name: vonogkgexbcbygpnz, Supplier warehouse: 8, quantity: 3, Order-line amount: 221.01, Adjusted quantity: 53
+
+	 Item number: 81623, name: jnlpiwshldbpigngqcby, Supplier warehouse: 8, quantity: 3, Order-line amount: 186.54, Adjusted quantity: 65
+
+	 Item number: 97126, name: vlbrdbafowhhz, Supplier warehouse: 2, quantity: 3, Order-line amount: 154.74, Adjusted quantity: 19
+
+=======================================
+=======================================
+Transaction ID: 19
+*** New Order Transaction Summary ***
+Customer ID: (3, 1, 38), Last name:BARPRICALLY, Credit:GC, C_DISCOUNT:0.3483
+
+Warehouse tax:0.0552, District tax:0.0769
+
+Order ID:3005, Order entry date:2022-11-05 17:31:29.756
+
+#items:18, Total amount:1887.98
+
+Items information:
+	 Item number: 71395, name: xvqibdrczqatzx, Supplier warehouse: 5, quantity: 3, Order-line amount: 266.13, Adjusted quantity: 79
+
+	 Item number: 65255, name: dgdkanebmtzoig, Supplier warehouse: 4, quantity: 3, Order-line amount: 81.51, Adjusted quantity: 54
+
+	 Item number: 89827, name: lhmkgajbqeyxuj, Supplier warehouse: 1, quantity: 3, Order-line amount: 290.34, Adjusted quantity: 107
+
+	 Item number: 35495, name: mrkzabktmzhrxjgayczyk, Supplier warehouse: 1, quantity: 3, Order-line amount: 12.96, Adjusted quantity: 71
+
+	 Item number: 37967, name: ehomuwpmlsdntwyoxnmr, Supplier warehouse: 8, quantity: 3, Order-line amount: 79.50, Adjusted quantity: 32
+
+	 Item number: 97409, name: fhvmenrhawnyqjjp, Supplier warehouse: 5, quantity: 3, Order-line amount: 291.45, Adjusted quantity: 62
+
+	 Item number: 95390, name: vfmknfdexzcmgdgjern, Supplier warehouse: 10, quantity: 3, Order-line amount: 50.55, Adjusted quantity: 76
+
+	 Item number: 36516, name: vmmscsnvisywazit, Supplier warehouse: 4, quantity: 3, Order-line amount: 245.97, Adjusted quantity: 49
+
+	 Item number: 3069, name: uoxfjrtwwltbbskhm, Supplier warehouse: 4, quantity: 3, Order-line amount: 200.07, Adjusted quantity: 50
+
+	 Item number: 6197, name: fnszyjzrvyglbundchnn, Supplier warehouse: 3, quantity: 3, Order-line amount: 297.24, Adjusted quantity: 77
+
+	 Item number: 15573, name: bxxndvivgqymlfhytrxhv, Supplier warehouse: 10, quantity: 3, Order-line amount: 153.84, Adjusted quantity: 76
+
+	 Item number: 16061, name: vhvhcffnxzvhzxrgcn, Supplier warehouse: 7, quantity: 3, Order-line amount: 68.79, Adjusted quantity: 16
+
+	 Item number: 43524, name: ctgzvyqlaucrxoalbrenhw, Supplier warehouse: 5, quantity: 3, Order-line amount: 68.52, Adjusted quantity: 42
+
+	 Item number: 48079, name: kbxxvedkvfyvpsyxhwhk, Supplier warehouse: 10, quantity: 3, Order-line amount: 133.02, Adjusted quantity: 97
+
+	 Item number: 57058, name: xjkmlgradxfuaeww, Supplier warehouse: 2, quantity: 3, Order-line amount: 41.97, Adjusted quantity: 33
+
+	 Item number: 80598, name: ygjqstfuffdyjhqaj, Supplier warehouse: 3, quantity: 3, Order-line amount: 126.66, Adjusted quantity: 78
+
+	 Item number: 96931, name: aodvgqvukahhdgqwfv, Supplier warehouse: 2, quantity: 3, Order-line amount: 36.78, Adjusted quantity: 27
+
+	 Item number: 97975, name: sovyhdjkyiwytk, Supplier warehouse: 1, quantity: 3, Order-line amount: 113.67, Adjusted quantity: 69
+
+=======================================
+=======================================
+Transaction ID: 20
+*** New Order Transaction Summary ***
+Customer ID: (3, 5, 1266), Last name:PRIPRESATION, Credit:GC, C_DISCOUNT:0.3950
+
+Warehouse tax:0.0552, District tax:0.0285
+
+Order ID:3002, Order entry date:2022-11-05 17:31:29.911
+
+#items:17, Total amount:1664.82
+
+Items information:
+	 Item number: 62655, name: xqzwtwdxawovcpzvyeeneru, Supplier warehouse: 2, quantity: 3, Order-line amount: 186.99, Adjusted quantity: 71
+
+	 Item number: 56403, name: aissufcgbjmirceei, Supplier warehouse: 8, quantity: 3, Order-line amount: 179.76, Adjusted quantity: 92
+
+	 Item number: 55715, name: inwawqiqdgutpewnjrbn, Supplier warehouse: 2, quantity: 3, Order-line amount: 107.61, Adjusted quantity: 71
+
+	 Item number: 38289, name: aevlqkueusqazpfyroklw, Supplier warehouse: 4, quantity: 3, Order-line amount: 233.01, Adjusted quantity: 35
+
+	 Item number: 16087, name: fiuvfhpxvwwnrjwwxsc, Supplier warehouse: 4, quantity: 3, Order-line amount: 188.19, Adjusted quantity: 93
+
+	 Item number: 13915, name: titjjhdteradbe, Supplier warehouse: 9, quantity: 3, Order-line amount: 32.43, Adjusted quantity: 17
+
+	 Item number: 59069, name: vravtoncenxdxopiwjvbd, Supplier warehouse: 10, quantity: 3, Order-line amount: 11.04, Adjusted quantity: 59
+
+	 Item number: 5095, name: pmfmppynxzdorznq, Supplier warehouse: 9, quantity: 3, Order-line amount: 69.33, Adjusted quantity: 62
+
+	 Item number: 11335, name: neokpedqtwwetqifjytinq, Supplier warehouse: 2, quantity: 3, Order-line amount: 169.26, Adjusted quantity: 56
+
+	 Item number: 16103, name: wxbdclctxifktmzctxdcri, Supplier warehouse: 6, quantity: 3, Order-line amount: 240.21, Adjusted quantity: 60
+
+	 Item number: 40612, name: bphvvrgmbyuhmp, Supplier warehouse: 7, quantity: 3, Order-line amount: 67.98, Adjusted quantity: 25
+
+	 Item number: 48788, name: obatwexkrgkaeoqhoq, Supplier warehouse: 7, quantity: 3, Order-line amount: 128.88, Adjusted quantity: 64
+
+	 Item number: 65227, name: apxqtfebszfepo, Supplier warehouse: 10, quantity: 3, Order-line amount: 283.05, Adjusted quantity: 88
+
+	 Item number: 79255, name: jbhvurledajnhsbd, Supplier warehouse: 4, quantity: 3, Order-line amount: 214.74, Adjusted quantity: 45
+
+	 Item number: 80969, name: yjxxqhejwcjxbfdfo, Supplier warehouse: 4, quantity: 3, Order-line amount: 218.04, Adjusted quantity: 25
+
+	 Item number: 82468, name: chdodqtghsoxjjwseaha, Supplier warehouse: 8, quantity: 3, Order-line amount: 82.62, Adjusted quantity: 12
+
+	 Item number: 89823, name: zmpqcrgwotbpottaudoj, Supplier warehouse: 3, quantity: 3, Order-line amount: 126.09, Adjusted quantity: 24
+
+=======================================
+=======================================
+Transaction ID: 21
+*** New Order Transaction Summary ***
+Customer ID: (3, 1, 1783), Last name:PRIPRESCALLY, Credit:GC, C_DISCOUNT:0.3292
+
+Warehouse tax:0.0552, District tax:0.0769
+
+Order ID:3006, Order entry date:2022-11-05 17:31:30.076
+
+#items:10, Total amount:1407.07
+
+Items information:
+	 Item number: 10247, name: rtortpqgwbexcftb, Supplier warehouse: 5, quantity: 3, Order-line amount: 223.14, Adjusted quantity: 43
+
+	 Item number: 13687, name: goajzxpngpslrxs, Supplier warehouse: 9, quantity: 3, Order-line amount: 283.26, Adjusted quantity: 56
+
+	 Item number: 15071, name: khkbrnawpjcpbqy, Supplier warehouse: 2, quantity: 3, Order-Time used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+line amount: 295.44, Adjusted quantity: 75
+
+	 Item number: 24295, name: zdksjpebjnfgnirsjmqgi, Supplier warehouse: 2, quantity: 3, Order-line amount: 85.53, Adjusted quantity: 29
+
+	 Item number: 30110, name: appjzlbcnzsha, Supplier warehouse: 4, quantity: 5, Order-line amount: 464.00, Adjusted quantity: 105
+
+	 Item number: 40299, name: zcvmqyahoqfajquuq, Supplier warehouse: 5, quantity: 1, Order-line amount: 37.16, Adjusted quantity: 11
+
+	 Item number: 60949, name: urqeprlzshhwszimler, Supplier warehouse: 2, quantity: 3, Order-line amount: 32.91, Adjusted quantity: 71
+
+	 Item number: 73439, name: futeaphltlooi, Supplier warehouse: 5, quantity: 3, Order-line amount: 76.32, Adjusted quantity: 14
+
+	 Item number: 95949, name: lihcuzjkzauzw, Supplier warehouse: 6, quantity: 3, Order-line amount: 153.12, Adjusted quantity: 70
+
+	 Item number: 96855, name: vdzvlsyzdbhny, Supplier warehouse: 8, quantity: 3, Order-line amount: 201.96, Adjusted quantity: 56
+
+=======================================
+=======================================
+Transaction ID: 22
+*** New Order Transaction Summary ***
+Customer ID: (3, 4, 1795), Last name:ESEPRESBAR, Credit:GC, C_DISCOUNT:0.1669
+
+Warehouse tax:0.0552, District tax:0.1367
+
+Order ID:3007, Order entry date:2022-11-05 17:31:30.178
+
+#items:16, Total amount:3304.37
+
+Items information:
+	 Item number: 88710, name: icioenwocsssl, Supplier warehouse: 3, quantity: 3, Order-line amount: 52.68, Adjusted quantity: 82
+
+	 Item number: 57062, name: zaifxztzecbykkrdofplyc, Supplier warehouse: 6, quantity: 5, Order-line amount: 238.70, Adjusted quantity: 40
+
+	 Item number: 23879, name: lwkgctdzhqjhsyvmmvmf, Supplier warehouse: 4, quantity: 3, Order-line amount: 153.93, Adjusted quantity: 88
+
+	 Item number: 71, name: xdudhzdcfvgefem, Supplier warehouse: 7, quantity: 3, Order-line amount: 80.28, Adjusted quantity: 84
+
+	 Item number: 6215, name: blombyfazeaqytfl, Supplier warehouse: 7, quantity: 3, Order-line amount: 118.20, Adjusted quantity: 79
+
+	 Item number: 10727, name: jcnbwagwvogoyohgxb, Supplier warehouse: 9, quantity: 3, Order-line amount: 184.20, Adjusted quantity: 53
+
+	 Item number: 11799, name: xclykguyaarkyklfkcauoq, Supplier warehouse: 10, quantity: 3, Order-line amount: 24.72, Adjusted quantity: 42
+
+	 Item number: 13895, name: cctihyoseceqnrhzy, Supplier warehouse: 8, quantity: 3, Order-line amount: 247.02, Adjusted quantity: 13
+
+	 Item number: 16042, name: rwettiicfkrbprmrra, Supplier warehouse: 6, quantity: 3, Order-line amount: 236.10, Adjusted quantity: 93
+
+	 Item number: 21439, name: xtorjuunaztxvo, Supplier warehouse: 8, quantity: 3, Order-line amount: 283.47, Adjusted quantity: 86
+
+	 Item number: 23199, name: vvcfrzxzygynqfcwnzdysn, Supplier warehouse: 7, quantity: 3, Order-line amount: 30.66, Adjusted quantity: 49
+
+	 Item number: 32451, name: zpxcaxbtikkrbmgaesyrx, Supplier warehouse: 1, quantity: 3, Order-line amount: 193.98, Adjusted quantity: 53
+
+	 Item number: 58341, name: ejexzmxduvoblxw, Supplier warehouse: 4, quantity: 3, Order-line amount: 197.16, Adjusted quantity: 33
+
+	 Item number: 64969, name: erbeqibwkzbyyrseezr, Supplier warehouse: 9, quantity: 10, Order-line amount: 807.20, Adjusted quantity: 103
+
+	 Item number: 71142, name: ylifregjwnrsws, Supplier warehouse: 8, quantity: 3, Order-line amount: 259.59, Adjusted quantity: 11
+
+	 Item number: 96338, name: gfvcpgrirkesxuooor, Supplier warehouse: 10, quantity: 3, Order-line amount: 219.87, Adjusted quantity: 57
+
+=======================================
+=======================================
+Transaction ID: 23
+*** New Order Transaction Summary ***
+Customer ID: (3, 2, 646), Last name:ANTIPRESESE, Credit:GC, C_DISCOUNT:0.2554
+
+Warehouse tax:0.0552, District tax:0.0718
+
+Order ID:3006, Order entry date:2022-11-05 17:31:30.323
+
+#items:9, Total amount:1050.15
+
+Items information:
+	 Item number: 64862, name: fqefsxfmfncaw, Supplier warehouse: 2, quantity: 3, Order-line amount: 69.63, Adjusted quantity: 20
+
+	 Item number: 16087, name: fiuvfhpxvwwnrjwwxsc, Supplier warehouse: 10, quantity: 3, Order-line amount: 188.19, Adjusted quantity: 10
+
+	 Item number: 48785, name: sjqyibkdmbvxxfwbxibcti, Supplier warehouse: 4, quantity: 3, Order-line amount: 288.48, Adjusted quantity: 60
+
+	 Item number: 50113, name: fzvxvmmwavsdmt, Supplier warehouse: 5, quantity: 3, Order-line amount: 42.42, Adjusted quantity: 52
+
+	 Item number: 55746, name: wvufcsjemubgcoaygjj, Supplier warehouse: 5, quantity: 3, Order-line amount: 200.25, Adjusted quantity: 97
+
+	 Item number: 70887, name: mnirzduqkvxdxhortfsvxe, Supplier warehouse: 10, quantity: 3, Order-line amount: 59.37, Adjusted quantity: 29
+
+	 Item number: 71343, name: eaacfqhbhulgufuub, Supplier warehouse: 2, quantity: 3, Order-line amount: 134.70, Adjusted quantity: 53
+
+	 Item number: 83942, name: ehmkldomqeocycssgdomtz, Supplier warehouse: 5, quantity: 3, Order-line amount: 31.44, Adjusted quantity: 10
+
+	 Item number: 97787, name: dotmysfiwirkl, Supplier warehouse: 6, quantity: 3, Order-line amount: 236.94, Adjusted quantity: 12
+
+=======================================
+=======================================
+Transaction ID: 24
+*** New Order Transaction Summary ***
+Customer ID: (3, 1, 193), Last name:OUGHTEINGABLE, Credit:GC, C_DISCOUNT:0.0086
+
+Warehouse tax:0.0552, District tax:0.0769
+
+Order ID:3007, Order entry date:2022-11-05 17:31:30.412
+
+#items:20, Total amount:3545.01
+
+Items information:
+	 Item number: 79715, name: yyjfnjeprvaucpunanxppul, Supplier warehouse: 4, quantity: 3, Order-line amount: 46.74, Adjusted quantity: 25
+
+	 Item number: 24150, name: fgrhyivgueymrqma, Supplier warehouse: 8, quantity: 3, Order-line amount: 89.28, Adjusted quantity: 85
+
+	 Item number: 97495, name: axuklqojforiwiylzc, Supplier warehouse: 3, quantity: 3, Order-line amount: 92.61, Adjusted quantity: 81
+
+	 Item number: 81636, name: lkdiiajswkwsj, Supplier warehouse: 4, quantity: 3, Order-line amount: 229.59, Adjusted quantity: 59
+
+	 Item number: 96806, name: tunqakrhhyrzlrmlimgdu, Supplier warehouse: 1, quantity: 3, Order-line amount: 202.02, Adjusted quantity: 52
+
+	 Item number: 92507, name: fzfkmpbseocsvqisbgbpgh, Supplier warehouse: 5, quantity: 3, Order-line amount: 213.72, Adjusted quantity: 46
+
+	 Item number: 81542, name: ecwnscfiiqxzjbwhwviyxuu, Supplier warehouse: 2, quantity: 3, Order-line amount: 220.71, Adjusted quantity: 51
+
+	 Item number: 3143, name: yndhlpchekzsrc, Supplier warehouse: 6, quantity: 3, Order-line amount: 297.63, Adjusted quantity: 88
+
+	 Item number: 40539, name: rpoarkadnumqzwy, Supplier warehouse: 6, quantity: 3, Order-line amount: 282.27, Adjusted quantity: 87
+
+	 Item number: 6206, name: qlnpdnpgnqzylisrfbuken, Supplier warehouse: 6, quantity: 3, Order-line amount: 107.82, Adjusted quantity: 35
+
+	 Item number: 23521, name: yjnwapxnhigdknfzwpp, Supplier warehouse: 8, quantity: 3, Order-line amount: 89.19, Adjusted quantity: 17
+
+	 Item number: 16004, name: tnxgitxfojjerlgtczwd, Supplier warehouse: 4, quantity: 3, Order-line amount: 156.36, Adjusted quantity: 73
+
+	 Item number: 24035, name: adzsnlnjbcrfijk, Supplier warehouse: 4, quantity: 3, Order-line amount: 64.83, Adjusted quantity: 85
+
+	 Item number: 33255, name: gevcwbdozfrfk, Supplier warehouse: 7, quantity: 3, Order-line amount: 275.52, Adjusted quantity: 22
+
+	 Item number: 52901, name: bwlkbznmggengezdzq, Supplier warehouse: 2, quantity: 3, Order-line amount: 161.52, Adjusted quantity: 58
+
+	 Item number: 64870, name: uymfntogyykhdbhygddse, Supplier warehouse: 1, quantity: 3, Order-line amount: 107.61, Adjusted quantity: 63
+
+	 Item number: 65254, name: nuupysageygerdrzijs, Supplier warehouse: 8, quantity: 3, Order-line amount: 226.77, Adjusted quantity: 57
+
+	 Item number: 69084, name: hqandqfyxywzlpq, Supplier warehouse: 10, quantity: 3, Order-line amount: 16.71, Adjusted quantity: 27
+
+	 Item number: 72422, name: irrgsjusxeyqtvtbfnk, Supplier warehouse: 6, quantity: 3, Order-line amount: 239.70, Adjusted quantity: 27
+
+	 Item number: 81541, name: panesrmrpbcroiyzomeqxoe, Supplier warehouse: 3, quantity: 3, Order-line amount: 37.92, Adjusted quantity: 85
+
+=======================================
+=======================================
+Transaction ID: 25
+*** NeTime used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+w Order Transaction Summary ***
+Customer ID: (3, 2, 2019), Last name:EINGABLEPRES, Credit:GC, C_DISCOUNT:0.3952
+
+Warehouse tax:0.0552, District tax:0.0718
+
+Order ID:3007, Order entry date:2022-11-05 17:31:30.619
+
+#items:12, Total amount:1514.28
+
+Items information:
+	 Item number: 97815, name: olrgoimdwyzfceai, Supplier warehouse: 1, quantity: 3, Order-line amount: 251.16, Adjusted quantity: 18
+
+	 Item number: 73149, name: lbfenejhvhqgo, Supplier warehouse: 8, quantity: 3, Order-line amount: 264.21, Adjusted quantity: 14
+
+	 Item number: 38303, name: mbqywemxnvvosqifcxn, Supplier warehouse: 9, quantity: 3, Order-line amount: 231.00, Adjusted quantity: 57
+
+	 Item number: 10237, name: umgbwxovbhoghztnplabd, Supplier warehouse: 2, quantity: 3, Order-line amount: 56.04, Adjusted quantity: 81
+
+	 Item number: 32447, name: zifwgrgwrjokem, Supplier warehouse: 4, quantity: 3, Order-line amount: 217.02, Adjusted quantity: 17
+
+	 Item number: 39062, name: uydfaeednjhllejbyqg, Supplier warehouse: 9, quantity: 3, Order-line amount: 131.34, Adjusted quantity: 91
+
+	 Item number: 58823, name: veezjnzpjldsbn, Supplier warehouse: 4, quantity: 3, Order-line amount: 205.44, Adjusted quantity: 84
+
+	 Item number: 62407, name: tdjwbyzkuszunnxo, Supplier warehouse: 1, quantity: 3, Order-line amount: 251.46, Adjusted quantity: 68
+
+	 Item number: 64742, name: xferddkgcandmoue, Supplier warehouse: 8, quantity: 3, Order-line amount: 31.17, Adjusted quantity: 91
+
+	 Item number: 69351, name: zjyovhxphzpoz, Supplier warehouse: 3, quantity: 3, Order-line amount: 215.40, Adjusted quantity: 36
+
+	 Item number: 81593, name: yodehpypwcaccoxtnbcr, Supplier warehouse: 5, quantity: 3, Order-line amount: 283.14, Adjusted quantity: 63
+
+	 Item number: 98023, name: hkpnpdbkyneouq, Supplier warehouse: 4, quantity: 3, Order-line amount: 84.24, Adjusted quantity: 105
+
+=======================================
+=======================================
+Transaction ID: 26
+*** New Order Transaction Summary ***
+Customer ID: (3, 2, 667), Last name:ANTIANTIANTI, Credit:GC, C_DISCOUNT:0.2703
+
+Warehouse tax:0.0552, District tax:0.0718
+
+Order ID:3008, Order entry date:2022-11-05 17:31:30.764
+
+#items:11, Total amount:1504.97
+
+Items information:
+	 Item number: 32996, name: wttwupxynsepynlyxzmg, Supplier warehouse: 9, quantity: 3, Order-line amount: 5.34, Adjusted quantity: 50
+
+	 Item number: 85415, name: iyaepjplhhpwntspj, Supplier warehouse: 4, quantity: 3, Order-line amount: 221.82, Adjusted quantity: 71
+
+	 Item number: 829, name: lqeehwfibmjsrcticfwx, Supplier warehouse: 3, quantity: 3, Order-line amount: 288.27, Adjusted quantity: 43
+
+	 Item number: 14055, name: frlgwtqtlghewdee, Supplier warehouse: 8, quantity: 3, Order-line amount: 195.39, Adjusted quantity: 44
+
+	 Item number: 47463, name: aiaperxgtbfbmelkmqg, Supplier warehouse: 3, quantity: 3, Order-line amount: 137.04, Adjusted quantity: 92
+
+	 Item number: 48711, name: yawxkwokdpgaszxgkyrqqt, Supplier warehouse: 6, quantity: 3, Order-line amount: 288.96, Adjusted quantity: 30
+
+	 Item number: 62727, name: ngmkvympofiicr, Supplier warehouse: 8, quantity: 3, Order-line amount: 102.21, Adjusted quantity: 97
+
+	 Item number: 65175, name: zanscnbdjylzftrez, Supplier warehouse: 7, quantity: 3, Order-line amount: 57.03, Adjusted quantity: 27
+
+	 Item number: 79591, name: kujfuuobeysjojbozkxpb, Supplier warehouse: 5, quantity: 3, Order-line amount: 178.62, Adjusted quantity: 84
+
+	 Item number: 80060, name: iainfqodtbfxumbranhwzj, Supplier warehouse: 10, quantity: 3, Order-line amount: 92.61, Adjusted quantity: 70
+
+	 Item number: 89175, name: bkdyjmgztdzmazl, Supplier warehouse: 1, quantity: 3, Order-line amount: 262.74, Adjusted quantity: 91
+
+=======================================
+=======================================
+Transaction ID: 27
+*** New Order Transaction Summary ***
+Customer ID: (3, 2, 2282), Last name:ESEABLEPRES, Credit:GC, C_DISCOUNT:0.1689
+
+Warehouse tax:0.0552, District tax:0.0718
+
+Order ID:3009, Order entry date:2022-11-05 17:31:30.883
+
+#items:14, Total amount:2466.15
+
+Items information:
+	 Item number: 28321, name: mvkhpjgmcmompt, Supplier warehouse: 3, quantity: 3, Order-line amount: 210.45, Adjusted quantity: 50
+
+	 Item number: 81191, name: hchmecejyosrmylklopy, Supplier warehouse: 10, quantity: 3, Order-line amount: 130.38, Adjusted quantity: 79
+
+	 Item number: 63206, name: wmeqhivdccbdveubsu, Supplier warehouse: 9, quantity: 3, Order-line amount: 198.78, Adjusted quantity: 75
+
+	 Item number: 83145, name: yhmpefasyxfdnfvrtp, Supplier warehouse: 10, quantity: 3, Order-line amount: 182.82, Adjusted quantity: 44
+
+	 Item number: 3623, name: alxzobtxoquuosrnt, Supplier warehouse: 4, quantity: 3, Order-line amount: 149.37, Adjusted quantity: 68
+
+	 Item number: 5165, name: hhbsvwvygyoloaffpydwri, Supplier warehouse: 8, quantity: 3, Order-line amount: 289.74, Adjusted quantity: 89
+
+	 Item number: 36063, name: uoijowkmryfsfzgggmlgdu, Supplier warehouse: 10, quantity: 3, Order-line amount: 126.99, Adjusted quantity: 62
+
+	 Item number: 39942, name: etthwzjooayxnnbcg, Supplier warehouse: 3, quantity: 3, Order-line amount: 293.13, Adjusted quantity: 68
+
+	 Item number: 44711, name: wtllziqbcsunrful, Supplier warehouse: 4, quantity: 3, Order-line amount: 75.78, Adjusted quantity: 62
+
+	 Item number: 54981, name: vlnjkyfpjcfrtvbffef, Supplier warehouse: 5, quantity: 3, Order-line amount: 275.34, Adjusted quantity: 69
+
+	 Item number: 81599, name: jtocklzfvakphhklxtuwi, Supplier warehouse: 2, quantity: 3, Order-line amount: 230.43, Adjusted quantity: 73
+
+	 Item number: 89750, name: lrjwtxkixhqeeqjflhcrby, Supplier warehouse: 9, quantity: 3, Order-line amount: 88.32, Adjusted quantity: 63
+
+	 Item number: 96935, name: zxaanaxkpmdrdhsok, Supplier warehouse: 9, quantity: 3, Order-line amount: 221.73, Adjusted quantity: 77
+
+	 Item number: 97511, name: udsamqwnwtosclbakyvfxv, Supplier warehouse: 4, quantity: 3, Order-line amount: 159.69, Adjusted quantity: 90
+
+=======================================
+=======================================
+Transaction ID: 28
+*** New Order Transaction Summary ***
+Customer ID: (3, 5, 1259), Last name:BARPRIPRES, Credit:BC, C_DISCOUNT:0.4008
+
+Warehouse tax:0.0552, District tax:0.0285
+
+Order ID:3003, Order entry date:2022-11-05 17:31:31.013
+
+#items:5, Total amount:665.24
+
+Items information:
+	 Item number: 15041, name: hwxiyfnfuwzxoklva, Supplier warehouse: 6, quantity: 3, Order-line amount: 249.99, Adjusted quantity: 15
+
+	 Item number: 21548, name: eyfwsdxabdavejlidtbfzmp, Supplier warehouse: 6, quantity: 3, Order-line amount: 273.54, Adjusted quantity: 54
+
+	 Item number: 24094, name: gsfapbdbdagktfy, Supplier warehouse: 3, quantity: 3, Order-line amount: 48.03, Adjusted quantity: 88
+
+	 Item number: 30165, name: hrttkkenbziilhslmqwj, Supplier warehouse: 2, quantity: 3, Order-line amount: 208.44, Adjusted quantity: 71
+
+	 Item number: 62827, name: ihzthikotszcgxmf, Supplier warehouse: 2, quantity: 3, Order-line amount: 244.47, Adjusted quantity: 83
+
+=======================================
+=======================================
+Transaction ID: 29
+*** New Order Transaction Summary ***
+Customer ID: (3, 2, 999), Last name:EINGEINGATION, Credit:GC, C_DISCOUNT:0.3296
+
+Warehouse tax:0.0552, District tax:0.0718
+
+Order ID:3010, Order entry date:2022-11-05 17:31:31.061
+
+#items:7, Total amount:980.90
+
+Items information:
+	 Item number: 5691, name: gfjcxsmxabywme, Supplier warehouse: 2, quantity: 3, Order-line amount: 215.79, Adjusted quantity: 23
+
+	 Item number: 23506, name: kzneydhpbwlgsxntgrbn, Supplier warehouse: 4, quantity: 3, Order-line amount: 184.08, Adjusted quantity: 10
+
+	 Item number: 40647, name: wwcrzmlcklpru, Supplier warehouse: 9, quantity: 3, Order-line amount: 195.66, Adjusted quantity: 43
+
+	 Item number: 47842, name: thkrtkrsqugnhazndmu, Supplier warehouse: 4, quantity: 3, Order-line amount: 108.72, Adjusted quantity: 20
+
+	 Item number: 63170, name: wgmzbstsaxitlclfdag, Supplier warehouse: 4, quantity: 3, Order-line amount: 108.51, Adjusted quantity: 76
+
+	 Item number: 72679, name: fdbetxbqpuovsdoypksbb, Supplier warehouse: 5, quantity: 3, Order-line amount: 271.53, Adjusted quantity: 90
+
+	 Item number: 93923, name: yycyomzyoTime used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+skpff, Supplier warehouse: 2, quantity: 3, Order-line amount: 213.99, Adjusted quantity: 107
+
+=======================================
+=======================================
+Transaction ID: 30
+*** New Order Transaction Summary ***
+Customer ID: (3, 4, 630), Last name:ANTIABLEEING, Credit:BC, C_DISCOUNT:0.4753
+
+Warehouse tax:0.0552, District tax:0.1367
+
+Order ID:3008, Order entry date:2022-11-05 17:31:31.131
+
+#items:7, Total amount:816.02
+
+Items information:
+	 Item number: 21939, name: plzjnqgqaorzv, Supplier warehouse: 6, quantity: 3, Order-line amount: 243.60, Adjusted quantity: 77
+
+	 Item number: 32254, name: dmlgozrsakpmhrhlupc, Supplier warehouse: 3, quantity: 3, Order-line amount: 182.43, Adjusted quantity: 42
+
+	 Item number: 42727, name: hlsxzicjxpwrwqpwd, Supplier warehouse: 3, quantity: 3, Order-line amount: 215.49, Adjusted quantity: 74
+
+	 Item number: 64727, name: jwgsvofklpyjkzlcmgslej, Supplier warehouse: 2, quantity: 3, Order-line amount: 117.78, Adjusted quantity: 66
+
+	 Item number: 66279, name: vlcmvoxmzniujarssspsbt, Supplier warehouse: 2, quantity: 3, Order-line amount: 207.48, Adjusted quantity: 108
+
+	 Item number: 89831, name: kvtfkvuukmgihdmkbpotpjl, Supplier warehouse: 1, quantity: 3, Order-line amount: 138.33, Adjusted quantity: 77
+
+	 Item number: 94623, name: sqmjgdclilhqhn, Supplier warehouse: 1, quantity: 3, Order-line amount: 199.71, Adjusted quantity: 51
+
+=======================================
+=======================================
+Transaction ID: 31
+*** New Order Transaction Summary ***
+Customer ID: (3, 2, 1088), Last name:EINGATIONATION, Credit:GC, C_DISCOUNT:0.3906
+
+Warehouse tax:0.0552, District tax:0.0718
+
+Order ID:3011, Order entry date:2022-11-05 17:31:31.196
+
+#items:13, Total amount:1324.25
+
+Items information:
+	 Item number: 64166, name: mkdbnpxsqjyhfvaxpkdomik, Supplier warehouse: 6, quantity: 3, Order-line amount: 15.72, Adjusted quantity: 52
+
+	 Item number: 44565, name: jjscbmzsvohnvxaadqogfu, Supplier warehouse: 2, quantity: 3, Order-line amount: 136.89, Adjusted quantity: 10
+
+	 Item number: 39187, name: ulzogjrbrvlplimfcbj, Supplier warehouse: 6, quantity: 3, Order-line amount: 221.31, Adjusted quantity: 17
+
+	 Item number: 3558, name: vuvpabtnghgqhok, Supplier warehouse: 3, quantity: 3, Order-line amount: 39.09, Adjusted quantity: 59
+
+	 Item number: 8727, name: pxmhvgmjtgggp, Supplier warehouse: 9, quantity: 3, Order-line amount: 54.81, Adjusted quantity: 25
+
+	 Item number: 24158, name: ojgwfkjqglhjsvwzlz, Supplier warehouse: 3, quantity: 3, Order-line amount: 189.06, Adjusted quantity: 39
+
+	 Item number: 38615, name: pciocvhuxpidi, Supplier warehouse: 3, quantity: 3, Order-line amount: 116.43, Adjusted quantity: 44
+
+	 Item number: 52901, name: bwlkbznmggengezdzq, Supplier warehouse: 2, quantity: 3, Order-line amount: 161.52, Adjusted quantity: 55
+
+	 Item number: 72379, name: kzsmabientdaeitvb, Supplier warehouse: 7, quantity: 3, Order-line amount: 166.38, Adjusted quantity: 96
+
+	 Item number: 77543, name: owhlbsiuzhdbrvheb, Supplier warehouse: 3, quantity: 3, Order-line amount: 274.17, Adjusted quantity: 42
+
+	 Item number: 81365, name: nmmtssglntiecgsuezczrp, Supplier warehouse: 8, quantity: 3, Order-line amount: 286.20, Adjusted quantity: 109
+
+	 Item number: 93912, name: riydokbkmbnersu, Supplier warehouse: 8, quantity: 3, Order-line amount: 94.68, Adjusted quantity: 28
+
+	 Item number: 97446, name: oqzsvvuxpirxv, Supplier warehouse: 2, quantity: 3, Order-line amount: 171.90, Adjusted quantity: 25
+
+=======================================
+=======================================
+Transaction ID: 32
+*** New Order Transaction Summary ***
+Customer ID: (3, 3, 2301), Last name:ABLEBARPRES, Credit:GC, C_DISCOUNT:0.2274
+
+Warehouse tax:0.0552, District tax:0.1168
+
+Order ID:3003, Order entry date:2022-11-05 17:31:31.307
+
+#items:18, Total amount:2617.60
+
+Items information:
+	 Item number: 55015, name: gnljgikrnwtmhkrfhz, Supplier warehouse: 4, quantity: 3, Order-line amount: 38.58, Adjusted quantity: 41
+
+	 Item number: 40487, name: ybyaholudohoczgivisrfe, Supplier warehouse: 3, quantity: 10, Order-line amount: 45.20, Adjusted quantity: 52
+
+	 Item number: 20173, name: jwgbwmahbxuhklcfjzai, Supplier warehouse: 2, quantity: 3, Order-line amount: 64.77, Adjusted quantity: 86
+
+	 Item number: 81612, name: rjxoumotwpmlmjqtfwwt, Supplier warehouse: 3, quantity: 3, Order-line amount: 235.41, Adjusted quantity: 84
+
+	 Item number: 48829, name: beqhjmgvrkcmtgpyy, Supplier warehouse: 6, quantity: 3, Order-line amount: 129.66, Adjusted quantity: 74
+
+	 Item number: 24239, name: qbkuiwuzzgnghntuc, Supplier warehouse: 8, quantity: 3, Order-line amount: 102.30, Adjusted quantity: 71
+
+	 Item number: 23971, name: issawvitlryybkfrbusoqs, Supplier warehouse: 4, quantity: 3, Order-line amount: 247.74, Adjusted quantity: 95
+
+	 Item number: 13093, name: smkxxgobjmcptv, Supplier warehouse: 1, quantity: 3, Order-line amount: 65.40, Adjusted quantity: 31
+
+	 Item number: 13631, name: rwghcmcdaaqukwtxuyn, Supplier warehouse: 7, quantity: 3, Order-line amount: 60.39, Adjusted quantity: 33
+
+	 Item number: 16062, name: mcndvyeggpwat, Supplier warehouse: 8, quantity: 3, Order-line amount: 290.49, Adjusted quantity: 65
+
+	 Item number: 21172, name: vqhklshwmhtregblkgv, Supplier warehouse: 6, quantity: 3, Order-line amount: 224.73, Adjusted quantity: 85
+
+	 Item number: 39712, name: lsdjchmmcbrmpxsli, Supplier warehouse: 1, quantity: 3, Order-line amount: 167.67, Adjusted quantity: 95
+
+	 Item number: 47421, name: yvanwnaxnaartisolz, Supplier warehouse: 5, quantity: 3, Order-line amount: 123.36, Adjusted quantity: 94
+
+	 Item number: 48448, name: pdnsumxwafafg, Supplier warehouse: 8, quantity: 3, Order-line amount: 241.29, Adjusted quantity: 38
+
+	 Item number: 69090, name: dibrjubtzwboxdfrqe, Supplier warehouse: 2, quantity: 3, Order-line amount: 229.71, Adjusted quantity: 38
+
+	 Item number: 72403, name: vkqlwnmdxavfvakca, Supplier warehouse: 8, quantity: 3, Order-line amount: 241.32, Adjusted quantity: 45
+
+	 Item number: 93771, name: jmlyqjhywcyfjcjswrvra, Supplier warehouse: 1, quantity: 3, Order-line amount: 109.14, Adjusted quantity: 56
+
+	 Item number: 93860, name: oocukrgqqjuqnbegrb, Supplier warehouse: 1, quantity: 3, Order-line amount: 273.66, Adjusted quantity: 67
+
+=======================================
+=======================================
+Transaction ID: 33
+*** New Order Transaction Summary ***
+Customer ID: (3, 3, 2107), Last name:PRESATIONPRI, Credit:GC, C_DISCOUNT:0.4647
+
+Warehouse tax:0.0552, District tax:0.1168
+
+Order ID:3004, Order entry date:2022-11-05 17:31:31.458
+
+#items:7, Total amount:365.41
+
+Items information:
+	 Item number: 3629, name: tfuoepdmpkdfijtbab, Supplier warehouse: 9, quantity: 3, Order-line amount: 78.54, Adjusted quantity: 67
+
+	 Item number: 20039, name: savjuxcetjpdcdqeigbnut, Supplier warehouse: 2, quantity: 3, Order-line amount: 69.12, Adjusted quantity: 10
+
+	 Item number: 28116, name: hjbvirthbrzdcmfqtyxs, Supplier warehouse: 10, quantity: 3, Order-line amount: 165.06, Adjusted quantity: 74
+
+	 Item number: 28326, name: ljubcsegtlqlntbojx, Supplier warehouse: 9, quantity: 3, Order-line amount: 54.24, Adjusted quantity: 21
+
+	 Item number: 54983, name: jlpyuxljkoejpjnwizyt, Supplier warehouse: 8, quantity: 3, Order-line amount: 182.19, Adjusted quantity: 77
+
+	 Item number: 56551, name: ennufgxszgroggsevrv, Supplier warehouse: 3, quantity: 3, Order-line amount: 22.29, Adjusted quantity: 39
+
+	 Item number: 72363, name: yhlwuytdjjdalhelasef, Supplier warehouse: 2, quantity: 3, Order-line amount: 11.01, Adjusted quantity: 31
+
+=======================================
+=======================================
+Transaction ID: 34
+*** New Order Transaction Summary ***
+Customer ID: (3, 3, 2303), Last name:PRESOUGHTBAR, Credit:GC, C_DISCOUNT:0.2287
+
+Warehouse tax:0.0552, District tax:0.1168
+
+Order ID:3005, Order entry date:2022-11-05 17:31:31.530
+
+#items:10, Total amount:1088.10
+
+Items information:
+	 Item number: 97894, name: ackmxmslggafeomtrhxuqkv, Supplier warehouse: 9, quantity: 3, Order-line amount: 12.18, Adjusted quantity: 77
+
+	 Item number: 4359, name: edxivgkhwgtteegsfvgedj, Supplier warehouse: 7, quantity: 3, OrderTime used: 0
+Time used: 0
+Time used: 0
+-line amount: 234.78, Adjusted quantity: 24
+
+	 Item number: 17383, name: hfwaiwmtwqbstbwhk, Supplier warehouse: 8, quantity: 1, Order-line amount: 11.35, Adjusted quantity: 90
+
+	 Item number: 23207, name: miqfzjehoyebiojjce, Supplier warehouse: 1, quantity: 3, Order-line amount: 241.02, Adjusted quantity: 14
+
+	 Item number: 44702, name: pawvxfvtijuezywfgkwf, Supplier warehouse: 10, quantity: 3, Order-line amount: 152.55, Adjusted quantity: 62
+
+	 Item number: 55010, name: ysqbbabrhsuhzugst, Supplier warehouse: 7, quantity: 3, Order-line amount: 206.94, Adjusted quantity: 12
+
+	 Item number: 62394, name: cnwgpodhasmiyscumuafs, Supplier warehouse: 6, quantity: 3, Order-line amount: 103.17, Adjusted quantity: 90
+
+	 Item number: 65255, name: dgdkanebmtzoig, Supplier warehouse: 5, quantity: 3, Order-line amount: 81.51, Adjusted quantity: 54
+
+	 Item number: 88739, name: idjyerysjajwflr, Supplier warehouse: 10, quantity: 3, Order-line amount: 41.40, Adjusted quantity: 82
+
+	 Item number: 93398, name: ehsscltlxbvzwxkqlp, Supplier warehouse: 2, quantity: 3, Order-line amount: 118.80, Adjusted quantity: 56
+
+=======================================
+=======================================
+Transaction ID: 35
+*** New Order Transaction Summary ***
+Customer ID: (3, 1, 963), Last name:EINGANTIABLE, Credit:GC, C_DISCOUNT:0.2701
+
+Warehouse tax:0.0552, District tax:0.0769
+
+Order ID:3008, Order entry date:2022-11-05 17:31:31.625
+
+#items:17, Total amount:2449.29
+
+Items information:
+	 Item number: 48834, name: kjqgqbnmpvnetsthznlploi, Supplier warehouse: 4, quantity: 3, Order-line amount: 285.12, Adjusted quantity: 108
+
+	 Item number: 80839, name: wvbuwtowbaaijkvewdvtrk, Supplier warehouse: 10, quantity: 3, Order-line amount: 167.10, Adjusted quantity: 45
+
+	 Item number: 48615, name: godljavukbgvyww, Supplier warehouse: 9, quantity: 3, Order-line amount: 262.65, Adjusted quantity: 108
+
+	 Item number: 56977, name: vprqyfdtxthkgcfo, Supplier warehouse: 5, quantity: 3, Order-line amount: 21.00, Adjusted quantity: 66
+
+	 Item number: 62567, name: bkgduawupagwvrgolcwu, Supplier warehouse: 2, quantity: 3, Order-line amount: 276.33, Adjusted quantity: 62
+
+	 Item number: 5929, name: ahoijafnzbkxryurzmluzoe, Supplier warehouse: 2, quantity: 3, Order-line amount: 237.36, Adjusted quantity: 54
+
+	 Item number: 13114, name: txoqgkuxttrrguwh, Supplier warehouse: 10, quantity: 3, Order-line amount: 200.79, Adjusted quantity: 34
+
+	 Item number: 30438, name: xapvznnhcdudndzrdoax, Supplier warehouse: 9, quantity: 3, Order-line amount: 156.24, Adjusted quantity: 19
+
+	 Item number: 31135, name: ikeonfdzcrepmrs, Supplier warehouse: 1, quantity: 3, Order-line amount: 219.78, Adjusted quantity: 17
+
+	 Item number: 31459, name: uuqenomnyenmtoxf, Supplier warehouse: 4, quantity: 3, Order-line amount: 47.88, Adjusted quantity: 26
+
+	 Item number: 31463, name: dvutzqryhtxxpyxrk, Supplier warehouse: 5, quantity: 3, Order-line amount: 90.81, Adjusted quantity: 52
+
+	 Item number: 32455, name: trmfjxdzqnyjgldqqo, Supplier warehouse: 1, quantity: 3, Order-line amount: 268.56, Adjusted quantity: 107
+
+	 Item number: 48533, name: xfltjfsygjdnubzprrl, Supplier warehouse: 2, quantity: 3, Order-line amount: 150.81, Adjusted quantity: 20
+
+	 Item number: 55013, name: hijkwhnkcectaijze, Supplier warehouse: 1, quantity: 3, Order-line amount: 196.98, Adjusted quantity: 61
+
+	 Item number: 65119, name: pkbwxfksrnwcwetzihspe, Supplier warehouse: 6, quantity: 3, Order-line amount: 133.35, Adjusted quantity: 11
+
+	 Item number: 79302, name: fyigeiswurtzfyrey, Supplier warehouse: 6, quantity: 3, Order-line amount: 112.80, Adjusted quantity: 71
+
+	 Item number: 88285, name: iwmwdqeybiirporajq, Supplier warehouse: 2, quantity: 3, Order-line amount: 136.53, Adjusted quantity: 27
+
+=======================================
+=======================================
+Transaction ID: 36
+*** New Order Transaction Summary ***
+Customer ID: (3, 5, 1279), Last name:CALLYEINGPRES, Credit:BC, C_DISCOUNT:0.4567
+
+Warehouse tax:0.0552, District tax:0.0285
+
+Order ID:3004, Order entry date:2022-11-05 17:31:31.780
+
+#items:12, Total amount:1057.32
+
+Items information:
+	 Item number: 84886, name: lhcqjhaqycuyv, Supplier warehouse: 3, quantity: 3, Order-line amount: 81.45, Adjusted quantity: 76
+
+	 Item number: 5667, name: ivwcudphcshopsgaf, Supplier warehouse: 8, quantity: 3, Order-line amount: 88.86, Adjusted quantity: 43
+
+	 Item number: 22951, name: xprigqlwcugyntqmi, Supplier warehouse: 5, quantity: 3, Order-line amount: 26.88, Adjusted quantity: 77
+
+	 Item number: 23046, name: cboovzftdmgnpkxpcnbiyul, Supplier warehouse: 9, quantity: 3, Order-line amount: 181.92, Adjusted quantity: 77
+
+	 Item number: 23135, name: qkgxetskdyjinutakknqz, Supplier warehouse: 8, quantity: 3, Order-line amount: 124.71, Adjusted quantity: 95
+
+	 Item number: 23515, name: hjnaywfffwsjwqekhndbyp, Supplier warehouse: 10, quantity: 3, Order-line amount: 200.07, Adjusted quantity: 18
+
+	 Item number: 36583, name: ikbhqdkrtlqfixpitaxyym, Supplier warehouse: 7, quantity: 3, Order-line amount: 226.05, Adjusted quantity: 65
+
+	 Item number: 47742, name: nlpptjhuttnoejvpfvssx, Supplier warehouse: 5, quantity: 3, Order-line amount: 248.58, Adjusted quantity: 89
+
+	 Item number: 64151, name: lximdbpivucxdedqbgyfs, Supplier warehouse: 4, quantity: 3, Order-line amount: 224.31, Adjusted quantity: 27
+
+	 Item number: 71751, name: cwpleafzftfesbdande, Supplier warehouse: 3, quantity: 3, Order-line amount: 33.66, Adjusted quantity: 50
+
+	 Item number: 86662, name: ufkwihktutnjykycbsjz, Supplier warehouse: 3, quantity: 3, Order-line amount: 264.18, Adjusted quantity: 27
+
+	 Item number: 87775, name: nfddthvidtmteiauhocf, Supplier warehouse: 10, quantity: 3, Order-line amount: 95.13, Adjusted quantity: 50
+
+=======================================
+=======================================
+Transaction ID: 37
+*** New Order Transaction Summary ***
+Customer ID: (3, 3, 1083), Last name:ABLEATIONPRI, Credit:GC, C_DISCOUNT:0.4775
+
+Warehouse tax:0.0552, District tax:0.1168
+
+Order ID:3006, Order entry date:2022-11-05 17:31:31.885
+
+#items:8, Total amount:823.14
+
+Items information:
+	 Item number: 16087, name: fiuvfhpxvwwnrjwwxsc, Supplier warehouse: 7, quantity: 3, Order-line amount: 188.19, Adjusted quantity: 37
+
+	 Item number: 31750, name: zriffdjjxaeaopcmcvz, Supplier warehouse: 10, quantity: 3, Order-line amount: 85.95, Adjusted quantity: 81
+
+	 Item number: 47698, name: solsdgdqfcjiuzsdx, Supplier warehouse: 2, quantity: 3, Order-line amount: 97.89, Adjusted quantity: 78
+
+	 Item number: 56229, name: cmtikpxfavlpipomqpxx, Supplier warehouse: 1, quantity: 3, Order-line amount: 142.08, Adjusted quantity: 109
+
+	 Item number: 75495, name: xftunyonzwqikvsjsaxu, Supplier warehouse: 1, quantity: 3, Order-line amount: 257.79, Adjusted quantity: 18
+
+	 Item number: 80454, name: gtwthhmuouhsl, Supplier warehouse: 3, quantity: 3, Order-line amount: 226.53, Adjusted quantity: 11
+
+	 Item number: 84967, name: xfgfdsqzbvyzhz, Supplier warehouse: 9, quantity: 3, Order-line amount: 282.81, Adjusted quantity: 94
+
+	 Item number: 87237, name: ifsizfwsricsxf, Supplier warehouse: 1, quantity: 3, Order-line amount: 62.94, Adjusted quantity: 51
+
+=======================================
+=======================================
+Transaction ID: 38
+*** New Order Transaction Summary ***
+Customer ID: (3, 3, 1795), Last name:EINGESEPRES, Credit:GC, C_DISCOUNT:0.3919
+
+Warehouse tax:0.0552, District tax:0.1168
+
+Order ID:3007, Order entry date:2022-11-05 17:31:31.961
+
+#items:17, Total amount:1730.78
+
+Items information:
+	 Item number: 48803, name: ljasolgttxnwdzsif, Supplier warehouse: 8, quantity: 3, Order-line amount: 48.12, Adjusted quantity: 38
+
+	 Item number: 79591, name: kujfuuobeysjojbozkxpb, Supplier warehouse: 3, quantity: 3, Order-line amount: 178.62, Adjusted quantity: 68
+
+	 Item number: 56806, name: xxlqzaxoubmmhaxwu, Supplier warehouse: 8, quantity: 3, Order-line amount: 93.33, Adjusted quantity: 52
+
+	 Item number: 48231, name: ybgdjgssccohlzu, Supplier warehouse: 9, quantity: 3, Order-line amount: 117.87, Adjusted quantity: 13
+
+	 Item number: 90077, name: gnjhursxindtbhppqeocthu, Supplier warehouse: 9, quantity: 3, Order-linTime used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+e amount: 202.95, Adjusted quantity: 39
+
+	 Item number: 61159, name: kggweyfphndxqmt, Supplier warehouse: 4, quantity: 3, Order-line amount: 10.50, Adjusted quantity: 53
+
+	 Item number: 15886, name: xsfluehpcwmkynrvmw, Supplier warehouse: 8, quantity: 3, Order-line amount: 292.02, Adjusted quantity: 34
+
+	 Item number: 6202, name: hrmjxadqfpudgrcndgtacsv, Supplier warehouse: 6, quantity: 3, Order-line amount: 111.72, Adjusted quantity: 95
+
+	 Item number: 31447, name: pbnugwjtswsvybchyizmdf, Supplier warehouse: 7, quantity: 3, Order-line amount: 37.95, Adjusted quantity: 41
+
+	 Item number: 32368, name: qfjtdzijadpdjy, Supplier warehouse: 10, quantity: 3, Order-line amount: 133.26, Adjusted quantity: 47
+
+	 Item number: 46755, name: oeibiwefftelyusklw, Supplier warehouse: 5, quantity: 3, Order-line amount: 246.42, Adjusted quantity: 26
+
+	 Item number: 56549, name: dawdxziccrbqzfdq, Supplier warehouse: 9, quantity: 3, Order-line amount: 137.85, Adjusted quantity: 82
+
+	 Item number: 65255, name: dgdkanebmtzoig, Supplier warehouse: 3, quantity: 3, Order-line amount: 81.51, Adjusted quantity: 68
+
+	 Item number: 69061, name: zqiemqmphtsdov, Supplier warehouse: 7, quantity: 3, Order-line amount: 217.50, Adjusted quantity: 46
+
+	 Item number: 72407, name: qpkllrmogwqapls, Supplier warehouse: 6, quantity: 3, Order-line amount: 216.06, Adjusted quantity: 86
+
+	 Item number: 72759, name: lvxohwwkjmqnxurbightei, Supplier warehouse: 6, quantity: 3, Order-line amount: 191.13, Adjusted quantity: 59
+
+	 Item number: 92871, name: eruwnxsrdonowfcqhjaifar, Supplier warehouse: 5, quantity: 3, Order-line amount: 111.69, Adjusted quantity: 53
+
+=======================================
+=======================================
+Transaction ID: 39
+*** New Order Transaction Summary ***
+Customer ID: (3, 2, 627), Last name:ANTIABLEANTI, Credit:GC, C_DISCOUNT:0.0441
+
+Warehouse tax:0.0552, District tax:0.0718
+
+Order ID:3012, Order entry date:2022-11-05 17:31:32.119
+
+#items:17, Total amount:2555.69
+
+Items information:
+	 Item number: 32423, name: nwndqhhnkblcwkcy, Supplier warehouse: 9, quantity: 3, Order-line amount: 176.58, Adjusted quantity: 58
+
+	 Item number: 10469, name: snhqkjstdywnx, Supplier warehouse: 8, quantity: 3, Order-line amount: 236.19, Adjusted quantity: 79
+
+	 Item number: 47055, name: luztdolzuuzjui, Supplier warehouse: 6, quantity: 3, Order-line amount: 177.09, Adjusted quantity: 71
+
+	 Item number: 87137, name: fcppmbgozhlfergin, Supplier warehouse: 5, quantity: 3, Order-line amount: 161.28, Adjusted quantity: 21
+
+	 Item number: 19878, name: jgvpguqnqomhgyqoyt, Supplier warehouse: 9, quantity: 3, Order-line amount: 223.11, Adjusted quantity: 54
+
+	 Item number: 5447, name: biqtspeidbfsyn, Supplier warehouse: 2, quantity: 3, Order-line amount: 265.53, Adjusted quantity: 78
+
+	 Item number: 15580, name: gimqsbxeeltliabxoymrw, Supplier warehouse: 8, quantity: 3, Order-line amount: 268.59, Adjusted quantity: 34
+
+	 Item number: 20051, name: xdlrufykemdqcktvdwvnzz, Supplier warehouse: 6, quantity: 3, Order-line amount: 6.24, Adjusted quantity: 90
+
+	 Item number: 24007, name: owznbxdszowdbdbr, Supplier warehouse: 2, quantity: 3, Order-line amount: 58.68, Adjusted quantity: 12
+
+	 Item number: 24293, name: gyuxauqxykiubqj, Supplier warehouse: 2, quantity: 3, Order-line amount: 57.78, Adjusted quantity: 18
+
+	 Item number: 24294, name: lowvlhghfaegciifvff, Supplier warehouse: 3, quantity: 3, Order-line amount: 149.25, Adjusted quantity: 108
+
+	 Item number: 32487, name: ioxdzwfadwfeursfzff, Supplier warehouse: 9, quantity: 3, Order-line amount: 131.34, Adjusted quantity: 54
+
+	 Item number: 38631, name: ikprhljmxxymtjevrggxdu, Supplier warehouse: 8, quantity: 3, Order-line amount: 63.75, Adjusted quantity: 69
+
+	 Item number: 73315, name: texeeousgnwgmsbzrcddxnn, Supplier warehouse: 9, quantity: 3, Order-line amount: 116.43, Adjusted quantity: 60
+
+	 Item number: 78939, name: qygmgmffbvuchemlcep, Supplier warehouse: 2, quantity: 3, Order-line amount: 50.25, Adjusted quantity: 17
+
+	 Item number: 80995, name: obxllftvmytvf, Supplier warehouse: 6, quantity: 3, Order-line amount: 109.89, Adjusted quantity: 30
+
+	 Item number: 97985, name: vtivwsjgjoootwxplojo, Supplier warehouse: 7, quantity: 3, Order-line amount: 120.33, Adjusted quantity: 109
+
+=======================================
+=======================================
+Transaction ID: 40
+*** New Order Transaction Summary ***
+Customer ID: (3, 3, 2291), Last name:EINGBARPRES, Credit:GC, C_DISCOUNT:0.4120
+
+Warehouse tax:0.0552, District tax:0.1168
+
+Order ID:3008, Order entry date:2022-11-05 17:31:32.320
+
+#items:10, Total amount:1584.05
+
+Items information:
+	 Item number: 16103, name: wxbdclctxifktmzctxdcri, Supplier warehouse: 8, quantity: 3, Order-line amount: 240.21, Adjusted quantity: 28
+
+	 Item number: 24023, name: gbmjgznqfbxmxicgrqnl, Supplier warehouse: 10, quantity: 3, Order-line amount: 148.56, Adjusted quantity: 58
+
+	 Item number: 28103, name: aoqgochhlsheajpwrm, Supplier warehouse: 9, quantity: 3, Order-line amount: 164.91, Adjusted quantity: 24
+
+	 Item number: 28132, name: lcbfdlyhmeuoec, Supplier warehouse: 7, quantity: 3, Order-line amount: 152.13, Adjusted quantity: 75
+
+	 Item number: 30151, name: vyoczptncrnzma, Supplier warehouse: 5, quantity: 3, Order-line amount: 102.84, Adjusted quantity: 79
+
+	 Item number: 37787, name: cveldeqlyhvrkjnrxkb, Supplier warehouse: 5, quantity: 10, Order-line amount: 818.40, Adjusted quantity: 37
+
+	 Item number: 43159, name: veyqxnitxicivjgruxubout, Supplier warehouse: 7, quantity: 3, Order-line amount: 36.03, Adjusted quantity: 77
+
+	 Item number: 81621, name: jrhnumntncssvhtsrov, Supplier warehouse: 8, quantity: 3, Order-line amount: 267.78, Adjusted quantity: 13
+
+	 Item number: 94871, name: ofrrxhagdbkpstnaad, Supplier warehouse: 4, quantity: 3, Order-line amount: 237.87, Adjusted quantity: 71
+
+	 Item number: 97959, name: gixesbkrmcxnypkz, Supplier warehouse: 7, quantity: 3, Order-line amount: 129.87, Adjusted quantity: 34
+
+=======================================
+=======================================
+Transaction ID: 41
+*** New Order Transaction Summary ***
+Customer ID: (3, 5, 1027), Last name:PRIPRIPRES, Credit:GC, C_DISCOUNT:0.0732
+
+Warehouse tax:0.0552, District tax:0.0285
+
+Order ID:3005, Order entry date:2022-11-05 17:31:32.427
+
+#items:17, Total amount:2109.24
+
+Items information:
+	 Item number: 31319, name: cuesmehcgpuueuwgx, Supplier warehouse: 4, quantity: 3, Order-line amount: 262.80, Adjusted quantity: 84
+
+	 Item number: 52454, name: jgygxdvsvwhhagamobc, Supplier warehouse: 6, quantity: 3, Order-line amount: 147.09, Adjusted quantity: 62
+
+	 Item number: 15318, name: chflcoxbnuoug, Supplier warehouse: 1, quantity: 3, Order-line amount: 63.99, Adjusted quantity: 22
+
+	 Item number: 16090, name: nrkyrmwflkfxyf, Supplier warehouse: 8, quantity: 3, Order-line amount: 72.27, Adjusted quantity: 39
+
+	 Item number: 89574, name: ybirauntytaatoyqph, Supplier warehouse: 7, quantity: 3, Order-line amount: 94.44, Adjusted quantity: 88
+
+	 Item number: 95845, name: firpctzkldknpswqrx, Supplier warehouse: 2, quantity: 3, Order-line amount: 44.28, Adjusted quantity: 80
+
+	 Item number: 931, name: mhfpowplppwsvb, Supplier warehouse: 9, quantity: 3, Order-line amount: 38.01, Adjusted quantity: 33
+
+	 Item number: 1860, name: bvpiiplkjhvosyujl, Supplier warehouse: 3, quantity: 3, Order-line amount: 136.11, Adjusted quantity: 68
+
+	 Item number: 16102, name: jnilvjkmfiphwauhzmf, Supplier warehouse: 3, quantity: 3, Order-line amount: 149.88, Adjusted quantity: 25
+
+	 Item number: 22151, name: teidcywzwqfunifisyry, Supplier warehouse: 4, quantity: 3, Order-line amount: 160.32, Adjusted quantity: 67
+
+	 Item number: 28245, name: amxvasfvkihvs, Supplier warehouse: 5, quantity: 3, Order-line amount: 125.01, Adjusted quantity: 26
+
+	 Item number: 47831, name: cwamizxggisxmcxel, Supplier warehouse: 3, quantity: 3, Order-line amount: 256.02, Adjusted quantity: 63
+
+	 Item number: 63715, name: txgrzpoplwzgbrhlcago, Supplier warehouse: 7, quantity: 3, Order-line amount: 139.80, Adjusted quantity: 43
+
+	 Item number: 64691, name: oitxklozvannknycutnq, Supplier warehouse: 4, quantity: 3, Order-line amount: 108.27Time used: 0
+Time used: 0
+Time used: 0
+, Adjusted quantity: 109
+
+	 Item number: 72157, name: nybnajhlxnvkoksml, Supplier warehouse: 10, quantity: 3, Order-line amount: 132.60, Adjusted quantity: 35
+
+	 Item number: 79327, name: vrpbkdqstuiwznhvhs, Supplier warehouse: 7, quantity: 3, Order-line amount: 142.05, Adjusted quantity: 50
+
+	 Item number: 83392, name: njypmyeqbpvwgiwir, Supplier warehouse: 5, quantity: 3, Order-line amount: 27.12, Adjusted quantity: 37
+
+=======================================
+=======================================
+Transaction ID: 42
+*** New Order Transaction Summary ***
+Customer ID: (3, 3, 1219), Last name:EINGABLEBAR, Credit:BC, C_DISCOUNT:0.2497
+
+Warehouse tax:0.0552, District tax:0.1168
+
+Order ID:3009, Order entry date:2022-11-05 17:31:32.579
+
+#items:12, Total amount:1607.63
+
+Items information:
+	 Item number: 60486, name: bgciartqcsistuyk, Supplier warehouse: 10, quantity: 3, Order-line amount: 121.65, Adjusted quantity: 35
+
+	 Item number: 75233, name: ykjysnxasgiyi, Supplier warehouse: 8, quantity: 3, Order-line amount: 57.75, Adjusted quantity: 88
+
+	 Item number: 5367, name: kffqmiblkpagnqzwufx, Supplier warehouse: 10, quantity: 3, Order-line amount: 54.96, Adjusted quantity: 46
+
+	 Item number: 5447, name: biqtspeidbfsyn, Supplier warehouse: 8, quantity: 3, Order-line amount: 265.53, Adjusted quantity: 75
+
+	 Item number: 9807, name: jsoyuallaoisbcjkohzfv, Supplier warehouse: 7, quantity: 3, Order-line amount: 28.98, Adjusted quantity: 66
+
+	 Item number: 24079, name: xmjfdkqndjekxemvb, Supplier warehouse: 4, quantity: 3, Order-line amount: 258.45, Adjusted quantity: 24
+
+	 Item number: 40679, name: hdtzikrnadmrgazhqjulxwz, Supplier warehouse: 8, quantity: 3, Order-line amount: 180.90, Adjusted quantity: 87
+
+	 Item number: 45015, name: vztsbrngitojiavmet, Supplier warehouse: 6, quantity: 3, Order-line amount: 83.58, Adjusted quantity: 73
+
+	 Item number: 63511, name: rxnpixaxresvvthvvbbpzd, Supplier warehouse: 7, quantity: 3, Order-line amount: 278.55, Adjusted quantity: 58
+
+	 Item number: 79558, name: xqbfvnkujlnsxgtroo, Supplier warehouse: 3, quantity: 3, Order-line amount: 135.18, Adjusted quantity: 38
+
+	 Item number: 89799, name: tyvwswtmbbqtikqchellwrq, Supplier warehouse: 4, quantity: 3, Order-line amount: 246.06, Adjusted quantity: 93
+
+	 Item number: 98005, name: bykuvqkyohwvujbhnxk, Supplier warehouse: 10, quantity: 3, Order-line amount: 116.61, Adjusted quantity: 42
+
+=======================================
+=======================================
+Transaction ID: 43
+*** New Order Transaction Summary ***
+Customer ID: (3, 5, 2250), Last name:PRIOUGHTANTI, Credit:GC, C_DISCOUNT:0.1803
+
+Warehouse tax:0.0552, District tax:0.0285
+
+Order ID:3006, Order entry date:2022-11-05 17:31:32.690
+
+#items:7, Total amount:956.28
+
+Items information:
+	 Item number: 24295, name: zdksjpebjnfgnirsjmqgi, Supplier warehouse: 8, quantity: 3, Order-line amount: 85.53, Adjusted quantity: 11
+
+	 Item number: 40615, name: bwantykiwmswurnzhlop, Supplier warehouse: 7, quantity: 3, Order-line amount: 66.51, Adjusted quantity: 30
+
+	 Item number: 51878, name: kwxeixspjsmgqfnhrhw, Supplier warehouse: 4, quantity: 3, Order-line amount: 207.42, Adjusted quantity: 27
+
+	 Item number: 55751, name: tldrwbjqmayjpslwxcluez, Supplier warehouse: 1, quantity: 3, Order-line amount: 269.46, Adjusted quantity: 54
+
+	 Item number: 64991, name: mvwyndmehivpambbzxrjo, Supplier warehouse: 8, quantity: 3, Order-line amount: 232.44, Adjusted quantity: 89
+
+	 Item number: 69107, name: zvszljdcidzvceyfyzrzih, Supplier warehouse: 7, quantity: 3, Order-line amount: 120.33, Adjusted quantity: 18
+
+	 Item number: 94775, name: vgkmvhumpapks, Supplier warehouse: 9, quantity: 3, Order-line amount: 94.83, Adjusted quantity: 41
+
+=======================================
+=======================================
+Transaction ID: 44
+*** New Order Transaction Summary ***
+Customer ID: (3, 1, 331), Last name:PRIPRIBAR, Credit:GC, C_DISCOUNT:0.3726
+
+Warehouse tax:0.0552, District tax:0.0769
+
+Order ID:3009, Order entry date:2022-11-05 17:31:32.754
+
+#items:12, Total amount:1340.00
+
+Items information:
+	 Item number: 71093, name: lgjtscgqctrrqmsk, Supplier warehouse: 10, quantity: 3, Order-line amount: 249.27, Adjusted quantity: 107
+
+	 Item number: 6023, name: hlqsrmwrcqimfsgxejaxl, Supplier warehouse: 7, quantity: 3, Order-line amount: 219.93, Adjusted quantity: 54
+
+	 Item number: 6063, name: achftvtgczfmyqdvjarfv, Supplier warehouse: 2, quantity: 3, Order-line amount: 32.10, Adjusted quantity: 58
+
+	 Item number: 11621, name: ftkuttkuskqdtxgocjz, Supplier warehouse: 5, quantity: 3, Order-line amount: 51.99, Adjusted quantity: 63
+
+	 Item number: 15002, name: cwdobiltshlmadcdexd, Supplier warehouse: 4, quantity: 3, Order-line amount: 152.67, Adjusted quantity: 86
+
+	 Item number: 16671, name: wfvuexopjvpny, Supplier warehouse: 9, quantity: 3, Order-line amount: 17.07, Adjusted quantity: 61
+
+	 Item number: 48551, name: voklkmypifvhid, Supplier warehouse: 10, quantity: 3, Order-line amount: 200.37, Adjusted quantity: 57
+
+	 Item number: 54968, name: takmqldinnttwdqskr, Supplier warehouse: 5, quantity: 3, Order-line amount: 229.35, Adjusted quantity: 38
+
+	 Item number: 55975, name: ryvafkrnfdjslvmtf, Supplier warehouse: 4, quantity: 3, Order-line amount: 183.99, Adjusted quantity: 47
+
+	 Item number: 73407, name: oysfrrnjkmuxx, Supplier warehouse: 5, quantity: 3, Order-line amount: 123.48, Adjusted quantity: 72
+
+	 Item number: 95954, name: opouxgtinnkzfkqenmlbe, Supplier warehouse: 8, quantity: 3, Order-line amount: 151.68, Adjusted quantity: 60
+
+	 Item number: 96991, name: etvdfqearhsrrabacxmbcys, Supplier warehouse: 8, quantity: 3, Order-line amount: 274.68, Adjusted quantity: 92
+
+=======================================
+=======================================
+Transaction ID: 45
+*** New Order Transaction Summary ***
+Customer ID: (3, 5, 1985), Last name:ESEANTIESE, Credit:GC, C_DISCOUNT:0.0000
+
+Warehouse tax:0.0552, District tax:0.0285
+
+Order ID:3007, Order entry date:2022-11-05 17:31:32.865
+
+#items:17, Total amount:2138.74
+
+Items information:
+	 Item number: 88691, name: iovmqtmpkbsyhv, Supplier warehouse: 8, quantity: 3, Order-line amount: 13.80, Adjusted quantity: 52
+
+	 Item number: 97827, name: dvtutpvyeblkhmcbhdjcj, Supplier warehouse: 8, quantity: 3, Order-line amount: 125.40, Adjusted quantity: 71
+
+	 Item number: 89743, name: zrovzxpwfmlebmmqo, Supplier warehouse: 7, quantity: 3, Order-line amount: 72.69, Adjusted quantity: 43
+
+	 Item number: 64453, name: ykebpntyqpyprcvsejb, Supplier warehouse: 7, quantity: 3, Order-line amount: 235.83, Adjusted quantity: 93
+
+	 Item number: 54949, name: gfvqmdgeepbuinkjyhhoaqh, Supplier warehouse: 9, quantity: 3, Order-line amount: 178.83, Adjusted quantity: 19
+
+	 Item number: 72930, name: hjeazkrimlsac, Supplier warehouse: 1, quantity: 3, Order-line amount: 113.70, Adjusted quantity: 87
+
+	 Item number: 15967, name: zzunssxirbjcx, Supplier warehouse: 1, quantity: 3, Order-line amount: 3.84, Adjusted quantity: 107
+
+	 Item number: 21158, name: gqtxkjoknauefebnqsvq, Supplier warehouse: 8, quantity: 3, Order-line amount: 163.62, Adjusted quantity: 19
+
+	 Item number: 24277, name: kuoalhdjmgpmxxd, Supplier warehouse: 4, quantity: 3, Order-line amount: 99.00, Adjusted quantity: 94
+
+	 Item number: 32358, name: fzsaqdbxowntster, Supplier warehouse: 7, quantity: 3, Order-line amount: 46.20, Adjusted quantity: 84
+
+	 Item number: 61147, name: rphpfrbcwonsxb, Supplier warehouse: 4, quantity: 3, Order-line amount: 59.76, Adjusted quantity: 85
+
+	 Item number: 64710, name: rsrevfogfjdgwh, Supplier warehouse: 4, quantity: 3, Order-line amount: 214.62, Adjusted quantity: 27
+
+	 Item number: 65209, name: lgrcbnuzhetphalttuwzqt, Supplier warehouse: 4, quantity: 3, Order-line amount: 14.91, Adjusted quantity: 105
+
+	 Item number: 81042, name: yhqixarwczdatkleumbpbdf, Supplier warehouse: 5, quantity: 3, Order-line amount: 142.44, Adjusted quantity: 29
+
+	 Item number: 81093, name: farrmmvyyxxsg, Supplier warehouse: 9, quantity: 3, Order-line amount: 131.43, Adjusted quantity: 15
+
+	 Item number: 89312, name: goqyudfuoelrxric, Supplier warehouse: 3, quantity: 3, Order-line amount: 295.68, Adjusted quantity: 79
+
+	 Item number: 97911, name: gfrdrgnnwospigfzhqv, Supplier warehouse: 8, quantity: 3, Order-line amount: 61.80, Adjusted quantity: 48
+
+=======================================
+=======================================
+Transaction ID: 46
+*** New Order Transaction Summary ***
+Customer ID: (3, 1, 2307), Last name:PRICALLYATION, Credit:BC, C_DISCOUNT:0.2356
+
+Warehouse tax:0.0552, District tax:0.0769
+
+Order ID:3010, Order entry date:2022-11-05 17:31:33.047
+
+#items:19, Total amount:2771.89
+
+Items information:
+	 Item number: 54727, name: xihdyghvqafhtppg, Supplier warehouse: 2, quantity: 3, Order-line amount: 287.01, Adjusted quantity: 23
+
+	 Item number: 89823, name: zmpqcrgwotbpottaudoj, Supplier warehouse: 8, quantity: 3, Order-line amount: 126.09, Adjusted quantity: 31
+
+	 Item number: 56727, name: ccbjxnylnzqecs, Supplier warehouse: 3, quantity: 3, Order-line amount: 52.98, Adjusted quantity: 32
+
+	 Item number: 97886, name: yxfqwdgvozkdtaxjsov, Supplier warehouse: 7, quantity: 3, Order-line amount: 250.08, Adjusted quantity: 73
+
+	 Item number: 56038, name: slommudyjdtzofrbxrbid, Supplier warehouse: 7, quantity: 3, Order-line amount: 211.26, Adjusted quantity: 72
+
+	 Item number: 71140, name: zlbjxrtuzwuxlqhyzilwrs, Supplier warehouse: 7, quantity: 3, Order-line amount: 276.03, Adjusted quantity: 91
+
+	 Item number: 89495, name: cfjxqjmgzrrmvfcsv, Supplier warehouse: 7, quantity: 3, Order-line amount: 22.23, Adjusted quantity: 88
+
+	 Item number: 39655, name: dcrbduwgfqhofmggdw, Supplier warehouse: 8, quantity: 3, Order-line amount: 122.79, Adjusted quantity: 20
+
+	 Item number: 3757, name: jmmnqngnespbzguwo, Supplier warehouse: 6, quantity: 3, Order-line amount: 195.51, Adjusted quantity: 40
+
+	 Item number: 22206, name: wfazyuomrckbhnx, Supplier warehouse: 6, quantity: 3, Order-line amount: 70.89, Adjusted quantity: 90
+
+	 Item number: 22235, name: feuxirjgrxqijljrwhdtmqy, Supplier warehouse: 1, quantity: 3, Order-line amount: 210.81, Adjusted quantity: 27
+
+	 Item number: 26051, name: eoqckeiinmyasad, Supplier warehouse: 8, quantity: 3, Order-line amount: 39.81, Adjusted quantity: 63
+
+	 Item number: 27213, name: adgdsmagmhtzotlmtwgrq, Supplier warehouse: 2, quantity: 3, Order-line amount: 38.34, Adjusted quantity: 88
+
+	 Item number: 38757, name: eyzazomwqgavnlsdrc, Supplier warehouse: 1, quantity: 3, Order-line amount: 271.95, Adjusted quantity: 26
+
+	 Item number: 60123, name: cyyjljlzfuzdetdecljq, Supplier warehouse: 3, quantity: 3, Order-line amount: 121.44, Adjusted quantity: 93
+
+	 Item number: 72415, name: ufqbllbisyxxqsludvpkzqy, Supplier warehouse: 2, quantity: 3, Order-line amount: 262.14, Adjusted quantity: 13
+
+	 Item number: 79429, name: yolqrnpvpxuwnurqouaocih, Supplier warehouse: 10, quantity: 3, Order-line amount: 120.78, Adjusted quantity: 86
+
+	 Item number: 88999, name: jiapajitaggfmdhqq, Supplier warehouse: 10, quantity: 3, Order-line amount: 272.22, Adjusted quantity: 52
+
+	 Item number: 96451, name: hqhowwtuvfguceqb, Supplier warehouse: 8, quantity: 3, Order-line amount: 250.74, Adjusted quantity: 38
+
+=======================================
+=======================================
+Transaction ID: 47
+********** Payment Transaction *********
+Customer info: 
+Identifier: (3, 4, 7)
+Name: (jehndiykcllgc, OE, BARBARANTI)
+Address: (ptvlbfadkrsksrys, rkwwlddtkiet, cfxjsxoqpchonztfd, OW, 202211111)
+Phone: 6567259741848902
+Since: 2022-08-02T09:16:07.424Z
+Credit status: GC
+Credit limit: 50000.0
+Discount: 0.32
+Balance: -75.68
+Warehouse address: (rrdczwmrlfxblg, prpgrntaqoosvxpkj, jlavsqccr, FR, 123456789)
+district address: (dszvssuonqhqrruysxy, hvknqvpmuyrofr, vodsxsbuyhtzws, PM, 123456789)
+Payment: 65.68
+
+=======================================
+=======================================
+Transaction ID: 48
+order id: 2989, entry time: 17:16:16Customer name: hlmvrgjb, OE, ANTIANTIPRESpopular item: cxecxmjkqmpmxhunqr quantity:5
+popular item: yynhuuuqascoamsvdyeixo quantity:5
+popular item: bqtvmfeqhwmlpnkljrkrm quantity:5
+popular item: ulsfohyflhbiakom quantity:5
+popular item: tawdcmvylwlotudwft quantity:5
+popular item: dkzmvtptlaobaigpnwl quantity:5
+popular item: jeaxmrzfzdsxygbz quantity:5
+popular item: ouurmvlixxpharuvp quantity:5
+order id: 2990, entry time: 17:16:16Customer name: xrpgzuaowrgc, OE, PRIEINGABLEpopular item: vgzsnsrllkouwfkokroqy quantity:5
+popular item: ssubsrhqdowiayuqof quantity:5
+popular item: pjunramzmzmxw quantity:5
+popular item: jaazjkganngxrijvcrp quantity:5
+popular item: czrcdbagzajjzbgityiesxy quantity:5
+popular item: ogsoeexhqwaiteephgph quantity:5
+order id: 2991, entry time: 17:16:16Customer name: udkevzfr, OE, ABLEESEOUGHTpopular item: xtunpmajmolyokkowgpuvf quantity:5
+popular item: aqoldbpmesfwqgz quantity:5
+popular item: lodtzncvggvqoksnxmy quantity:5
+popular item: sqisqsacwghaoyyxnqfob quantity:5
+popular item: wtlcaktuvvvmlggcpivmxt quantity:5
+popular item: cwrsccmjljbkfhm quantity:5
+popular item: urjwvfbhcrlplznamrohx quantity:5
+popular item: dlqvlbttpmadrqglhbkogsu quantity:5
+popular item: fdzoxwdqdjxdddksinmrl quantity:5
+popular item: tctbjmfntflegxdynnbvp quantity:5
+popular item: vsmasespfsimxky quantity:5
+popular item: cdjbsbcqnxfbvd quantity:5
+popular item: iyhnhxybdvvwxpkt quantity:5
+popular item: tvltvjhkynlewsiscqlof quantity:5
+popular item: mjhxgaggjogekcaix quantity:5
+order id: 2992, entry time: 17:16:16Customer name: ihbarpfn, OE, PRIPRIABLEpopular item: ademxhsfqlkilhds quantity:5
+popular item: grzvrgbyxkuoenkmtjdbu quantity:5
+popular item: svuqvirymkyxethvah quantity:5
+popular item: evmstdrolfwjoh quantity:5
+popular item: iguqfvliflqoo quantity:5
+popular item: shwssxfodmqtxcwvzfnuqr quantity:5
+popular item: ndqeicvygytdikll quantity:5
+popular item: baocilbooiaoxlvli quantity:5
+popular item: niemdwvgwsnwnepge quantity:5
+popular item: qxqxpaogyrrtvzwuoofvf quantity:5
+popular item: xptwmtkjrtfmriilkwa quantity:5
+popular item: arwlxibyyrydmhamkoaopx quantity:5
+popular item: xapriskcyytcgqbwjzmm quantity:5
+popular item: ihfuajexohruwhxpess quantity:5
+popular item: reisdwkrqseeuyonja quantity:5
+popular item: thcnrhoqcmxnqnqnils quantity:5
+popular item: hqjoxofhfwglb quantity:5
+popular item: jldycbnddzhnygxa quantity:5
+order id: 2993, entry time: 17:16:16Customer name: xlsklqfppuit, OE, ANTIESEANTIpopular item: pnzowtcplbbiy quantity:5
+popular item: egbahhgmsjapruvnljxkts quantity:5
+popular item: fevmacdbuxnxgpqvyxg quantity:5
+popular item: moiujqzlhoogjscudcc quantity:5
+popular item: apiffumkkezhuoctuqclb quantity:5
+popular item: uwlrgicdeijtskvtjl quantity:5
+order id: 2994, entry time: 17:16:16Customer name: ystqfuwxadzbmac, OE, EINGBARATIONpopular item: tyqktqkynatjjp quantity:5
+popular item: kidjtjhjzdonl quantity:5
+popular item: gcvpemjpophtonwoblq quantity:5
+popular item: pdzqmkfxwxcsw quantity:5
+popular item: brxcqexewdrjifzodlnszi quantity:5
+popular item: jbwicfzdlpypmclp quantity:5
+popular item: icwjkycagzqxes quantity:5
+popular item: mxjoodcxleaxid quantity:5
+popular item: mxlkhcczbckcohfq quantity:5
+order id: 2995, entry time: 17:16:16Customer name: cpwbrvphrkicof, OE, EINGBARCALLYpopular item: cudxhlngfviobpnkoydrn quantity:5
+popular item: trfgmzudnmhwzotjfhx quantity:5
+popular item: ekdolefjffuemjmyhhtugn quantity:5
+popular item: cxgtqruziliqmkgirpjg quantity:5
+popular item: fxgyqvwyvfvnsyglon quantity:5
+popular item: yelykwkwbuvwkiitow quantity:5
+popular item: ihflinmzbjvhhntvtq quantity:5
+popular item: srczjslqbdjgsm quantity:5
+popular item: koiivdnjxxbeqkkcqmoshn quantity:5
+popular item: pszepttdsukaceyalemd quantity:5
+popular item: hxqezvaxpcuwwaef quantity:5
+popular item: lwiuhzkycgqogdumhef quantity:5
+popular item: gtsjaboloussvob quantity:5
+order id: 2996, entry time: 17:16:16Customer name: gzlmiwaqz, OE, ATIONANTIBARpopular item: zlxjywdfgpvbdqtdkugkl quantity:5
+popular item: lidzyicjtgocd quantity:5
+popular item: qxehtmgscfooxflqfid quantity:5
+popular item: zsczntzjyirtx quantity:5
+popular item: xkuekaphkihioe quantity:5
+popular item: qwkftafanqzioinrgjv quantity:5
+popular item: gwctwnhbldtfpe quantity:5
+popular item: uvwpzjwpojxofyjolxmsjs quantity:5
+popular item: wmsswibybjzbsmfbcjmyp quantity:5
+popular item: kmpxkdsdyjuwmwraxgoofa quantity:5
+popular item: mzrteibldwnaxbtciaozxc quantity:5
+popular item: ewrctyzakcqucvcs quantity:5
+popular item: uiuaanpttvlavcldsdol quantity:5
+popular item: efpgsygysrhyq quantity:5
+popular item: flkfuyxxwjnyirlnalaue quantity:5
+popular item: fyewgyuakpqppjk quantity:5
+popular item: bqelfxmtafzzwzshfqdr quantity:5
+popular item: gtbaiqqljdeqgxyajpkuy quantity:5
+popular item: yxdslekpbbxirkpjrmksr quantity:5
+popular item: rfsbzhrgavqxdpodpmzpb quantity:5
+order id: 2997, entry time: 17:16:16Customer name: qyzezkdifunys, OE, OUGHTCALLYABLEpopular item: malujheavnbprdckirrerpm quantity:5
+popular item: jfjiwfrhkrlmpykxh quantity:5
+popular item: qfxswbvgbiupkcedsvdsfsb quantity:5
+popular item: ybbbmtxqduwcnhs quantity:5
+popular item: texpoukwssfwcefsvcy quantity:5
+order id: 2998, entry time: 17:16:16Customer name: hadsdedrujro, OE, ABLECALLYATIONpopular item: vxpygrzthyoanhevnnmljzh quantity:5
+popular item: rhwurekjbqyev quantity:5
+popular item: nwqdbyyrgviolojhfzrpmij quantity:5
+popular item: abxgkoadkxjuevr quantity:5
+popular item: nnrdwpzytidoqustr quantity:5
+popular item: bmbwywhhxvuqc quantity:5
+popular item: yupuqucyhpxlqirdyze quantity:5
+popular item: qwqoxoowdawhhmdmgibylfz quantity:5
+popular item: qdqjimbzwtrfzswb quantity:5
+popular item: kulwnxialgfdyjyspcexqj quantity:5
+popular item: arvwwypwgpchhisgvyexjf quantity:5
+popular item: udvehswzrcwbegf quantity:5
+popular item: aigxtmfnuexuwkxekzhzrr quantity:5
+popular item: pnhjzqcvimpsjskmusair quantity:5
+popular item: lfuzpzlxouqmgyubajmuc quantity:5
+popular item: nyxvwvnmmszcjbjmijlkkbw quantity:5
+popular item: rwpjfnyefjlkbwrlqxiltwp quantity:5
+popular item: htgnxztiucciafmprybtu quantity:5
+order id: 2999, entry time: 17:16:16Customer name: glkntrozd, OE, OUGHTCALLYEINGpopular item: meioaxaajxhun quantity:5
+popular item: sizscqjngnrvdjpahl quantity:5
+popular item: xjpppktzmkxzezzx quantity:5
+popular item: zyozsrubbgvmnfu quantity:5
+popular item: seffdugnzmylkdhij quantity:5
+popular item: jutcwtmibxlvuayu quantity:5
+popular item: hrllkbxrjzrasbsq quantity:5
+popular item: gyxmrleunjcjvdl quantity:5
+popular item: jciflbayvpwupeamjxmv quantity:5
+popular item: wcklinjnrljeuaqgtrvydj quantity:5
+popular item: onkwpsidegjbtuedupjwzz quantity:5
+popular item: wtpbqffvtrupbkujcffo quantity:5
+popular item: draaespxzesjtptnzd quantity:5
+popular item: mbeihkzxwcexmjrtmq quantity:5
+order id: 3000, entry time: 17:16:16Customer name: lmvucklznx, OE, OUGHTABLEATIONpopular item: abyadnhdiwslctfiktqisvb quantity:5
+popular item: idhcpefkoiltppfj quantity:5
+popular item: zruimjnpwbwawinalfb quantity:5
+popular item: qqjihambcdzmegsdtttqh quantity:5
+popular item: vvdhojohmdhemuv quantity:5
+popular item: kmdkratbbkbmgw quantity:5
+popular item: zgevizvcqqrbzmwg quantity:5
+popular item: dmvwsdooerhaey quantity:5
+popular item: mmvpmplpxjhudecyrridsmp quantity:5
+order id: 3001, entry time: 17:31:27popular item: jfnjauqrtojzymjdunsxf quantity:3
+popular item: mmiozopvbcwhnrchshtjo quantity:3
+popular item: twefpbjnhtqkjycxhykcv quantity:3
+popular item: tktyxqpqkbrjuyqhvchlaa quantity:3
+popular item: nviagrstqsoyfpbbzcuock quantity:3
+order id: 3002, entry time: 17:31:28popular item: bstdpsggyuaqbvqqfusjhb quantity:3
+popular item: weapicwydwetrwq quantity:3
+popular item: qqliylocrtblai quantity:3
+popular item: exfrrsmlexrgdnruolxvllp quantity:3
+popular item: tcuykmlvmznpcaxrhnrzf quantity:3
+popular item: zclaaviyjlzvvtuvy quantity:3
+popular item: lyznfgfdzzefbwdzkeqeikl quantity:3
+popular item: alqegxdznggnrzmgwv quantity:3
+popular item: vxnqkungteiocfzv quantity:3
+popular item: hwbmcmqrxqxbuwjnbdsi quantity:3
+popular item: vtspvxqnorhaagnapv quantity:3
+popular item: kyhgvgkjehnlgusaxzgqbm quantity:3
+popular item: zpzrkplnkuwbofjmxkxjqt quantity:3
+popular item: tpvacpefpnaxaviammokp quantity:3
+popular item: jdzgkzkjbuohthmq quantity:3
+popular item: agkxijqmbdqhmze quantity:3
+order id: 3003, entry time: 17:31:28popular item: yinidvchapwmymxsd quantity:3
+popular item: pbiyihirvvcxxud quantity:3
+popular item: uhsmumlezbvttsfzebw quantity:3
+popular item: irgihhnstkowepufbb quantity:3
+popular item: huuvbxypfoxnnezcw quantity:3
+popular item: ichngzuyvlesszactjn quantity:3
+popular item: kqwompvjmqoiu quantity:3
+popular item: zrchgnhmpmsmid quantity:3
+popular item: vkzbpskhsieiewnnnqfknov quantity:3
+popular item: vajrgshcpdasrgpe quantity:3
+popular item: toqxcopomykbuiiwkwfm quantity:3
+popular item: husscswixpldscnvpgyq quantity:3
+popular item: troekmmssijbfjv quantity:3
+popular item: creraeufgydvs quantity:3
+popular item: qymgtqykyxemmkztwz quantity:3
+popular item: uajafoajeffrtmr quantity:3
+order id: 3004, entry time: 17:31:29popular item: bazdtdsuufpgroynabc quantity:3
+popular item: idpmgwhjbktrh quantity:3
+popular item: yskbpjihzawsd quantity:3
+popular item: maujapevnhyrcwahsei quantity:3
+popular item: gnakiazbupxhwnhzbjlfvjp quantity:3
+popular item: pgmdiybpkxxkfws quantity:3
+popular item: pgyislzpekmerwdank quantity:3
+popular item: eviweaqxydhtcjlhpuyr quantity:3
+popular item: saielrtcwoirukygivtndk quantity:3
+popular item: bksfxqnkdzrqpgu quantity:3
+popular item: jmeoknapwmxngyr quantity:3
+popular item: yntylnmmikdauokg quantity:3
+popular item: hkpnpdbkyneouq quantity:3
+order id: 3005, entry time: 17:31:29popular item: uoxfjrtwwltbbskhm quantity:3
+popular item: fnszyjzrvyglbundchnn quantity:3
+popular item: bxxndvivgqymlfhytrxhv quantity:3
+popular item: vhvhcffnxzvhzxrgcn quantity:3
+popular item: mrkzabktmzhrxjgayczyk quantity:3
+popular item: vmmscsnvisywazit quantity:3
+popular item: ehomuwpmlsdntwyoxnmr quantity:3
+popular item: ctgzvyqlaucrxoalbrenhw quantity:3
+popular item: kbxxvedkvfyvpsyxhwhk quantity:3
+popular item: xjkmlgradxfuaeww quantity:3
+popular item: dgdkanebmtzoig quantity:3
+popular item: xvqibdrczqatzx quantity:3
+popular item: ygjqstfuffdyjhqaj quantity:3
+popular item: lhmkgajbqeyxuj quantity:3
+popular item: vfmknfdexzcmgdgjern quantity:3
+popular item: aodvgqvukahhdgqwfv quantity:3
+popular item: fhvmenrhawnyqjjp quantity:3
+popular item: sovyhdjkyiwytk quantity:3
+order id: 3006, entry time: 17:31:30popular item: appjzlbcnzsha quantity:5
+order id: 3007, entry time: 17:31:30popular item: yndhlpchekzsrc quantity:3
+popular item: qlnpdnpgnqzylisrfbuken quantity:3
+popular item: tnxgitxfojjerlgtczwd quantity:3
+popular item: yjnwapxnhigdknfzwpp quantity:3
+popular item: adzsnlnjbcrfijk quantity:3
+popular item: fgrhyivgueymrqma quantity:3
+popular item: gevcwbdozfrfk quantity:3
+popular item: rpoarkadnumqzwy quantity:3
+popular item: bwlkbznmggengezdzq quantity:3
+popular item: uymfntogyykhdbhygddse quantity:3
+popular item: nuupysageygerdrzijs quantity:3
+popular item: hqandqfyxywzlpq quantity:3
+popular item: irrgsjusxeyqtvtbfnk quantity:3
+popular item: yyjfnjeprvaucpunanxppul quantity:3
+popular item: panesrmrpbcroiyzomeqxoe quantity:3
+popular item: ecwnscfiiqxzjbwhwviyxuu quantity:3
+popular item: lkdiiajswkwsj quantity:3
+popular item: fzfkmpbseocsvqisbgbpgh quantity:3
+popular item: tunqakrhhyrzlrmlimgdu quantity:3
+popular item: axuklqojforiwiylzc quantity:3
+order id: 3008, entry time: 17:31:31popular item: ahoijafnzbkxryurzmluzoe quantity:3
+popular item: txoqgkuxttrrguwh quantity:3
+popular item: xapvznnhcdudndzrdoax quantity:3
+popular item: ikeonfdzcrepmrs quantity:3
+popular item: uuqenomnyenmtoxf quantity:3
+popular item: dvutzqryhtxxpyxrk quantity:3
+popular item: trmfjxdzqnyjgldqqo quantity:3
+popular item: xfltjfsygjdnubzprrl quantity:3
+popular item: godljavukbgvyww quantity:3
+popular item: kjqgqbnmpvnetsthznlploi quantity:3
+popular item: hijkwhnkcectaijze quantity:3
+popular item: vprqyfdtxthkgcfo quantity:3
+popular item: bkgduawupagwvrgolcwu quantity:3
+popular item: pkbwxfksrnwcwetzihspe quantity:3
+popular item: fyigeiswurtzfyrey quantity:3
+popular item: wvbuwtowbaaijkvewdvtrk quantity:3
+popular item: iwmwdqeybiirporajq quantity:3
+order id: 3009, entry time: 17:31:32popular item: hlqsrmwrcqimfsgxejaxl quantity:3
+popular item: achftvtgczfmyqdvjarfv quantity:3
+popular item: ftkuttkuskqdtxgocjz quantity:3
+popular item: cwdobiltshlmadcdexd quantity:3
+popular item: wfvuexopjvpny quantity:3
+popular item: voklkmypifvhid quantity:3
+popular item: takmqldinnttwdqskr quantity:3
+popular item: ryvafkrnfdjslvmtf quantity:3
+popular item: lgjtscgqctrrqmsk quantity:3
+popular item: oysfrrnjkmuxx quaTime used: 0
+Updated order line warehouse 3, district 1, order 2102, order line 1
+Updated order line warehouse 3, district 1, order 2102, order line 2
+Updated order line warehouse 3, district 1, order 2102, order line 3
+Updated order line warehouse 3, district 1, order 2102, order line 4
+Updated order line warehouse 3, district 1, order 2102, order line 5
+Updated order line warehouse 3, district 1, order 2102, order line 6
+Updated order line warehouse 3, district 1, order 2102, order line 7
+Updated order line warehouse 3, district 1, order 2102, order line 8
+Updated order line warehouse 3, district 1, order 2102, order line 9
+Updated order line warehouse 3, district 1, order 2102, order line 10
+Updated order line warehouse 3, district 1, order 2102, order line 11
+Updated order line warehouse 3, district 1, order 2102, order line 12
+Updated order line warehouse 3, district 1, order 2102, order line 13
+Updated order line warehouse 3, district 1, order 2102, order line 14
+Updated order line warehouse 3, district 1, order 2102, order line 15
+Updated order line warehouse 3, district 1, order 2102, order line 16
+Updated order line warehouse 3, district 1, order 2102, order line 17
+Updated order line warehouse 3, district 1, order 2102, order line 18
+Updated order line warehouse 3, district 1, order 2102, order line 19
+Updated order line warehouse 3, district 2, order 2102, order line 1
+Updated order line warehouse 3, district 2, order 2102, order line 2
+Updated order line warehouse 3, district 2, order 2102, order line 3
+Updated order line warehouse 3, district 2, order 2102, order line 4
+Updated order line warehouse 3, district 2, order 2102, order line 5
+Updated order line warehouse 3, district 2, order 2102, order line 6
+Updated order line warehouse 3, district 2, order 2102, order line 7
+Updated order line warehouse 3, district 2, order 2102, order line 8
+Updated order line warehouse 3, district 2, order 2102, order line 9
+Updated order line warehouse 3, district 2, order 2102, order line 10
+Updated order line warehouse 3, district 2, order 2102, order line 11
+Updated order line warehouse 3, district 2, order 2102, order line 12
+Updated order line warehouse 3, district 2, order 2102, order line 13
+Updated order line warehouse 3, district 2, order 2102, order line 14
+Updated order line warehouse 3, district 2, order 2102, order line 15
+Updated order line warehouse 3, district 3, order 2102, order line 1
+Updated order line warehouse 3, district 3, order 2102, order line 2
+Updated order line warehouse 3, district 3, order 2102, order line 3
+Updated order line warehouse 3, district 3, order 2102, order line 4
+Updated order line warehouse 3, district 3, order 2102, order line 5
+Updated order line warehouse 3, district 3, order 2102, order line 6
+Updated order line warehouse 3, district 3, order 2102, order line 7
+Updated order line warehouse 3, district 3, order 2102, order line 8
+Updated order line warehouse 3, district 3, order 2102, order line 9
+Updated order line warehouse 3, district 3, order 2102, order line 10
+Updated order line warehouse 3, district 3, order 2102, order line 11
+Updated order line warehouse 3, district 3, order 2102, order line 12
+Updated order line warehouse 3, district 3, order 2102, order line 13
+Updated order line warehouse 3, district 3, order 2102, order line 14
+Updated order line warehouse 3, district 3, order 2102, order line 15
+Updated order line warehouse 3, district 3, order 2102, order line 16
+Updated order line warehouse 3, district 3, order 2102, order line 17
+Updated order line warehouse 3, district 3, order 2102, order line 18
+Updated order line warehouse 3, district 3, order 2102, order line 19
+Updated order line warehouse 3, district 3, order 2102, order line 20
+Updated order line warehouse 3, district 4, order 2102, order line 1
+Updated order line warehouse 3, district 4, order 2102, order line 2
+Updated order line warehouse 3, district 4, order 2102, order line 3
+Updated order line warehouse 3, district 4, order 2102, order line 4
+Updated order line warehouse 3, district 4, order 2102, order line 5
+Updated order line warehouse 3, district 4, order 2102, order line 6
+Updated order line warehouse 3, district 5, order 2102, order line 1
+Updated order line warehouse 3, district 5, order 2102, order line 2
+Updated order line warehouse 3, district 5, order 2102, order line 3
+Updated order line warehouse 3, district 5, order 2102, order line 4
+Updated order line warehouse 3, district 5, order 2102, order line 5
+Updated order line warehouse 3, district 5, order 2102, order line 6
+Updated order line warehouse 3, district 5, order 2102, order line 7
+Updated order line warehouse 3, district 5, order 2102, order line 8
+Updated order line warehouse 3, district 5, order 2102, order line 9
+Updated order line warehouse 3, district 5, order 2102, order line 10
+Updated order line warehouse 3, district 5, order 2102, order line 11
+Updated order line warehouse 3, district 5, order 2102, order line 12
+Updated order line warehouse 3, district 6, order 2102, order line 1
+Updated order line warehouse 3, district 6, order 2102, order line 2
+Updated order line warehouse 3, district 6, order 2102, order line 3
+Updated order line warehouse 3, district 6, order 2102, order line 4
+Updated order line warehouse 3, district 6, order 2102, order line 5
+Updated order line warehouse 3, district 6, order 2102, order line 6
+Updated order line warehouse 3, district 6, order 2102, order line 7
+Updated order line warehouse 3, district 6, order 2102, order line 8
+Updated order line warehouse 3, district 6, order 2102, order line 9
+Updated order line warehouse 3, district 6, order 2102, order line 10
+Updated order line warehouse 3, district 6, order 2102, order line 11
+Updated order line warehouse 3, district 6, order 2102, order line 12
+Updated order line warehouse 3, district 6, order 2102, order line 13
+Updated order line warehouse 3, district 6, order 2102, order line 14
+Updated order line warehouse 3, district 6, order 2102, order line 15
+Updated order line warehouse 3, district 6, order 2102, order line 16
+Updated order line warehouse 3, district 6, order 2102, order line 17
+Updated order line warehouse 3, district 6, order 2102, order line 18
+Updated order line warehouse 3, district 6, order 2102, order line 19
+Updated order line warehouse 3, district 6, order 2102, order line 20
+Updated order line warehouse 3, district 7, order 2102, order line 1
+Updated order line warehouse 3, district 7, order 2102, order line 2
+Updated order line warehouse 3, district 7, order 2102, order line 3
+Updated order line warehouse 3, district 7, order 2102, order line 4
+Updated order line warehouse 3, district 7, order 2102, order line 5
+Updated order line warehouse 3, district 7, order 2102, order line 6
+Updated order line warehouse 3, district 7, order 2102, order line 7
+Updated order line warehouse 3, district 7, order 2102, order line 8
+Updated order line warehouse 3, district 7, order 2102, order line 9
+Updated order line warehouse 3, district 7, order 2102, order line 10
+Updated order line warehouse 3, district 7, order 2102, order line 11
+Updated order line warehouse 3, district 7, order 2102, order line 12
+Updated order line warehouse 3, district 7, order 2102, order line 13
+Updated order line warehouse 3, district 7, order 2102, order line 14
+Updated order line warehouse 3, district 7, order 2102, order line 15
+Updated order line warehouse 3, district 7, order 2102, order line 16
+Updated order line warehouse 3, district 7, order 2102, order line 17
+Updated order line warehouse 3, district 8, order 2102, order line 1
+Updated order line warehouse 3, district 8, order 2102, order line 2
+Updated order line warehouse 3, district 8, order 2102, order line 3
+Updated order line warehouse 3, district 8, order 2102, order line 4
+Updated order line warehouse 3, district 8, order 2102, order line 5
+Updated order line warehouse 3, district 8, order 2102, order line 6
+Updated order line warehouse 3, district 8, order 2102, order line 7
+Updated order line warehouse 3, district 8, order 2102, order line 8
+Updated order line warehouse 3, district 8, order 2102, order line 9
+Updated order line warehouse 3, district 8, order 2102, order line 10
+Updated order line warehouse 3, district 8, order 2102, order line 11
+Updated order line warehouse 3, district 8, order 2102, order line 12
+Updated order line warehouse 3, district 8, order 2102, order line 13
+Updated order line warehouse 3, district 8, order 2102, order line 14
+Updated order line warehouse 3, district 8, order 2102, order line 15
+Updated order line warehouse 3, district 8, order 2102, order line 16
+Updated order line warehouse 3, district 9, order 2102, order line 1
+Updated order line warehouse 3, district 9, order 2102, order line 2
+Updated order line warehouse 3, district 9, order 2102, order line 3
+Updated order line warehouse 3, district 9, order 2102, order line 4
+Updated order line warehouse 3, district 9, order 2102, order line 5
+Updated order line warehouse 3, district 10, order 2102, order line 1
+Updated order line warehouse 3, district 10, order 2102, order line 2
+Updated order line warehouse 3, district 10, order 2102, order line 3
+Updated order line warehouse 3, district 10, order 2102, order line 4
+Updated order line warehouse 3, district 10, order 2102, order line 5
+Updated order line warehouse 3, district 10, order 2102, order line 6
+Updated order line warehouse 3, district 10, order 2102, order line 7
+Updated order line warehouse 3, district 10, order 2102, order line 8
+Updated order line warehouse 3, district 10, order 2102, order line 9
+Updated order line warehouse 3, district 10, order 2102, order line 10
+Updated order line warehouse 3, district 10, order 2102, order line 11
+Updated order line warehouse 3, district 10, order 2102, order line 12
+Updated order line warehouse 3, district 10, order 2102, order line 13
+Updated order line warehouse 3, district 10, order 2102, order line 14
+Updated order line warehouse 3, district 10, order 2102, order line 15
+Updated order line warehouse 3, district 10, order 2102, order line 16
+Updated order line warehouse 3, district 10, order 2102, order line 17
+Updated order line warehouse 3, district 10, order 2102, order line 18
+Updated order line warehouse 3, district 10, order 2102, order line 19
+Updated order line warehouse 3, district 10, order 2102, order line 20
+Time used: 0
+ntity:3
+popular item: opouxgtinnkzfkqenmlbe quantity:3
+popular item: etvdfqearhsrrabacxmbcys quantity:3
+order id: 3010, entry time: 17:31:33popular item: jmmnqngnespbzguwo quantity:3
+popular item: wfazyuomrckbhnx quantity:3
+popular item: feuxirjgrxqijljrwhdtmqy quantity:3
+popular item: eoqckeiinmyasad quantity:3
+popular item: adgdsmagmhtzotlmtwgrq quantity:3
+popular item: eyzazomwqgavnlsdrc quantity:3
+popular item: dcrbduwgfqhofmggdw quantity:3
+popular item: xihdyghvqafhtppg quantity:3
+popular item: slommudyjdtzofrbxrbid quantity:3
+popular item: ccbjxnylnzqecs quantity:3
+popular item: cyyjljlzfuzdetdecljq quantity:3
+popular item: zlbjxrtuzwuxlqhyzilwrs quantity:3
+popular item: ufqbllbisyxxqsludvpkzqy quantity:3
+popular item: yolqrnpvpxuwnurqouaocih quantity:3
+popular item: jiapajitaggfmdhqq quantity:3
+popular item: cfjxqjmgzrrmvfcsv quantity:3
+popular item: zmpqcrgwotbpottaudoj quantity:3
+popular item: hqhowwtuvfguceqb quantity:3
+popular item: yxfqwdgvozkdtaxjsov quantity:3
+item name:ctgzvyqlaucrxoalbrenhw, ratio: 0.003597
+item name:wcklinjnrljeuaqgtrvydj, ratio: 0.003597
+item name:iguqfvliflqoo, ratio: 0.003597
+item name:qfxswbvgbiupkcedsvdsfsb, ratio: 0.003597
+item name:xkuekaphkihioe, ratio: 0.003597
+item name:jfnjauqrtojzymjdunsxf, ratio: 0.003597
+item name:bstdpsggyuaqbvqqfusjhb, ratio: 0.003597
+item name:bazdtdsuufpgroynabc, ratio: 0.003597
+item name:jciflbayvpwupeamjxmv, ratio: 0.003597
+item name:tunqakrhhyrzlrmlimgdu, ratio: 0.003597
+item name:pszepttdsukaceyalemd, ratio: 0.003597
+item name:nyxvwvnmmszcjbjmijlkkbw, ratio: 0.003597
+item name:maujapevnhyrcwahsei, ratio: 0.003597
+item name:fnszyjzrvyglbundchnn, ratio: 0.003597
+item name:xtunpmajmolyokkowgpuvf, ratio: 0.003597
+item name:tpvacpefpnaxaviammokp, ratio: 0.003597
+item name:wtpbqffvtrupbkujcffo, ratio: 0.003597
+item name:qlnpdnpgnqzylisrfbuken, ratio: 0.003597
+item name:tyqktqkynatjjp, ratio: 0.003597
+item name:pbiyihirvvcxxud, ratio: 0.003597
+item name:yolqrnpvpxuwnurqouaocih, ratio: 0.003597
+item name:wmsswibybjzbsmfbcjmyp, ratio: 0.003597
+item name:kqwompvjmqoiu, ratio: 0.003597
+item name:yndhlpchekzsrc, ratio: 0.003597
+item name:srczjslqbdjgsm, ratio: 0.003597
+item name:grzvrgbyxkuoenkmtjdbu, ratio: 0.003597
+item name:adgdsmagmhtzotlmtwgrq, ratio: 0.003597
+item name:irgihhnstkowepufbb, ratio: 0.003597
+item name:yskbpjihzawsd, ratio: 0.003597
+item name:ehomuwpmlsdntwyoxnmr, ratio: 0.003597
+item name:pnhjzqcvimpsjskmusair, ratio: 0.003597
+item name:pgyislzpekmerwdank, ratio: 0.003597
+item name:fgrhyivgueymrqma, ratio: 0.003597
+item name:rpoarkadnumqzwy, ratio: 0.003597
+item name:pjunramzmzmxw, ratio: 0.003597
+item name:pkbwxfksrnwcwetzihspe, ratio: 0.003597
+item name:yxfqwdgvozkdtaxjsov, ratio: 0.003597
+item name:pnzowtcplbbiy, ratio: 0.003597
+item name:vxpygrzthyoanhevnnmljzh, ratio: 0.003597
+item name:uhsmumlezbvttsfzebw, ratio: 0.003597
+item name:husscswixpldscnvpgyq, ratio: 0.003597
+item name:bkgduawupagwvrgolcwu, ratio: 0.003597
+item name:yupuqucyhpxlqirdyze, ratio: 0.003597
+item name:zsczntzjyirtx, ratio: 0.003597
+item name:gnakiazbupxhwnhzbjlfvjp, ratio: 0.003597
+item name:ouurmvlixxpharuvp, ratio: 0.003597
+item name:icwjkycagzqxes, ratio: 0.003597
+item name:nviagrstqsoyfpbbzcuock, ratio: 0.003597
+item name:jldycbnddzhnygxa, ratio: 0.003597
+item name:fhvmenrhawnyqjjp, ratio: 0.003597
+item name:tnxgitxfojjerlgtczwd, ratio: 0.003597
+item name:panesrmrpbcroiyzomeqxoe, ratio: 0.003597
+item name:ecwnscfiiqxzjbwhwviyxuu, ratio: 0.003597
+item name:ogsoeexhqwaiteephgph, ratio: 0.003597
+item name:qqjihambcdzmegsdtttqh, ratio: 0.003597
+item name:zruimjnpwbwawinalfb, ratio: 0.003597
+item name:twefpbjnhtqkjycxhykcv, ratio: 0.003597
+item name:vprqyfdtxthkgcfo, ratio: 0.003597
+item name:niemdwvgwsnwnepge, ratio: 0.003597
+item name:uvwpzjwpojxofyjolxmsjs, ratio: 0.003597
+item name:cwdobiltshlmadcdexd, ratio: 0.003597
+item name:vfmknfdexzcmgdgjern, ratio: 0.003597
+item name:meioaxaajxhun, ratio: 0.003597
+item name:exfrrsmlexrgdnruolxvllp, ratio: 0.003597
+item name:kyhgvgkjehnlgusaxzgqbm, ratio: 0.003597
+item name:aodvgqvukahhdgqwfv, ratio: 0.003597
+item name:vmmscsnvisywazit, ratio: 0.003597
+item name:bwlkbznmggengezdzq, ratio: 0.003597
+item name:jdzgkzkjbuohthmq, ratio: 0.003597
+item name:qymgtqykyxemmkztwz, ratio: 0.003597
+item name:mzrteibldwnaxbtciaozxc, ratio: 0.003597
+item name:malujheavnbprdckirrerpm, ratio: 0.003597
+item name:vtspvxqnorhaagnapv, ratio: 0.003597
+item name:huuvbxypfoxnnezcw, ratio: 0.003597
+item name:mrkzabktmzhrxjgayczyk, ratio: 0.003597
+item name:ryvafkrnfdjslvmtf, ratio: 0.003597
+item name:uiuaanpttvlavcldsdol, ratio: 0.003597
+item name:jmmnqngnespbzguwo, ratio: 0.003597
+item name:bmbwywhhxvuqc, ratio: 0.003597
+item name:ulsfohyflhbiakom, ratio: 0.003597
+item name:flkfuyxxwjnyirlnalaue, ratio: 0.003597
+item name:arvwwypwgpchhisgvyexjf, ratio: 0.003597
+item name:sovyhdjkyiwytk, ratio: 0.003597
+item name:qxehtmgscfooxflqfid, ratio: 0.003597
+item name:pgmdiybpkxxkfws, ratio: 0.003597
+item name:fevmacdbuxnxgpqvyxg, ratio: 0.003597
+item name:takmqldinnttwdqskr, ratio: 0.003597
+item name:apiffumkkezhuoctuqclb, ratio: 0.003597
+item name:vhvhcffnxzvhzxrgcn, ratio: 0.003597
+item name:mmiozopvbcwhnrchshtjo, ratio: 0.003597
+item name:agkxijqmbdqhmze, ratio: 0.003597
+item name:oysfrrnjkmuxx, ratio: 0.003597
+item name:wfazyuomrckbhnx, ratio: 0.003597
+item name:ssubsrhqdowiayuqof, ratio: 0.003597
+item name:mxlkhcczbckcohfq, ratio: 0.003597
+item name:kjqgqbnmpvnetsthznlploi, ratio: 0.003597
+item name:hqhowwtuvfguceqb, ratio: 0.003597
+item name:alqegxdznggnrzmgwv, ratio: 0.003597
+item name:qxqxpaogyrrtvzwuoofvf, ratio: 0.003597
+item name:trmfjxdzqnyjgldqqo, ratio: 0.003597
+item name:hwbmcmqrxqxbuwjnbdsi, ratio: 0.003597
+item name:vvdhojohmdhemuv, ratio: 0.003597
+item name:bqelfxmtafzzwzshfqdr, ratio: 0.003597
+item name:opouxgtinnkzfkqenmlbe, ratio: 0.003597
+item name:gwctwnhbldtfpe, ratio: 0.003597
+item name:bxxndvivgqymlfhytrxhv, ratio: 0.003597
+item name:egbahhgmsjapruvnljxkts, ratio: 0.003597
+item name:axuklqojforiwiylzc, ratio: 0.003597
+item name:vajrgshcpdasrgpe, ratio: 0.003597
+item name:ygjqstfuffdyjhqaj, ratio: 0.003597
+item name:jfjiwfrhkrlmpykxh, ratio: 0.003597
+item name:htgnxztiucciafmprybtu, ratio: 0.003597
+item name:jutcwtmibxlvuayu, ratio: 0.003597
+item name:creraeufgydvs, ratio: 0.003597
+item name:feuxirjgrxqijljrwhdtmqy, ratio: 0.003597
+item name:cyyjljlzfuzdetdecljq, ratio: 0.003597
+item name:iwmwdqeybiirporajq, ratio: 0.003597
+item name:qwkftafanqzioinrgjv, ratio: 0.003597
+item name:etvdfqearhsrrabacxmbcys, ratio: 0.003597
+item name:ufqbllbisyxxqsludvpkzqy, ratio: 0.003597
+item name:zmpqcrgwotbpottaudoj, ratio: 0.003597
+item name:eviweaqxydhtcjlhpuyr, ratio: 0.003597
+item name:fyewgyuakpqppjk, ratio: 0.003597
+item name:uajafoajeffrtmr, ratio: 0.003597
+item name:jmeoknapwmxngyr, ratio: 0.003597
+item name:xjkmlgradxfuaeww, ratio: 0.003597
+item name:xvqibdrczqatzx, ratio: 0.003597
+item name:lhmkgajbqeyxuj, ratio: 0.003597
+item name:weapicwydwetrwq, ratio: 0.003597
+item name:zpzrkplnkuwbofjmxkxjqt, ratio: 0.003597
+item name:uuqenomnyenmtoxf, ratio: 0.003597
+item name:zclaaviyjlzvvtuvy, ratio: 0.003597
+item name:lkdiiajswkwsj, ratio: 0.003597
+item name:hijkwhnkcectaijze, ratio: 0.003597
+item name:saielrtcwoirukygivtndk, ratio: 0.003597
+item name:hkpnpdbkyneouq, ratio: 0.003597
+item name:nuupysageygerdrzijs, ratio: 0.003597
+item name:xapvznnhcdudndzrdoax, ratio: 0.003597
+item name:slommudyjdtzofrbxrbid, ratio: 0.003597
+item name:dgdkanebmtzoig, ratio: 0.003597
+item name:irrgsjusxeyqtvtbfnk, ratio: 0.003597
+item name:dvutzqryhtxxpyxrk, ratio: 0.003597
+item name:dcrbduwgfqhofmggdw, ratio: 0.003597
+item name:evmstdrolfwjoh, ratio: 0.003597
+item name:rwpjfnyefjlkbwrlqxiltwp, ratio: 0.003597
+item name:brxcqexewdrjifzodlnszi, ratio: 0.003597
+item name:sizscqjngnrvdjpahl, ratio: 0.003597
+item name:trfgmzudnmhwzotjfhx, ratio: 0.003597
+item name:jbwicfzdlpypmclp, ratio: 0.003597
+item name:lidzyicjtgocd, ratio: 0.003597
+item name:shwssxfodmqtxcwvzfnuqr, ratio: 0.003597
+item name:gyxmrleunjcjvdl, ratio: 0.003597
+item name:cdjbsbcqnxfbvd, ratio: 0.003597
+item name:nwqdbyyrgviolojhfzrpmij, ratio: 0.003597
+item name:ademxhsfqlkilhds, ratio: 0.003597
+item name:kulwnxialgTime used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+fdyjyspcexqj, ratio: 0.003597
+item name:cxecxmjkqmpmxhunqr, ratio: 0.003597
+item name:yelykwkwbuvwkiitow, ratio: 0.003597
+item name:vsmasespfsimxky, ratio: 0.003597
+item name:gtsjaboloussvob, ratio: 0.003597
+item name:qwqoxoowdawhhmdmgibylfz, ratio: 0.003597
+item name:tctbjmfntflegxdynnbvp, ratio: 0.003597
+item name:mmvpmplpxjhudecyrridsmp, ratio: 0.003597
+item name:wfvuexopjvpny, ratio: 0.003597
+item name:jeaxmrzfzdsxygbz, ratio: 0.003597
+item name:cwrsccmjljbkfhm, ratio: 0.003597
+item name:hrllkbxrjzrasbsq, ratio: 0.003597
+item name:idpmgwhjbktrh, ratio: 0.003597
+item name:ahoijafnzbkxryurzmluzoe, ratio: 0.003597
+item name:aqoldbpmesfwqgz, ratio: 0.003597
+item name:baocilbooiaoxlvli, ratio: 0.003597
+item name:xapriskcyytcgqbwjzmm, ratio: 0.003597
+item name:zlxjywdfgpvbdqtdkugkl, ratio: 0.003597
+item name:iyhnhxybdvvwxpkt, ratio: 0.003597
+item name:txoqgkuxttrrguwh, ratio: 0.003597
+item name:ihfuajexohruwhxpess, ratio: 0.003597
+item name:urjwvfbhcrlplznamrohx, ratio: 0.003597
+item name:reisdwkrqseeuyonja, ratio: 0.003597
+item name:mjhxgaggjogekcaix, ratio: 0.003597
+item name:uwlrgicdeijtskvtjl, ratio: 0.003597
+item name:czrcdbagzajjzbgityiesxy, ratio: 0.003597
+item name:mxjoodcxleaxid, ratio: 0.003597
+item name:fdzoxwdqdjxdddksinmrl, ratio: 0.003597
+item name:thcnrhoqcmxnqnqnils, ratio: 0.003597
+item name:tawdcmvylwlotudwft, ratio: 0.003597
+item name:cxgtqruziliqmkgirpjg, ratio: 0.003597
+item name:fzfkmpbseocsvqisbgbpgh, ratio: 0.003597
+item name:dlqvlbttpmadrqglhbkogsu, ratio: 0.003597
+item name:cudxhlngfviobpnkoydrn, ratio: 0.003597
+item name:yyjfnjeprvaucpunanxppul, ratio: 0.003597
+item name:rfsbzhrgavqxdpodpmzpb, ratio: 0.003597
+item name:ftkuttkuskqdtxgocjz, ratio: 0.003597
+item name:eyzazomwqgavnlsdrc, ratio: 0.003597
+item name:uymfntogyykhdbhygddse, ratio: 0.003597
+item name:sqisqsacwghaoyyxnqfob, ratio: 0.003597
+item name:ihflinmzbjvhhntvtq, ratio: 0.003597
+item name:lwiuhzkycgqogdumhef, ratio: 0.003597
+item name:draaespxzesjtptnzd, ratio: 0.003597
+item name:ichngzuyvlesszactjn, ratio: 0.003597
+item name:zyozsrubbgvmnfu, ratio: 0.003597
+item name:xptwmtkjrtfmriilkwa, ratio: 0.003597
+item name:idhcpefkoiltppfj, ratio: 0.003597
+item name:lfuzpzlxouqmgyubajmuc, ratio: 0.003597
+item name:hlqsrmwrcqimfsgxejaxl, ratio: 0.003597
+item name:ekdolefjffuemjmyhhtugn, ratio: 0.003597
+item name:udvehswzrcwbegf, ratio: 0.003597
+item name:ndqeicvygytdikll, ratio: 0.003597
+item name:arwlxibyyrydmhamkoaopx, ratio: 0.003597
+item name:koiivdnjxxbeqkkcqmoshn, ratio: 0.003597
+item name:svuqvirymkyxethvah, ratio: 0.003597
+item name:tktyxqpqkbrjuyqhvchlaa, ratio: 0.003597
+item name:xfltjfsygjdnubzprrl, ratio: 0.003597
+item name:cfjxqjmgzrrmvfcsv, ratio: 0.003597
+item name:ccbjxnylnzqecs, ratio: 0.003597
+item name:hxqezvaxpcuwwaef, ratio: 0.003597
+item name:qdqjimbzwtrfzswb, ratio: 0.003597
+item name:appjzlbcnzsha, ratio: 0.003597
+item name:ikeonfdzcrepmrs, ratio: 0.003597
+item name:moiujqzlhoogjscudcc, ratio: 0.003597
+item name:kmpxkdsdyjuwmwraxgoofa, ratio: 0.003597
+item name:jiapajitaggfmdhqq, ratio: 0.003597
+item name:voklkmypifvhid, ratio: 0.003597
+item name:kmdkratbbkbmgw, ratio: 0.003597
+item name:aigxtmfnuexuwkxekzhzrr, ratio: 0.003597
+item name:achftvtgczfmyqdvjarfv, ratio: 0.003597
+item name:bqtvmfeqhwmlpnkljrkrm, ratio: 0.003597
+item name:gcvpemjpophtonwoblq, ratio: 0.003597
+item name:lgjtscgqctrrqmsk, ratio: 0.003597
+item name:wtlcaktuvvvmlggcpivmxt, ratio: 0.003597
+item name:abxgkoadkxjuevr, ratio: 0.003597
+item name:dmvwsdooerhaey, ratio: 0.003597
+item name:onkwpsidegjbtuedupjwzz, ratio: 0.003597
+item name:lodtzncvggvqoksnxmy, ratio: 0.003597
+item name:gtbaiqqljdeqgxyajpkuy, ratio: 0.003597
+item name:vxnqkungteiocfzv, ratio: 0.003597
+item name:eoqckeiinmyasad, ratio: 0.003597
+item name:tcuykmlvmznpcaxrhnrzf, ratio: 0.003597
+item name:wvbuwtowbaaijkvewdvtrk, ratio: 0.003597
+item name:efpgsygysrhyq, ratio: 0.003597
+item name:fyigeiswurtzfyrey, ratio: 0.003597
+item name:xihdyghvqafhtppg, ratio: 0.003597
+item name:pdzqmkfxwxcsw, ratio: 0.003597
+item name:kbxxvedkvfyvpsyxhwhk, ratio: 0.003597
+item name:yxdslekpbbxirkpjrmksr, ratio: 0.003597
+item name:xjpppktzmkxzezzx, ratio: 0.003597
+item name:jaazjkganngxrijvcrp, ratio: 0.003597
+item name:tvltvjhkynlewsiscqlof, ratio: 0.003597
+item name:hqjoxofhfwglb, ratio: 0.003597
+item name:bksfxqnkdzrqpgu, ratio: 0.003597
+item name:rhwurekjbqyev, ratio: 0.003597
+item name:qqliylocrtblai, ratio: 0.003597
+item name:texpoukwssfwcefsvcy, ratio: 0.003597
+item name:dkzmvtptlaobaigpnwl, ratio: 0.003597
+item name:hqandqfyxywzlpq, ratio: 0.003597
+item name:vkzbpskhsieiewnnnqfknov, ratio: 0.003597
+item name:yjnwapxnhigdknfzwpp, ratio: 0.003597
+item name:vgzsnsrllkouwfkokroqy, ratio: 0.003597
+item name:yntylnmmikdauokg, ratio: 0.003597
+item name:nnrdwpzytidoqustr, ratio: 0.003597
+item name:abyadnhdiwslctfiktqisvb, ratio: 0.003597
+item name:adzsnlnjbcrfijk, ratio: 0.003597
+item name:zrchgnhmpmsmid, ratio: 0.003597
+item name:zlbjxrtuzwuxlqhyzilwrs, ratio: 0.003597
+item name:toqxcopomykbuiiwkwfm, ratio: 0.003597
+item name:troekmmssijbfjv, ratio: 0.003597
+item name:gevcwbdozfrfk, ratio: 0.003597
+item name:godljavukbgvyww, ratio: 0.003597
+item name:yynhuuuqascoamsvdyeixo, ratio: 0.003597
+item name:kidjtjhjzdonl, ratio: 0.003597
+item name:zgevizvcqqrbzmwg, ratio: 0.003597
+item name:fxgyqvwyvfvnsyglon, ratio: 0.003597
+item name:mbeihkzxwcexmjrtmq, ratio: 0.003597
+item name:ybbbmtxqduwcnhs, ratio: 0.003597
+item name:seffdugnzmylkdhij, ratio: 0.003597
+item name:ewrctyzakcqucvcs, ratio: 0.003597
+item name:lyznfgfdzzefbwdzkeqeikl, ratio: 0.003597
+item name:yinidvchapwmymxsd, ratio: 0.003597
+item name:uoxfjrtwwltbbskhm, ratio: 0.003597
+
+=======================================
+=======================================
+Transaction ID: 49
+********** Delivery Transaction *********
+
+The next order to deliver in (3, 1) is 2102
+Updated the info of customer (3, 1, 2811)
+********** Delivery Transaction *********
+
+The next order to deliver in (3, 2) is 2102
+Updated the info of customer (3, 2, 1091)
+********** Delivery Transaction *********
+
+The next order to deliver in (3, 3) is 2102
+Updated the info of customer (3, 3, 1461)
+********** Delivery Transaction *********
+
+The next order to deliver in (3, 4) is 2102
+Updated the info of customer (3, 4, 516)
+********** Delivery Transaction *********
+
+The next order to deliver in (3, 5) is 2102
+Updated the info of customer (3, 5, 2564)
+********** Delivery Transaction *********
+
+The next order to deliver in (3, 6) is 2102
+Updated the info of customer (3, 6, 788)
+********** Delivery Transaction *********
+
+The next order to deliver in (3, 7) is 2102
+Updated the info of customer (3, 7, 2306)
+********** Delivery Transaction *********
+
+The next order to deliver in (3, 8) is 2102
+Updated the info of customer (3, 8, 933)
+********** Delivery Transaction *********
+
+The next order to deliver in (3, 9) is 2102
+Updated the info of customer (3, 9, 2820)
+********** Delivery Transaction *********
+
+The next order to deliver in (3, 10) is 2102
+Updated the info of customer (3, 10, 2885)
+=======================================
+=======================================
+Transaction ID: 50
+*** New Order Transaction Summary ***
+Customer ID: (3, 5, 2562), Last name:BARATIONCALLY, Credit:GC, C_DISCOUNT:0.3798
+
+Warehouse tax:0.0552, District tax:0.0285
+
+Order ID:3008, Order entry date:2022-11-05 17:31:33.842
+
+#items:6, Total amount:621.68
+
+Items information:
+	 Item number: 5253, name: pgfafkllzmznmfxurkd, Supplier warehouse: 8, quantity: 3, Order-line amount: 170.07, Adjusted quantity: 97
+
+	 Item number: 15934, name: eamnvlobziecsqjfxra, Supplier warehouse: 2, quantity: 3, Order-line amount: 133.65, Adjusted quantity: 21
+
+	 Item number: 22738, name: jkkwzxmklpmmjipfyz, Supplier warehouse: 7, quantity: 3, Order-line amount: 65.13, Adjusted quantity: 42
+
+	 Item number: 56519, name: lrqkgmcopcmijb, Supplier warehouse: 5, quantity: 3, Order-line amount: 77.07, Adjusted quantity: 20
+
+	 Item number: 56543, name: zyrhthevdyrsdfoeqvy, Supplier warehouse: 10, quantity: 3, Order-line amount: 286.05, Adjusted quantity: 27
+
+	 Item number: 64215, name: kofkudnjsyzse, Supplier warehouse: 9, quantity: 3, Order-line amount: 192.99, Adjusted qTime used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+uantity: 24
+
+=======================================
+=======================================
+Transaction ID: 51
+*** New Order Transaction Summary ***
+Customer ID: (3, 5, 329), Last name:PRIABLEATION, Credit:GC, C_DISCOUNT:0.4567
+
+Warehouse tax:0.0552, District tax:0.0285
+
+Order ID:3009, Order entry date:2022-11-05 17:31:33.903
+
+#items:5, Total amount:485.17
+
+Items information:
+	 Item number: 5191, name: vfhlscdsnazqbwbxzcvgyr, Supplier warehouse: 10, quantity: 3, Order-line amount: 148.95, Adjusted quantity: 16
+
+	 Item number: 81447, name: gqqhpwowapntnn, Supplier warehouse: 5, quantity: 3, Order-line amount: 38.28, Adjusted quantity: 79
+
+	 Item number: 89287, name: jyrznpkpxovnqoseyqlua, Supplier warehouse: 5, quantity: 3, Order-line amount: 296.07, Adjusted quantity: 22
+
+	 Item number: 95718, name: ptpprzixtasbjsqx, Supplier warehouse: 10, quantity: 3, Order-line amount: 77.19, Adjusted quantity: 26
+
+	 Item number: 98997, name: hwbckehgpcsqisxszh, Supplier warehouse: 7, quantity: 7, Order-line amount: 263.55, Adjusted quantity: 79
+
+=======================================
+=======================================
+Transaction ID: 52
+*** New Order Transaction Summary ***
+Customer ID: (3, 3, 959), Last name:EINGESEATION, Credit:BC, C_DISCOUNT:0.4415
+
+Warehouse tax:0.0552, District tax:0.1168
+
+Order ID:3010, Order entry date:2022-11-05 17:31:33.953
+
+#items:5, Total amount:390.34
+
+Items information:
+	 Item number: 15014, name: genxtnvbyltevlmu, Supplier warehouse: 8, quantity: 3, Order-line amount: 75.03, Adjusted quantity: 48
+
+	 Item number: 35107, name: tmwywbbjyqajy, Supplier warehouse: 1, quantity: 3, Order-line amount: 200.67, Adjusted quantity: 62
+
+	 Item number: 38261, name: fcpmxfgslxufonbyaqoad, Supplier warehouse: 6, quantity: 3, Order-line amount: 147.03, Adjusted quantity: 89
+
+	 Item number: 79477, name: cochedmrthonwsmjqv, Supplier warehouse: 7, quantity: 3, Order-line amount: 64.05, Adjusted quantity: 94
+
+	 Item number: 83558, name: zakfkkglzjkkonfb, Supplier warehouse: 7, quantity: 3, Order-line amount: 109.56, Adjusted quantity: 34
+
+=======================================
+=======================================
+Transaction ID: 53
+*** New Order Transaction Summary ***
+Customer ID: (3, 2, 2305), Last name:ESEABLEATION, Credit:GC, C_DISCOUNT:0.0248
+
+Warehouse tax:0.0552, District tax:0.0718
+
+Order ID:3013, Order entry date:2022-11-05 17:31:33.999
+
+#items:14, Total amount:3056.99
+
+Items information:
+	 Item number: 10946, name: kbvqhcffhuwwrhqaclf, Supplier warehouse: 8, quantity: 3, Order-line amount: 260.82, Adjusted quantity: 68
+
+	 Item number: 75462, name: pgmrekmtsoaavt, Supplier warehouse: 5, quantity: 3, Order-line amount: 182.67, Adjusted quantity: 39
+
+	 Item number: 11493, name: xewibsubzopqleyeuhgzpp, Supplier warehouse: 4, quantity: 3, Order-line amount: 262.14, Adjusted quantity: 83
+
+	 Item number: 15590, name: kkavofyczancdvu, Supplier warehouse: 3, quantity: 3, Order-line amount: 66.45, Adjusted quantity: 44
+
+	 Item number: 15975, name: zfxdcksadyowkytqxwpiyx, Supplier warehouse: 10, quantity: 3, Order-line amount: 288.72, Adjusted quantity: 108
+
+	 Item number: 16006, name: kkqkjebzuowuagjd, Supplier warehouse: 8, quantity: 3, Order-line amount: 55.20, Adjusted quantity: 20
+
+	 Item number: 28007, name: wkbxjdkfccvujfooxc, Supplier warehouse: 3, quantity: 3, Order-line amount: 55.83, Adjusted quantity: 60
+
+	 Item number: 30082, name: mlceoxpumilaxtohwhi, Supplier warehouse: 7, quantity: 3, Order-line amount: 282.66, Adjusted quantity: 52
+
+	 Item number: 30183, name: mdqeanhfgtvlwaditsfihc, Supplier warehouse: 6, quantity: 3, Order-line amount: 241.56, Adjusted quantity: 33
+
+	 Item number: 38559, name: kytzqoluorbwwixkwfy, Supplier warehouse: 9, quantity: 3, Order-line amount: 293.49, Adjusted quantity: 97
+
+	 Item number: 52687, name: nfcifndwquulnmnujil, Supplier warehouse: 5, quantity: 3, Order-line amount: 296.22, Adjusted quantity: 49
+
+	 Item number: 72259, name: ekbjahyrniebbnl, Supplier warehouse: 4, quantity: 3, Order-line amount: 126.75, Adjusted quantity: 39
+
+	 Item number: 80615, name: jcyrwmqlmpbuehuv, Supplier warehouse: 6, quantity: 3, Order-line amount: 149.55, Adjusted quantity: 109
+
+	 Item number: 89785, name: nvbbmofdartvhbyvxp, Supplier warehouse: 6, quantity: 3, Order-line amount: 219.42, Adjusted quantity: 58
+
+=======================================
+=======================================
+Transaction ID: 54
+*** New Order Transaction Summary ***
+Customer ID: (3, 3, 2562), Last name:OUGHTCALLYCALLY, Credit:GC, C_DISCOUNT:0.2989
+
+Warehouse tax:0.0552, District tax:0.1168
+
+Order ID:3011, Order entry date:2022-11-05 17:31:34.115
+
+#items:5, Total amount:758.82
+
+Items information:
+	 Item number: 15951, name: jqbsnjrvuqfkm, Supplier warehouse: 2, quantity: 3, Order-line amount: 274.53, Adjusted quantity: 30
+
+	 Item number: 20179, name: yqdpoqvjskfkgqp, Supplier warehouse: 3, quantity: 3, Order-line amount: 213.39, Adjusted quantity: 33
+
+	 Item number: 48359, name: emnagjsyooftljbrswiehll, Supplier warehouse: 3, quantity: 3, Order-line amount: 182.10, Adjusted quantity: 56
+
+	 Item number: 48735, name: kcnhvdpomewfq, Supplier warehouse: 4, quantity: 3, Order-line amount: 78.51, Adjusted quantity: 50
+
+	 Item number: 54957, name: xvafqhyimoxgbodrzkar, Supplier warehouse: 7, quantity: 3, Order-line amount: 174.96, Adjusted quantity: 37
+
+=======================================
+=======================================
+Transaction ID: 55
+*** New Order Transaction Summary ***
+Customer ID: (3, 1, 515), Last name:ESEOUGHTPRES, Credit:GC, C_DISCOUNT:0.3409
+
+Warehouse tax:0.0552, District tax:0.0769
+
+Order ID:3011, Order entry date:2022-11-05 17:31:34.162
+
+#items:16, Total amount:1824.22
+
+Items information:
+	 Item number: 38119, name: mslkyepnoybattziaha, Supplier warehouse: 4, quantity: 3, Order-line amount: 147.00, Adjusted quantity: 71
+
+	 Item number: 36959, name: gzckmihzcsswxgnmzvufgq, Supplier warehouse: 5, quantity: 3, Order-line amount: 66.63, Adjusted quantity: 54
+
+	 Item number: 12006, name: qbuoeuykdkxok, Supplier warehouse: 4, quantity: 3, Order-line amount: 27.72, Adjusted quantity: 27
+
+	 Item number: 76071, name: zrkglcaanmcfbxpkpmzbqe, Supplier warehouse: 4, quantity: 3, Order-line amount: 289.08, Adjusted quantity: 72
+
+	 Item number: 40391, name: yjpiqvrwluxyvnkdyklxu, Supplier warehouse: 8, quantity: 3, Order-line amount: 163.98, Adjusted quantity: 38
+
+	 Item number: 8223, name: zqstjccoeyfrsn, Supplier warehouse: 2, quantity: 3, Order-line amount: 231.63, Adjusted quantity: 88
+
+	 Item number: 14975, name: rpkgnppzrkfduuookoo, Supplier warehouse: 2, quantity: 3, Order-line amount: 3.45, Adjusted quantity: 88
+
+	 Item number: 15383, name: oxfvoiwevjdxiljrj, Supplier warehouse: 7, quantity: 3, Order-line amount: 92.43, Adjusted quantity: 61
+
+	 Item number: 19654, name: xmyelmzfmrgfvck, Supplier warehouse: 5, quantity: 3, Order-line amount: 212.46, Adjusted quantity: 10
+
+	 Item number: 22871, name: zwnpszsnysycmvnzixwlr, Supplier warehouse: 8, quantity: 3, Order-line amount: 46.68, Adjusted quantity: 25
+
+	 Item number: 31334, name: iekxwrymoidzvmgepykmdl, Supplier warehouse: 3, quantity: 3, Order-line amount: 285.42, Adjusted quantity: 60
+
+	 Item number: 50791, name: yqflvmrmiywat, Supplier warehouse: 6, quantity: 3, Order-line amount: 281.94, Adjusted quantity: 13
+
+	 Item number: 56777, name: dokfnldnldjggzt, Supplier warehouse: 2, quantity: 3, Order-line amount: 102.27, Adjusted quantity: 20
+
+	 Item number: 67267, name: kdrcgcuiwesqmirjmkeq, Supplier warehouse: 6, quantity: 3, Order-line amount: 198.60, Adjusted quantity: 85
+
+	 Item number: 82368, name: lcyleikskslyowu, Supplier warehouse: 3, quantity: 3, Order-line amount: 23.25, Adjusted quantity: 46
+
+	 Item number: 97509, name: rqvykzbivqvvfekez, Supplier warehouse: 4, quantity: 3, Order-line amount: 272.25, Adjusted quantity: 65
+
+=======================================
+=======================================
+Transaction ID: 56
+*** New Order Transaction Summary ***
+Customer ID: (3, 4, 628), Last name:ANTIABLECALLY, Credit:GC, C_DISCOUNT:0.3440
+
+Warehouse tax:0.0552, District tax:0.1367
+
+Order ID:3009, Order entry date:2022-11-05 17:31:34.289
+
+#items:5, TTime used: 0
+Time used: 0
+[Error]:  New Order Abort New **** New Order Transaction Information ****
+CID:1122, WID:3, DID:3, num order-lines:18
+Item IDs are:,57058,59803,24277,72021,65238,34022,62917,54487,4094,31446,37311,40423,59494,63175,64871,73443,73446,97250
+Quantities:,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+Supply warehouse IDs:,3,10,5,8,2,5,7,7,10,7,1,13,4,2,1,5,9,4
+
+Time used: 0
+Time used: 0
+Time used: 0
+otal amount:350.11
+
+Items information:
+	 Item number: 18578, name: skyzkbadzrjaixn, Supplier warehouse: 5, quantity: 3, Order-line amount: 24.30, Adjusted quantity: 43
+
+	 Item number: 52567, name: tbwujkjidndegtn, Supplier warehouse: 5, quantity: 3, Order-line amount: 129.96, Adjusted quantity: 23
+
+	 Item number: 66263, name: giuxdwjjqeqsjbnuwapcsg, Supplier warehouse: 10, quantity: 3, Order-line amount: 10.77, Adjusted quantity: 12
+
+	 Item number: 93375, name: hxellqximrmuudvcpg, Supplier warehouse: 8, quantity: 3, Order-line amount: 170.04, Adjusted quantity: 11
+
+	 Item number: 93887, name: krkqiadbbheom, Supplier warehouse: 6, quantity: 3, Order-line amount: 112.71, Adjusted quantity: 64
+
+=======================================
+=======================================
+Transaction ID: 57
+*** New Order Transaction Summary ***
+Customer ID: (3, 1, 2642), Last name:PRIPRESCALLY, Credit:GC, C_DISCOUNT:0.2767
+
+Warehouse tax:0.0552, District tax:0.0769
+
+Order ID:3012, Order entry date:2022-11-05 17:31:34.338
+
+#items:14, Total amount:1704.82
+
+Items information:
+	 Item number: 5314, name: afsblnevupwxpzpfjiqy, Supplier warehouse: 5, quantity: 3, Order-line amount: 200.61, Adjusted quantity: 49
+
+	 Item number: 32483, name: povnfgiizsvhedrf, Supplier warehouse: 2, quantity: 3, Order-line amount: 96.09, Adjusted quantity: 76
+
+	 Item number: 79958, name: nlovdygwttvvitwophspb, Supplier warehouse: 8, quantity: 3, Order-line amount: 93.24, Adjusted quantity: 37
+
+	 Item number: 78539, name: hfluvxsozosgqoocfevs, Supplier warehouse: 2, quantity: 3, Order-line amount: 197.46, Adjusted quantity: 43
+
+	 Item number: 579, name: fqcunzudfodiyznlxqlblv, Supplier warehouse: 1, quantity: 3, Order-line amount: 173.73, Adjusted quantity: 26
+
+	 Item number: 3071, name: rzyvjeuhrqkuvdxbrpibk, Supplier warehouse: 4, quantity: 3, Order-line amount: 145.35, Adjusted quantity: 22
+
+	 Item number: 11175, name: bxkabaynvwbohulornr, Supplier warehouse: 9, quantity: 3, Order-line amount: 271.74, Adjusted quantity: 24
+
+	 Item number: 56454, name: rqfuhgkeorwynzw, Supplier warehouse: 3, quantity: 3, Order-line amount: 161.01, Adjusted quantity: 81
+
+	 Item number: 66534, name: gbwxttxlgqptlzmvmzmz, Supplier warehouse: 3, quantity: 3, Order-line amount: 107.67, Adjusted quantity: 58
+
+	 Item number: 71383, name: jxwfropjokdskxehdjyxp, Supplier warehouse: 10, quantity: 3, Order-line amount: 274.23, Adjusted quantity: 18
+
+	 Item number: 72327, name: gcdikfbkqeikfuxxxa, Supplier warehouse: 4, quantity: 3, Order-line amount: 49.50, Adjusted quantity: 20
+
+	 Item number: 94943, name: atvwspxwnxyiqggtt, Supplier warehouse: 4, quantity: 3, Order-line amount: 68.52, Adjusted quantity: 66
+
+	 Item number: 96996, name: excgzaoltgevzqzmxbjjjpt, Supplier warehouse: 2, quantity: 3, Order-line amount: 150.21, Adjusted quantity: 15
+
+	 Item number: 97495, name: axuklqojforiwiylzc, Supplier warehouse: 8, quantity: 3, Order-line amount: 92.61, Adjusted quantity: 34
+
+=======================================
+=======================================
+Transaction ID: 58
+*** New Order Transaction Summary ***
+Customer ID: (3, 4, 1019), Last name:BARPRESPRES, Credit:GC, C_DISCOUNT:0.0436
+
+Warehouse tax:0.0552, District tax:0.1367
+
+Order ID:3010, Order entry date:2022-11-05 17:31:34.452
+
+#items:5, Total amount:802.46
+
+Items information:
+	 Item number: 24295, name: zdksjpebjnfgnirsjmqgi, Supplier warehouse: 6, quantity: 3, Order-line amount: 85.53, Adjusted quantity: 106
+
+	 Item number: 29581, name: qbkwfqohcpspvbp, Supplier warehouse: 10, quantity: 3, Order-line amount: 181.89, Adjusted quantity: 32
+
+	 Item number: 72855, name: omnndjprrxflhijbccquswl, Supplier warehouse: 7, quantity: 3, Order-line amount: 153.99, Adjusted quantity: 29
+
+	 Item number: 81127, name: xajrzpvsqowtpvon, Supplier warehouse: 5, quantity: 3, Order-line amount: 40.50, Adjusted quantity: 76
+
+	 Item number: 98019, name: uajafoajeffrtmr, Supplier warehouse: 1, quantity: 3, Order-line amount: 242.04, Adjusted quantity: 60
+
+=======================================
+=======================================
+Transaction ID: 59
+*** New Order Transaction Summary ***
+Customer ID: (3, 5, 2673), Last name:ESEBARPRES, Credit:GC, C_DISCOUNT:0.3435
+
+Warehouse tax:0.0552, District tax:0.0285
+
+Order ID:3010, Order entry date:2022-11-05 17:31:34.604
+
+#items:19, Total amount:1788.97
+
+Items information:
+	 Item number: 69275, name: gqcebdphuzuyljpxbto, Supplier warehouse: 10, quantity: 3, Order-line amount: 109.98, Adjusted quantity: 78
+
+	 Item number: 92550, name: clmsqbkhztkpfuld, Supplier warehouse: 2, quantity: 3, Order-line amount: 147.39, Adjusted quantity: 41
+
+	 Item number: 56998, name: jxuxitqxaazorqfwiadzo, Supplier warehouse: 1, quantity: 3, Order-line amount: 146.91, Adjusted quantity: 88
+
+	 Item number: 36004, name: rpgelmntbvjyso, Supplier warehouse: 4, quantity: 3, Order-line amount: 133.71, Adjusted quantity: 23
+
+	 Item number: 88292, name: ovhcbmtbxsqkcthrlpfmw, Supplier warehouse: 1, quantity: 3, Order-line amount: 63.18, Adjusted quantity: 15
+
+	 Item number: 85734, name: rphjefsnzfqojaroz, Supplier warehouse: 2, quantity: 3, Order-line amount: 246.21, Adjusted quantity: 59
+
+	 Item number: 89014, name: xedexqdbqybrr, Supplier warehouse: 2, quantity: 3, Order-line amount: 20.67, Adjusted quantity: 72
+
+	 Item number: 89299, name: gyhjhomwnifwz, Supplier warehouse: 3, quantity: 3, Order-line amount: 282.69, Adjusted quantity: 93
+
+	 Item number: 6207, name: idafnlyfbckrnlwoe, Supplier warehouse: 5, quantity: 3, Order-line amount: 4.56, Adjusted quantity: 57
+
+	 Item number: 11363, name: hjfocbrjtzwvhzognzlohu, Supplier warehouse: 10, quantity: 3, Order-line amount: 143.28, Adjusted quantity: 30
+
+	 Item number: 22117, name: ogoyfnqiuevqkkhjbjela, Supplier warehouse: 9, quantity: 3, Order-line amount: 20.61, Adjusted quantity: 47
+
+	 Item number: 24293, name: gyuxauqxykiubqj, Supplier warehouse: 6, quantity: 3, Order-line amount: 57.78, Adjusted quantity: 46
+
+	 Item number: 32353, name: ijvzvidxbahqv, Supplier warehouse: 4, quantity: 3, Order-line amount: 206.55, Adjusted quantity: 81
+
+	 Item number: 40391, name: yjpiqvrwluxyvnkdyklxu, Supplier warehouse: 4, quantity: 3, Order-line amount: 163.98, Adjusted quantity: 66
+
+	 Item number: 60167, name: xrewkpnfvuglwsmrilvede, Supplier warehouse: 4, quantity: 3, Order-line amount: 265.68, Adjusted quantity: 45
+
+	 Item number: 64799, name: tymgfwikvsfirvglwjkauvp, Supplier warehouse: 2, quantity: 3, Order-line amount: 69.42, Adjusted quantity: 76
+
+	 Item number: 79589, name: bkfhqnksybzywwqaxg, Supplier warehouse: 1, quantity: 3, Order-line amount: 65.61, Adjusted quantity: 36
+
+	 Item number: 90694, name: ugatqwbuzeqxmqsab, Supplier warehouse: 3, quantity: 3, Order-line amount: 247.41, Adjusted quantity: 90
+
+	 Item number: 96838, name: xetkhuqpuptvkkeuifkbfc, Supplier warehouse: 8, quantity: 3, Order-line amount: 118.92, Adjusted quantity: 16
+
+=======================================
+=======================================
+Transaction ID: 60
+*** New Order Transaction Summary ***
+Customer ID: (3, 2, 2307), Last name:OUGHTPRICALLY, Credit:BC, C_DISCOUNT:0.3235
+
+Warehouse tax:0.0552, District tax:0.0718
+
+Order ID:3014, Order entry date:2022-11-05 17:31:34.749
+
+#items:17, Total amount:1637.37
+
+Items information:
+	 Item number: 42579, name: jerlllbjxqexpllo, Supplier warehouse: 3, quantity: 3, Order-line amount: 22.77, Adjusted quantity: 87
+
+	 Item number: 47549, name: hsbyynjzcjfgb, Supplier warehouse: 6, quantity: 3, Order-line amount: 225.03, Adjusted quantity: 54
+
+	 Item number: 16075, name: jgzropkfnsrtfayc, Supplier warehouse: 10, quantity: 3, Order-line amount: 229.80, Adjusted quantity: 91
+
+	 Item number: 74722, name: dfjnreyakweuuzatqp, Supplier warehouse: 7, quantity: 3, Order-line amount: 139.65, Adjusted quantity: 75
+
+	 Item number: 65219, name: ifmrxrzwtbmqxdcdvyu, Supplier warehouse: 3, quantity: 3, Order-line amount: 92.07, Adjusted quantity: 86
+
+	 Item number: 24272, name: cmzpfoarvuzhrksc, Supplier warehouse: 4, quantity: 3, Order-line amount: 197.16, Adjusted quantity: 23
+
+	 Item number: 4934, name: uutrpyqtbtlfktwkfsa, Supplier warehouse: 1, quantity: 3, Order-line amount: 23.13, Adjusted quanTime used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+tity: 33
+
+	 Item number: 81639, name: hngiigjqoazhqrnuxhab, Supplier warehouse: 4, quantity: 3, Order-line amount: 96.54, Adjusted quantity: 33
+
+	 Item number: 55830, name: dnvjzqzwiictzs, Supplier warehouse: 4, quantity: 3, Order-line amount: 20.49, Adjusted quantity: 86
+
+	 Item number: 37079, name: mlwkawpmgkgecjmdcs, Supplier warehouse: 9, quantity: 3, Order-line amount: 21.39, Adjusted quantity: 93
+
+	 Item number: 43147, name: xuivottjmcfyyvipegbmuo, Supplier warehouse: 7, quantity: 3, Order-line amount: 246.42, Adjusted quantity: 25
+
+	 Item number: 56743, name: sbzfdrykbvkavxrqazerum, Supplier warehouse: 3, quantity: 3, Order-line amount: 146.61, Adjusted quantity: 93
+
+	 Item number: 56935, name: nhpquwuwftzdanutif, Supplier warehouse: 7, quantity: 3, Order-line amount: 161.58, Adjusted quantity: 92
+
+	 Item number: 70179, name: bmzmcsozijrcxovkpd, Supplier warehouse: 6, quantity: 3, Order-line amount: 60.09, Adjusted quantity: 92
+
+	 Item number: 72927, name: tvmklzszggmhhwonf, Supplier warehouse: 1, quantity: 3, Order-line amount: 231.06, Adjusted quantity: 73
+
+	 Item number: 81573, name: cxgzsrjnoaenhotx, Supplier warehouse: 4, quantity: 3, Order-line amount: 168.39, Adjusted quantity: 30
+
+	 Item number: 96993, name: lxbzuauyddzpqws, Supplier warehouse: 1, quantity: 3, Order-line amount: 65.43, Adjusted quantity: 16
+
+=======================================
+=======================================
+Transaction ID: 61
+*** New Order Transaction Summary ***
+Customer ID: (3, 2, 2253), Last name:EINGABLEPRES, Credit:GC, C_DISCOUNT:0.0507
+
+Warehouse tax:0.0552, District tax:0.0718
+
+Order ID:3015, Order entry date:2022-11-05 17:31:34.877
+
+#items:7, Total amount:1559.60
+
+Items information:
+	 Item number: 4029, name: uwwzggaspjmaan, Supplier warehouse: 3, quantity: 3, Order-line amount: 120.93, Adjusted quantity: 87
+
+	 Item number: 9951, name: lxfnsfepqgxepnbkjqlwyp, Supplier warehouse: 2, quantity: 3, Order-line amount: 261.00, Adjusted quantity: 18
+
+	 Item number: 14047, name: xwdlwhlwfuwlpfpeu, Supplier warehouse: 9, quantity: 3, Order-line amount: 278.28, Adjusted quantity: 68
+
+	 Item number: 27615, name: otpvqjwawtwaklza, Supplier warehouse: 8, quantity: 3, Order-line amount: 290.88, Adjusted quantity: 40
+
+	 Item number: 32455, name: trmfjxdzqnyjgldqqo, Supplier warehouse: 10, quantity: 3, Order-line amount: 268.56, Adjusted quantity: 93
+
+	 Item number: 48855, name: ymcueinpcecjexsbyxby, Supplier warehouse: 6, quantity: 3, Order-line amount: 151.02, Adjusted quantity: 67
+
+	 Item number: 93879, name: neksmzqnnlrvmrg, Supplier warehouse: 1, quantity: 3, Order-line amount: 87.09, Adjusted quantity: 41
+
+=======================================
+=======================================
+Transaction ID: 62
+=======================================
+=======================================
+Transaction ID: 63
+*** New Order Transaction Summary ***
+Customer ID: (3, 2, 2050), Last name:OUGHTANTIPRES, Credit:GC, C_DISCOUNT:0.0206
+
+Warehouse tax:0.0552, District tax:0.0718
+
+Order ID:3016, Order entry date:2022-11-05 17:31:35.070
+
+#items:6, Total amount:609.52
+
+Items information:
+	 Item number: 12007, name: eqsiobqckyijbfc, Supplier warehouse: 9, quantity: 3, Order-line amount: 121.92, Adjusted quantity: 81
+
+	 Item number: 48295, name: ewjiqccxoaqydotetpddvc, Supplier warehouse: 5, quantity: 3, Order-line amount: 47.34, Adjusted quantity: 80
+
+	 Item number: 54983, name: jlpyuxljkoejpjnwizyt, Supplier warehouse: 7, quantity: 3, Order-line amount: 182.19, Adjusted quantity: 82
+
+	 Item number: 76963, name: bucuvhkrjxbgjrtgestqnr, Supplier warehouse: 1, quantity: 3, Order-line amount: 48.18, Adjusted quantity: 46
+
+	 Item number: 88789, name: oomrhlqlsridbnqfm, Supplier warehouse: 6, quantity: 3, Order-line amount: 104.52, Adjusted quantity: 55
+
+	 Item number: 88794, name: rrjmdxiuopmssvfrz, Supplier warehouse: 5, quantity: 3, Order-line amount: 48.06, Adjusted quantity: 33
+
+=======================================
+=======================================
+Transaction ID: 64
+*** New Order Transaction Summary ***
+Customer ID: (3, 3, 705), Last name:CALLYBARPRES, Credit:GC, C_DISCOUNT:0.0864
+
+Warehouse tax:0.0552, District tax:0.1168
+
+Order ID:3012, Order entry date:2022-11-05 17:31:35.128
+
+#items:13, Total amount:2309.87
+
+Items information:
+	 Item number: 56027, name: dhrgvhckdwqzydzvdua, Supplier warehouse: 10, quantity: 3, Order-line amount: 258.81, Adjusted quantity: 43
+
+	 Item number: 43732, name: uyrnouykxbhsemusae, Supplier warehouse: 2, quantity: 3, Order-line amount: 289.68, Adjusted quantity: 61
+
+	 Item number: 5655, name: fiffircibaqyv, Supplier warehouse: 4, quantity: 3, Order-line amount: 255.66, Adjusted quantity: 27
+
+	 Item number: 6095, name: zvqabsritdcezet, Supplier warehouse: 1, quantity: 3, Order-line amount: 190.62, Adjusted quantity: 16
+
+	 Item number: 6151, name: eqkdxfaaniilgdoybup, Supplier warehouse: 7, quantity: 3, Order-line amount: 170.40, Adjusted quantity: 28
+
+	 Item number: 10919, name: ccofxbrmjlmmvcojbww, Supplier warehouse: 2, quantity: 3, Order-line amount: 103.32, Adjusted quantity: 68
+
+	 Item number: 28325, name: nphujmprhunzavhnhvj, Supplier warehouse: 6, quantity: 3, Order-line amount: 269.31, Adjusted quantity: 47
+
+	 Item number: 52423, name: czsfkhxfzafpwwcva, Supplier warehouse: 9, quantity: 3, Order-line amount: 17.46, Adjusted quantity: 37
+
+	 Item number: 62791, name: mlrtisqbhukqsciy, Supplier warehouse: 8, quantity: 3, Order-line amount: 57.03, Adjusted quantity: 101
+
+	 Item number: 73029, name: aowbvwxrappzmjum, Supplier warehouse: 4, quantity: 3, Order-line amount: 135.57, Adjusted quantity: 29
+
+	 Item number: 73437, name: wrkzugpdgbgvzclwup, Supplier warehouse: 5, quantity: 3, Order-line amount: 41.40, Adjusted quantity: 107
+
+	 Item number: 88805, name: jzufzixgqocjoasswkrioav, Supplier warehouse: 10, quantity: 3, Order-line amount: 271.20, Adjusted quantity: 64
+
+	 Item number: 89015, name: mwgzhijjizqnn, Supplier warehouse: 3, quantity: 3, Order-line amount: 96.81, Adjusted quantity: 19
+
+=======================================
+=======================================
+Transaction ID: 65
+*** New Order Transaction Summary ***
+Customer ID: (3, 4, 2241), Last name:ESEEINGEING, Credit:GC, C_DISCOUNT:0.2323
+
+Warehouse tax:0.0552, District tax:0.1367
+
+Order ID:3011, Order entry date:2022-11-05 17:31:35.247
+
+#items:19, Total amount:2538.25
+
+Items information:
+	 Item number: 9557, name: ehuovntjsyvpccds, Supplier warehouse: 5, quantity: 3, Order-line amount: 275.82, Adjusted quantity: 89
+
+	 Item number: 66279, name: vlcmvoxmzniujarssspsbt, Supplier warehouse: 5, quantity: 3, Order-line amount: 207.48, Adjusted quantity: 44
+
+	 Item number: 81381, name: eixqzphbvpiqzqnbe, Supplier warehouse: 8, quantity: 3, Order-line amount: 41.52, Adjusted quantity: 35
+
+	 Item number: 32047, name: qnhilklnsrlrznquapgvg, Supplier warehouse: 1, quantity: 3, Order-line amount: 204.60, Adjusted quantity: 11
+
+	 Item number: 62691, name: bsenhjektihxasgcskyifwu, Supplier warehouse: 1, quantity: 3, Order-line amount: 230.91, Adjusted quantity: 93
+
+	 Item number: 75079, name: vxqbccdxocizakzaaf, Supplier warehouse: 2, quantity: 3, Order-line amount: 140.10, Adjusted quantity: 15
+
+	 Item number: 97244, name: klcpzqzqsrqekgqzvjduxb, Supplier warehouse: 5, quantity: 3, Order-line amount: 37.11, Adjusted quantity: 47
+
+	 Item number: 73191, name: bzzjrdopfqdujm, Supplier warehouse: 6, quantity: 3, Order-line amount: 245.91, Adjusted quantity: 68
+
+	 Item number: 32349, name: gjikrypwfvizdjfvko, Supplier warehouse: 6, quantity: 3, Order-line amount: 188.04, Adjusted quantity: 28
+
+	 Item number: 98007, name: yeemyupikuqtbaboepbqfn, Supplier warehouse: 9, quantity: 3, Order-line amount: 171.87, Adjusted quantity: 58
+
+	 Item number: 16093, name: uspbgqhltscbldjjpkwmcu, Supplier warehouse: 5, quantity: 3, Order-line amount: 32.61, Adjusted quantity: 11
+
+	 Item number: 23270, name: rriouvxhsehmd, Supplier warehouse: 6, quantity: 3, Order-line amount: 56.43, Adjusted quantity: 91
+
+	 Item number: 47847, name: nttlgbgyadkvjgnhtfborb, Supplier warehouse: 8, quantity: 3, Order-line amount: 5.10, Adjusted quantity: 48
+
+	 Item number: 52951, name: tsoyxhpxmkwqwxvxjebko, Supplier warehouse: 10, quantity: 3, Order-line amount: 216.81, Adjusted quantity: 47
+
+	 Item number: 56343, name: dfqcopnjlfcmufilef, Supplier warehouse: 1, quantity: 3, Order-line amount: 3.90, Adjusted quantity: 37
+
+	 Item number: 69053, name: aciucsermduqqhzbxyyf, Supplier warehouse: 6, quantity: 3, Order-line amount: 48.18, Adjusted quantity: 39
+
+	 Item number: 73382, name: hxyslkztpxpfhxulktuqjz, Supplier warehouse: 7, quantity: 3, Order-line amount: 223.08, Adjusted quantity: 70
+
+	 Item number: 81602, name: hjwrwdduxekntueg, Supplier warehouse: 8, quantity: 3, Order-line amount: 162.42, Adjusted quantity: 85
+
+	 Item number: 85699, name: akkemtkednpupzhhauozm, Supplier warehouse: 4, quantity: 3, Order-line amount: 282.09, Adjusted quantity: 60
+
+=======================================
+=======================================
+Transaction ID: 66
+*** New Order Transaction Summary ***
+Customer ID: (3, 2, 393), Last name:PRIEINGABLE, Credit:GC, C_DISCOUNT:0.4325
+
+Warehouse tax:0.0552, District tax:0.0718
+
+Order ID:3017, Order entry date:2022-11-05 17:31:35.463
+
+#items:17, Total amount:1340.63
+
+Items information:
+	 Item number: 15911, name: xjiyirbtgneoeklb, Supplier warehouse: 3, quantity: 3, Order-line amount: 105.18, Adjusted quantity: 29
+
+	 Item number: 79078, name: bgtwcbwxytzrzijthtgtd, Supplier warehouse: 9, quantity: 3, Order-line amount: 266.79, Adjusted quantity: 42
+
+	 Item number: 61927, name: jkrprinbajsfbfo, Supplier warehouse: 10, quantity: 3, Order-line amount: 121.89, Adjusted quantity: 35
+
+	 Item number: 56783, name: xcmsuogrmuxfrlxkp, Supplier warehouse: 8, quantity: 3, Order-line amount: 58.68, Adjusted quantity: 54
+
+	 Item number: 37862, name: sapnmdxplivhypx, Supplier warehouse: 4, quantity: 3, Order-line amount: 92.82, Adjusted quantity: 75
+
+	 Item number: 24155, name: okopryiszuxcovj, Supplier warehouse: 8, quantity: 3, Order-line amount: 237.39, Adjusted quantity: 41
+
+	 Item number: 76965, name: wpuhushhjgsocqrzfclvald, Supplier warehouse: 9, quantity: 3, Order-line amount: 13.50, Adjusted quantity: 10
+
+	 Item number: 62125, name: vapkyuqdhzkws, Supplier warehouse: 4, quantity: 3, Order-line amount: 87.36, Adjusted quantity: 17
+
+	 Item number: 12087, name: aqeoiceexjxsdeedkqw, Supplier warehouse: 6, quantity: 3, Order-line amount: 80.58, Adjusted quantity: 13
+
+	 Item number: 24159, name: fyatjixmsxpaxugsnhqmk, Supplier warehouse: 7, quantity: 3, Order-line amount: 137.49, Adjusted quantity: 44
+
+	 Item number: 39015, name: jutbwmmhkblpwin, Supplier warehouse: 7, quantity: 3, Order-line amount: 88.29, Adjusted quantity: 65
+
+	 Item number: 40551, name: uawhoiweipvbznoceq, Supplier warehouse: 3, quantity: 3, Order-line amount: 268.62, Adjusted quantity: 87
+
+	 Item number: 44677, name: dqxdduskrxdxnyjqx, Supplier warehouse: 10, quantity: 3, Order-line amount: 141.51, Adjusted quantity: 30
+
+	 Item number: 60886, name: nqpuclwxmrkiqcuprwujkar, Supplier warehouse: 10, quantity: 3, Order-line amount: 86.28, Adjusted quantity: 31
+
+	 Item number: 65111, name: qlbeajqnxjmwiwjma, Supplier warehouse: 7, quantity: 3, Order-line amount: 195.84, Adjusted quantity: 52
+
+	 Item number: 73447, name: saielrtcwoirukygivtndk, Supplier warehouse: 5, quantity: 3, Order-line amount: 23.52, Adjusted quantity: 50
+
+	 Item number: 95901, name: fiolnrbcspgzecsbjnu, Supplier warehouse: 9, quantity: 3, Order-line amount: 90.39, Adjusted quantity: 84
+
+=======================================
+=======================================
+Transaction ID: 67
+*** Order Status Transaction Summary ***
+Customer name: （ykpzalggdpqarz, OE, ESEPRIABLE), balance: -10.00
+Last order ID: 2879, Carrier ID: 0, Datetime: 2022-08-02T09:16:16.651Z
+Items of last order:
+Item number: 526, Supply warehouse ID: 3, Quantity: 5, Price: 5412.69, Delivery time: Not delivered
+Item number: 13938, Supply warehouse ID: 3, Quantity: 5, Price: 1489.82, Delivery time: Not delivered
+Item number: 15269, Supply warehouse ID: 3, Quantity: 5, Price: 465.79, Delivery time: Not delivered
+Item number: 28911, Supply warehouse ID: 3, Quantity: 5, Price: 2976.61, Delivery time: Not delivered
+Item number: 32422, Supply warehouse ID: 3, Quantity: 5, Price: 8015.33, Delivery time: Not delivered
+Item number: 33542, Supply warehouse ID: 3, Quantity: 5, Price: 797.33, Delivery time: Not delivered
+Item number: 35918, Supply warehouse ID: 3, Quantity: 5, Price: 2111.64, Delivery time: Not delivered
+Item number: 42217, Supply warehouse ID: 3, Quantity: 5, Price: 5920.57, Delivery time: Not delivered
+Item number: 43616, Supply warehouse ID: 3, Quantity: 5, Price: 6976.40, Delivery time: Not delivered
+Item number: 46962, Supply warehouse ID: 3, Quantity: 5, Price: 7524.03, Delivery time: Not delivered
+Item number: 48699, Supply warehouse ID: 3, Quantity: 5, Price: 6554.23, Delivery time: Not delivered
+Item number: 49403, Supply warehouse ID: 3, Quantity: 5, Price: 55.26, Delivery time: Not delivered
+Item number: 51206, Supply warehouse ID: 3, Quantity: 5, Price: 9802.13, Delivery time: Not delivered
+Item number: 54245, Supply warehouse ID: 3, Quantity: 5, Price: 2074.89, Delivery time: Not delivered
+Item number: 80488, Supply warehouse ID: 3, Quantity: 5, Price: 9773.50, Delivery time: Not delivered
+Item number: 83537, Supply warehouse ID: 3, Quantity: 5, Price: 2295.45, Delivery time: Not delivered
+Item number: 93787, Supply warehouse ID: 3, Quantity: 5, Price: 6448.51, Delivery time: Not delivered
+=======================================
+=======================================
+Transaction ID: 68
+********** Payment Transaction *********
+Customer info: 
+Identifier: (3, 2, 2303)
+Name: (kdmxleicd, OE, EINGBARPRI)
+Address: (fpdqkmncqfebxtxau, welxranywhzyvkfcns, nukttyeyx, NZ, 708211111)
+Phone: 0742025219620995
+Since: 2022-08-02T09:16:07.331Z
+Credit status: GC
+Credit limit: 50000.0
+Discount: 0.3596
+Balance: -2111.26
+Warehouse address: (rrdczwmrlfxblg, prpgrntaqoosvxpkj, jlavsqccr, FR, 123456789)
+district address: (szrmixooyix, wxsoadmtryad, qjynjieuagsecpv, SH, 123456789)
+Payment: 2101.26
+
+=======================================
+=======================================
+Transaction ID: 69
+order id: 2986, entry time: 17:16:16Customer name: itsxtix, OE, ABLEANTIATIONpopular item: wvoyjdzhclbsrlvqcpmndb quantity:5
+popular item: zjvqehhrqwgnpymowwjeanl quantity:5
+popular item: cdhpikgtvmwmtucgrcl quantity:5
+popular item: bgaudsqtntzzdplnuw quantity:5
+popular item: emuijrwlkgiuvyfhnhs quantity:5
+popular item: qdveztfloupbfzfygwqqdi quantity:5
+popular item: otrvmwgnkxflmxczlfh quantity:5
+popular item: nmznystgqbdvtepciqqjr quantity:5
+popular item: hzwjbuaxyqclhne quantity:5
+popular item: brepcekdakpyhohcfoyd quantity:5
+popular item: cqmepnrqbzuvltqqebgxui quantity:5
+popular item: ceahcnvrygkoysgabvjwpin quantity:5
+popular item: msfzjixucxeqnxzagecwvnu quantity:5
+popular item: ofxigbxyupatfczgeku quantity:5
+popular item: dehxqlfecvaynioi quantity:5
+popular item: emprdvmaskmzschehzgr quantity:5
+order id: 2987, entry time: 17:16:16Customer name: itqjzoqdvbsfs, OE, ESEESEPRESpopular item: zuzjalevhccqmzyht quantity:5
+popular item: txrwbpzcgjuopa quantity:5
+popular item: bmueltrdoqlsmomofbao quantity:5
+popular item: wfzoknecxiuzvpv quantity:5
+popular item: gjmxwxtcapnntqbzdnkhmp quantity:5
+popular item: eajqwpyjccteqg quantity:5
+popular item: gcaddljmjzzfb quantity:5
+popular item: dmoliwotwnimdh quantity:5
+popular item: junrfxmenrocctpwdk quantity:5
+popular item: tagoklnrxgrycr quantity:5
+popular item: uwdfiwxxdfxxg quantity:5
+popular item: wyeskwwcsgvtaqljogodp quantity:5
+popular item: ykttkllilimbbrzctnqljw quantity:5
+popular item: yngphrbqaiinxj quantity:5
+popular item: tscvygweijeld quantity:5
+popular item: drlcnlyshykszi quantity:5
+popular item: qemlpjaptqqaf quantity:5
+popular item: guwaqtjpwijrxoiaca quantity:5
+popular item: discoknzgupfuszbxk quantity:5
+order id: 2988, entry time: 17:16:16Customer name: qzjrmrxkm, OE, ESECALLYEINGpopular item: ninzcexpfbdniobzpx quantity:5
+popular item: ylfezwfenndcffu quantity:5
+popular item: gnyxfntacxwyponvqccds quantity:5
+popular item: lqoeplrzixlac quantity:5
+popular item: bkukzecvhfnpuwkt quantity:5
+popular item: vfpkpvjfrnyidyosaacd quantity:5
+order id: 2989, entry time: 17:16:16Customer name: dbozxksvtmicbm, OE, PRESOUGHTABLEpopular item: syswawldcjrxszp quantity:5
+popular item: llkzzsgjiazibv quantity:5
+popular item: qefckjynzcxctjpo quantity:5
+popular item: qfhfmwjldktyfclrmy quantity:5
+popular item: ayclivoaloscqew quantity:5
+popular item: ueqwnuuageunmmrwtooymt quantity:5
+popular item: uieqsnexudsbyqtranft quantity:5
+popular item: fqegcgluxzvlsdf quantity:5
+popular item: xqftognsnnkyucwuneepexd quantity:5
+popular item: uuqbvufmvwubfrrcqiozg quantity:5
+popular item: uvvoohapuvnqciv quantity:5
+popular item: ghebinitnuobk quantity:5
+popular item: twowlutbzzjgomikjbn quantity:5
+popular item: muyojluyfvkbaaiwue quantity:5
+popular item: jxxzyedkszrkfu quantity:5
+popular item: rqeoccubhjgsfnlnkek quantity:5
+order id: 2990, entry time: 17:16:16Customer name: hrgqnevstri, OE, ESEEINGOUGHTpopular item: bjykqmoqflgcuq quantity:5
+popular item: xitbhprmonlpn quantity:5
+popular item: kzupldtqamstumswcgee quantity:5
+popular item: dqbuhiesfxevh quantity:5
+popular item: bmktwghnoingfrltww quantity:5
+popular item: fkltrmvehjyvuxkwpwz quantity:5
+popular item: wizwxypodtmzojhe quantity:5
+popular item: yjlllekcharayeyxzei quantity:5
+popular item: srssvvoujdayafdk quantity:5
+popular item: mytxodvfkxzggnvwdatzik quantity:5
+popular item: ypjubmbfbzxerlxytlsoopu quantity:5
+order id: 2991, entry time: 17:16:16Customer name: kmosjkzlcjgeuis, OE, ANTIBARBARpopular item: vhnojjupbwmzslfxzkrm quantity:5
+popular item: ksaymcvvzcaeyg quantity:5
+popular item: zqygasvjcbitmzuw quantity:5
+popular item: vtybsvlnabwhfaitomdlgkc quantity:5
+popular item: vqhpzznkemdwf quantity:5
+popular item: abypjjjnjpvmjyeariwt quantity:5
+popular item: xhirzkzwesvyztitihocmu quantity:5
+popular item: jwwxsohnjekeyenzohqosgx quantity:5
+popular item: phfkhsrhbjxndmim quantity:5
+popular item: pnzzchlbymjtkcrzneocn quantity:5
+popular item: fzxxiuefckeqytkwdgbjaqn quantity:5
+popular item: fswndkbpzopxd quantity:5
+popular item: rbtzshtirknqbghjapklxkf quantity:5
+popular item: tfjuwfujamytxvqmcgrtlhb quantity:5
+popular item: rdmphmbtxzaudwoju quantity:5
+popular item: loomanipjrhhxzfpxhu quantity:5
+popular item: hwpvpltxwbhhdm quantity:5
+popular item: qqcbeckxxxeob quantity:5
+popular item: cpogjvcrqmkzgy quantity:5
+popular item: pgtvpzfnqtwetqabfbkg quantity:5
+order id: 2992, entry time: 17:16:16Customer name: vaxunffdcqb, OE, BARPRESPRESpopular item: ikqztxvzmzhijva quantity:5
+popular item: eovrphkrbsnttunk quantity:5
+popular item: hwyivjzllwarhso quantity:5
+popular item: prxlrjezpzoacd quantity:5
+popular item: otlctzeyktagwhqodcrn quantity:5
+popular item: ktpgnawzzybnvqt quantity:5
+popular item: xqhjkoriodvmglyjg quantity:5
+popular item: nbuejaystqrrlfbenj quantity:5
+popular item: rzdjhhmlxyenemsgbm quantity:5
+popular item: cbjtvfasqcceisuayxsmac quantity:5
+popular item: zcmnvzwfjjwaxmzy quantity:5
+popular item: elzsvjfzvhqts quantity:5
+popular item: dlmvtwncuzbqil quantity:5
+popular item: frpnwcuvxroiuplq quantity:5
+popular item: gjawakvlivbjyxzliek quantity:5
+popular item: fvcblerwnfobdslryn quantity:5
+popular item: mcqoqyxapwqrrqnwewq quantity:5
+order id: 2993, entry time: 17:16:16Customer name: waxfeyoyvenmry, OE, OUGHTPRESATIONpopular item: wefnmofjkjnurgchjcefhpw quantity:5
+popular item: sbgttzdrzjoqwrz quantity:5
+popular item: hfiwpqohyvlep quantity:5
+popular item: kwrfnddkupcvuzlvtnlssv quantity:5
+popular item: gxtkpqrraommicyy quantity:5
+popular item: gjyjcerqukuvbbj quantity:5
+order id: 2994, entry time: 17:16:16Customer name: fnfeewwabv, OE, OUGHTCALLYEINGpopular item: cbiyslqeygccipbx quantity:5
+popular item: llhxjwbqkepfbsjn quantity:5
+popular item: nvkbhwuqkrbsva quantity:5
+popular item: dbhvcobnpnaybqhr quantity:5
+popular item: ifxkkkkhtpkjdx quantity:5
+popular item: hwgjpfqalawhztzku quantity:5
+popular item: kjwvcajalviinpvvad quantity:5
+popular item: lqxrigjgmoyxmxcnw quantity:5
+popular item: lgndxlzwgeupdctnyzxh quantity:5
+order id: 2995, entry time: 17:16:16Customer name: xyrvdjnxekh, OE, ESEATIONANTIpopular item: dluqnenmsmxbvhiylojebyk quantity:5
+popular item: shkbwdlhqdxyghwfoih quantity:5
+popular item: kxywjuzehuhrcdzaiknfip quantity:5
+popular item: nvnrgvikrtnuqmpomxxkvj quantity:5
+popular item: gxpaqguhjdyqli quantity:5
+popular item: rtfmrnvhsyggacnzqjig quantity:5
+popular item: fitbppbjftmfota quantity:5
+popular item: ygkqswztcgpfwbeawuqjp quantity:5
+popular item: gonmlyjfcukwzfw quantity:5
+popular item: xnmkaykfgwjdcabe quantity:5
+popular item: chazxxlwonnulegk quantity:5
+popular item: qidqczbyrvhel quantity:5
+order id: 2996, entry time: 17:16:16Customer name: eghcbtyfzmvmakv, OE, ATIONESEEINGpopular item: cviykzzykihndjuecowuh quantity:5
+popular item: kgcoiccbdjcybva quantity:5
+popular item: xdpwzwgcdwqqlrfcy quantity:5
+popular item: cezrdtybeczrh quantity:5
+popular item: zlelwwkzeixogwdatb quantity:5
+popular item: ffnauefmbokbbk quantity:5
+popular item: oplvpoipfuaspoqxf quantity:5
+order id: 2997, entry time: 17:16:16Customer name: klgpjwqldtkuc, OE, ESEPRESBARpopular item: zuzhemissltlsuvpm quantity:5
+popular item: hjwbwcpduqmnimcjlow quantity:5
+popular item: wfhvhbwdwcvtfqbuxt quantity:5
+popular item: uoguvlngvxnluhvyf quantity:5
+popular item: ujgwkpqueeycwcjgvmc quantity:5
+popular item: ihxqtujqkjzlgdwmb quantity:5
+popular item: rlauymgyeuspcuskfp quantity:5
+popular item: ytklveqqkzcaevlv quantity:5
+popular item: hhmezmnahvfcylbxhoy quantity:5
+popular item: cxuesfnjhxxaxjbefqowh quantity:5
+popular item: vanbzwmzvrnlhfm quantity:5
+popular item: bzfwetpjzxtzmtjhplza quantity:5
+popular item: kqyknvazynvkrmr quantity:5
+popular item: jazhxuzdugqzwtnhb quantity:5
+popular item: xkzknbareoongavnt quantity:5
+order id: 2998, entry time: 17:16:16Customer name: aynoiixmyfjq, OE, BARANTIATIONpopular item: cbhfminavwaohmxffx quantity:5
+popular item: blpkkqqagtzymv quantity:5
+popular item: etpddepezirzfjbkuzdbnq quantity:5
+popular item: krlakshzgwejvfnavn quantity:5
+popular item: wpeizzdnwwsxxeun quantity:5
+popular item: qptxulmqcmzhgvls quantity:5
+popular item: komlfkqrphrwks quantity:5
+order id: 2999, entry time: 17:16:16Customer name: obtqmtlsamzn, OE, ANTIBARBARpopular item: bwngobepoqdqxtydxbuawm quantity:5
+popular item: gdxmgupiqkbxoilbvojduaq quantity:5
+popular item: vcyynkttpakxccy quantity:5
+popular item: wjwfditvuexeykpxlyz quantity:5
+popular item: zunwytkpteyoafvvss quantity:5
+popular item: kwsfeoptuzupbk quantity:5
+popular item: blxtzuwmgchriyuyldi quantity:5
+popular item: cagnkfuwrlxoaxdzqmdm quantity:5
+popular item: vchoyfabqpyef quantity:5
+popular item: izscdlshugtqs quantity:5
+order id: 3000, entry time: 17:16:16Customer name: ltbueyvwqm, OE, PRESOUGHTOUGHTpopular item: soosgefopnsdjyv quantity:5
+popular item: jxulftbxyufhtliznyt quantity:5
+popular item: hvjhuwfqoogsyoaucqf quantity:5
+popular item: dyqjtuouqdcnye quantity:5
+popular item: wwgmmrliasbtrhkykvid quantity:5
+popular item: petlemvyfuuazsjtxrakoj quantity:5
+popular item: ogrgaibextrnhzifh quantity:5
+popular item: jtnhsazwzivtmltwahb quantity:5
+order id: 3001, entry time: 17:31:27popular item: nqczwddivrqssbblbyrrpa quantity:3
+popular item: bcaqdapufltpntccpgc quantity:3
+popular item: ehwiztjylywgcq quantity:3
+popular item: ucjjzbqeciuvdb quantity:3
+popular item: ylkalzegkhjldpmuvlygw quantity:3
+popular item: zreftvchaiztcgccr quantity:3
+popular item: fdjctkzirjpwagj quantity:3
+order id: 3002, entry time: 17:31:27popular item: iqblcziookmmkrwvuu quantity:4
+order id: 3003, entry time: 17:31:28popular item: mkqkgeblxowpmmbnkjn quantity:3
+popular item: bmroxqpzwcefcknnenaho quantity:3
+popular item: ywylqbpbbyzbzjao quantity:3
+popular item: soprsvkxjupbfirshpvrsn quantity:3
+popular item: ayhecorrbtqmlpjwdbbsa quantity:3
+popular item: nosueijcjzphkj quantity:3
+popular item: ljasolgttxnwdzsif quantity:3
+popular item: xfdfznqekphszsjbtuplz quantity:3
+popular item: hlohnvvtpotpp quantity:3
+popular item: ngjtbmbosybdyvjol quantity:3
+popular item: vzczxdhswelreymrariufo quantity:3
+popular item: rzrmdjjhhpsgleguftvs quantity:3
+popular item: pswokyshdxhkylxncd quantity:3
+popular item: lqawwhvymoiqcqzuradpdg quantity:3
+order id: 3004, entry time: 17:31:28popular item: xghdczsdfaybpiqz quantity:3
+popular item: idafnlyfbckrnlwoe quantity:3
+popular item: lzutohddpcxcyxenllhk quantity:3
+popular item: tzvmkxprvvtoiylotgrmzx quantity:3
+popular item: kehrbjguakqpslromhhwjz quantity:3
+popular item: tdhpjmklmlrvkrrnq quantity:3
+popular item: mriusedtesfmznbvzcy quantity:3
+popular item: tyqtvvyvysweyao quantity:3
+popular item: hfomzlqnmdomxx quantity:3
+popular item: cfgyaeoeuvnvwigao quantity:3
+popular item: abkswyualsymvwffhpdnhhj quantity:3
+popular item: gtscoljauuiqlnkulavyhb quantity:3
+popular item: irdukpgrqcnredbzj quantity:3
+popular item: hxieadzyocokwnrazpf quantity:3
+popular item: sckkpmnhftttjzycfbfm quantity:3
+popular item: ymdmzpbhmjkhkpmcbuvfour quantity:3
+popular item: kjpvcgnwulmnlxegkoeup quantity:3
+popular item: fapowdumaefeklydznnxn quantity:3
+popular item: naewbgnwvniwcqdidjnkz quantity:3
+order id: 3005, entry time: 17:31:29popular item: jcaimnjjmiggybprluj quantity:3
+popular item: rqoaeieoxsafkttmvnlgp quantity:3
+popular item: zxtcsoplgqxsebtevwiu quantity:3
+popular item: fjqzhfglblmpaeostwbylkj quantity:3
+popular item: djmscelzryzdqxxec quantity:3
+popular item: tbsufdfdthkrkcnamuaqfr quantity:3
+popular item: nzmgoxzjcqrmdkfyxubdrr quantity:3
+popular item: fcbnunonxgicscdkyhqlno quantity:3
+popular item: msbvsbqhrhytyqbjdur quantity:3
+popular item: mtacqxkspcgcoxhatlsuzue quantity:3
+popular item: cuhcsklptaxxrlnqu quantity:3
+popular item: stjlibrrwbdbwz quantity:3
+popular item: ieseigaefhzcuxjyx quantity:3
+popular item: kvtfkvuukmgihdmkbpotpjl quantity:3
+popular item: myncxmxipcbibzzrubsfh quantity:3
+order id: 3006, entry time: 17:31:29popular item: otyhnfaojxuypys quantity:3
+popular item: uctmihxjnijomsaufmog quantity:3
+popular item: khndtmwssbdpezge quantity:3
+popular item: ahozlwjlumzrbfsvvmk quantity:3
+popular item: yrgqnkkizpirhpc quantity:3
+popular item: vonogkgexbcbygpnz quantity:3
+popular item: jnlpiwshldbpigngqcby quantity:3
+popular item: vlbrdbafowhhz quantity:3
+order id: 3007, entry time: 17:31:30popular item: erbeqibwkzbyyrseezr quantity:10
+order id: 3008, entry time: 17:31:31popular item: plzjnqgqaorzv quantity:3
+popular item: dmlgozrsakpmhrhlupc quantity:3
+popular item: hlsxzicjxpwrwqpwd quantity:3
+popular item: jwgsvofklpyjkzlcmgslej quantity:3
+popular item: vlcmvoxmzniujarssspsbt quantity:3
+popular item: kvtfkvuukmgihdmkbpotpjl quantity:3
+popular item: sqmjgdclilhqhn quantity:3
+order id: 3009, entry time: 17:31:34popular item: skyzkbadzrjaixn quantity:3
+popular item: tbwujkjidndegtn quantity:3
+popular item: giuxdwjjqeqsjbnuwapcsg quantity:3
+popular item: hxellqximrmuudvcpg quantity:3
+popular item: krkqiadbbheom quantity:3
+order id: 3010, entry time: 17:31:34popular item: zdksjpebjnfgnirsjmqgi quantity:3
+popular item: qbkwfqohcpspvbp quantity:3
+popular item: omnndjprrxflhijbccquswl quantity:3
+popular item: xajrzpvsqowtpvon quantity:3
+popular item: uajafoajeffrtmr quantity:3
+order id: 3011, entry time: 17:31:35popular item: ehuovntjsyvpccds quantity:3
+popular item: uspbgqhltscbldjjpkwmcu quantity:3
+popular item: rriouvxhsehmd quantity:3
+popular item: qnhilklnsrlrznquapgvg quantity:3
+popular item: gjikrypwfvizdjfvko quantity:3
+popular item: nttlgbgyadkvjgnhtfborb quantity:3
+popular item: tsoyxhpxmkwqwxvxjebko quantity:3
+popular item: dfqcopnjlfcmufilef quantity:3
+popular item: bsenhjektihxasgcskyifwu quantity:3
+popular item: vlcmvoxmzniujarssspsbt quantity:3
+popular item: aciucsermduqqhzbxyyf quantity:3
+popular item: bzzjrdopfqdujm quantity:3
+popular item: hxyslkztpxpfhxulktuqjz quantity:3
+popular item: vxqbccdxocizakzaaf quantity:3
+popular item: eixqzphbvpiqzqnbe quantity:3
+popular item: hjwrwdduxekntueg quantity:3
+popular item: akkemtkednpupzhhauozm quantity:3
+popular item: klcpzqzqsrqekgqzvjduxb quantity:3
+popular item: yeemyupikuqtbaboepbqfn quantity:3
+item name:wizwxypodtmzojhe, ratio: 0.003597
+item name:cbiyslqeygccipbx, ratio: 0.003597
+item name:ikqztxvzmzhijva, ratio: 0.003597
+item name:bmktwghnoingfrltww, ratio: 0.003597
+item name:jazhxuzdugqzwtnhb, ratio: 0.003597
+item name:mytxodvfkxzggnvwdatzik, ratio: 0.003597
+item name:nqczwddivrqssbblbyrrpa, ratio: 0.003597
+item name:gjmxwxtcapnntqbzdnkhmp, ratio: 0.003597
+item name:ffnauefmbokbbk, ratio: 0.003597
+item name:dfqcopnjlfcmufilef, ratio: 0.003597
+item name:blpkkqqagtzymv, ratio: 0.003597
+item name:ofxigbxyupatfczgeku, ratio: 0.003597
+item name:bzfwetpjzxtzmtjhplza, ratio: 0.003597
+item name:hzwjbuaxyqclhne, ratio: 0.003597
+item name:wpeizzdnwwsxxeun, ratio: 0.003597
+item name:pnzzchlbymjtkcrzneocn, ratio: 0.003597
+item name:gdxmgupiqkbxoilbvojduaq, ratio: 0.003597
+item name:mcqoqyxapwqrrqnwewq, ratio: 0.003597
+item name:bcaqdapufltpntccpgc, ratio: 0.003597
+item name:twowlutbzzjgomikjbn, ratio: 0.003597
+item name:cpogjvcrqmkzgy, ratio: 0.003597
+item name:fcbnunonxgicscdkyhqlno, ratio: 0.003597
+item name:wfhvhbwdwcvtfqbuxt, ratio: 0.003597
+item name:gjawakvlivbjyxzliek, ratio: 0.003597
+item name:vtybsvlnabwhfaitomdlgkc, ratio: 0.003597
+item name:idafnlyfbckrnlwoe, ratio: 0.003597
+item name:fjqzhfglblmpaeostwbylkj, ratio: 0.003597
+item name:otyhnfaojxuypys, ratio: 0.003597
+item name:dqbuhiesfxevh, ratio: 0.003597
+item name:bmroxqpzwcefcknnenaho, ratio: 0.003597
+item name:kjpvcgnwulmnlxegkoeup, ratio: 0.003597
+item name:lqoeplrzixlac, ratio: 0.003597
+item name:rzdjhhmlxyenemsgbm, ratio: 0.003597
+item name:kwrfnddkupcvuzlvtnlssv, ratio: 0.003597
+item name:llkzzsgjiazibv, ratio: 0.003597
+item name:petlemvyfuuazsjtxrakoj, ratio: 0.003597
+item name:etpddepezirzfjbkuzdbnq, ratio: 0.003597
+item name:vqhpzznkemdwf, ratio: 0.003597
+item name:tzvmkxprvvtoiylotgrmzx, ratio: 0.003597
+item name:gjikrypwfvizdjfvko, ratio: 0.003597
+item name:vchoyfabqpyef, ratio: 0.003597
+item name:xfdfznqekphszsjbtuplz, ratio: 0.003597
+item name:cagnkfuwrlxoaxdzqmdm, ratio: 0.003597
+item name:tbsufdfdthkrkcnamuaqfr, ratio: 0.003597
+item name:muyojluyfvkbaaiwue, ratio: 0.003597
+item name:zreftvchaiztcgccr, ratio: 0.003597
+item name:eajqwpyjccteqg, ratio: 0.003597
+item name:hwpvpltxwbhhdm, ratio: 0.003597
+item name:sbgttzdrzjoqwrz, ratio: 0.003597
+item name:hvjhuwfqoogsyoaucqf, ratio: 0.003597
+item name:chazxxlwonnulegk, ratio: 0.003597
+item name:cviykzzykihndjuecowuh, ratio: 0.003597
+item name:bjykqmoqflgcuq, ratio: 0.003597
+item name:dluqnenmsmxbvhiylojebyk, ratio: 0.003597
+item name:zlelwwkzeixogwdatb, ratio: 0.003597
+item name:xhirzkzwesvyztitihocmu, ratio: 0.003597
+item name:hwgjpfqalawhztzku, ratio: 0.003597
+item name:dmoliwotwnimdh, ratio: 0.003597
+item name:loomanipjrhhxzfpxhu, ratio: 0.003597
+item name:kxywjuzehuhrcdzaiknfip, ratio: 0.003597
+item name:msbvsbqhrhytyqbjdur, ratio: 0.003597
+item name:nvnrgvikrtnuqmpomxxkvj, ratio: 0.003597
+item name:abkswyualsymvwffhpdnhhj, ratio: 0.003597
+item name:fitbppbjftmfota, ratio: 0.003597
+item name:komlfkqrphrwks, ratio: 0.003597
+item name:jcaimnjjmiggybprluj, ratio: 0.003597
+item name:tfjuwfujamytxvqmcgrtlhb, ratio: 0.003597
+item name:irdukpgrqcnredbzj, ratio: 0.003597
+item name:msfzjixucxeqnxzagecwvnu, ratio: 0.003597
+item name:skyzkbadzrjaixn, ratio: 0.003597
+item name:soprsvkxjupbfirshpvrsn, ratio: 0.003597
+item name:vanbzwmzvrnlhfm, ratio: 0.003597
+item name:omnndjprrxflhijbccquswl, ratio: 0.003597
+item name:hfomzlqnmdomxx, ratio: 0.003597
+item name:zunwytkpteyoafvvss, ratio: 0.003597
+item name:eovrphkrbsnttunk, ratio: 0.003597
+item name:vcyynkttpakxccy, ratio: 0.003597
+item name:ieseigaefhzcuxjyx, ratio: 0.003597
+item name:ljasolgttxnwdzsif, ratio: 0.003597
+item name:jwwxsohnjekeyenzohqosgx, ratio: 0.003597
+item name:hxyslkztpxpfhxulktuqjz, ratio: 0.003597
+item name:elzsvjfzvhqts, ratio: 0.003597
+item name:yjlllekcharayeyxzei, ratio: 0.003597
+item name:blxtzuwmgchriyuyldi, ratio: 0.003597
+item name:zxtcsoplgqxsebtevwiu, ratio: 0.003597
+item name:hwyivjzllwarhso, ratio: 0.003597
+item name:ksaymcvvzcaeyg, ratio: 0.003597
+item name:mriusedtesfmznbvzcy, ratio: 0.003597
+item name:nzmgoxzjcqrmdkfyxubdrr, ratio: 0.003597
+item name:rtfmrnvhsyggacnzqjig, ratio: 0.003597
+item name:fvcblerwnfobdslryn, ratio: 0.003597
+item name:hxellqximrmuudvcpg, ratio: 0.003597
+item name:krkqiadbbheom, ratio: 0.003597
+item name:llhxjwbqkepfbsjn, ratio: 0.003597
+item name:qefckjynzcxctjpo, ratio: 0.003597
+item name:xqhjkoriodvmglyjg, ratio: 0.003597
+item name:kwsfeoptuzupbk, ratio: 0.003597
+item name:ylkalzegkhjldpmuvlygw, ratio: 0.003597
+item name:qfhfmwjldktyfclrmy, ratio: 0.003597
+item name:akkemtkednpupzhhauozm, ratio: 0.003597
+item name:ehwiztjylywgcq, ratio: 0.003597
+item name:hjwrwdduxekntueg, ratio: 0.003597
+item name:fapowdumaefeklydznnxn, ratio: 0.003597
+item name:dbhvcobnpnaybqhr, ratio: 0.003597
+item name:kjwvcajalviinpvvad, ratio: 0.003597
+item name:cdhpikgtvmwmtucgrcl, ratio: 0.003597
+item name:kzupldtqamstumswcgee, ratio: 0.003597
+item name:syswawldcjrxszp, ratio: 0.003597
+item name:jnlpiwshldbpigngqcby, ratio: 0.003597
+item name:giuxdwjjqeqsjbnuwapcsg, ratio: 0.003597
+item name:yeemyupikuqtbaboepbqfn, ratio: 0.003597
+item name:pgtvpzfnqtwetqabfbkg, ratio: 0.003597
+item name:lqawwhvymoiqcqzuradpdg, ratio: 0.003597
+item name:tyqtvvyvysweyao, ratio: 0.003597
+item name:jwgsvofklpyjkzlcmgslej, ratio: 0.003597
+item name:tsoyxhpxmkwqwxvxjebko, ratio: 0.003597
+item name:uspbgqhltscbldjjpkwmcu, ratio: 0.003597
+item name:pswokyshdxhkylxncd, ratio: 0.003597
+item name:qdveztfloupbfzfygwqqdi, ratio: 0.003597
+item name:sckkpmnhftttjzycfbfm, ratio: 0.003597
+item name:uajafoajeffrtmr, ratio: 0.003597
+item name:lzutohddpcxcyxenllhk, ratio: 0.003597
+item name:bsenhjektihxasgcskyifwu, ratio: 0.003597
+item name:ucjjzbqeciuvdb, ratio: 0.003597
+item name:rzrmdjjhhpsgleguftvs, ratio: 0.003597
+item name:mtacqxkspcgcoxhatlsuzue, ratio: 0.003597
+item name:vhnojjupbwmzslfxzkrm, ratio: 0.003597
+item name:oplvpoipfuaspoqxf, ratio: 0.003597
+item name:ywylqbpbbyzbzjao, ratio: 0.003597
+item name:rqoaeieoxsafkttmvnlgp, ratio: 0.003597
+item name:hlohnvvtpotpp, ratio: 0.003597
+item name:kvtfkvuukmgihdmkbpotpjl, ratio: 0.007194
+item name:vlcmvoxmzniujarssspsbt, ratio: 0.007194
+item name:xajrzpvsqowtpvon, ratio: 0.003597
+item name:rriouvxhsehmd, ratio: 0.003597
+item name:fdjctkzirjpwagj, ratio: 0.003597
+item name:hxieadzyocokwnrazpf, ratio: 0.003597
+item name:stjlibrrwbdbwz, ratio: 0.003597
+item name:khndtmwssbdpezge, ratio: 0.003597
+item name:yrgqnkkizpirhpc, ratio: 0.003597
+item name:hlsxzicjxpwrwqpwd, ratio: 0.003597
+item name:zdksjpebjnfgnirsjmqgi, ratio: 0.003597
+item name:nttlgbgyadkvjgnhtfborb, ratio: 0.003597
+item name:gnyxfntacxwyponvqccds, ratio: 0.003597
+item name:ayclivoaloscqew, ratio: 0.003597
+item name:otrvmwgnkxflmxczlfh, ratio: 0.003597
+item name:discoknzgupfuszbxk, ratio: 0.003597
+item name:qqcbeckxxxeob, ratio: 0.003597
+item name:qptxulmqcmzhgvls, ratio: 0.003597
+item name:cxuesfnjhxxaxjbefqowh, ratio: 0.003597
+item name:ifxkkkkhtpkjdx, ratio: 0.003597
+item name:zqygasvjcbitmzuw, ratio: 0.003597
+item name:wjwfditvuexeykpxlyz, ratio: 0.003597
+item name:mkqkgeblxowpmmbnkjn, ratio: 0.003597
+item name:ogrgaibextrnhzifh, ratio: 0.003597
+item name:emuijrwlkgiuvyfhnhs, ratio: 0.003597
+item name:tscvygweijeld, ratio: 0.003597
+item name:cbhfminavwaohmxffx, ratio: 0.003597
+item name:junrfxmenrocctpwdk, ratio: 0.003597
+item name:wyeskwwcsgvtaqljogodp, ratio: 0.003597
+item name:soosgefopnsdjyv, ratio: 0.003597
+item name:tdhpjmklmlrvkrrnq, ratio: 0.003597
+item name:gtscoljauuiqlnkulavyhb, ratio: 0.003597
+item name:wvoyjdzhclbsrlvqcpmndb, ratio: 0.003597
+item name:kehrbjguakqpslromhhwjz, ratio: 0.003597
+item name:qnhilklnsrlrznquapgvg, ratio: 0.003597
+item name:kqyknvazynvkrmr, ratio: 0.003597
+item name:ihxqtujqkjzlgdwmb, ratio: 0.003597
+item name:fzxxiuefckeqytkwdgbjaqn, ratio: 0.003597
+item name:djmscelzryzdqxxec, ratio: 0.003597
+item name:emprdvmaskmzschehzgr, ratio: 0.003597
+item name:uvvoohapuvnqciv, ratio: 0.003597
+item name:wwgmmrliasbtrhkykvid, ratio: 0.003597
+item name:zuzjalevhccqmzyht, ratio: 0.003597
+item name:kgcoiccbdjcybva, ratio: 0.003597
+item name:cfgyaeoeuvnvwigao, ratio: 0.003597
+item name:rqeoccubhjgsfnlnkek, ratio: 0.003597
+item name:ymdmzpbhmjkhkpmcbuvfour, ratio: 0.003597
+item name:vxqbccdxocizakzaaf, ratio: 0.003597
+item name:hfiwpqohyvlep, ratio: 0.003597
+item name:qidqczbyrvhel, ratio: 0.003597
+item name:rlauymgyeuspcuskfp, ratio: 0.003597
+item name:dlmvtwncuzbqil, ratio: 0.003597
+item name:bgaudsqtntzzdplnuw, ratio: 0.003597
+item name:fkltrmvehjyvuxkwpwz, ratio: 0.003597
+item name:yngphrbqaiinxj, ratio: 0.003597
+item name:fqegcgluxzvlsdf, ratio: 0.003597
+item name:ktpgnawzzybnvqt, ratio: 0.003597
+item name:nbuejaystqrrlfbenj, ratio: 0.003597
+item name:ceahcnvrygkoysgabvjwpin, ratio: 0.003597
+item name:gxtkpqrraommicyy, ratio: 0.003597
+item name:hjwbwcpduqmnimcjlow, ratio: 0.003597
+item name:ehuovntjsyvpccds, ratio: 0.003597
+item name:txrwbpzcgjuopa, ratio: 0.003597
+item name:gxpaqguhjdyqli, ratio: 0.003597
+item name:tbwujkjidndegtn, ratio: 0.003597
+item name:gonmlyjfcukwzfw, ratio: 0.003597
+item name:brepcekdakpyhohcfoyd, ratio: 0.003597
+item name:zuzhemissltlsuvpm, ratio: 0.003597
+item name:vzczxdhswelreymrariufo, ratio: 0.003597
+item name:rbtzshtirknqbghjapklxkf, ratio: 0.003597
+item name:nosueijcjzphkj, ratio: 0.003597
+item name:vlbrdbafowhhz, ratio: 0.003597
+item name:gjyjcerqukuvbbj, ratio: 0.003597
+item name:qemlpjaptqqaf, ratio: 0.003597
+item name:drlcnlyshykszi, ratio: 0.003597
+item name:guwaqtjpwijrxoiaca, ratio: 0.003597
+item name:bwngobepoqdqxtydxbuawm, ratio: 0.003597
+item name:jxxzyedkszrkfu, ratio: 0.003597
+item name:fswndkbpzopxd, ratio: 0.003597
+item name:otlctzeyktagwhqodcrn, ratio: 0.003597
+item name:lqxrigjgmoyxmxcnw, ratio: 0.003597
+item name:zcmnvzwfjjwaxmzy, ratio: 0.003597
+item name:ygkqswztcgpfwbeawuqjp, ratio: 0.003597
+item name:bkukzecvhfnpuwkt, ratio: 0.003597
+item name:tagoklnrxgrycr, ratio: 0.003597
+item name:qbkwfqohcpspvbp, ratio: 0.003597
+item name:wfzoknecxiuzvpv, ratio: 0.003597
+item name:ypjubmbfbzxerlxytlsoopu, ratio: 0.003597
+item name:xqftognsnnkyucwuneepexd, ratio: 0.003597
+item name:xdpwzwgcdwqqlrfcy, ratio: 0.003597
+item name:frpnwcuvxroiuplq, ratio: 0.003597
+item name:krlakshzgwejvfnavn, ratio: 0.003597
+item name:rdmphmbtxzaudwoju, ratio: 0.003597
+item name:ahozlwjlumzrbfsvvmk, ratio: 0.003597
+item name:jtnhsazwzivtmltwahb, ratio: 0.003597
+item name:dehxqlfecvaynioi, ratio: 0.003597
+item name:dyqjtuouqdcnye, ratio: 0.003597
+item name:sqmjgdclilhqhn, ratio: 0.003597
+item name:wefnmofjkjnurgchjcefhpw, ratio: 0.003597
+item name:bmueltrdoqlsmomofbao, ratio: 0.003597
+item name:uieqsnexudsbyqtranft, ratio: 0.003597
+item name:myncxmxipcbibzzrubsfh, ratio: 0.003597
+item name:ujgwkpqueeycwcjgvmc, ratio: 0.003597
+item name:ylfezwfenndcffu, ratio: 0.003597
+item name:cezrdtybeczrh, ratio: 0.003597
+item name:cbjtvfasqcceisuayxsmac, ratio: 0.003597
+item name:gcaddljmjzzfb, ratio: 0.003597
+item name:izscdlshugtqs, ratio: 0.003597
+item name:vfpkpvjfrnyidyosaacd, ratio: 0.003597
+item name:nmznystgqbdvtepciqqjr, ratio: 0.003597
+item name:ueqwnuuageunmmrwtooymt, ratio: 0.003597
+item name:jxulftbxyufhtliznyt, ratio: 0.003597
+item name:plzjnqgqaorzv, ratio: 0.003597
+item name:xitbhprmonlpn, ratio: 0.003597
+item name:xkzknbareoongavnt, ratio: 0.003597
+item name:uoguvlngvxnluhvyf, ratio: 0.003597
+item name:aciucsermduqqhzbxyyf, ratio: 0.003597
+item name:nvkbhwuqkrbsva, ratio: 0.003597
+item name:ayhecorrbtqmlpjwdbbsa, ratio: 0.003597
+item name:hhmezmnahvfcylbxhoy, ratio: 0.003597
+item name:uctmihxjnijomsaufmog, ratio: 0.003597
+item name:zjvqehhrqwgnpymowwjeanl, ratio: 0.003597
+item name:ghebinitnuobk, ratio: 0.003597
+item name:ngjtbmbosybdyvjol, ratio: 0.003597
+item name:xghdczsdfaybpiqz, ratio: 0.003597
+item name:cqmepnrqbzuvltqqebgxui, ratio: 0.003597
+item name:abypjjjnjpvmjyeariwt, ratio: 0.003597
+item name:erbeqibwkzbyyrseezr, ratio: 0.003597
+item name:ninzcexpfbdniobzpx, ratio: 0.003597
+item name:phfkhsrhbjxndmim, ratio: 0.003597
+item name:srssvvoujdayafdk, ratio: 0.003597
+item name:shkbwdlhqdxyghwfoih, ratio: 0.003597
+item name:naewbgnwvniwcqdidjnkz, ratio: 0.003597
+item name:lgndxlzwgeupdctnyzxh, ratio: 0.003597
+item name:klcpzqzqsrqekgqzvjduxb, ratio: 0.003597
+item name:uuqbvufmvwubfrrcqiozg, ratio: 0.003597
+item name:vonogkgexbcbygpnz, ratio: 0.003597
+item name:xnmkaykfgwjdcabe, ratio: 0.003597
+item name:cuhcsklptaxxrlnqu, ratio: 0.003597
+item name:eixqzphbvpiqzqnbe, ratio: 0.003597
+item name:bzzjrdopfqdujm, ratio: 0.003597
+item name:iqblcziookmmkrwvuu, ratio: 0.003597
+item name:uwdfiwxxdfxxg, ratio: 0.003597
+item name:prxlrjezpzoacd, ratio: 0.003597
+item name:dmlgozrsakpmhrhlupc, ratio: 0.003597
+item name:ykttkllilimbbrzctnqljw, ratio: 0.0Time used: 0
+Time used: 0
