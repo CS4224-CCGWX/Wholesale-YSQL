@@ -21,6 +21,7 @@ public class SampleApp {
     private static Map<String, Long> hm = new HashMap<>();
 
     private static Map<String, Long> hm_count = new HashMap<>();
+    private static Map<String, Long> hm_retry = new HashMap<>();
 
     private static int retryTimes = 2;
 
@@ -72,7 +73,7 @@ public class SampleApp {
     private static void run(Connection conn, int client) throws SQLException, IOException {
         TransactionParser transactionParser = new TransactionParser(conn, utils, io);
         OutputFormatter outputFormatter = new OutputFormatter();
-
+        long totalNumberOfRetry = 0;
         List<Long> latencyList = new ArrayList<>();
         long fileStart, fileEnd, txStart, txEnd, elapsedTime, txIndividualStart, txIndividualEnd, elapsedTimeForIndividual;
 
@@ -109,9 +110,18 @@ public class SampleApp {
                     System.out.println("Time used: " + elapsedTime);
                     break;
                 } catch (Exception e) {
-                    System.err.println("retry counter: " + i);
+                    String[] s = transaction.toString().split(" ");
+                    String curS = s[0];
+                    long defaultValue = 0;
+                    hm_retry.put(curS, hm_retry.getOrDefault(curS, defaultValue) + 1);
+
+                    totalNumberOfRetry = totalNumberOfRetry + 1;
+                    System.out.println("[out]retry counter: " + i);
+                    System.err.println("[err]retry counter: " + i);
+                    System.out.println(transaction.toString());
                     System.err.println(transaction.toString());
                     e.printStackTrace();
+                    System.out.println("**************************************");
                     System.err.println("**************************************");
                 }
             }
@@ -125,7 +135,7 @@ public class SampleApp {
         fileEnd = System.nanoTime();
 
         long totalElapsedTime = TimeUnit.SECONDS.convert(fileEnd - fileStart, TimeUnit.NANOSECONDS);
-        PerformanceReportGenerator.generatePerformanceReport(latencyList, totalElapsedTime, client, hm, hm_count, totalTransaction);
+        PerformanceReportGenerator.generatePerformanceReport(latencyList, totalElapsedTime, client, hm, hm_count, hm_retry, totalTransaction, totalNumberOfRetry);
 
     }
 }

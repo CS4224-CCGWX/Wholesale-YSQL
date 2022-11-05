@@ -1,18 +1,19 @@
 package utils;
 
-import java.io.*;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
-import java.util.Properties;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
-import java.util.*;
 
 public class PerformanceReportGenerator {
     private static String reportFilePath;
-    private static String performanceFormat = "Transaction files: %d, Total Count: %s," +
-            "Time Taken: %s, Throughput: %s, Average: %s, Median: %s, 95: %s, 99: %s\n";
+    private static String performanceFormat = "Transaction files: %d, Total Count: %s, Total Number of Transaction: %d" +
+            "Time Taken: %s, Throughput: %s, Average: %s, Median: %s, 95: %s, 99: %s, Total number of retry: %d \n";
 
-    private static String individualTransactionPerformance = "Transaction name: %s, Total time: %d, Total count: %d \n";
+    private static String individualTransactionPerformance = "Transaction name: %s, Total time: %d, Total count: %d" +
+            "  Total Number of retry: %d \n";
 
     static FileWriter fw;
 
@@ -27,7 +28,8 @@ public class PerformanceReportGenerator {
 //    }
     public static void generatePerformanceReport(List<Long> latencyList, long totalTime, int client,
                                                  Map<String, Long> individual_time, Map<String, Long> individual_count,
-                                                 int totalTransaction) throws IOException {
+                                                 Map<String, Long> individual_retry,
+                                                 int totalTransaction, long totalNumberOfRetry) throws IOException {
         Collections.sort(latencyList);
         int count = latencyList.size();
         long sum = latencyList.stream().mapToLong(Long::longValue).sum();
@@ -35,12 +37,14 @@ public class PerformanceReportGenerator {
 
         fw = new FileWriter(reportFilePath, true);
         fw.write(String.format(performanceFormat,client, outputFormatter.formatTotalTransactions(count),
+                totalTransaction,
                 outputFormatter.formatTotalElapsedTime(totalTime),
                 outputFormatter.formatThroughput((double) count / totalTime),
                 outputFormatter.formatAverage((double) convertToMs(sum) / count),
                 outputFormatter.formatMedian(convertToMs(getMedian(latencyList))),
                 outputFormatter.formatPercentile(convertToMs(getByPercentile(latencyList, 95))),
-                outputFormatter.formatPercentile(convertToMs(getByPercentile(latencyList, 99)))
+                outputFormatter.formatPercentile(convertToMs(getByPercentile(latencyList, 99))),
+                totalNumberOfRetry
                 )
         );
         for (Map.Entry<String, Long> set :
@@ -48,7 +52,8 @@ public class PerformanceReportGenerator {
             String curTrans = set.getKey();
             long tTime = individual_time.get(curTrans);
             long transCount = individual_count.get(curTrans);
-            fw.write(String.format(individualTransactionPerformance, curTrans, tTime, transCount));
+            long totalRetry = individual_retry.get(curTrans);
+            fw.write(String.format(individualTransactionPerformance, curTrans, tTime, transCount, totalRetry));
             fw.write("\n");
         }
         fw.write("Total transaction count: " + totalTransaction + "\n");
