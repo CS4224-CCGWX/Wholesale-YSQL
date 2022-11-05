@@ -16,11 +16,11 @@ submit_job() {
 
 load_data() {
     ssh "cs4224i@xcnd20.comp.nus.edu.sg" ./Wholesale-YSQL/scripts/dump_data.sh xcnd20 $port_id
-    echo ./Wholesale-YSQL/scripts/dump_data.sh $port_id
+    echo ./Wholesale-YSQL/scripts/dump_data.sh $node_id $port_id
 }
 
 
-# load_data
+load_data
 for ((c=0; c<5; c++))
 do
   submit_job $c &
