@@ -3,8 +3,8 @@ package utils;
 import java.io.*;
 import java.util.StringTokenizer;
 
-//public class IO extends PrintWriter {
-public class IO {
+public class IO extends PrintWriter {
+//public class IO {
     private BufferedReader r;
     private String line;
 
@@ -15,8 +15,7 @@ public class IO {
     private int client;
 
     public IO(int client) {
-//        super(new BufferedOutputStream(System.out));
-//        super(System.out);
+        super(new BufferedOutputStream(System.out));
         this.client = client;
     }
 
@@ -54,14 +53,6 @@ public class IO {
         String ans = peekToken();
         token = null;
         return ans;
-    }
-
-    public void println(Object str) {
-        System.out.println(str.toString());
-    }
-
-    public void close() {
-        return;
     }
 }
 

@@ -8,6 +8,7 @@ import java.sql.Array;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalTime;
 import java.util.*;
 
 public class PopularItemTransaction extends AbstractTransaction {
@@ -56,12 +57,13 @@ public class PopularItemTransaction extends AbstractTransaction {
 
             while (pastOrders.next()) {
                 int orderId = pastOrders.getInt("O_ID");
+                LocalTime time = pastOrders.getTime("O_ENTRY_D").toLocalTime();
                 PreparedQueries.getCustomerNameByID.setInt(1, warehouseID);
                 PreparedQueries.getCustomerNameByID.setInt(2, districtID);
                 PreparedQueries.getCustomerNameByID.setInt(3, orderId);
                 ResultSet customerName = PreparedQueries.getCustomerNameByID.executeQuery();
 
-                sb.append(String.format("order id: %d", orderId));
+                sb.append(String.format("order id: %d, entry time: %s", orderId, time.toString()));
                 if (customerName.next()) {
                     sb.append(String.format("Customer name: %s, %s, %s", customerName.getString("C_FIRST"),
                             customerName.getString("C_MIDDLE"), customerName.getString("C_LAST")));

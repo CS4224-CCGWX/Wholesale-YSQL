@@ -31,6 +31,8 @@ public class RelatedCustomerTransaction extends AbstractTransaction {
 
     @Override
     public void execute() throws SQLException {
+        StringBuilder sb = new StringBuilder();
+        sb.append(String.format("Customer id: (%d, %d, %d)\n", warehouseID, districtID, customerID));
         try {
             PreparedQueries.getOrderedItemsByCustomerStmt.setInt(1, warehouseID);
             PreparedQueries.getOrderedItemsByCustomerStmt.setInt(2, districtID);
@@ -57,7 +59,6 @@ public class RelatedCustomerTransaction extends AbstractTransaction {
                 }
             }
 
-            StringBuilder sb = new StringBuilder();
             for (String c : result) {
                 sb.append(c);
                 sb.append('\n');
