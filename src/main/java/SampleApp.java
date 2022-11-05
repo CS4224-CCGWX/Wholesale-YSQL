@@ -93,18 +93,20 @@ public class SampleApp {
             io.println(outputFormatter.formatTransactionID(latencyList.size()));
 
             txStart = System.nanoTime();
-            for (int i = 0; i <= retryTimes; i++) {
+            int i = 0;
+            for (; i <= retryTimes; i++) {
                 try {
-                    txIndividualStart = System.nanoTime();
                     transaction.execute();
-                    txIndividualEnd = System.nanoTime();
-                    elapsedTimeForIndividual = TimeUnit.SECONDS.convert(txIndividualEnd - txIndividualStart, TimeUnit.NANOSECONDS);
+                    txEnd = System.nanoTime();
+                    elapsedTime = TimeUnit.SECONDS.convert(txEnd - txStart, TimeUnit.NANOSECONDS);
                     String[] s = transaction.toString().split(" ");
                     String curS = s[0];
+
                     long defaultValue = 0;
-                    hm.put(curS, hm.getOrDefault(curS, defaultValue) + elapsedTimeForIndividual);
+                    hm.put(curS, hm.getOrDefault(curS, defaultValue) + elapsedTime);
                     hm_count.put(curS, hm_count.getOrDefault(curS, defaultValue) + 1);
-                    System.out.println("Time used: " + elapsedTimeForIndividual);
+                    latencyList.add(elapsedTime);
+                    System.out.println("Time used: " + elapsedTime);
                     break;
                 } catch (Exception e) {
                     System.err.println("retry counter: " + i);
@@ -113,14 +115,11 @@ public class SampleApp {
                     System.err.println("**************************************");
                 }
             }
-            System.err.println("transaction " + transaction.toString() + "fails after 3 attempts");
+            if (i > retryTimes) {
+                System.err.println("transaction " + transaction.toString() + "fails after 3 attempts");
+            }
 
-
-            txEnd = System.nanoTime();
             io.println(OutputFormatter.linebreak);
-
-            elapsedTime = txEnd - txStart;
-            latencyList.add(elapsedTime);
         }
         io.close();
         fileEnd = System.nanoTime();
