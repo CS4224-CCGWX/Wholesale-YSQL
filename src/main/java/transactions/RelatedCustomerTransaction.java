@@ -34,6 +34,7 @@ public class RelatedCustomerTransaction extends AbstractTransaction {
         StringBuilder sb = new StringBuilder();
         sb.append(String.format("Customer id: (%d, %d, %d)\n", warehouseID, districtID, customerID));
         try {
+            connection.setAutoCommit(true);
             PreparedQueries.getOrderedItemsByCustomerStmt.setInt(1, warehouseID);
             PreparedQueries.getOrderedItemsByCustomerStmt.setInt(2, districtID);
             PreparedQueries.getOrderedItemsByCustomerStmt.setInt(3, customerID);

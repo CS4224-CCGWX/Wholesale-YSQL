@@ -37,6 +37,7 @@ public class TopBalanceTransaction extends AbstractTransaction {
 
         HashMap<Integer, String> districts = new HashMap<>(), warehouses = new HashMap<>();
         try {
+            connection.setAutoCommit(true);
             ResultSet customers = PreparedQueries.getCustomerWithTopBalance.executeQuery();
             while (customers.next()) {
                 int districtID = customers.getInt("C_D_ID");
@@ -102,8 +103,6 @@ public class TopBalanceTransaction extends AbstractTransaction {
             e.printStackTrace();
             System.out.println("[Error]:  Top Balance Abort " + this.toString());
             System.err.println("[Error]: Top Balance Abort " + this.toString());
-
-            connection.rollback();
         }
     }
 }
