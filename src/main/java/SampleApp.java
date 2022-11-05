@@ -113,6 +113,8 @@ public class SampleApp {
                     System.err.println("**************************************");
                 }
             }
+            System.err.println("transaction " + transaction.toString() + "fails after 3 attempts");
+
 
             txEnd = System.nanoTime();
             io.println(OutputFormatter.linebreak);
