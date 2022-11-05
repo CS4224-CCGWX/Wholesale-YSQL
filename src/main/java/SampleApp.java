@@ -3,17 +3,12 @@ import parser.TransactionParser;
 import transactions.AbstractTransaction;
 import utils.*;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 public class SampleApp {
     private static Connection conn;
@@ -26,6 +21,8 @@ public class SampleApp {
     private static Map<String, Long> hm = new HashMap<>();
 
     private static Map<String, Long> hm_count = new HashMap<>();
+
+    private static int retryTimes = 2;
 
     /*
     args[0] - ip
@@ -56,7 +53,7 @@ public class SampleApp {
         PerformanceReportGenerator.setFilePath(settings.getProperty("reportFilePath"), client);
         dataLoader = new DataLoader(conn, ip, port, dbUser);
         utils = new QueryUtils(conn);
-        
+
 
         if (action.equals("load")) {
             dataLoader.loadAll();
@@ -96,22 +93,25 @@ public class SampleApp {
             io.println(outputFormatter.formatTransactionID(latencyList.size()));
 
             txStart = System.nanoTime();
-            try {
-                txIndividualStart = System.nanoTime();
-                transaction.execute();
-                txIndividualEnd = System.nanoTime();
-                elapsedTimeForIndividual = TimeUnit.SECONDS.convert(txIndividualEnd - txIndividualStart, TimeUnit.NANOSECONDS);;
-                String[] s = transaction.toString().split(" ");
-                String curS = s[0];
-                long defaultValue = 0;
-                hm.put(curS, hm.getOrDefault(curS, defaultValue) + elapsedTimeForIndividual);
-                hm_count.put(curS, hm_count.getOrDefault(curS, defaultValue) + 1);
-
-                System.out.println("Time used: " + elapsedTimeForIndividual);
-            } catch (Exception e) {
-                e.printStackTrace();
-                System.err.println("**************************************");
-                System.err.println(transaction.toString());
+            for (int i = 0; i <= retryTimes; i++) {
+                try {
+                    txIndividualStart = System.nanoTime();
+                    transaction.execute();
+                    txIndividualEnd = System.nanoTime();
+                    elapsedTimeForIndividual = TimeUnit.SECONDS.convert(txIndividualEnd - txIndividualStart, TimeUnit.NANOSECONDS);
+                    String[] s = transaction.toString().split(" ");
+                    String curS = s[0];
+                    long defaultValue = 0;
+                    hm.put(curS, hm.getOrDefault(curS, defaultValue) + elapsedTimeForIndividual);
+                    hm_count.put(curS, hm_count.getOrDefault(curS, defaultValue) + 1);
+                    System.out.println("Time used: " + elapsedTimeForIndividual);
+                    break;
+                } catch (Exception e) {
+                    System.err.println("retry counter: " + i);
+                    System.err.println(transaction.toString());
+                    e.printStackTrace();
+                    System.err.println("**************************************");
+                }
             }
 
             txEnd = System.nanoTime();
