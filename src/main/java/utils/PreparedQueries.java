@@ -76,8 +76,9 @@ public class PreparedQueries {
         getOrderLineInOrder = conn.prepareStatement("SELECT OL_AMOUNT, OL_C_ID, OL_NUMBER FROM order_line " +
                 "WHERE OL_W_ID = ? AND OL_D_ID = ? AND OL_O_ID = ?;");
         getCustomerBalance = conn.prepareStatement("SELECT C_BALANCE FROM customer WHERE C_W_ID = ? AND C_D_ID = ? AND C_ID = ?;");
+
         updateCustomerPaymentInfo =  conn.prepareStatement("UPDATE customer "
-                + "SET C_BALANCE = ?, C_YTD_PAYMENT = ?, C_PAYMENT_CNT = C_PAYMENT_CNT + 1 "
+                + "SET C_BALANCE = C_BALANCE - ?, C_YTD_PAYMENT =  C_YTD_PAYMENT + ?, C_PAYMENT_CNT = C_PAYMENT_CNT + 1 "
                 + "WHERE C_W_ID = ? AND C_D_ID = ? AND C_ID = ?;");
         getFullCustomerInfo = conn.prepareStatement("SELECT C_W_ID, C_D_ID, C_ID, C_FIRST, C_MIDDLE, C_LAST, C_STREET_1, C_STREET_2, "
                         + "C_CITY, C_STATE, C_ZIP, C_PHONE, C_SINCE, C_CREDIT, C_CREDIT_LIM, C_DISCOUNT, C_BALANCE, C_YTD_PAYMENT "

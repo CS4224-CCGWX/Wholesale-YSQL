@@ -95,8 +95,8 @@ public class PaymentTransaction extends AbstractTransaction{
             float customerYtd = customerRes.getFloat("C_YTD_PAYMENT");
             customerYtd += payment;
 
-            PreparedQueries.updateCustomerPaymentInfo.setBigDecimal(1, BigDecimal.valueOf(customerBalance));
-            PreparedQueries.updateCustomerPaymentInfo.setFloat(2, customerYtd);
+            PreparedQueries.updateCustomerPaymentInfo.setBigDecimal(1, BigDecimal.valueOf(payment));
+            PreparedQueries.updateCustomerPaymentInfo.setFloat(2, payment);
             PreparedQueries.updateCustomerPaymentInfo.setInt(3, warehouseId);
             PreparedQueries.updateCustomerPaymentInfo.setInt(4, districtId);
             PreparedQueries.updateCustomerPaymentInfo.setInt(5, customerId);
