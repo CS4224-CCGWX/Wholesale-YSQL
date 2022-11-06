@@ -26,7 +26,7 @@ public class NewOrderTransaction extends AbstractTransaction {
 
 
     public NewOrderTransaction(Connection connection, IO io, int cid, int wid, int did, int n,
-                               List<Integer> itemIds, List<Integer> quantities, List<Integer> supplyWarehouseIds) throws SQLException {
+                               List<Integer> itemIds, List<Integer> supplyWarehouseIds, List<Integer> quantities ) throws SQLException {
         super(connection, io);
         customerId = cid;
         warehouseId = wid;
