@@ -71,7 +71,7 @@ public class PreparedQueries {
                 " WHERE C_W_ID = ? AND C_D_ID = ? AND C_ID = ?;");
         updateCustomerBalanceAndDcount = conn.prepareStatement("UPDATE customer SET C_BALANCE = ? , C_DELIVERY_CNT = C_DELIVERY_CNT + 1 "
                 + "WHERE C_W_ID = ? AND C_D_ID = ? AND C_ID = ?;");
-        updateDistrictYearToDateAmount =  conn.prepareStatement("UPDATE district SET D_YTD = ? "
+        updateDistrictYearToDateAmount =  conn.prepareStatement("UPDATE district D_YTD = D_YTD + ? "
                 + "WHERE D_W_ID = ? AND D_ID = ?;");
         getOrderLineInOrder = conn.prepareStatement("SELECT OL_AMOUNT, OL_C_ID, OL_NUMBER FROM order_line " +
                 "WHERE OL_W_ID = ? AND OL_D_ID = ? AND OL_O_ID = ?;");

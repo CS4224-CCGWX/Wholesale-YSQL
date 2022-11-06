@@ -69,7 +69,7 @@ public class PaymentTransaction extends AbstractTransaction{
             districtYtd += payment;
 
             // 2. Update the district (C W ID,C D ID) by incrementing D YTD by PAYMENT
-            PreparedQueries.updateDistrictYearToDateAmount.setBigDecimal(1, BigDecimal.valueOf(districtYtd));
+            PreparedQueries.updateDistrictYearToDateAmount.setBigDecimal(1, BigDecimal.valueOf(payment));
             PreparedQueries.updateDistrictYearToDateAmount.setInt(2, warehouseId);
             PreparedQueries.updateDistrictYearToDateAmount.setInt(3, districtId);
             this.executeUpdate(PreparedQueries.updateDistrictYearToDateAmount);
