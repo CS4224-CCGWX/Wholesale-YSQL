@@ -58,7 +58,7 @@ public class PreparedQueries {
         getWarehouseTax =  conn.prepareStatement("SELECT W_TAX FROM warehouse WHERE W_ID = ?;");
         getCustomerLastAndCreditAndDiscount = conn.prepareStatement("SELECT C_LAST, C_CREDIT, C_DISCOUNT FROM customer " +
                 "WHERE C_W_ID = ? AND C_D_ID = ? AND C_ID = ?;");
-        updateWarehouseYearToDateAmount = conn.prepareStatement("UPDATE warehouse SET W_YTD = ? WHERE W_ID = ?;");
+        updateWarehouseYearToDateAmount = conn.prepareStatement("UPDATE warehouse SET W_YTD = W_YTD + ? WHERE W_ID = ?;");
         getDistrictAddressAndYtd = conn.prepareStatement("SELECT D_STREET_1, D_STREET_2, D_CITY, D_STATE, D_ZIP, D_YTD "
                 + "FROM district WHERE D_W_ID = ? AND D_ID = ?;");
         getWarehouseAddressAndYtd = conn.prepareStatement("SELECT W_STREET_1, W_STREET_2, W_CITY, W_STATE, W_ZIP, W_YTD "

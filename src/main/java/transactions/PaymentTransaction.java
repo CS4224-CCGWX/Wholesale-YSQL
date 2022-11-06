@@ -41,18 +41,18 @@ public class PaymentTransaction extends AbstractTransaction{
             // 1.  Update the warehouse C W ID by incrementing W YTD by PAYMENT
 
             // Output Customer Last Order for each item
-            PreparedQueries.getWarehouseAddressAndYtd.setInt(1, warehouseId);
+//            PreparedQueries.getWarehouseAddressAndYtd.setInt(1, warehouseId);
+//
+//            ResultSet warehouseResult = this.executeQuery(PreparedQueries.getWarehouseAddressAndYtd);
+//
+//            if (!warehouseResult.next()) {
+//                error("formattedGetWarehouseAddressAndYtd");
+//                throw new SQLException();
+//            }
+//            double warehouseYtd = warehouseResult.getBigDecimal("W_YTD").doubleValue();
+//            warehouseYtd += payment;
 
-            ResultSet warehouseResult = this.executeQuery(PreparedQueries.getWarehouseAddressAndYtd);
-
-            if (!warehouseResult.next()) {
-                error("formattedGetWarehouseAddressAndYtd");
-                throw new SQLException();
-            }
-            double warehouseYtd = warehouseResult.getBigDecimal("W_YTD").doubleValue();
-            warehouseYtd += payment;
-
-            PreparedQueries.updateWarehouseYearToDateAmount.setBigDecimal(1, BigDecimal.valueOf(warehouseYtd));
+            PreparedQueries.updateWarehouseYearToDateAmount.setBigDecimal(1, BigDecimal.valueOf(payment));
             PreparedQueries.updateWarehouseYearToDateAmount.setInt(2, warehouseId);
             this.executeUpdate(PreparedQueries.updateWarehouseYearToDateAmount);
 
