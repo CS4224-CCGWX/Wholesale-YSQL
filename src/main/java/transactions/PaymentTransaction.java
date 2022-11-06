@@ -40,7 +40,7 @@ public class PaymentTransaction extends AbstractTransaction{
             // 1.  Update the warehouse C W ID by incrementing W YTD by PAYMENT
 
             // Output Customer Last Order for each item
-//            PreparedQueries.getWarehouseAddressAndYtd.setInt(1, warehouseId);
+           PreparedQueries.getWarehouseAddressAndYtd.setInt(1, warehouseId);
 //
 //            double warehouseYtd = warehouseResult.getBigDecimal("W_YTD").doubleValue();
 //            warehouseYtd += payment;
