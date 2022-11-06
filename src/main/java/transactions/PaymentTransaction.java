@@ -6,7 +6,6 @@ import utils.PreparedQueries;
 
 import java.math.BigDecimal;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -43,12 +42,6 @@ public class PaymentTransaction extends AbstractTransaction{
             // Output Customer Last Order for each item
 //            PreparedQueries.getWarehouseAddressAndYtd.setInt(1, warehouseId);
 //
-//            ResultSet warehouseResult = this.executeQuery(PreparedQueries.getWarehouseAddressAndYtd);
-//
-//            if (!warehouseResult.next()) {
-//                error("formattedGetWarehouseAddressAndYtd");
-//                throw new SQLException();
-//            }
 //            double warehouseYtd = warehouseResult.getBigDecimal("W_YTD").doubleValue();
 //            warehouseYtd += payment;
 
@@ -70,19 +63,6 @@ public class PaymentTransaction extends AbstractTransaction{
             • Increment C YTD PAYMENT by PAYMENT
             • Increment C PAYMENT CNT by 1
          */
-            PreparedQueries.getFullCustomerInfo.setInt(1, warehouseId);
-            PreparedQueries.getFullCustomerInfo.setInt(2, districtId);
-            PreparedQueries.getFullCustomerInfo.setInt(3, customerId);
-            ResultSet customerRes = this.executeQuery(PreparedQueries.getFullCustomerInfo);
-            if (!customerRes.next()) {
-                error("formattedGetFullCustomerInfo");
-                throw new SQLException();
-            }
-
-            double customerBalance = customerRes.getBigDecimal("C_BALANCE").doubleValue();
-            customerBalance -= payment;
-            float customerYtd = customerRes.getFloat("C_YTD_PAYMENT");
-            customerYtd += payment;
 
             PreparedQueries.updateCustomerPaymentInfo.setBigDecimal(1, BigDecimal.valueOf(payment));
             PreparedQueries.updateCustomerPaymentInfo.setBigDecimal(2, BigDecimal.valueOf(payment));
@@ -101,6 +81,25 @@ public class PaymentTransaction extends AbstractTransaction{
                 error("formattedGetDistrictAddressAndYtd");
                 throw new SQLException();
             }
+
+            ResultSet warehouseResult = this.executeQuery(PreparedQueries.getWarehouseAddressAndYtd);
+
+            if (!warehouseResult.next()) {
+                error("formattedGetWarehouseAddressAndYtd");
+                throw new SQLException();
+            }
+
+            PreparedQueries.getFullCustomerInfo.setInt(1, warehouseId);
+            PreparedQueries.getFullCustomerInfo.setInt(2, districtId);
+            PreparedQueries.getFullCustomerInfo.setInt(3, customerId);
+            ResultSet customerRes = this.executeQuery(PreparedQueries.getFullCustomerInfo);
+            if (!customerRes.next()) {
+                error("formattedGetFullCustomerInfo");
+                throw new SQLException();
+            }
+
+            double customerBalance = customerRes.getBigDecimal("C_BALANCE").doubleValue();
+
 
             // Output Customer Information
 
