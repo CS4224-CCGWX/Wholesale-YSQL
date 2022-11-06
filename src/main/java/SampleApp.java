@@ -1,4 +1,3 @@
-import parser.DataLoader;
 import parser.TransactionParser;
 import transactions.AbstractTransaction;
 import utils.*;
@@ -13,7 +12,6 @@ import java.util.concurrent.TimeUnit;
 public class SampleApp {
     private static Connection conn;
 
-    private static DataLoader dataLoader;
     private static QueryUtils utils;
 
     private static IO io;
@@ -52,13 +50,10 @@ public class SampleApp {
         }
 
         PerformanceReportGenerator.setFilePath(settings.getProperty("reportFilePath"), client);
-        dataLoader = new DataLoader(conn, ip, port, dbUser);
         utils = new QueryUtils(conn);
 
 
-        if (action.equals("load")) {
-            dataLoader.loadAll();
-        } else if (action.equals("run")) {
+        if (action.equals("run")) {
             run(conn, client);
         } else {
             System.err.printf("Action: %s not specified", action);

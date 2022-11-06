@@ -25,9 +25,6 @@ public class PerformanceReportGenerator {
         reportFilePath = String.format(path, client);
     }
 
-//    public static void setFilePath(String path) {
-//        reportFilePath = path;
-//    }
     public static void generatePerformanceReport(List<Long> latencyList, long totalTime, int client,
                                                  Map<String, Long> individual_time, Map<String, Long> individual_count,
                                                  Map<String, Long> individual_retry,

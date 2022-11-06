@@ -41,9 +41,6 @@ public class PaymentTransaction extends AbstractTransaction{
 
             // Output Customer Last Order for each item
            PreparedQueries.getWarehouseAddressAndYtd.setInt(1, warehouseId);
-//
-//            double warehouseYtd = warehouseResult.getBigDecimal("W_YTD").doubleValue();
-//            warehouseYtd += payment;
 
             PreparedQueries.updateWarehouseYearToDateAmount.setBigDecimal(1, BigDecimal.valueOf(payment));
             PreparedQueries.updateWarehouseYearToDateAmount.setInt(2, warehouseId);
