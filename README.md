@@ -30,6 +30,6 @@ mvn package
 Make sure the project jar file is generated at `./target/yugabyte-simple-java-app-1.0-SNAPSHOT.jar`.
 
 ### Run benchmark
-- On `xcnd20`, run `./scripts/run_benchmark.sh`.
-- Check `./log` for each transaction files' output and error.
-- CSV files containing summary statistics can be found under `./backup`.
+- On `xcnd20`, run `./scripts/run_benchmark.sh`. (Modify `run_benchmark.sh` if you are running it on a different cluster)
+- Check `.out` and `.err` for each transaction files' output and error.
+- CSV files containing summary statistics can be found within `report.csv`.
