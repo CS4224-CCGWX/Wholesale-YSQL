@@ -7,7 +7,7 @@
 - Make sure the default ports used by Yugabyte masters and tservers are available. You can find the default ports [here](https://docs.yugabyte.com/preview/reference/configuration/default-ports/).
 
 ### Setup steps
-Assume the current working directory is the root directory of this repo (Wholesale-YCQL)
+Assume the current working directory is the root directory of this repo (Wholesale-YSQL)
 #### Start cluster on `xcnd20 - xcnd24`
 - On `xcnd20`, run `./scripts/start_cluster.sh`.
 - The script will start YB-Masters on `xcnd20 - xcnd22` and start YB-TServers on `xcnd20 - xcnd24`
