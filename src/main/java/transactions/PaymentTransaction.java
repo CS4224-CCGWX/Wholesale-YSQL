@@ -85,7 +85,7 @@ public class PaymentTransaction extends AbstractTransaction{
             customerYtd += payment;
 
             PreparedQueries.updateCustomerPaymentInfo.setBigDecimal(1, BigDecimal.valueOf(payment));
-            PreparedQueries.updateCustomerPaymentInfo.setFloat(2, payment);
+            PreparedQueries.updateCustomerPaymentInfo.setBigDecimal(2, BigDecimal.valueOf(payment));
             PreparedQueries.updateCustomerPaymentInfo.setInt(3, warehouseId);
             PreparedQueries.updateCustomerPaymentInfo.setInt(4, districtId);
             PreparedQueries.updateCustomerPaymentInfo.setInt(5, customerId);
