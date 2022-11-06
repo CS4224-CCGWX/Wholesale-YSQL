@@ -18,10 +18,6 @@ public class SampleApp {
 
     private static IO io;
 
-    private static Map<String, Long> hm = new HashMap<>();
-
-    private static Map<String, Long> hm_count = new HashMap<>();
-    private static Map<String, Long> hm_retry = new HashMap<>();
 
     private static int retryTimes = 2;
 
@@ -104,8 +100,6 @@ public class SampleApp {
                     String curS = s[0];
 
                     long defaultValue = 0;
-                    hm.put(curS, hm.getOrDefault(curS, defaultValue) + elapsedTime);
-                    hm_count.put(curS, hm_count.getOrDefault(curS, defaultValue) + 1);
                     latencyList.add(elapsedTime);
                     System.out.println("Time used: " + elapsedTime);
                     break;
@@ -113,7 +107,6 @@ public class SampleApp {
                     String[] s = transaction.toString().split(" ");
                     String curS = s[0];
                     long defaultValue = 0;
-                    hm_retry.put(curS, hm_retry.getOrDefault(curS, defaultValue) + 1);
 
                     totalNumberOfRetry = totalNumberOfRetry + 1;
                     System.out.println("[out]retry counter: " + i);
@@ -139,7 +132,6 @@ public class SampleApp {
         fileEnd = System.nanoTime();
 
         long totalElapsedTime = TimeUnit.SECONDS.convert(fileEnd - fileStart, TimeUnit.NANOSECONDS);
-        PerformanceReportGenerator.generatePerformanceReport(latencyList, totalElapsedTime, client, hm, hm_count, hm_retry, totalTransaction, totalNumberOfRetry);
-
+        PerformanceReportGenerator.generatePerformanceReport(latencyList, totalElapsedTime, client);
     }
 }
