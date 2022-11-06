@@ -2,8 +2,10 @@
 # require pandas packages
 import pandas as pd 
 import os
-dataDir="/home/stuproj/cs4224i/project_files/data_files/"
-outputDir = "/home/stuproj/cs4224i/Wholesale-YSQL/project_files/data_files/"
+
+my_path = os.path.abspath(os.path.dirname(__file__))
+dataDir = os.path.join(my_path, "../project_files/data_files/")
+outputDir = dataDir
 # source file
 order_path = dataDir + "order.csv"
 order_line_path = dataDir + "order-line.csv"
@@ -25,9 +27,7 @@ def get_cid_in_order_line():
 
     orders = pd.read_csv(order_path, header = None)
     orders = orders.loc[:, [W_ID_idx, D_ID_idx, O_ID_idx, O_C_ID_idx]]
-    # print(orders.loc[:10, :])
     order_lines = pd.read_csv(order_line_path, header = None)
-    # print(order_lines.loc[:10, :])
 
 
     order_lines_with_cid = order_lines.merge(orders, on = [W_ID_idx, D_ID_idx, O_ID_idx])
@@ -43,7 +43,6 @@ def compute_next_order_to_deliver():
     O_ID_idx = 2
 
     orders = pd.read_csv(order_path, header = None)
-    orders = orders[orders[O_CARRIER_ID_idx].notnull() == False] # remove not null rows
 
     district_with_next_delivery_id = orders.groupby([W_ID_idx, D_ID_idx], as_index = False)[O_ID_idx].min()
 

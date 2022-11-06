@@ -22,6 +22,9 @@ Assume the current working directory is the root directory of this repo (Wholesa
 - `Maven`
 - `Python 3.7` with `pandas` package (neccessary for data preprocessing).
 
+### Data Preprocessing
+- Run python script `precompute.py` first. Ma
+
 ### Build and package Java application
 ```
 mvn compile
