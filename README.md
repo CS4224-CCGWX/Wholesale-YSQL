@@ -21,6 +21,7 @@ Assume the current working directory is the root directory of this repo (Wholesa
 - `JDK 11`
 - `Maven`
 - `Python 3.7` with `pandas` package (neccessary for data preprocessing).
+- Create a new directory `project_files` and put the data and transaction files under it.
 
 ### Data Preprocessing
 - Run python script `precompute.py` first. Ma
