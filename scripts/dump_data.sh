@@ -1,4 +1,4 @@
-schema="../src/main/resources/schema.sql"
+schema="/home/stuproj/cs4224i/Wholesale-YSQL/src/main/resources/schema.sql"
 DELIM=","
 YSQLSH="/temp/yugabyte-2.14.1.0/bin/ysqlsh"
 dataDir="/home/stuproj/cs4224i/Wholesale-YSQL/project_files/data_files"

@@ -25,11 +25,11 @@ submit_job() {
     ip="192.168.48.239"
   fi
 
-  ssh "cs4224i@$node_id.comp.nus.edu.sg" ./Wholesale-YSQL/scripts/run_jar.sh $ip $port_id $job_id
+  ssh "cs4224i@$node_id.comp.nus.edu.sg"  "./Wholesale-YSQL/scripts/run_jar.sh $ip $port_id $job_id"
 }
 
 load_data() {
-    ssh "cs4224i@xcnd20.comp.nus.edu.sg" ./Wholesale-YSQL/scripts/dump_data.sh 192.168.48.239 $port_id
+    ssh "cs4224i@xcnd20.comp.nus.edu.sg"  "./Wholesale-YSQL/scripts/dump_data.sh 192.168.48.239 $port_id"
 }
 
 
