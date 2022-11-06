@@ -1,33 +1,17 @@
-schema="/home/stuproj/cs4224i/Wholesale-YSQL/src/main/resources/schema.sql"
+schema="../src/main/resources/schema.sql"
 DELIM=","
 YSQLSH="/temp/yugabyte-2.14.1.0/bin/ysqlsh"
-root_dir=/home/stuproj/cs4224i/Wholesale-YSQL
 dataDir="/home/stuproj/cs4224i/Wholesale-YSQL/project_files/data_files"
 base_node=20
 
 #create csv file for measurement
-cd $root_dir
+cd ..
 if [[ -e report.csv ]]; then
     rm -f report.csv
 fi
 
-curr_node=$1
+ip=$1
 port=$2
-if [ $curr_node == "xcnd20" ]; then
-    ip="192.168.48.239"
-elif [ $curr_node == "xcnd21" ]; then
-    ip="192.168.48.240"
-elif [ $curr_node == "xcnd22" ]; then
-    ip="192.168.48.241"
-elif [ $curr_node == "xcnd23" ]; then
-    ip="192.168.48.242"
-elif [ $curr_node == "xcnd24" ]; then
-    ip="192.168.48.243"
-else
-    echo "Using default node xcnd20"
-    ip="192.168.48.239"
-fi
-
 
 
 echo "***** Start dump data *****"

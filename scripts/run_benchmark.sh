@@ -1,7 +1,6 @@
 num_nodes=5
 base_node=20  # base node is xcnd20
 port_id=5433
-root_dir=/home/stuproj/cs4224i/Wholesale-YSQL
 
 submit_job() {
   job_id=$1
@@ -11,12 +10,26 @@ submit_job() {
 
   echo "the job will be submitted to node: $node_id"
 
-  ssh "cs4224i@$node_id.comp.nus.edu.sg" ./Wholesale-YSQL/scripts/run_jar.sh $node_id $port_id $job_id
+  if [ $curr_node == "xcnd20" ]; then
+    ip="192.168.48.239"
+  elif [ $curr_node == "xcnd21" ]; then
+    ip="192.168.48.240"
+  elif [ $curr_node == "xcnd22" ]; then
+    ip="192.168.48.241"
+  elif [ $curr_node == "xcnd23" ]; then
+    ip="192.168.48.242"
+  elif [ $curr_node == "xcnd24" ]; then
+    ip="192.168.48.243"
+  else
+    echo "Using default node xcnd20"
+    ip="192.168.48.239"
+  fi
+
+  ssh "cs4224i@$node_id.comp.nus.edu.sg" ./Wholesale-YSQL/scripts/run_jar.sh $ip $port_id $job_id
 }
 
 load_data() {
-    ssh "cs4224i@xcnd20.comp.nus.edu.sg" ./Wholesale-YSQL/scripts/dump_data.sh xcnd20 $port_id
-    echo ./Wholesale-YSQL/scripts/dump_data.sh $node_id $port_id
+    ssh "cs4224i@xcnd20.comp.nus.edu.sg" ./Wholesale-YSQL/scripts/dump_data.sh 192.168.48.239 $port_id
 }
 
 
