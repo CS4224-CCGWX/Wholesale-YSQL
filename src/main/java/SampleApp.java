@@ -95,7 +95,7 @@ public class SampleApp {
                 try {
                     transaction.execute();
                     txEnd = System.nanoTime();
-                    elapsedTime = TimeUnit.SECONDS.convert(txEnd - txStart, TimeUnit.NANOSECONDS);
+                    elapsedTime = TimeUnit.MILLISECONDS.convert(txEnd - txStart, TimeUnit.NANOSECONDS);
                     String[] s = transaction.toString().split(" ");
                     String curS = s[0];
 

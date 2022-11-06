@@ -30,18 +30,20 @@ public class PerformanceReportGenerator {
 //    }
     public static void generatePerformanceReport(List<Long> latencyList, long totalTime, int client) throws IOException {
         Collections.sort(latencyList);
+
         int count = latencyList.size();
         long sum = latencyList.stream().mapToLong(Long::longValue).sum();
         OutputFormatter outputFormatter = new OutputFormatter();
+        System.err.println(sum + " " + count);
 
         fw = new FileWriter(reportFilePath, true);
         String output = String.format(performanceNoHeading,client, outputFormatter.formatTotalTransactions(count),
                 outputFormatter.formatTotalElapsedTime(totalTime),
                 outputFormatter.formatThroughput((double) count / totalTime),
-                outputFormatter.formatAverage((double) convertToMs(sum) / count),
-                outputFormatter.formatMedian(convertToMs(getMedian(latencyList))),
-                outputFormatter.formatPercentile(convertToMs(getByPercentile(latencyList, 95))),
-                outputFormatter.formatPercentile(convertToMs(getByPercentile(latencyList, 99)))
+                outputFormatter.formatAverage(sum * 1.0 / count),
+                outputFormatter.formatMedian(getMedian(latencyList)),
+                outputFormatter.formatPercentile(getByPercentile(latencyList, 95)),
+                outputFormatter.formatPercentile(getByPercentile(latencyList, 99))
         );
         fw.write(output);
         System.err.println(output);
