@@ -10,15 +10,15 @@ submit_job() {
 
   echo "the job will be submitted to node: $node_id"
 
-  if [ $curr_node == "xcnd20" ]; then
+  if [ $node_id == "xcnd20" ]; then
     ip="192.168.48.239"
-  elif [ $curr_node == "xcnd21" ]; then
+  elif [ $node_id == "xcnd21" ]; then
     ip="192.168.48.240"
-  elif [ $curr_node == "xcnd22" ]; then
+  elif [ $node_id == "xcnd22" ]; then
     ip="192.168.48.241"
-  elif [ $curr_node == "xcnd23" ]; then
+  elif [ $node_id == "xcnd23" ]; then
     ip="192.168.48.242"
-  elif [ $curr_node == "xcnd24" ]; then
+  elif [ $node_id == "xcnd24" ]; then
     ip="192.168.48.243"
   else
     echo "Using default node xcnd20"
