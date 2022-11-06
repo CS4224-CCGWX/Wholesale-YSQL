@@ -11,7 +11,7 @@ Assume the current working directory is the root directory of this repo (Wholesa
 ### Pre-requisite
 - `JDK 11`
 - `Maven`
-- `Python 3.7` with `pandas` package (necessary for data pre-processing).
+
 
 ### Build and package Java application
 ```
@@ -23,18 +23,4 @@ Make sure the project jar file is generated at `./target/yugabyte-simple-java-ap
 ### Run benchmark
 - On `xcnd20`, run `./scripts/run_benchmark.sh`.
 - Check `./log` for each transaction files' output and error.
-- CSV files containing summary statistics can be found under `./back`.
-
-
-## Run YSQL Java application benchmark
-### Pre-requisite
-- `JDK 11`
-- `Maven`
-
-### Build and package Java application
-```
-mvn clean
-mvn package
-```
-
-### Run benchmark
+- CSV files containing summary statistics can be found under `./backuip`.
