@@ -70,7 +70,6 @@ public class PaymentTransaction extends AbstractTransaction{
             PreparedQueries.updateCustomerPaymentInfo.setInt(4, districtId);
             PreparedQueries.updateCustomerPaymentInfo.setInt(5, customerId);
             this.executeUpdate(PreparedQueries.updateCustomerPaymentInfo);
-            connection.commit();
 
 
             PreparedQueries.getDistrictAddressAndYtd.setInt(1, warehouseId);
@@ -127,6 +126,8 @@ public class PaymentTransaction extends AbstractTransaction{
             sb.append(delimiter);
 
             io.println(sb);
+
+            connection.commit();
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("[Error]:  Payment Abort " + this.toString());
