@@ -33,28 +33,19 @@ public class PerformanceReportGenerator {
         int count = latencyList.size();
         long sum = latencyList.stream().mapToLong(Long::longValue).sum();
         OutputFormatter outputFormatter = new OutputFormatter();
-
-        fw = new FileWriter(reportFilePath, true);
-        fw.write(String.format(performanceNoHeading,client, outputFormatter.formatTotalTransactions(count),
+        String output = String.format(performanceNoHeading,client, outputFormatter.formatTotalTransactions(count),
                 outputFormatter.formatTotalElapsedTime(totalTime),
                 outputFormatter.formatThroughput((double) count / totalTime),
                 outputFormatter.formatAverage((double) convertToMs(sum) / count),
                 outputFormatter.formatMedian(convertToMs(getMedian(latencyList))),
                 outputFormatter.formatPercentile(convertToMs(getByPercentile(latencyList, 95))),
                 outputFormatter.formatPercentile(convertToMs(getByPercentile(latencyList, 99)))
-                ));
-
-        fw.write(String.format(performanceFormat,client, outputFormatter.formatTotalTransactions(count),
-                totalTransaction,
-                outputFormatter.formatTotalElapsedTime(totalTime),
-                outputFormatter.formatThroughput((double) count / totalTime),
-                outputFormatter.formatAverage((double) convertToMs(sum) / count),
-                outputFormatter.formatMedian(convertToMs(getMedian(latencyList))),
-                outputFormatter.formatPercentile(convertToMs(getByPercentile(latencyList, 95))),
-                outputFormatter.formatPercentile(convertToMs(getByPercentile(latencyList, 99))),
-                totalNumberOfRetry
-                )
         );
+
+        fw = new FileWriter(reportFilePath, true);
+        fw.write(output);
+        System.err.println(output);
+
         for (Map.Entry<String, Long> set :
                 individual_time.entrySet()) {
             String curTrans = set.getKey();
