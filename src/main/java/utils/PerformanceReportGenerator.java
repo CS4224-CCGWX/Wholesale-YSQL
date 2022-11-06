@@ -61,9 +61,10 @@ public class PerformanceReportGenerator {
         for (Map.Entry<String, Long> set :
                 individual_time.entrySet()) {
             String curTrans = set.getKey();
+            long defaultValue = 0;
             long tTime = individual_time.get(curTrans);
             long transCount = individual_count.get(curTrans);
-            long totalRetry = individual_retry.get(curTrans);
+            long totalRetry = individual_retry.getOrDefault(curTrans, defaultValue);
             fw.write(String.format(individualTransactionPerformance, curTrans, tTime, transCount, totalRetry));
             fw.write("\n");
         }
