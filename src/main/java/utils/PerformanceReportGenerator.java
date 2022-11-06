@@ -12,6 +12,8 @@ public class PerformanceReportGenerator {
     private static String performanceFormat = "Transaction files: %d, Total Count: %s, Total Number of Transaction: %d" +
             "Time Taken: %s, Throughput: %s, Average: %s, Median: %s, 95: %s, 99: %s, Total number of retry: %d \n";
 
+    private static String performanceNoHeading = "%d, %s, %s, %s, %s, %s, %s, %s \n";
+
     private static String individualTransactionPerformance = "Transaction name: %s, Total time: %d, Total count: %d" +
             "  Total Number of retry: %d \n";
 
@@ -36,6 +38,15 @@ public class PerformanceReportGenerator {
         OutputFormatter outputFormatter = new OutputFormatter();
 
         fw = new FileWriter(reportFilePath, true);
+        fw.write(String.format(performanceNoHeading,client, outputFormatter.formatTotalTransactions(count),
+                outputFormatter.formatTotalElapsedTime(totalTime),
+                outputFormatter.formatThroughput((double) count / totalTime),
+                outputFormatter.formatAverage((double) convertToMs(sum) / count),
+                outputFormatter.formatMedian(convertToMs(getMedian(latencyList))),
+                outputFormatter.formatPercentile(convertToMs(getByPercentile(latencyList, 95))),
+                outputFormatter.formatPercentile(convertToMs(getByPercentile(latencyList, 99)))
+                ));
+
         fw.write(String.format(performanceFormat,client, outputFormatter.formatTotalTransactions(count),
                 totalTransaction,
                 outputFormatter.formatTotalElapsedTime(totalTime),
