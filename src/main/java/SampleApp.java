@@ -102,7 +102,6 @@ public class SampleApp {
                     hm.put(curS, hm.getOrDefault(curS, defaultValue) + elapsedTime);
                     hm_count.put(curS, hm_count.getOrDefault(curS, defaultValue) + 1);
                     latencyList.add(txEnd - txStart);
-                    System.out.println("Time used: " + elapsedTime);
                     break;
                 } catch (Exception e) {
                     String[] s = transaction.toString().split(" ");
