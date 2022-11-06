@@ -1,0 +1,2068 @@
+Time used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+[Error]:  New Order Abort New **** New Order Transaction Information ****
+CID:2027, WID:10, DID:5, num order-lines:15
+Item IDs are:,54438,65111,77015,29927,73403,5191,12103,23287,29991,36423,40167,81495,86611,95638,97671
+Quantities:,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10
+Supply warehouse IDs:,10,2,10,10,8,11,10,4,10,6,9,9,5,3,4
+
+Time used: 0
+Time used: 0
+=======================================
+Transaction ID: 0
+*** New Order Transaction Summary ***
+Customer ID: (10, 3, 295), Last name:ABLEEINGPRES, Credit:GC, C_DISCOUNT:0.0591
+
+Warehouse tax:0.1803, District tax:0.1539
+
+Order ID:3001, Order entry date:2022-11-05 17:31:28.128
+
+#items:18, Total amount:14371.48
+
+Items information:
+	 Item number: 40519, name: ibesmqmehpntptx, Supplier warehouse: 8, quantity: 10, Order-line amount: 553.10, Adjusted quantity: 76
+
+	 Item number: 19645, name: ddugazypbqkzopiio, Supplier warehouse: 10, quantity: 10, Order-line amount: 830.50, Adjusted quantity: 16
+
+	 Item number: 70357, name: tzjiseoflcuextbxoehudbh, Supplier warehouse: 6, quantity: 10, Order-line amount: 557.70, Adjusted quantity: 57
+
+	 Item number: 51815, name: afftogmamudiruytwxvgjg, Supplier warehouse: 1, quantity: 10, Order-line amount: 898.90, Adjusted quantity: 100
+
+	 Item number: 24007, name: owznbxdszowdbdbr, Supplier warehouse: 2, quantity: 10, Order-line amount: 195.60, Adjusted quantity: 15
+
+	 Item number: 38231, name: gmdtmnbetacgcxnhdawz, Supplier warehouse: 2, quantity: 10, Order-line amount: 867.00, Adjusted quantity: 44
+
+	 Item number: 31399, name: djffvcjbqmwfzpwfob, Supplier warehouse: 8, quantity: 10, Order-line amount: 133.00, Adjusted quantity: 102
+
+	 Item number: 13446, name: eqevarqqsqvrhspqoaek, Supplier warehouse: 3, quantity: 10, Order-line amount: 964.70, Adjusted quantity: 31
+
+	 Item number: 14279, name: thhqrhszjpvvri, Supplier warehouse: 7, quantity: 10, Order-line amount: 748.90, Adjusted quantity: 63
+
+	 Item number: 30339, name: zzxuqeoxbebgy, Supplier warehouse: 4, quantity: 10, Order-line amount: 492.50, Adjusted quantity: 90
+
+	 Item number: 31831, name: bwnbladffarlunqpakzfcv, Supplier warehouse: 6, quantity: 10, Order-line amount: 779.00, Adjusted quantity: 23
+
+	 Item number: 60567, name: eerzuuuaccewnxu, Supplier warehouse: 3, quantity: 10, Order-line amount: 802.80, Adjusted quantity: 74
+
+	 Item number: 73191, name: bzzjrdopfqdujm, Supplier warehouse: 1, quantity: 10, Order-line amount: 819.70, Adjusted quantity: 75
+
+	 Item number: 80974, name: pwkrczfepkjzoqchaufpm, Supplier warehouse: 6, quantity: 10, Order-line amount: 626.30, Adjusted quantity: 72
+
+	 Item number: 85735, name: dpwhsnzrigmopazum, Supplier warehouse: 5, quantity: 10, Order-line amount: 736.30, Adjusted quantity: 72
+
+	 Item number: 91351, name: axdrgwkxtvkecig, Supplier warehouse: 5, quantity: 10, Order-line amount: 435.50, Adjusted quantity: 72
+
+	 Item number: 97889, name: kxexhzwltpcisorqfndkbal, Supplier warehouse: 6, quantity: 10, Order-line amount: 851.60, Adjusted quantity: 54
+
+	 Item number: 97924, name: ufffdlhwxnkjgxxwqtxjwmu, Supplier warehouse: 1, quantity: 10, Order-line amount: 155.10, Adjusted quantity: 27
+
+=======================================
+=======================================
+Transaction ID: 1
+*** New Order Transaction Summary ***
+Customer ID: (10, 5, 1951), Last name:EINGABLEBAR, Credit:GC, C_DISCOUNT:0.3778
+
+Warehouse tax:0.1803, District tax:0.1158
+
+Order ID:3001, Order entry date:2022-11-05 17:31:28.420
+
+#items:7, Total amount:2975.66
+
+Items information:
+	 Item number: 4127, name: vlveswztxovcpkmaxhzdbqp, Supplier warehouse: 8, quantity: 10, Order-line amount: 465.50, Adjusted quantity: 21
+
+	 Item number: 7238, name: zdrlgyxjzsixgokue, Supplier warehouse: 10, quantity: 10, Order-line amount: 22.90, Adjusted quantity: 70
+
+	 Item number: 38589, name: ndfpdkkmuklfgnxn, Supplier warehouse: 3, quantity: 10, Order-line amount: 751.20, Adjusted quantity: 37
+
+	 Item number: 40419, name: gxixcjmufvdhhjviciac, Supplier warehouse: 8, quantity: 10, Order-line amount: 834.80, Adjusted quantity: 33
+
+	 Item number: 40511, name: jojrwkpvmlsqt, Supplier warehouse: 8, quantity: 10, Order-line amount: 397.60, Adjusted quantity: 49
+
+	 Item number: 46294, name: xtocwhxeisfomm, Supplier warehouse: 5, quantity: 10, Order-line amount: 296.80, Adjusted quantity: 72
+
+	 Item number: 85447, name: xwvbytgfhjrdel, Supplier warehouse: 10, quantity: 10, Order-line amount: 921.10, Adjusted quantity: 29
+
+=======================================
+=======================================
+Transaction ID: 2
+*** New Order Transaction Summary ***
+Customer ID: (10, 5, 313), Last name:PRIOUGHTABLE, Credit:GC, C_DISCOUNT:0.1785
+
+Warehouse tax:0.1803, District tax:0.1158
+
+Order ID:3002, Order entry date:2022-11-05 17:31:28.532
+
+#items:14, Total amount:4632.39
+
+Items information:
+	 Item number: 56540, name: fetwmejuxelffqgrhejggh, Supplier warehouse: 9, quantity: 10, Order-line amount: 331.30, Adjusted quantity: 43
+
+	 Item number: 16476, name: hwugpcgkhjbsjqfctnxj, Supplier warehouse: 5, quantity: 10, Order-line amount: 181.50, Adjusted quantity: 73
+
+	 Item number: 64156, name: oyndpyufcrtgyrdhpgpuocu, Supplier warehouse: 9, quantity: 10, Order-line amount: 380.80, Adjusted quantity: 109
+
+	 Item number: 5187, name: mbrnjehdsnxsnm, Supplier warehouse: 10, quantity: 10, Order-line amount: 514.90, Adjusted quantity: 85
+
+	 Item number: 6127, name: qagpcbdexqnigv, Supplier warehouse: 9, quantity: 10, Order-line amount: 48.10, Adjusted quantity: 77
+
+	 Item number: 20198, name: bofgshqazjvroy, Supplier warehouse: 8, quantity: 10, Order-line amount: 53.70, Adjusted quantity: 28
+
+	 Item number: 26462, name: kkuisnhjgqvpzdowwbi, Supplier warehouse: 4, quantity: 10, Order-line amount: 144.30, Adjusted quantity: 65
+
+	 Item number: 31843, name: yyuucendkmvfswsr, Supplier warehouse: 5, quantity: 10, Order-line amount: 988.10, Adjusted quantity: 63
+
+	 Item number: 39575, name: qcghfxpuihxfkqqxayfd, Supplier warehouse: 9, quantity: 10, Order-line amount: 289.80, Adjusted quantity: 13
+
+	 Item number: 42467, name: teqkqagnnqnjdwtot, Supplier warehouse: 5, quantity: 10, Order-line amount: 720.30, Adjusted quantity: 30
+
+	 Item number: 56671, name: chdxzkclmbmpwfczrlih, Supplier warehouse: 4, quantity: 10, Order-line amount: 38.70, Adjusted quantity: 46
+
+	 Item number: 79062, name: cbqsgbtqtvmosuagdtveku, Supplier warehouse: 7, quantity: 10, Order-line amount: 196.80, Adjusted quantity: 15
+
+	 Item number: 85478, name: zkbvpcqqmoyghtfqt, Supplier warehouse: 5, quantity: 10, Order-line amount: 365.60, Adjusted quantity: 24
+
+	 Item number: 91783, name: jjgpytjdlhfamgl, Supplier warehouse: 2, quantity: 10, Order-line amount: 96.80, Adjusted quantity: 72
+
+=======================================
+=======================================
+Transaction ID: 3
+*** New Order Transaction Summary ***
+Customer ID: (10, 4, 183), Last name:OUGHTATIONABLE, Credit:GC, C_DISCOUNT:0.3992
+
+Warehouse tax:0.1803, District tax:0.1874
+
+Order ID:3001, Order entry date:2022-11-05 17:31:28.691
+
+#items:17, Total amount:7791.74
+
+Items information:
+	 Item number: 47835, name: rtkqyoocaxozrkydqwy, Supplier warehouse: 4, quantity: 10, Order-line amount: 729.00, Adjusted quantity: 51
+
+	 Item number: 85471, name: hkwyqodazhjqnrlsdjmgr, Supplier warehouse: 4, quantity: 10, Order-line amount: 176.80, Adjusted quantity: 58
+
+	 Item number: 93347, name: saohnqhuwcbqqpsm, Supplier warehouse: 5, quantity: 10, Order-line amount: 554.40, Adjusted quantity: 21
+
+	 Item number: 48865, name: ujxiaxhhdtpveb, Supplier warehouse: 1, quantity: 10, Order-line amount: 194.10, Adjusted quantity: 64
+
+	 Item number: 81591, name: mxhmaybmfrjlqnwzmcankvo, Supplier warehouse: 9, quantity: 10, Order-line amount: 302.60, Adjusted quantity: 80
+
+	 Item number: 90918, name: buthemjgxmgetlny, Supplier warehouse: 5, quantity: 10, Order-line amount: 693.30, Adjusted quantity: 103
+
+	 Item number: 2261, name: anhfagyqdcpfotcwhd, Supplier warehouse: 4, quantity: 10, Order-line amount: 521.10, Adjusted quantity: 44
+
+	 Item number: 4071, name: wmygtcobwbpnrkkpnsx, Supplier warehouse: 6, quantity: 10, Order-line amount: 977.10, Adjusted quantity: 49
+
+	 Item number: 6151, name: eqkdxfaaniilgdoybup, Supplier warehouse: 6, quantity: 10, Order-line amount: 568.00, Adjusted quantity: 62
+
+	 Item number: 13975, name: tiuteolsvqtispnksn, Supplier warehouse: 7, quantity: 10, Order-line amount: 455.30, Adjusted quantity: 73
+
+	 Item number: 22502, name: szzkqjtppyjowfieqptqdjz, Supplier warehouse: 7, quantity: 10, Order-line amount: 972.90, Adjusted quantity: 49
+
+	 ItTime used: 0
+Time used: 0
+Updated order line warehouse 10, district 1, order 2101, order line 1
+Updated order line warehouse 10, district 1, order 2101, order line 2
+Updated order line warehouse 10, district 1, order 2101, order line 3
+Updated order line warehouse 10, district 1, order 2101, order line 4
+Updated order line warehouse 10, district 1, order 2101, order line 5
+Updated order line warehouse 10, district 1, order 2101, order line 6
+Updated order line warehouse 10, district 1, order 2101, order line 7
+Updated order line warehouse 10, district 1, order 2101, order line 8
+Updated order line warehouse 10, district 1, order 2101, order line 9
+Updated order line warehouse 10, district 1, order 2101, order line 10
+Updated order line warehouse 10, district 1, order 2101, order line 11
+Updated order line warehouse 10, district 1, order 2101, order line 12
+Updated order line warehouse 10, district 1, order 2101, order line 13
+Updated order line warehouse 10, district 1, order 2101, order line 14
+Updated order line warehouse 10, district 1, order 2101, order line 15
+Updated order line warehouse 10, district 1, order 2101, order line 16
+Updated order line warehouse 10, district 2, order 2101, order line 1
+Updated order line warehouse 10, district 2, order 2101, order line 2
+Updated order line warehouse 10, district 2, order 2101, order line 3
+Updated order line warehouse 10, district 2, order 2101, order line 4
+Updated order line warehouse 10, district 2, order 2101, order line 5
+Updated order line warehouse 10, district 3, order 2101, order line 1
+Updated order line warehouse 10, district 3, order 2101, order line 2
+Updated order line warehouse 10, district 3, order 2101, order line 3
+Updated order line warehouse 10, district 3, order 2101, order line 4
+Updated order line warehouse 10, district 3, order 2101, order line 5
+Updated order line warehouse 10, district 3, order 2101, order line 6
+Updated order line warehouse 10, district 3, order 2101, order line 7
+Updated order line warehouse 10, district 3, order 2101, order line 8
+Updated order line warehouse 10, district 3, order 2101, order line 9
+Updated order line warehouse 10, district 3, order 2101, order line 10
+Updated order line warehouse 10, district 3, order 2101, order line 11
+Updated order line warehouse 10, district 3, order 2101, order line 12
+Updated order line warehouse 10, district 4, order 2101, order line 1
+Updated order line warehouse 10, district 4, order 2101, order line 2
+Updated order line warehouse 10, district 4, order 2101, order line 3
+Updated order line warehouse 10, district 4, order 2101, order line 4
+Updated order line warehouse 10, district 4, order 2101, order line 5
+Updated order line warehouse 10, district 4, order 2101, order line 6
+Updated order line warehouse 10, district 4, order 2101, order line 7
+Updated order line warehouse 10, district 4, order 2101, order line 8
+Updated order line warehouse 10, district 4, order 2101, order line 9
+Updated order line warehouse 10, district 4, order 2101, order line 10
+Updated order line warehouse 10, district 4, order 2101, order line 11
+Updated order line warehouse 10, district 5, order 2101, order line 1
+Updated order line warehouse 10, district 5, order 2101, order line 2
+Updated order line warehouse 10, district 5, order 2101, order line 3
+Updated order line warehouse 10, district 5, order 2101, order line 4
+Updated order line warehouse 10, district 5, order 2101, order line 5
+Updated order line warehouse 10, district 5, order 2101, order line 6
+Updated order line warehouse 10, district 5, order 2101, order line 7
+Updated order line warehouse 10, district 5, order 2101, order line 8
+Updated order line warehouse 10, district 5, order 2101, order line 9
+Updated order line warehouse 10, district 5, order 2101, order line 10
+Updated order line warehouse 10, district 5, order 2101, order line 11
+Updated order line warehouse 10, district 5, order 2101, order line 12
+Updated order line warehouse 10, district 5, order 2101, order line 13
+Updated order line warehouse 10, district 5, order 2101, order line 14
+Updated order line warehouse 10, district 5, order 2101, order line 15
+Updated order line warehouse 10, district 5, order 2101, order line 16
+Updated order line warehouse 10, district 5, order 2101, order line 17
+Updated order line warehouse 10, district 5, order 2101, order line 18
+Updated order line warehouse 10, district 6, order 2101, order line 1
+Updated order line warehouse 10, district 6, order 2101, order line 2
+Updated order line warehouse 10, district 6, order 2101, order line 3
+Updated order line warehouse 10, district 6, order 2101, order line 4
+Updated order line warehouse 10, district 6, order 2101, order line 5
+Updated order line warehouse 10, district 6, order 2101, order line 6
+Updated order line warehouse 10, district 6, order 2101, order line 7
+Updated order line warehouse 10, district 7, order 2101, order line 1
+Updated order line warehouse 10, district 7, order 2101, order line 2
+Updated order line warehouse 10, district 7, order 2101, order line 3
+Updated order line warehouse 10, district 7, order 2101, order line 4
+Updated order line warehouse 10, district 7, order 2101, order line 5
+Updated order line warehouse 10, district 7, order 2101, order line 6
+Updated order line warehouse 10, district 7, order 2101, order line 7
+Updated order line warehouse 10, district 7, order 2101, order line 8
+Updated order line warehouse 10, district 7, order 2101, order line 9
+Updated order line warehouse 10, district 7, order 2101, order line 10
+Updated order line warehouse 10, district 7, order 2101, order line 11
+Updated order line warehouse 10, district 7, order 2101, order line 12
+Updated order line warehouse 10, district 7, order 2101, order line 13
+Updated order line warehouse 10, district 7, order 2101, order line 14
+Updated order line warehouse 10, district 7, order 2101, order line 15
+Updated order line warehouse 10, district 7, order 2101, order line 16
+Updated order line warehouse 10, district 7, order 2101, order line 17
+Updated order line warehouse 10, district 8, order 2101, order line 1
+Updated order line warehouse 10, district 8, order 2101, order line 2
+Updated order line warehouse 10, district 8, order 2101, order line 3
+Updated order line warehouse 10, district 8, order 2101, order line 4
+Updated order line warehouse 10, district 8, order 2101, order line 5
+Updated order line warehouse 10, district 8, order 2101, order line 6
+Updated order line warehouse 10, district 8, order 2101, order line 7
+Updated order line warehouse 10, district 8, order 2101, order line 8
+Updated order line warehouse 10, district 8, order 2101, order line 9
+Updated order line warehouse 10, district 8, order 2101, order line 10
+Updated order line warehouse 10, district 8, order 2101, order line 11
+Updated order line warehouse 10, district 8, order 2101, order line 12
+Updated order line warehouse 10, district 8, order 2101, order line 13
+Updated order line warehouse 10, district 8, order 2101, order line 14
+Updated order line warehouse 10, district 8, order 2101, order line 15
+Updated order line warehouse 10, district 8, order 2101, order line 16
+Updated order line warehouse 10, district 8, order 2101, order line 17
+Updated order line warehouse 10, district 8, order 2101, order line 18
+Updated order line warehouse 10, district 8, order 2101, order line 19
+Updated order line warehouse 10, district 9, order 2101, order line 1
+Updated order line warehouse 10, district 9, order 2101, order line 2
+Updated order line warehouse 10, district 9, order 2101, order line 3
+Updated order line warehouse 10, district 9, order 2101, order line 4
+Updated order line warehouse 10, district 9, order 2101, order line 5
+Updated order line warehouse 10, district 9, order 2101, order line 6
+Updated order line warehouse 10, district 9, order 2101, order line 7
+Updated order line warehouse 10, district 9, order 2101, order line 8
+Updated order line warehouse 10, district 9, order 2101, order line 9
+Updated order line warehouse 10, district 9, order 2101, order line 10
+Updated order line warehouse 10, district 9, order 2101, order line 11
+Updated order line warehouse 10, district 9, order 2101, order line 12
+Updated order line warehouse 10, district 9, order 2101, order line 13
+Updated order line warehouse 10, district 9, order 2101, order line 14
+Updated order line warehouse 10, district 9, order 2101, order line 15
+Updated order line warehouse 10, district 9, order 2101, order line 16
+Updated order line warehouse 10, district 10, order 2101, order line 1
+Updated order line warehouse 10, district 10, order 2101, order line 2
+Updated order line warehouse 10, district 10, order 2101, order line 3
+Updated order line warehouse 10, district 10, order 2101, order line 4
+Updated order line warehouse 10, district 10, order 2101, order line 5
+Updated order line warehouse 10, district 10, order 2101, order line 6
+Updated order line warehouse 10, district 10, order 2101, order line 7
+Updated order line warehouse 10, district 10, order 2101, order line 8
+Updated order line warehouse 10, district 10, order 2101, order line 9
+Updated order line warehouse 10, district 10, order 2101, order line 10
+Updated order line warehouse 10, district 10, order 2101, order line 11
+Updated order line warehouse 10, district 10, order 2101, order line 12
+Updated order line warehouse 10, district 10, order 2101, order line 13
+Updated order line warehouse 10, district 10, order 2101, order line 14
+Updated order line warehouse 10, district 10, order 2101, order line 15
+Updated order line warehouse 10, district 10, order 2101, order line 16
+Updated order line warehouse 10, district 10, order 2101, order line 17
+Updated order line warehouse 10, district 10, order 2101, order line 18
+Time used: 0
+Time used: 0
+Time used: 0
+em number: 47646, name: qcrmjembozyuqbyichoikur, Supplier warehouse: 7, quantity: 10, Order-line amount: 477.50, Adjusted quantity: 10
+
+	 Item number: 56807, name: fsfbfpnvjzzpzyixajdu, Supplier warehouse: 10, quantity: 10, Order-line amount: 574.20, Adjusted quantity: 76
+
+	 Item number: 72831, name: rwavmobtbbdhwqkhig, Supplier warehouse: 3, quantity: 10, Order-line amount: 288.80, Adjusted quantity: 48
+
+	 Item number: 73319, name: gkrkpelboltzpbkltmkn, Supplier warehouse: 5, quantity: 10, Order-line amount: 932.50, Adjusted quantity: 27
+
+	 Item number: 95715, name: ngbziqrzfkzjxufxjznxp, Supplier warehouse: 5, quantity: 10, Order-line amount: 350.20, Adjusted quantity: 25
+
+	 Item number: 97767, name: upxbrewjvasiraef, Supplier warehouse: 5, quantity: 10, Order-line amount: 714.50, Adjusted quantity: 64
+
+=======================================
+=======================================
+Transaction ID: 4
+*** New Order Transaction Summary ***
+Customer ID: (10, 1, 1027), Last name:ANTIANTIPRI, Credit:BC, C_DISCOUNT:0.0703
+
+Warehouse tax:0.1803, District tax:0.0533
+
+Order ID:3001, Order entry date:2022-11-05 17:31:28.864
+
+#items:12, Total amount:5988.31
+
+Items information:
+	 Item number: 50334, name: parjxxqmozyjqyf, Supplier warehouse: 10, quantity: 10, Order-line amount: 202.80, Adjusted quantity: 50
+
+	 Item number: 15051, name: hxpmtmnrwgsqkllfuu, Supplier warehouse: 10, quantity: 10, Order-line amount: 369.30, Adjusted quantity: 51
+
+	 Item number: 16103, name: wxbdclctxifktmzctxdcri, Supplier warehouse: 2, quantity: 10, Order-line amount: 800.70, Adjusted quantity: 59
+
+	 Item number: 9779, name: vfxnuhvuoxmgafg, Supplier warehouse: 1, quantity: 10, Order-line amount: 302.10, Adjusted quantity: 106
+
+	 Item number: 14146, name: oygcpklstqvwlsfxsmyxdw, Supplier warehouse: 2, quantity: 10, Order-line amount: 189.30, Adjusted quantity: 101
+
+	 Item number: 40091, name: pwqnqvqqrbgtdnzjefdo, Supplier warehouse: 1, quantity: 10, Order-line amount: 373.20, Adjusted quantity: 63
+
+	 Item number: 42519, name: hbvycqjtngnim, Supplier warehouse: 10, quantity: 10, Order-line amount: 586.50, Adjusted quantity: 81
+
+	 Item number: 50395, name: vkfrilsyvunjrfomxqtmps, Supplier warehouse: 4, quantity: 10, Order-line amount: 639.40, Adjusted quantity: 80
+
+	 Item number: 54887, name: myflwvglllyzkohfysytr, Supplier warehouse: 1, quantity: 10, Order-line amount: 380.60, Adjusted quantity: 72
+
+	 Item number: 62615, name: qrdvmupkmysjzi, Supplier warehouse: 10, quantity: 10, Order-line amount: 219.60, Adjusted quantity: 88
+
+	 Item number: 64447, name: emiveoihyedbejuhxjuu, Supplier warehouse: 8, quantity: 10, Order-line amount: 787.50, Adjusted quantity: 87
+
+	 Item number: 64966, name: szabgxffyvwkbouptrlrtis, Supplier warehouse: 8, quantity: 10, Order-line amount: 370.40, Adjusted quantity: 20
+
+=======================================
+=======================================
+Transaction ID: 5
+*** New Order Transaction Summary ***
+Customer ID: (10, 3, 2801), Last name:EINGABLEBAR, Credit:GC, C_DISCOUNT:0.4615
+
+Warehouse tax:0.1803, District tax:0.1539
+
+Order ID:3002, Order entry date:2022-11-05 17:31:28.978
+
+#items:20, Total amount:6449.39
+
+Items information:
+	 Item number: 61075, name: grpvolvjlgbqpqtxdfktbqw, Supplier warehouse: 6, quantity: 10, Order-line amount: 719.90, Adjusted quantity: 35
+
+	 Item number: 92821, name: onenolpwmmctvfk, Supplier warehouse: 3, quantity: 10, Order-line amount: 787.90, Adjusted quantity: 14
+
+	 Item number: 80583, name: bemxpfppqfxwvfru, Supplier warehouse: 5, quantity: 10, Order-line amount: 46.10, Adjusted quantity: 70
+
+	 Item number: 32387, name: oipthedglgmnelskf, Supplier warehouse: 2, quantity: 10, Order-line amount: 384.50, Adjusted quantity: 82
+
+	 Item number: 13405, name: hogkmawsobnxqibtylpuijz, Supplier warehouse: 9, quantity: 10, Order-line amount: 335.80, Adjusted quantity: 101
+
+	 Item number: 77361, name: vfezrudilnknlggsowegnr, Supplier warehouse: 5, quantity: 10, Order-line amount: 270.50, Adjusted quantity: 14
+
+	 Item number: 40550, name: cwurtaioucurgvxarx, Supplier warehouse: 10, quantity: 10, Order-line amount: 289.70, Adjusted quantity: 67
+
+	 Item number: 32487, name: ioxdzwfadwfeursfzff, Supplier warehouse: 8, quantity: 10, Order-line amount: 437.80, Adjusted quantity: 66
+
+	 Item number: 4295, name: rebjozpaupnwty, Supplier warehouse: 7, quantity: 10, Order-line amount: 603.20, Adjusted quantity: 31
+
+	 Item number: 5445, name: vsadabfplqelkhjrgadrb, Supplier warehouse: 4, quantity: 10, Order-line amount: 717.30, Adjusted quantity: 101
+
+	 Item number: 12007, name: eqsiobqckyijbfc, Supplier warehouse: 7, quantity: 10, Order-line amount: 406.40, Adjusted quantity: 11
+
+	 Item number: 24150, name: fgrhyivgueymrqma, Supplier warehouse: 10, quantity: 10, Order-line amount: 297.60, Adjusted quantity: 59
+
+	 Item number: 24215, name: sywxhvbwuuowsfdt, Supplier warehouse: 2, quantity: 10, Order-line amount: 535.10, Adjusted quantity: 11
+
+	 Item number: 38463, name: xyqnhjfzillgtdxmr, Supplier warehouse: 2, quantity: 10, Order-line amount: 309.50, Adjusted quantity: 29
+
+	 Item number: 71143, name: cpqlxhjyqdvpwrhypuayk, Supplier warehouse: 3, quantity: 10, Order-line amount: 309.80, Adjusted quantity: 78
+
+	 Item number: 73062, name: wcecbwjppsqoebdnturephm, Supplier warehouse: 2, quantity: 10, Order-line amount: 684.70, Adjusted quantity: 43
+
+	 Item number: 73191, name: bzzjrdopfqdujm, Supplier warehouse: 8, quantity: 10, Order-line amount: 819.70, Adjusted quantity: 17
+
+	 Item number: 75423, name: gaykadmyizsqjrh, Supplier warehouse: 8, quantity: 10, Order-line amount: 222.70, Adjusted quantity: 86
+
+	 Item number: 95975, name: nsepikhvarvodtohcjazm, Supplier warehouse: 1, quantity: 10, Order-line amount: 59.20, Adjusted quantity: 15
+
+	 Item number: 97856, name: undzwpczftakelhtxpp, Supplier warehouse: 5, quantity: 10, Order-line amount: 739.20, Adjusted quantity: 23
+
+=======================================
+=======================================
+Transaction ID: 6
+=======================================
+=======================================
+Transaction ID: 7
+*** New Order Transaction Summary ***
+Customer ID: (10, 1, 983), Last name:EINGATIONABLE, Credit:GC, C_DISCOUNT:0.0480
+
+Warehouse tax:0.1803, District tax:0.0533
+
+Order ID:3002, Order entry date:2022-11-05 17:31:29.239
+
+#items:12, Total amount:6155.79
+
+Items information:
+	 Item number: 2051, name: ialxljynpuqyhp, Supplier warehouse: 5, quantity: 10, Order-line amount: 676.90, Adjusted quantity: 38
+
+	 Item number: 6215, name: blombyfazeaqytfl, Supplier warehouse: 5, quantity: 10, Order-line amount: 394.00, Adjusted quantity: 33
+
+	 Item number: 18006, name: yacctlozgkobuyobexuxxk, Supplier warehouse: 9, quantity: 10, Order-line amount: 175.30, Adjusted quantity: 12
+
+	 Item number: 23239, name: voascecmjyivtouwywjdo, Supplier warehouse: 10, quantity: 10, Order-line amount: 155.30, Adjusted quantity: 76
+
+	 Item number: 23525, name: shvoacmuninbmvsa, Supplier warehouse: 1, quantity: 10, Order-line amount: 42.30, Adjusted quantity: 16
+
+	 Item number: 24038, name: hrqtbirmomnerrfsejeknet, Supplier warehouse: 8, quantity: 10, Order-line amount: 653.40, Adjusted quantity: 59
+
+	 Item number: 31959, name: ekjeakozythjh, Supplier warehouse: 7, quantity: 10, Order-line amount: 661.00, Adjusted quantity: 24
+
+	 Item number: 32279, name: zhjmycblyoxrdbdoxsy, Supplier warehouse: 2, quantity: 10, Order-line amount: 346.60, Adjusted quantity: 85
+
+	 Item number: 55256, name: cogpdqgjnawxoa, Supplier warehouse: 2, quantity: 10, Order-line amount: 411.60, Adjusted quantity: 22
+
+	 Item number: 55775, name: ydxaqmqkwtnbdoglw, Supplier warehouse: 3, quantity: 10, Order-line amount: 862.10, Adjusted quantity: 25
+
+	 Item number: 56774, name: cwlfswutcnfdzyncnztdsa, Supplier warehouse: 5, quantity: 10, Order-line amount: 517.70, Adjusted quantity: 49
+
+	 Item number: 73445, name: ebkcrauayinsaif, Supplier warehouse: 10, quantity: 10, Order-line amount: 345.50, Adjusted quantity: 34
+
+=======================================
+=======================================
+Transaction ID: 8
+*** New Order Transaction Summary ***
+Customer ID: (10, 3, 2307), Last name:ABLECALLYEING, Credit:GC, C_DISCOUNT:0.44Time used: 0
+Updated order line warehouse 10, district 1, order 2102, order line 1
+Updated order line warehouse 10, district 1, order 2102, order line 2
+Updated order line warehouse 10, district 1, order 2102, order line 3
+Updated order line warehouse 10, district 1, order 2102, order line 4
+Updated order line warehouse 10, district 1, order 2102, order line 5
+Updated order line warehouse 10, district 1, order 2102, order line 6
+Updated order line warehouse 10, district 1, order 2102, order line 7
+Updated order line warehouse 10, district 1, order 2102, order line 8
+Updated order line warehouse 10, district 1, order 2102, order line 9
+Updated order line warehouse 10, district 1, order 2102, order line 10
+Updated order line warehouse 10, district 1, order 2102, order line 11
+Updated order line warehouse 10, district 1, order 2102, order line 12
+Updated order line warehouse 10, district 1, order 2102, order line 13
+Updated order line warehouse 10, district 2, order 2102, order line 1
+Updated order line warehouse 10, district 2, order 2102, order line 2
+Updated order line warehouse 10, district 2, order 2102, order line 3
+Updated order line warehouse 10, district 2, order 2102, order line 4
+Updated order line warehouse 10, district 2, order 2102, order line 5
+Updated order line warehouse 10, district 2, order 2102, order line 6
+Updated order line warehouse 10, district 2, order 2102, order line 7
+Updated order line warehouse 10, district 2, order 2102, order line 8
+Updated order line warehouse 10, district 2, order 2102, order line 9
+Updated order line warehouse 10, district 3, order 2102, order line 1
+Updated order line warehouse 10, district 3, order 2102, order line 2
+Updated order line warehouse 10, district 3, order 2102, order line 3
+Updated order line warehouse 10, district 3, order 2102, order line 4
+Updated order line warehouse 10, district 3, order 2102, order line 5
+Updated order line warehouse 10, district 4, order 2102, order line 1
+Updated order line warehouse 10, district 4, order 2102, order line 2
+Updated order line warehouse 10, district 4, order 2102, order line 3
+Updated order line warehouse 10, district 4, order 2102, order line 4
+Updated order line warehouse 10, district 4, order 2102, order line 5
+Updated order line warehouse 10, district 4, order 2102, order line 6
+Updated order line warehouse 10, district 4, order 2102, order line 7
+Updated order line warehouse 10, district 4, order 2102, order line 8
+Updated order line warehouse 10, district 4, order 2102, order line 9
+Updated order line warehouse 10, district 4, order 2102, order line 10
+Updated order line warehouse 10, district 4, order 2102, order line 11
+Updated order line warehouse 10, district 5, order 2102, order line 1
+Updated order line warehouse 10, district 5, order 2102, order line 2
+Updated order line warehouse 10, district 5, order 2102, order line 3
+Updated order line warehouse 10, district 5, order 2102, order line 4
+Updated order line warehouse 10, district 5, order 2102, order line 5
+Updated order line warehouse 10, district 5, order 2102, order line 6
+Updated order line warehouse 10, district 5, order 2102, order line 7
+Updated order line warehouse 10, district 5, order 2102, order line 8
+Updated order line warehouse 10, district 5, order 2102, order line 9
+Updated order line warehouse 10, district 5, order 2102, order line 10
+Updated order line warehouse 10, district 5, order 2102, order line 11
+Updated order line warehouse 10, district 5, order 2102, order line 12
+Updated order line warehouse 10, district 5, order 2102, order line 13
+Updated order line warehouse 10, district 5, order 2102, order line 14
+Updated order line warehouse 10, district 5, order 2102, order line 15
+Updated order line warehouse 10, district 6, order 2102, order line 1
+Updated order line warehouse 10, district 6, order 2102, order line 2
+Updated order line warehouse 10, district 6, order 2102, order line 3
+Updated order line warehouse 10, district 6, order 2102, order line 4
+Updated order line warehouse 10, district 6, order 2102, order line 5
+Updated order line warehouse 10, district 6, order 2102, order line 6
+Updated order line warehouse 10, district 6, order 2102, order line 7
+Updated order line warehouse 10, district 6, order 2102, order line 8
+Updated order line warehouse 10, district 6, order 2102, order line 9
+Updated order line warehouse 10, district 6, order 2102, order line 10
+Updated order line warehouse 10, district 6, order 2102, order line 11
+Updated order line warehouse 10, district 6, order 2102, order line 12
+Updated order line warehouse 10, district 7, order 2102, order line 1
+Updated order line warehouse 10, district 7, order 2102, order line 2
+Updated order line warehouse 10, district 7, order 2102, order line 3
+Updated order line warehouse 10, district 7, order 2102, order line 4
+Updated order line warehouse 10, district 7, order 2102, order line 5
+Updated order line warehouse 10, district 7, order 2102, order line 6
+Updated order line warehouse 10, district 8, order 2102, order line 1
+Updated order line warehouse 10, district 8, order 2102, order line 2
+Updated order line warehouse 10, district 8, order 2102, order line 3
+Updated order line warehouse 10, district 8, order 2102, order line 4
+Updated order line warehouse 10, district 8, order 2102, order line 5
+Updated order line warehouse 10, district 8, order 2102, order line 6
+Updated order line warehouse 10, district 8, order 2102, order line 7
+Updated order line warehouse 10, district 8, order 2102, order line 8
+Updated order line warehouse 10, district 8, order 2102, order line 9
+Updated order line warehouse 10, district 8, order 2102, order line 10
+Updated order line warehouse 10, district 8, order 2102, order line 11
+Updated order line warehouse 10, district 8, order 2102, order line 12
+Updated order line warehouse 10, district 9, order 2102, order line 1
+Updated order line warehouse 10, district 9, order 2102, order line 2
+Updated order line warehouse 10, district 9, order 2102, order line 3
+Updated order line warehouse 10, district 9, order 2102, order line 4
+Updated order line warehouse 10, district 9, order 2102, order line 5
+Updated order line warehouse 10, district 9, order 2102, order line 6
+Updated order line warehouse 10, district 9, order 2102, order line 7
+Updated order line warehouse 10, district 9, order 2102, order line 8
+Updated order line warehouse 10, district 9, order 2102, order line 9
+Updated order line warehouse 10, district 9, order 2102, order line 10
+Updated order line warehouse 10, district 10, order 2102, order line 1
+Updated order line warehouse 10, district 10, order 2102, order line 2
+Updated order line warehouse 10, district 10, order 2102, order line 3
+Updated order line warehouse 10, district 10, order 2102, order line 4
+Updated order line warehouse 10, district 10, order 2102, order line 5
+Updated order line warehouse 10, district 10, order 2102, order line 6
+Updated order line warehouse 10, district 10, order 2102, order line 7
+Updated order line warehouse 10, district 10, order 2102, order line 8
+Updated order line warehouse 10, district 10, order 2102, order line 9
+Updated order line warehouse 10, district 10, order 2102, order line 10
+Updated order line warehouse 10, district 10, order 2102, order line 11
+Updated order line warehouse 10, district 10, order 2102, order line 12
+Updated order line warehouse 10, district 10, order 2102, order line 13
+Time used: 0
+Updated order line warehouse 10, district 1, order 2103, order line 1
+Updated order line warehouse 10, district 1, order 2103, order line 2
+Updated order line warehouse 10, district 1, order 2103, order line 3
+Updated order line warehouse 10, district 1, order 2103, order line 4
+Updated order line warehouse 10, district 1, order 2103, order line 5
+Updated order line warehouse 10, district 1, order 2103, order line 6
+Updated order line warehouse 10, district 1, order 2103, order line 7
+Updated order line warehouse 10, district 1, order 2103, order line 8
+Updated order line warehouse 10, district 1, order 2103, order line 9
+Updated order line warehouse 10, district 1, order 2103, order line 10
+Updated order line warehouse 10, district 1, order 2103, order line 11
+Updated order line warehouse 10, district 1, order 2103, order line 12
+Updated order line warehouse 10, district 2, order 2103, order line 1
+Updated order line warehouse 10, district 2, order 2103, order line 2
+Updated order line warehouse 10, district 2, order 2103, order line 3
+Updated order line warehouse 10, district 2, order 2103, order line 4
+Updated order line warehouse 10, district 2, order 2103, order line 5
+Updated order line warehouse 10, district 2, order 2103, order line 6
+Updated order line warehouse 10, district 2, order 2103, order line 7
+Updated order line warehouse 10, district 3, order 2103, order line 1
+Updated order line warehouse 10, district 3, order 2103, order line 2
+Updated order line warehouse 10, district 3, order 2103, order line 3
+Updated order line warehouse 10, district 3, order 2103, order line 4
+Updated order line warehouse 10, district 3, order 2103, order line 5
+Updated order line warehouse 10, district 3, order 2103, order line 6
+Updated order line warehouse 10, district 3, order 2103, order line 7
+Updated order line warehouse 10, district 3, order 2103, order line 8
+Updated order line warehouse 10, district 3, order 2103, order line 9
+Updated order line warehouse 10, district 3, order 2103, order line 10
+Updated order line warehouse 10, district 3, order 2103, order line 11
+Updated order line warehouse 10, district 3, order 2103, order line 12
+Updated order line warehouse 10, district 4, order 2103, order line 1
+Updated order line warehouse 10, district 4, order 2103, order line 2
+Updated order line warehouse 10, district 4, order 2103, order line 3
+Updated order line warehouse 10, district 4, order 2103, order line 4
+Updated order line warehouse 10, district 4, order 2103, order line 5
+Updated order line warehouse 10, district 4, order 2103, order line 6
+Updated order line warehouse 10, district 4, order 2103, order line 7
+Updated order line warehouse 10, district 4, order 2103, order line 8
+Updated order line warehouse 10, district 4, order 2103, order line 9
+Updated order line warehouse 10, district 5, order 2103, order line 1
+Updated order line warehouse 10, district 5, order 2103, order line 2
+Updated order line warehouse 10, district 5, order 2103, order line 3
+Updated order line warehouse 10, district 5, order 2103, order line 4
+Updated order line warehouse 10, district 5, order 2103, order line 5
+Updated order line warehouse 10, district 5, order 2103, order line 6
+Updated order line warehouse 10, district 5, order 2103, order line 7
+Updated order line warehouse 10, district 5, order 2103, order line 8
+Updated order line warehouse 10, district 5, order 2103, order line 9
+Updated order line warehouse 10, district 5, order 2103, order line 10
+Updated order line warehouse 10, district 5, order 2103, order line 11
+Updated order line warehouse 10, district 5, order 2103, order line 12
+Updated order line warehouse 10, district 5, order 2103, order line 13
+Updated order line warehouse 10, district 6, order 2103, order line 1
+Updated order line warehouse 10, district 6, order 2103, order line 2
+Updated order line warehouse 10, district 6, order 2103, order line 3
+Updated order line warehouse 10, district 6, order 2103, order line 4
+Updated order line warehouse 10, district 6, order 2103, order line 5
+Updated order line warehouse 10, district 6, order 2103, order line 6
+Updated order line warehouse 10, district 6, order 2103, order line 7
+Updated order line warehouse 10, district 6, order 2103, order line 8
+Updated order line warehouse 10, district 6, order 2103, order line 9
+Updated order line warehouse 10, district 6, order 2103, order line 10
+Updated order line warehouse 10, district 6, order 2103, order line 11
+Updated order line warehouse 10, district 6, order 2103, order line 12
+Updated order line warehouse 10, district 6, order 2103, order line 13
+Updated order line warehouse 10, district 6, order 2103, order line 14
+Updated order line warehouse 10, district 6, order 2103, order line 15
+Updated order line warehouse 10, district 6, order 2103, order line 16
+Updated order line warehouse 10, district 6, order 2103, order line 17
+Updated order line warehouse 10, district 6, order 2103, order line 18
+Updated order line warehouse 10, district 6, order 2103, order line 19
+Updated order line warehouse 10, district 7, order 2103, order line 1
+Updated order line warehouse 10, district 7, order 2103, order line 2
+Updated order line warehouse 10, district 7, order 2103, order line 3
+Updated order line warehouse 10, district 7, order 2103, order line 4
+Updated order line warehouse 10, district 7, order 2103, order line 5
+Updated order line warehouse 10, district 7, order 2103, order line 6
+Updated order line warehouse 10, district 7, order 2103, order line 7
+Updated order line warehouse 10, district 7, order 2103, order line 8
+Updated order line warehouse 10, district 7, order 2103, order line 9
+Updated order line warehouse 10, district 7, order 2103, order line 10
+Updated order line warehouse 10, district 7, order 2103, order line 11
+Updated order line warehouse 10, district 7, order 2103, order line 12
+Updated order line warehouse 10, district 7, order 2103, order line 13
+Updated order line warehouse 10, district 7, order 2103, order line 14
+Updated order line warehouse 10, district 7, order 2103, order line 15
+Updated order line warehouse 10, district 7, order 2103, order line 16
+Updated order line warehouse 10, district 7, order 2103, order line 17
+Updated order line warehouse 10, district 7, order 2103, order line 18
+Updated order line warehouse 10, district 7, order 2103, order line 19
+Updated order line warehouse 10, district 7, order 2103, order line 20
+Updated order line warehouse 10, district 8, order 2103, order line 1
+Updated order line warehouse 10, district 8, order 2103, order line 2
+Updated order line warehouse 10, district 8, order 2103, order line 3
+Updated order line warehouse 10, district 8, order 2103, order line 4
+Updated order line warehouse 10, district 8, order 2103, order line 5
+Updated order line warehouse 10, district 8, order 2103, order line 6
+Updated order line warehouse 10, district 8, order 2103, order line 7
+Updated order line warehouse 10, district 8, order 2103, order line 8
+Updated order line warehouse 10, district 8, order 2103, order line 9
+Updated order line warehouse 10, district 8, order 2103, order line 10
+Updated order line warehouse 10, district 8, order 2103, order line 11
+Updated order line warehouse 10, district 8, order 2103, order line 12
+Updated order line warehouse 10, district 8, order 2103, order line 13
+Updated order line warehouse 10, district 8, order 2103, order line 14
+Updated order line warehouse 10, district 8, order 2103, order line 15
+Updated order line warehouse 10, district 9, order 2103, order line 1
+Updated order line warehouse 10, district 9, order 2103, order line 2
+Updated order line warehouse 10, district 9, order 2103, order line 3
+Updated order line warehouse 10, district 9, order 2103, order line 4
+Updated order line warehouse 10, district 9, order 2103, order line 5
+Updated order line warehouse 10, district 9, order 2103, order line 6
+Updated order line warehouse 10, district 9, order 2103, order line 7
+Updated order line warehouse 10, district 9, order 2103, order line 8
+Updated order line warehouse 10, district 9, order 2103, order line 9
+Updated order line warehouse 10, district 9, order 2103, order line 10
+Updated order line warehouse 10, district 10, order 2103, order line 1
+Updated order line warehouse 10, district 10, order 2103, order line 2
+Updated order line warehouse 10, district 10, order 2103, order line 3
+Updated order line warehouse 10, district 10, order 2103, order line 4
+Updated order line warehouse 10, district 10, order 2103, order line 5
+Updated order line warehouse 10, district 10, order 2103, order line 6
+Updated order line warehouse 10, district 10, order 2103, order line 7
+Updated order line warehouse 10, district 10, order 2103, order line 8
+Updated order line warehouse 10, district 10, order 2103, order line 9
+Updated order line warehouse 10, district 10, order 2103, order line 10
+Updated order line warehouse 10, district 10, order 2103, order line 11
+Updated order line warehouse 10, district 10, order 2103, order line 12
+Updated order line warehouse 10, district 10, order 2103, order line 13
+Updated order line warehouse 10, district 10, order 2103, order line 14
+Updated order line warehouse 10, district 10, order 2103, order line 15
+Updated order line warehouse 10, district 10, order 2103, order line 16
+Updated order line warehouse 10, district 10, order 2103, order line 17
+Updated order line warehouse 10, district 10, order 2103, order line 18
+Time used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+Updated order line warehouse 10, district 1, order 2104, order line 1
+Updated order line warehouse 10, district 1, order 2104, order line 2
+Updated order line warehouse 10, district 1, order 2104, order line 3
+Updated order line warehouse 10, district 1, order 2104, order line 4
+Updated order line warehouse 10, district 1, order 2104, order line 5
+Updated order line warehouse 10, district 1, order 2104, order line 6
+Updated order line warehouse 10, district 1, order 2104, order line 7
+Updated order line warehouse 10, district 1, order 2104, order line 8
+Updated order line warehouse 10, district 1, order 2104, order line 9
+Updated order line warehouse 10, district 1, order 2104, order line 10
+Updated order line warehouse 10, district 1, order 2104, order line 11
+Updated order line warehouse 10, district 1, order 2104, order line 12
+Updated order line warehouse 10, district 1, order 2104, order line 13
+Updated order line warehouse 10, district 1, order 2104, order line 14
+Updated order line warehouse 10, district 1, order 2104, order line 15
+Updated order line warehouse 10, district 1, order 2104, order line 16
+Updated order line warehouse 10, district 2, order 2104, order line 1
+Updated order line warehouse 10, district 2, order 2104, order line 2
+Updated order line warehouse 10, district 2, order 2104, order line 3
+Updated order line warehouse 10, district 2, order 2104, order line 4
+Updated order line warehouse 10, district 2, order 2104, order line 5
+Updated order line warehouse 10, district 2, order 2104, order line 6
+Updated order line warehouse 10, district 2, order 2104, order line 7
+Updated order line warehouse 10, district 2, order 2104, order line 8
+Updated order line warehouse 10, district 2, order 2104, order line 9
+Updated order line warehouse 10, district 2, order 2104, order line 10
+Updated order line warehouse 10, district 2, order 2104, order line 11
+Updated order line warehouse 10, district 2, order 2104, order line 12
+Updated order line warehouse 10, district 2, order 2104, order line 13
+Updated order line warehouse 10, district 2, order 2104, order line 14
+Updated order line warehouse 10, district 2, order 2104, order line 15
+Updated order line warehouse 10, district 2, order 2104, order line 16
+Updated order line warehouse 10, district 2, order 2104, order line 17
+Updated order line warehouse 10, district 2, order 2104, order line 18
+Updated order line warehouse 10, district 2, order 2104, order line 19
+Updated order line warehouse 10, district 2, order 2104, order line 20
+Updated order line warehouse 10, district 3, order 2104, order line 1
+Updated order line warehouse 10, district 3, order 2104, order line 2
+Updated order line warehouse 10, district 3, order 2104, order line 3
+Updated order line warehouse 10, district 3, order 2104, order line 4
+Updated order line warehouse 10, district 3, order 2104, order line 5
+Updated order line warehouse 10, district 3, order 2104, order line 6
+Updated order line warehouse 10, district 3, order 2104, order line 7
+Updated order line warehouse 10, district 3, order 2104, order line 8
+Updated order line warehouse 10, district 3, order 2104, order line 9
+Updated order line warehouse 10, district 3, order 2104, order line 10
+Updated order line warehouse 10, district 3, order 2104, order line 11
+Updated order line warehouse 10, district 3, order 2104, order line 12
+Updated order line warehouse 10, district 3, order 2104, order line 13
+Updated order line warehouse 10, district 3, order 2104, order line 14
+Updated order line warehouse 10, district 3, order 2104, order line 15
+Updated order line warehouse 10, district 3, order 2104, order line 16
+Updated order line warehouse 10, district 3, order 2104, order line 17
+Updated order line warehouse 10, district 3, order 2104, order line 18
+Updated order line warehouse 10, district 3, order 2104, order line 19
+Updated order line warehouse 10, district 3, order 2104, order line 20
+Updated order line warehouse 10, district 4, order 2104, order line 1
+Updated order line warehouse 10, district 4, order 2104, order line 2
+Updated order line warehouse 10, district 4, order 2104, order line 3
+Updated order line warehouse 10, district 4, order 2104, order line 4
+Updated order line warehouse 10, district 4, order 2104, order line 5
+Updated order line warehouse 10, district 4, order 2104, order line 6
+Updated order line warehouse 10, district 4, order 2104, order line 7
+Updated order line warehouse 10, district 4, order 2104, order line 8
+Updated order line warehouse 10, district 4, order 2104, order line 9
+Updated order line warehouse 10, district 4, order 2104, order line 10
+Updated order line warehouse 10, district 4, order 2104, order line 11
+Updated order line warehouse 10, district 4, order 2104, order line 12
+Updated order line warehouse 10, district 4, order 2104, order line 13
+Updated order line warehouse 10, district 4, order 2104, order line 14
+Updated order line warehouse 10, district 5, order 2104, order line 1
+Updated order line warehouse 10, district 5, order 2104, order line 2
+Updated order line warehouse 10, district 5, order 2104, order line 3
+Updated order line warehouse 10, district 5, order 2104, order line 4
+Updated order line warehouse 10, district 5, order 2104, order line 5
+Updated order line warehouse 10, district 5, order 2104, order line 6
+Updated order line warehouse 10, district 5, order 2104, order line 7
+Updated order line warehouse 10, district 5, order 2104, order line 8
+Updated order line warehouse 10, district 5, order 2104, order line 9
+Updated order line warehouse 10, district 5, order 2104, order line 10
+Updated order line warehouse 10, district 5, order 2104, order line 11
+Updated order line warehouse 10, district 5, order 2104, order line 12
+Updated order line warehouse 10, district 5, order 2104, order line 13
+Updated order line warehouse 10, district 5, order 2104, order line 14
+Updated order line warehouse 10, district 5, order 2104, order line 15
+Updated order line warehouse 10, district 5, order 2104, order line 16
+Updated order line warehouse 10, district 5, order 2104, order line 17
+Updated order line warehouse 10, district 6, order 2104, order line 1
+Updated order line warehouse 10, district 6, order 2104, order line 2
+Updated order line warehouse 10, district 6, order 2104, order line 3
+Updated order line warehouse 10, district 6, order 2104, order line 4
+Updated order line warehouse 10, district 6, order 2104, order line 5
+Updated order line warehouse 10, district 6, order 2104, order line 6
+Updated order line warehouse 10, district 6, order 2104, order line 7
+Updated order line warehouse 10, district 6, order 2104, order line 8
+Updated order line warehouse 10, district 6, order 2104, order line 9
+Updated order line warehouse 10, district 6, order 2104, order line 10
+Updated order line warehouse 10, district 7, order 2104, order line 1
+Updated order line warehouse 10, district 7, order 2104, order line 2
+Updated order line warehouse 10, district 7, order 2104, order line 3
+Updated order line warehouse 10, district 7, order 2104, order line 4
+Updated order line warehouse 10, district 7, order 2104, order line 5
+Updated order line warehouse 10, district 7, order 2104, order line 6
+Updated order line warehouse 10, district 7, order 2104, order line 7
+Updated order line warehouse 10, district 7, order 2104, order line 8
+Updated order line warehouse 10, district 7, order 2104, order line 9
+Updated order line warehouse 10, district 7, order 2104, order line 10
+50
+
+Warehouse tax:0.1803, District tax:0.1539
+
+Order ID:3003, Order entry date:2022-11-05 17:31:29.359
+
+#items:10, Total amount:3280.33
+
+Items information:
+	 Item number: 5426, name: iumwetbelqnmwcvatginfqc, Supplier warehouse: 5, quantity: 10, Order-line amount: 539.20, Adjusted quantity: 78
+
+	 Item number: 5959, name: hxtrqycqlvhgyrpjhvflzlf, Supplier warehouse: 1, quantity: 10, Order-line amount: 113.70, Adjusted quantity: 58
+
+	 Item number: 14301, name: ebsqjmjklphvkhq, Supplier warehouse: 5, quantity: 10, Order-line amount: 404.50, Adjusted quantity: 70
+
+	 Item number: 16077, name: pykghvfofrawmmwecofzhql, Supplier warehouse: 10, quantity: 10, Order-line amount: 259.10, Adjusted quantity: 80
+
+	 Item number: 40151, name: nkqcyyvqjkbbeefdyrkn, Supplier warehouse: 4, quantity: 10, Order-line amount: 533.00, Adjusted quantity: 14
+
+	 Item number: 55893, name: tuzwzsmlujzmwjxtcqwy, Supplier warehouse: 7, quantity: 10, Order-line amount: 181.70, Adjusted quantity: 17
+
+	 Item number: 56789, name: fgntabnzhstliaxxladuutn, Supplier warehouse: 8, quantity: 10, Order-line amount: 941.70, Adjusted quantity: 102
+
+	 Item number: 64739, name: wwfodvgyhcnplhy, Supplier warehouse: 10, quantity: 10, Order-line amount: 936.90, Adjusted quantity: 12
+
+	 Item number: 73447, name: saielrtcwoirukygivtndk, Supplier warehouse: 9, quantity: 10, Order-line amount: 78.40, Adjusted quantity: 10
+
+	 Item number: 95719, name: ngpxqaitvozfatvehr, Supplier warehouse: 6, quantity: 10, Order-line amount: 441.80, Adjusted quantity: 107
+
+=======================================
+=======================================
+Transaction ID: 9
+*** New Order Transaction Summary ***
+Customer ID: (10, 1, 1855), Last name:OUGHTANTIBAR, Credit:GC, C_DISCOUNT:0.3645
+
+Warehouse tax:0.1803, District tax:0.0533
+
+Order ID:3003, Order entry date:2022-11-05 17:31:29.467
+
+#items:15, Total amount:4923.07
+
+Items information:
+	 Item number: 3959, name: vzgmtgxdeauipwdlb, Supplier warehouse: 10, quantity: 10, Order-line amount: 451.40, Adjusted quantity: 77
+
+	 Item number: 40535, name: ebwllozffypqvywzepffi, Supplier warehouse: 3, quantity: 10, Order-line amount: 424.30, Adjusted quantity: 82
+
+	 Item number: 16069, name: lsmktljelkcpsrxz, Supplier warehouse: 10, quantity: 10, Order-line amount: 148.90, Adjusted quantity: 50
+
+	 Item number: 57039, name: jbgqxsjrvpcotnns, Supplier warehouse: 5, quantity: 10, Order-line amount: 644.80, Adjusted quantity: 27
+
+	 Item number: 80231, name: xjcxagdrnhmgokpzhpwg, Supplier warehouse: 9, quantity: 10, Order-line amount: 641.80, Adjusted quantity: 89
+
+	 Item number: 34534, name: lygyewidayzkbptlitjntog, Supplier warehouse: 2, quantity: 10, Order-line amount: 751.30, Adjusted quantity: 78
+
+	 Item number: 81511, name: ppvqnxmhhurcngzfpglonl, Supplier warehouse: 5, quantity: 10, Order-line amount: 382.50, Adjusted quantity: 81
+
+	 Item number: 36575, name: fabtwgceiwnwmkfdaohvv, Supplier warehouse: 10, quantity: 10, Order-line amount: 166.20, Adjusted quantity: 21
+
+	 Item number: 39523, name: sfgwtcrameikhpirbv, Supplier warehouse: 10, quantity: 10, Order-line amount: 306.80, Adjusted quantity: 52
+
+	 Item number: 48864, name: jngfllkogtetb, Supplier warehouse: 5, quantity: 10, Order-line amount: 832.90, Adjusted quantity: 39
+
+	 Item number: 58631, name: vweouzzxlxkidp, Supplier warehouse: 5, quantity: 10, Order-line amount: 143.40, Adjusted quantity: 72
+
+	 Item number: 63038, name: zsbltrppdrienvuroz, Supplier warehouse: 1, quantity: 10, Order-line amount: 147.70, Adjusted quantity: 100
+
+	 Item number: 73151, name: rrrhgarbpdccwrvyvjfi, Supplier warehouse: 1, quantity: 10, Order-line amount: 352.80, Adjusted quantity: 42
+
+	 Item number: 73399, name: ogzcnzmwfgodyrxhgxkmuxt, Supplier warehouse: 8, quantity: 10, Order-line amount: 249.60, Adjusted quantity: 66
+
+	 Item number: 95932, name: pfsyatevyhaplerru, Supplier warehouse: 10, quantity: 10, Order-line amount: 635.40, Adjusted quantity: 24
+
+=======================================
+=======================================
+Transaction ID: 10
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 1) is 2101
+Updated the info of customer (10, 1, 1103)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 2) is 2101
+Updated the info of customer (10, 2, 174)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 3) is 2101
+Updated the info of customer (10, 3, 2317)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 4) is 2101
+Updated the info of customer (10, 4, 1516)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 5) is 2101
+Updated the info of customer (10, 5, 1514)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 6) is 2101
+Updated the info of customer (10, 6, 2926)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 7) is 2101
+Updated the info of customer (10, 7, 2540)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 8) is 2101
+Updated the info of customer (10, 8, 2594)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 9) is 2101
+Updated the info of customer (10, 9, 1356)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 10) is 2101
+Updated the info of customer (10, 10, 2810)
+=======================================
+=======================================
+Transaction ID: 11
+********** Payment Transaction *********
+Customer info: 
+Identifier: (10, 1, 1279)
+Name: (pixkparzyd, OE, EINGABLEBAR)
+Address: (kxwrfgnkzznvhos, nqtihbyklcydt, uspyxkuzyrc, DJ, 904311111)
+Phone: 4063043959930395
+Since: 2022-08-02T09:16:11.944Z
+Credit status: GC
+Credit limit: 50000.0
+Discount: 0.4605
+Balance: -4717.75
+Warehouse address: (qkmofdqspkknurf, orjlbpcbiwtsjnprbni, tkjywahwgkzyn, SF, 123456789)
+district address: (qifbzhxfhhapad, gazjeqfrzc, ymlkwharoiobu, GZ, 123456789)
+Payment: 4707.75
+
+=======================================
+=======================================
+Transaction ID: 12
+*** New Order Transaction Summary ***
+Customer ID: (10, 4, 2285), Last name:ANTIANTIATION, Credit:BC, C_DISCOUNT:0.4786
+
+Warehouse tax:0.1803, District tax:0.1874
+
+Order ID:3002, Order entry date:2022-11-05 17:31:30.112
+
+#items:8, Total amount:2441.01
+
+Items information:
+	 Item number: 3351, name: shiudktbkjgzdnrgk, Supplier warehouse: 1, quantity: 10, Order-line amount: 871.20, Adjusted quantity: 61
+
+	 Item number: 27357, name: aaljiphruptwrrvlzonaiwg, Supplier warehouse: 4, quantity: 10, Order-line amount: 836.00, Adjusted quantity: 34
+
+	 Item number: 30302, name: jmiuwyrrmzciwq, Supplier warehouse: 2, quantity: 10, Order-line amount: 37.70, Adjusted quantity: 52
+
+	 Item number: 33506, name: gdyigdwvcljggaetu, Supplier warehouse: 2, quantity: 10, Order-line amount: 239.30, Adjusted quantity: 65
+
+	 Item number: 36579, name: qcffhuzwllszzlsrr, Supplier warehouse: 3, quantity: 10, Order-line amount: 112.60, Adjusted quantity: 69
+
+	 Item number: 84311, name: zqopdpryvzyztr, Supplier warehouse: 5, quantity: 10, Order-line amount: 849.90, Adjusted quantity: 44
+
+	 Item number: 92757, name: bvoduomqljuwpqrjptn, Supplier warehouse: 2, quantity: 10, Order-line amount: 43.40, Adjusted quantity: 61
+
+	 Item number: 97959, name: gixesbkrmcxnypkz, Supplier warehouse: 9, quantity: 10, Order-line amount: 432.90, Adjusted quantity: 45
+
+=======================================
+=======================================
+Transaction ID: 13
+*** New Order Transaction Summary ***
+Customer ID: (10, 3, 1789), Last name:OUGHTCALLYCALLY, Credit:GC, C_DISCOUNT:0.2143
+
+Warehouse tax:0.1803, District tax:0.1539
+
+Order ID:3004, Order entry date:2022-11-05 17:31:30.198
+
+#items:20, Total amount:12174.18
+
+Items information:
+	 Item number: 27302, name: rwhybuegkqybdglefw, Supplier warehouse: 9, quantity: 10, Order-line amount: 667.90, Adjusted quantity: 40
+
+	 Item number: 79591, name: kujfuuobeysjojbozkxpb, Supplier warehouse: 2, quantity: 10, Order-line amount: 595.40, Adjusted quantity: 64
+
+	 Item number: 91623, name: ocqmwcmbeeigcr, Supplier warehouse: 2, quantity: 10, Order-line amount: 198.40, Adjusted quantity: 14
+
+	 Item number: 13021, name: fyynmkqiloccla, Supplier warehouse: 4, quantity: 10, Order-line amount: 515.10, Adjusted quantity: 28
+
+	 Item number: 32343, name: jbozwwvgamdmd, Supplier warehouse: 8, quantity: 10, Order-line amount: 826.20, Adjusted quantity: 24
+
+	 Item number: 71399, name: ukubvdohekvspbffeleeb, Supplier warehouse: 6, quantity: 10, Order-line amount: 958.00, Adjusted quantity: 60
+
+	 Item number: 55141, name: yoybzdnflpwsktdthuoia, Supplier warehouse: 2, quantity: 9, Order-line amount: 289.17, Adjusted quantity: 36
+
+	 Item number: 89767, name: qymgtqykyxemmkztwz, Supplier warehouse: 10, quantity: 10, Order-line amount: 898.00, Adjusted quantity: 84
+
+	 Item number: 72325, name: llfmcznnlkrfr, Supplier warehouse: 4, quantity: 10, Order-line amount: 68.90, Adjusted quantity: 24
+
+	 Item number: 1879, name: bjdopehafpyvgjvwgfopsi, Supplier warehouse: 6, quantity: 10, Order-line amount: 867.90, Adjusted quantity: 67
+
+	 Item number: 4679, name: pdeauhjklcwyointzsa, Supplier warehouse: 1, quantity: 10, Order-line amount: 780.50, Adjusted quantity: 81
+
+	 Item number: 14031, name: bohhiyikpjbroaml, Supplier warehouse: 8, quantity: 10, Order-line amount: 869.40, Adjusted quantity: 21
+
+	 Item number: 36193, name: gthtkbmikhdvkt, Supplier warehouse: 9, quantity: 10, Order-line amount: 912.00, Adjusted quantity: 14
+
+	 Item number: 60615, name: bnxpepoeencyogxmedm, Supplier warehouse: 8, quantity: 10, Order-line amount: 875.10, Adjusted quantity: 69
+
+	 Item number: 61143, name: alruahmvtvabtnbapgyvirc, Supplier warehouse: 10, quantity: 10, Order-line amount: 133.80, Adjusted quantity: 11
+
+	 Item number: 71781, name: mbmdmblowxeawaurup, Supplier warehouse: 4, quantity: 10, Order-line amount: 58.90, Adjusted quantity: 100
+
+	 Item number: 81571, name: esuvitihzszitnlsp, Supplier warehouse: 3, quantity: 10, Order-line amount: 128.70, Adjusted quantity: 106
+
+	 Item number: 96486, name: zgeggvwxxprtbx, Supplier warehouse: 6, quantity: 10, Order-line amount: 737.00, Adjusted quantity: 80
+
+	 Item number: 97958, name: mgnnlzoafyrvahifttphb, Supplier warehouse: 7, quantity: 10, Order-line amount: 445.30, Adjusted quantity: 21
+
+	 Item number: 97971, name: hzolcdrfgquiprymsrnb, Supplier warehouse: 3, quantity: 10, Order-line amount: 787.80, Adjusted quantity: 51
+
+=======================================
+=======================================
+Transaction ID: 14
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 1) is 2102
+Updated the info of customer (10, 1, 2939)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 2) is 2102
+Updated the info of customer (10, 2, 1733)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 3) is 2102
+Updated the info of customer (10, 3, 1305)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 4) is 2102
+Updated the info of customer (10, 4, 1087)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 5) is 2102
+Updated the info of customer (10, 5, 1620)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 6) is 2102
+Updated the info of customer (10, 6, 1023)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 7) is 2102
+Updated the info of customer (10, 7, 1654)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 8) is 2102
+Updated the info of customer (10, 8, 2021)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 9) is 2102
+Updated the info of customer (10, 9, 2829)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 10) is 2102
+Updated the info of customer (10, 10, 1951)
+=======================================
+=======================================
+Transaction ID: 15
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 1) is 2103
+Updated the info of customer (10, 1, 2852)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 2) is 2103
+Updated the info of customer (10, 2, 687)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 3) is 2103
+Updated the info of customer (10, 3, 1648)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 4) is 2103
+Updated the info of customer (10, 4, 2925)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 5) is 2103
+Updated the info of customer (10, 5, 2833)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 6) is 2103
+Updated the info of customer (10, 6, 2777)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 7) is 2103
+Updated the info of customer (10, 7, 1084)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 8) is 2103
+Updated the info of customer (10, 8, 2825)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 9) is 2103
+Updated the info of customer (10, 9, 2552)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 10) is 2103
+Updated the info of customer (10, 10, 645)
+=======================================
+=======================================
+Transaction ID: 16
+********** Payment Transaction *********
+Customer info: 
+Identifier: (8, 4, 1121)
+Name: (zzzeidkpg, OE, OUGHTATIONABLE)
+Address: (yppqgwksnhwno, kpswjoqhzvxtcspo, jtrnxlgptijkvtvrzw, ZF, 027011111)
+Phone: 5660421328945547
+Since: 2022-08-02T09:16:10.835Z
+Credit status: GC
+Credit limit: 50000.0
+Discount: 0.2157
+Balance: -678.09
+Warehouse address: (krdcmbxkfuilwd, bfxrfaopru, dflpdlhxxcxcuplwgd, PH, 123456789)
+district address: (gfswrefkvogrovqba, tigzuwvmjponz, tqepohcqmicce, FZ, 123456789)
+Payment: 668.09
+
+=======================================
+=======================================
+Transaction ID: 17
+********** Payment Transaction *********
+Customer info: 
+Identifier: (10, 5, 2307)
+Name: (oolthozftymqfa, OE, BARPRESOUGHT)
+Address: (pzldtjxmf, loknuvecli, ahpqjhfof, WI, 288111111)
+Phone: 0903256882870320
+Since: 2022-08-02T09:16:12.244Z
+Credit status: GC
+Credit limit: 50000.0
+Discount: 0.0379
+Balance: -1231.55
+Warehouse address: (qkmofdqspkknurf, orjlbpcbiwtsjnprbni, tkjywahwgkzyn, SF, 123456789)
+district address: (ugrkbjertzejm, qzxvdtwortp, hrwbizkkl, PJ, 123456789)
+Payment: 1221.55
+
+=======================================
+=======================================
+Transaction ID: 18
+*** Order Status Transaction Summary ***
+Customer name: （bbhlkhj, OE, OUGHTATIONBAR), balance: -10.00
+Last order ID: 2655, Carrier ID: 0, Datetime: 2022-08-02T09:16:21.842Z
+Items of last order:
+Item number: 23480, Supply warehouse ID: 10, Quantity: 5, Price: 4213.23, Delivery time: Not delivered
+Item number: 42305, Supply warehouse ID: 10, Quantity: 5, Price: 335.91, Delivery time: Not delivered
+Item number: 54434, Supply warehouse ID: 10, Quantity: 5, Price: 1317.39, Delivery time: Not delivered
+Item number: 55865, Supply warehouse ID: 10, Quantity: 5, Price: 377.95, Delivery time: Not delivered
+Item number: 72779, Supply warehouse ID: 10, Quantity: 5, Price: 8235.06, Delivery time: Not delivered
+Item number: 83731, Supply warehouse ID: 10, Quantity: 5, Price: 7525.76, Delivery time: Not delivered
+=======================================
+=======================================
+Transaction ID: 19
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 1) is 2104
+Updated the info of customer (10, 1, 1706)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 2) is 2104
+Updated the info of customer (10, 2, 1336)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 3) is 2104
+Updated the info of customer (10, 3, 2916)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 4) is 2104
+Updated the info of customer (10, 4, 1167)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 5) is 2104
+Updated the info of customer (10, 5, 1540)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 6) is 2104
+Updated the info of customer (10, 6, 852)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 7) is 2104
+Updated the info oUpdated order line warehouse 10, district 8, order 2104, order line 1
+Updated order line warehouse 10, district 8, order 2104, order line 2
+Updated order line warehouse 10, district 8, order 2104, order line 3
+Updated order line warehouse 10, district 8, order 2104, order line 4
+Updated order line warehouse 10, district 8, order 2104, order line 5
+Updated order line warehouse 10, district 8, order 2104, order line 6
+Updated order line warehouse 10, district 8, order 2104, order line 7
+Updated order line warehouse 10, district 8, order 2104, order line 8
+Updated order line warehouse 10, district 8, order 2104, order line 9
+Updated order line warehouse 10, district 8, order 2104, order line 10
+Updated order line warehouse 10, district 8, order 2104, order line 11
+Updated order line warehouse 10, district 9, order 2104, order line 1
+Updated order line warehouse 10, district 9, order 2104, order line 2
+Updated order line warehouse 10, district 9, order 2104, order line 3
+Updated order line warehouse 10, district 9, order 2104, order line 4
+Updated order line warehouse 10, district 9, order 2104, order line 5
+Updated order line warehouse 10, district 9, order 2104, order line 6
+Updated order line warehouse 10, district 10, order 2104, order line 1
+Updated order line warehouse 10, district 10, order 2104, order line 2
+Updated order line warehouse 10, district 10, order 2104, order line 3
+Updated order line warehouse 10, district 10, order 2104, order line 4
+Updated order line warehouse 10, district 10, order 2104, order line 5
+Updated order line warehouse 10, district 10, order 2104, order line 6
+Updated order line warehouse 10, district 10, order 2104, order line 7
+Updated order line warehouse 10, district 10, order 2104, order line 8
+Updated order line warehouse 10, district 10, order 2104, order line 9
+Updated order line warehouse 10, district 10, order 2104, order line 10
+Updated order line warehouse 10, district 10, order 2104, order line 11
+Updated order line warehouse 10, district 10, order 2104, order line 12
+Updated order line warehouse 10, district 10, order 2104, order line 13
+Updated order line warehouse 10, district 10, order 2104, order line 14
+Updated order line warehouse 10, district 10, order 2104, order line 15
+Updated order line warehouse 10, district 10, order 2104, order line 16
+Updated order line warehouse 10, district 10, order 2104, order line 17
+Updated order line warehouse 10, district 10, order 2104, order line 18
+Updated order line warehouse 10, district 10, order 2104, order line 19
+Updated order line warehouse 10, district 10, order 2104, order line 20
+Time used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+f customer (10, 7, 2021)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 8) is 2104
+Updated the info of customer (10, 8, 2639)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 9) is 2104
+Updated the info of customer (10, 9, 2421)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 10) is 2104
+Updated the info of customer (10, 10, 2110)
+=======================================
+=======================================
+Transaction ID: 20
+*** New Order Transaction Summary ***
+Customer ID: (10, 5, 613), Last name:ANTIOUGHTABLE, Credit:GC, C_DISCOUNT:0.3865
+
+Warehouse tax:0.1803, District tax:0.1158
+
+Order ID:3003, Order entry date:2022-11-05 17:31:31.900
+
+#items:13, Total amount:5645.94
+
+Items information:
+	 Item number: 31943, name: reufctuhqulue, Supplier warehouse: 8, quantity: 10, Order-line amount: 235.10, Adjusted quantity: 74
+
+	 Item number: 55575, name: uoibhrzenfoudothxzyot, Supplier warehouse: 10, quantity: 10, Order-line amount: 578.00, Adjusted quantity: 31
+
+	 Item number: 96615, name: jybztoytdshzns, Supplier warehouse: 2, quantity: 10, Order-line amount: 989.40, Adjusted quantity: 21
+
+	 Item number: 6051, name: jxpmjtjinciatyccxtyt, Supplier warehouse: 9, quantity: 10, Order-line amount: 762.20, Adjusted quantity: 54
+
+	 Item number: 6158, name: vchvquodopoibyquf, Supplier warehouse: 3, quantity: 10, Order-line amount: 527.50, Adjusted quantity: 17
+
+	 Item number: 26311, name: kdihgqmhbeyvfplwjvbhdc, Supplier warehouse: 2, quantity: 10, Order-line amount: 124.00, Adjusted quantity: 63
+
+	 Item number: 44759, name: lrzgsukvfkiuw, Supplier warehouse: 9, quantity: 10, Order-line amount: 302.30, Adjusted quantity: 64
+
+	 Item number: 56518, name: ehnvvtueednxcoicxa, Supplier warehouse: 8, quantity: 10, Order-line amount: 979.40, Adjusted quantity: 72
+
+	 Item number: 63495, name: ocrkcxjdmcjybspg, Supplier warehouse: 5, quantity: 10, Order-line amount: 455.30, Adjusted quantity: 72
+
+	 Item number: 64135, name: xjdhcwbdtohgjjxypbvgjzx, Supplier warehouse: 4, quantity: 10, Order-line amount: 500.20, Adjusted quantity: 15
+
+	 Item number: 65255, name: dgdkanebmtzoig, Supplier warehouse: 8, quantity: 10, Order-line amount: 271.70, Adjusted quantity: 68
+
+	 Item number: 85171, name: jhrahgoilyphnnfildra, Supplier warehouse: 1, quantity: 10, Order-line amount: 843.00, Adjusted quantity: 58
+
+	 Item number: 97511, name: udsamqwnwtosclbakyvfxv, Supplier warehouse: 9, quantity: 10, Order-line amount: 532.30, Adjusted quantity: 108
+
+=======================================
+=======================================
+Transaction ID: 21
+*** New Order Transaction Summary ***
+Customer ID: (10, 3, 515), Last name:ESEOUGHTPRES, Credit:GC, C_DISCOUNT:0.4513
+
+Warehouse tax:0.1803, District tax:0.1539
+
+Order ID:3005, Order entry date:2022-11-05 17:31:32.043
+
+#items:12, Total amount:4951.69
+
+Items information:
+	 Item number: 46497, name: oxfzfozolgbbligiamlwf, Supplier warehouse: 2, quantity: 10, Order-line amount: 550.70, Adjusted quantity: 14
+
+	 Item number: 81575, name: zoeflybkixgjtxacw, Supplier warehouse: 7, quantity: 10, Order-line amount: 724.80, Adjusted quantity: 24
+
+	 Item number: 4071, name: wmygtcobwbpnrkkpnsx, Supplier warehouse: 5, quantity: 10, Order-line amount: 977.10, Adjusted quantity: 53
+
+	 Item number: 28887, name: yptuydocpfqelksyhdsl, Supplier warehouse: 9, quantity: 10, Order-line amount: 862.90, Adjusted quantity: 44
+
+	 Item number: 30279, name: bffsqeixeoabocftpmwk, Supplier warehouse: 8, quantity: 10, Order-line amount: 430.20, Adjusted quantity: 84
+
+	 Item number: 32389, name: ndqjdvhnqjlgxaazklnnrg, Supplier warehouse: 3, quantity: 10, Order-line amount: 56.80, Adjusted quantity: 78
+
+	 Item number: 52964, name: ifngwqfvwlhmwvkdbnuvj, Supplier warehouse: 4, quantity: 10, Order-line amount: 943.70, Adjusted quantity: 54
+
+	 Item number: 56743, name: sbzfdrykbvkavxrqazerum, Supplier warehouse: 1, quantity: 10, Order-line amount: 488.70, Adjusted quantity: 41
+
+	 Item number: 56935, name: nhpquwuwftzdanutif, Supplier warehouse: 2, quantity: 10, Order-line amount: 538.60, Adjusted quantity: 67
+
+	 Item number: 85575, name: aqzgunytmzhsh, Supplier warehouse: 9, quantity: 10, Order-line amount: 493.10, Adjusted quantity: 90
+
+	 Item number: 89574, name: ybirauntytaatoyqph, Supplier warehouse: 5, quantity: 10, Order-line amount: 314.80, Adjusted quantity: 88
+
+	 Item number: 98006, name: xoteqputlysrphmqmqxuc, Supplier warehouse: 3, quantity: 10, Order-line amount: 382.50, Adjusted quantity: 107
+
+=======================================
+=======================================
+Transaction ID: 22
+********** Payment Transaction *********
+Customer info: 
+Identifier: (5, 3, 40)
+Name: (ikuwyadirkuez, OE, BARPRIEING)
+Address: (dqdxwquxsp, inoudskpioimbaw, iagurdkqkcuorxt, BE, 504411111)
+Phone: 2866388318683446
+Since: 2022-08-02T09:16:08.867Z
+Credit status: GC
+Credit limit: 50000.0
+Discount: 0.3728
+Balance: -4916.76
+Warehouse address: (kumpsxhelidqeo, hoihegjoazbvp, mchshgxzyx, QR, 123456789)
+district address: (kzqkxvbtezfajlllj, rrrdrnmdcjban, hlccphqnzfarwy, MQ, 123456789)
+Payment: 4906.76
+
+=======================================
+=======================================
+Transaction ID: 23
+********** Payment Transaction *********
+Customer info: 
+Identifier: (10, 4, 961)
+Name: (bofbchgjqntx, OE, EINGANTIBAR)
+Address: (wkfmqhyov, vszpvxylsbvbrcdikaq, jmgpjqtyfccshce, DF, 501711111)
+Phone: 1992309016169001
+Since: 2022-08-02T09:16:12.144Z
+Credit status: GC
+Credit limit: 50000.0
+Discount: 0.3864
+Balance: -2035.59
+Warehouse address: (qkmofdqspkknurf, orjlbpcbiwtsjnprbni, tkjywahwgkzyn, SF, 123456789)
+district address: (zcasxoyryggjhnaa, iddvbblqlsavnomlmap, npcuhpmiaqnidxcbd, ZA, 123456789)
+Payment: 2025.59
+
+=======================================
+=======================================
+Transaction ID: 24
+********** Payment Transaction *********
+Customer info: 
+Identifier: (5, 2, 1215)
+Name: (nqvcgnoqhdzaus, OE, ABLEOUGHTATION)
+Address: (ibtmotayicbnbcamkr, kbqrfclxmemxsgusk, uubvrlqssdgakzngq, NX, 309811111)
+Phone: 9847047279552080
+Since: 2022-08-02T09:16:08.821Z
+Credit status: GC
+Credit limit: 50000.0
+Discount: 0.2627
+Balance: -1527.6
+Warehouse address: (kumpsxhelidqeo, hoihegjoazbvp, mchshgxzyx, QR, 123456789)
+district address: (vcijdsqcxqks, dcifpfpqjenhiyxilqw, btofryzafctxerjnhs, IN, 123456789)
+Payment: 1517.60
+
+=======================================
+=======================================
+Transaction ID: 25
+*** New Order Transaction Summary ***
+Customer ID: (10, 2, 2306), Last name:PRESBARPRES, Credit:GC, C_DISCOUNT:0.1877
+
+Warehouse tax:0.1803, District tax:0.0819
+
+Order ID:3001, Order entry date:2022-11-05 17:31:32.200
+
+#items:7, Total amount:4764.91
+
+Items information:
+	 Item number: 5946, name: swhpvclrzpynvnqaztblj, Supplier warehouse: 8, quantity: 10, Order-line amount: 766.90, Adjusted quantity: 43
+
+	 Item number: 35047, name: qcjfzrtvncrlkgsmpgqczbz, Supplier warehouse: 7, quantity: 10, Order-line amount: 601.20, Adjusted quantity: 23
+
+	 Item number: 36487, name: yjzbgkslsdiiyxgef, Supplier warehouse: 4, quantity: 10, Order-line amount: 366.30, Adjusted quantity: 50
+
+	 Item number: 38246, name: emqylrxwyobjeduaxenhwx, Supplier warehouse: 6, quantity: 10, Order-line amount: 982.90, Adjusted quantity: 102
+
+	 Item number: 79591, name: kujfuuobeysjojbozkxpb, Supplier warehouse: 9, quantity: 10, Order-line amount: 595.40, Adjusted quantity: 102
+
+	 Item number: 88678, name: glthoepqphqccfxxadbn, Supplier warehouse: 8, quantity: 10, Order-line amount: 733.60, Adjusted quantity: 83
+
+	 Item number: 96927, name: qllpwrqgkuojpjei, Supplier warehouse: 6, quantity: 10, Order-line amount: 601.10, Adjusted quantity: 84
+
+=======================================
+=======================================
+Transaction ID: 26
+*** New Order Transaction Summary ***
+Customer ID: (10, 5, 1227), Last name:PRIANTIPRI, Credit:GC, C_DISCOUNT:0.3439
+
+Warehouse tax:0.1803, District tax:0.1158
+
+Order ID:3004, Order entry date:2022-11-05 17:31:32.278
+
+#items:16, Total amount:7159.53
+
+Items information:
+	 Item number: 15943, name: zpwldntqswobg, Supplier warehouse: 5, quantity: 10, Order-line amount: 87Time used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+3.00, Adjusted quantity: 47
+
+	 Item number: 22982, name: fwbbaxjrpaqqrgxwgedan, Supplier warehouse: 8, quantity: 10, Order-line amount: 84.30, Adjusted quantity: 104
+
+	 Item number: 56535, name: uhmqfuuqitnxgwrw, Supplier warehouse: 1, quantity: 10, Order-line amount: 634.20, Adjusted quantity: 10
+
+	 Item number: 2103, name: dshzatjwqdtths, Supplier warehouse: 8, quantity: 10, Order-line amount: 445.20, Adjusted quantity: 108
+
+	 Item number: 84455, name: iloothkuzdzsotxycp, Supplier warehouse: 4, quantity: 10, Order-line amount: 312.50, Adjusted quantity: 44
+
+	 Item number: 72933, name: ucjjzbqeciuvdb, Supplier warehouse: 8, quantity: 10, Order-line amount: 140.90, Adjusted quantity: 106
+
+	 Item number: 60615, name: bnxpepoeencyogxmedm, Supplier warehouse: 3, quantity: 10, Order-line amount: 875.10, Adjusted quantity: 65
+
+	 Item number: 21404, name: hgkgftkjuqesuvrvto, Supplier warehouse: 9, quantity: 10, Order-line amount: 295.20, Adjusted quantity: 70
+
+	 Item number: 28385, name: fcptkeefncfiulirqf, Supplier warehouse: 8, quantity: 10, Order-line amount: 584.40, Adjusted quantity: 32
+
+	 Item number: 56550, name: kziumocuzbnhpkvpogweizx, Supplier warehouse: 8, quantity: 10, Order-line amount: 276.60, Adjusted quantity: 37
+
+	 Item number: 78818, name: kpiwphscnemyyy, Supplier warehouse: 10, quantity: 10, Order-line amount: 163.00, Adjusted quantity: 74
+
+	 Item number: 86723, name: aixotqxwqrpdgc, Supplier warehouse: 2, quantity: 10, Order-line amount: 325.70, Adjusted quantity: 45
+
+	 Item number: 87380, name: jpibbcicqdrhgptahmidgdi, Supplier warehouse: 7, quantity: 10, Order-line amount: 793.70, Adjusted quantity: 27
+
+	 Item number: 95679, name: eghsdqmelguanmdmitjbi, Supplier warehouse: 8, quantity: 10, Order-line amount: 974.50, Adjusted quantity: 40
+
+	 Item number: 97499, name: yfltayyhajdxj, Supplier warehouse: 4, quantity: 10, Order-line amount: 882.90, Adjusted quantity: 77
+
+	 Item number: 97826, name: uwaikhtsrfwllacuru, Supplier warehouse: 3, quantity: 10, Order-line amount: 758.10, Adjusted quantity: 26
+
+=======================================
+=======================================
+Transaction ID: 27
+********** Payment Transaction *********
+Customer info: 
+Identifier: (10, 3, 2415)
+Name: (wguhzynav, OE, EINGABLEPRI)
+Address: (iteuattwdlalhw, oosaglydvidrltvw, uecumohofpt, WS, 464911111)
+Phone: 3465475930185557
+Since: 2022-08-02T09:16:12.108Z
+Credit status: GC
+Credit limit: 50000.0
+Discount: 0.1926
+Balance: -55.16
+Warehouse address: (qkmofdqspkknurf, orjlbpcbiwtsjnprbni, tkjywahwgkzyn, SF, 123456789)
+district address: (qkcyuunpinpn, xuxiawvdlzywvu, dtiuupjxqwqe, IC, 123456789)
+Payment: 45.16
+
+=======================================
+=======================================
+Transaction ID: 28
+*** Order Status Transaction Summary ***
+Customer name: （sntqoyeijrlxni, OE, PRIABLEABLE), balance: -10.00
+Last order ID: 303, Carrier ID: 4, Datetime: 2022-08-02T09:16:21.936Z
+Items of last order:
+Item number: 6765, Supply warehouse ID: 10, Quantity: 5, Price: 172.00, Delivery time: 2022-08-02 17:16:21.936
+Item number: 15602, Supply warehouse ID: 10, Quantity: 5, Price: 175.00, Delivery time: 2022-08-02 17:16:21.936
+Item number: 26273, Supply warehouse ID: 10, Quantity: 5, Price: 149.00, Delivery time: 2022-08-02 17:16:21.936
+Item number: 35262, Supply warehouse ID: 10, Quantity: 5, Price: 54.00, Delivery time: 2022-08-02 17:16:21.936
+Item number: 38238, Supply warehouse ID: 10, Quantity: 5, Price: 125.00, Delivery time: 2022-08-02 17:16:21.936
+Item number: 46356, Supply warehouse ID: 10, Quantity: 5, Price: 114.00, Delivery time: 2022-08-02 17:16:21.936
+Item number: 47457, Supply warehouse ID: 10, Quantity: 5, Price: 25.00, Delivery time: 2022-08-02 17:16:21.936
+Item number: 48396, Supply warehouse ID: 10, Quantity: 5, Price: 7.00, Delivery time: 2022-08-02 17:16:21.936
+Item number: 50992, Supply warehouse ID: 10, Quantity: 5, Price: 163.00, Delivery time: 2022-08-02 17:16:21.936
+Item number: 60396, Supply warehouse ID: 10, Quantity: 5, Price: 179.00, Delivery time: 2022-08-02 17:16:21.936
+Item number: 60781, Supply warehouse ID: 10, Quantity: 5, Price: 36.00, Delivery time: 2022-08-02 17:16:21.936
+Item number: 69222, Supply warehouse ID: 10, Quantity: 5, Price: 51.00, Delivery time: 2022-08-02 17:16:21.936
+Item number: 71245, Supply warehouse ID: 10, Quantity: 5, Price: 103.00, Delivery time: 2022-08-02 17:16:21.936
+Item number: 72348, Supply warehouse ID: 10, Quantity: 5, Price: 31.00, Delivery time: 2022-08-02 17:16:21.936
+Item number: 72904, Supply warehouse ID: 10, Quantity: 5, Price: 132.00, Delivery time: 2022-08-02 17:16:21.936
+Item number: 87604, Supply warehouse ID: 10, Quantity: 5, Price: 172.00, Delivery time: 2022-08-02 17:16:21.936
+Item number: 91524, Supply warehouse ID: 10, Quantity: 5, Price: 166.00, Delivery time: 2022-08-02 17:16:21.936
+Item number: 94763, Supply warehouse ID: 10, Quantity: 5, Price: 179.00, Delivery time: 2022-08-02 17:16:21.936
+Item number: 99095, Supply warehouse ID: 10, Quantity: 5, Price: 36.00, Delivery time: 2022-08-02 17:16:21.936
+Item number: 99562, Supply warehouse ID: 10, Quantity: 5, Price: 82.00, Delivery time: 2022-08-02 17:16:21.936
+=======================================
+=======================================
+Transaction ID: 29
+*** New Order Transaction Summary ***
+Customer ID: (10, 2, 321), Last name:PRIABLEBAR, Credit:GC, C_DISCOUNT:0.4741
+
+Warehouse tax:0.1803, District tax:0.0819
+
+Order ID:3002, Order entry date:2022-11-05 17:31:32.525
+
+#items:13, Total amount:4541.92
+
+Items information:
+	 Item number: 67268, name: bbfgtnjvngkmwzpufak, Supplier warehouse: 3, quantity: 10, Order-line amount: 328.80, Adjusted quantity: 107
+
+	 Item number: 60775, name: ygfursyyierzxwli, Supplier warehouse: 9, quantity: 10, Order-line amount: 671.40, Adjusted quantity: 41
+
+	 Item number: 40419, name: gxixcjmufvdhhjviciac, Supplier warehouse: 10, quantity: 10, Order-line amount: 834.80, Adjusted quantity: 15
+
+	 Item number: 15285, name: tvrohdcybxmbkliqawbw, Supplier warehouse: 5, quantity: 10, Order-line amount: 83.70, Adjusted quantity: 101
+
+	 Item number: 21667, name: rgzagtmlqlvonrdb, Supplier warehouse: 10, quantity: 10, Order-line amount: 644.70, Adjusted quantity: 85
+
+	 Item number: 22210, name: vkefmmnttvvwimgfwqg, Supplier warehouse: 7, quantity: 10, Order-line amount: 692.60, Adjusted quantity: 48
+
+	 Item number: 30374, name: arspmynvjenhdvm, Supplier warehouse: 4, quantity: 10, Order-line amount: 215.20, Adjusted quantity: 52
+
+	 Item number: 39367, name: sedshrvxjdrstajglxn, Supplier warehouse: 2, quantity: 10, Order-line amount: 462.90, Adjusted quantity: 40
+
+	 Item number: 46217, name: ovmmgcympdlpbdpbohpjz, Supplier warehouse: 2, quantity: 10, Order-line amount: 463.30, Adjusted quantity: 82
+
+	 Item number: 56987, name: ygcseeroxgvkcvg, Supplier warehouse: 9, quantity: 10, Order-line amount: 157.70, Adjusted quantity: 48
+
+	 Item number: 64735, name: zfparujlmiafzwywt, Supplier warehouse: 8, quantity: 10, Order-line amount: 873.10, Adjusted quantity: 13
+
+	 Item number: 65231, name: uayncreelsxmz, Supplier warehouse: 7, quantity: 10, Order-line amount: 917.60, Adjusted quantity: 39
+
+	 Item number: 70367, name: hnaaekwyfoutin, Supplier warehouse: 3, quantity: 10, Order-line amount: 496.60, Adjusted quantity: 73
+
+=======================================
+=======================================
+Transaction ID: 30
+*** New Order Transaction Summary ***
+Customer ID: (10, 2, 1091), Last name:ANTIANTIABLE, Credit:GC, C_DISCOUNT:0.1638
+
+Warehouse tax:0.1803, District tax:0.0819
+
+Order ID:3003, Order entry date:2022-11-05 17:31:32.660
+
+#items:8, Total amount:3797.62
+
+Items information:
+	 Item number: 14039, name: tdznxvpifkwvzqmljvr, Supplier warehouse: 8, quantity: 10, Order-line amount: 315.80, Adjusted quantity: 52
+
+	 Item number: 40675, name: sepmiivinvrhnkwbtagxo, Supplier warehouse: 7, quantity: 10, Order-line amount: 935.30, Adjusted quantity: 10
+
+	 Item number: 50903, name: figcpdgsdjikncj, Supplier warehouse: 9, quantity: 10, Order-line amount: 104.20, Adjusted quantity: 80
+
+	 Item number: 57063, name: myauwnfqyxjyfyjacq, Supplier warehouse: 7, quantity: 10, Order-line amount: 811.20, Adjusted Time used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+Time used: 0
+Updated order line warehouse 10, district 1, order 2105, order line 1
+Updated order line warehouse 10, district 1, order 2105, order line 2
+Updated order line warehouse 10, district 1, order 2105, order line 3
+Updated order line warehouse 10, district 1, order 2105, order line 4
+Updated order line warehouse 10, district 1, order 2105, order line 5
+Updated order line warehouse 10, district 1, order 2105, order line 6
+Updated order line warehouse 10, district 1, order 2105, order line 7
+Updated order line warehouse 10, district 1, order 2105, order line 8
+Updated order line warehouse 10, district 1, order 2105, order line 9
+Updated order line warehouse 10, district 1, order 2105, order line 10
+Updated order line warehouse 10, district 1, order 2105, order line 11
+Updated order line warehouse 10, district 2, order 2105, order line 1
+Updated order line warehouse 10, district 2, order 2105, order line 2
+Updated order line warehouse 10, district 2, order 2105, order line 3
+Updated order line warehouse 10, district 2, order 2105, order line 4
+Updated order line warehouse 10, district 2, order 2105, order line 5
+Updated order line warehouse 10, district 2, order 2105, order line 6
+Updated order line warehouse 10, district 2, order 2105, order line 7
+Updated order line warehouse 10, district 2, order 2105, order line 8
+Updated order line warehouse 10, district 2, order 2105, order line 9
+Updated order line warehouse 10, district 2, order 2105, order line 10
+Updated order line warehouse 10, district 2, order 2105, order line 11
+Updated order line warehouse 10, district 2, order 2105, order line 12
+Updated order line warehouse 10, district 2, order 2105, order line 13
+Updated order line warehouse 10, district 3, order 2105, order line 1
+Updated order line warehouse 10, district 3, order 2105, order line 2
+Updated order line warehouse 10, district 3, order 2105, order line 3
+Updated order line warehouse 10, district 3, order 2105, order line 4
+Updated order line warehouse 10, district 3, order 2105, order line 5
+Updated order line warehouse 10, district 3, order 2105, order line 6
+Updated order line warehouse 10, district 3, order 2105, order line 7
+Updated order line warehouse 10, district 3, order 2105, order line 8
+Updated order line warehouse 10, district 3, order 2105, order line 9
+Updated order line warehouse 10, district 3, order 2105, order line 10
+Updated order line warehouse 10, district 3, order 2105, order line 11
+Updated order line warehouse 10, district 3, order 2105, order line 12
+Updated order line warehouse 10, district 3, order 2105, order line 13
+Updated order line warehouse 10, district 3, order 2105, order line 14
+Updated order line warehouse 10, district 4, order 2105, order line 1
+Updated order line warehouse 10, district 4, order 2105, order line 2
+Updated order line warehouse 10, district 4, order 2105, order line 3
+Updated order line warehouse 10, district 4, order 2105, order line 4
+Updated order line warehouse 10, district 4, order 2105, order line 5
+Updated order line warehouse 10, district 4, order 2105, order line 6
+Updated order line warehouse 10, district 4, order 2105, order line 7
+Updated order line warehouse 10, district 5, order 2105, order line 1
+Updated order line warehouse 10, district 5, order 2105, order line 2
+Updated order line warehouse 10, district 5, order 2105, order line 3
+Updated order line warehouse 10, district 5, order 2105, order line 4
+Updated order line warehouse 10, district 5, order 2105, order line 5
+Updated order line warehouse 10, district 5, order 2105, order line 6
+Updated order line warehouse 10, district 5, order 2105, order line 7
+Updated order line warehouse 10, district 5, order 2105, order line 8
+Updated order line warehouse 10, district 5, order 2105, order line 9
+Updated order line warehouse 10, district 5, order 2105, order line 10
+Updated order line warehouse 10, district 5, order 2105, order line 11
+Updated order line warehouse 10, district 5, order 2105, order line 12
+Updated order line warehouse 10, district 5, order 2105, order line 13
+Updated order line warehouse 10, district 5, order 2105, order line 14
+Updated order line warehouse 10, district 6, order 2105, order line 1
+Updated order line warehouse 10, district 6, order 2105, order line 2
+Updated order line warehouse 10, district 6, order 2105, order line 3
+Updated order line warehouse 10, district 6, order 2105, order line 4
+Updated order line warehouse 10, district 6, order 2105, order line 5
+Updated order line warehouse 10, district 6, order 2105, order line 6
+Updated order line warehouse 10, district 6, order 2105, order line 7
+Updated order line warehouse 10, district 6, order 2105, order line 8
+Updated order line warehouse 10, district 6, order 2105, order line 9
+Updated order line warehouse 10, district 6, order 2105, order line 10
+Updated order line warehouse 10, district 6, order 2105, order line 11
+Updated order line warehouse 10, district 6, order 2105, order line 12
+Updated order line warehouse 10, district 6, order 2105, order line 13
+Updated order line warehouse 10, district 6, order 2105, order line 14
+Updated order line warehouse 10, district 6, order 2105, order line 15
+Updated order line warehouse 10, district 6, order 2105, order line 16
+Updated order line warehouse 10, district 6, order 2105, order line 17
+Updated order line warehouse 10, district 7, order 2105, order line 1
+Updated order line warehouse 10, district 7, order 2105, order line 2
+Updated order line warehouse 10, district 7, order 2105, order line 3
+Updated order line warehouse 10, district 7, order 2105, order line 4
+Updated order line warehouse 10, district 7, order 2105, order line 5
+Updated order line warehouse 10, district 7, order 2105, order line 6
+Updated order line warehouse 10, district 7, order 2105, order line 7
+Updated order line warehouse 10, district 7, order 2105, order line 8
+Updated order line warehouse 10, district 7, order 2105, order line 9
+Updated order line warehouse 10, district 7, order 2105, order line 10
+Updated order line warehouse 10, district 7, order 2105, order line 11
+Updated order line warehouse 10, district 7, order 2105, order line 12
+Updated order line warehouse 10, district 7, order 2105, order line 13
+Updated order line warehouse 10, district 7, order 2105, order line 14
+quantity: 10
+
+	 Item number: 59850, name: xalfbdimlsplrb, Supplier warehouse: 3, quantity: 10, Order-line amount: 792.80, Adjusted quantity: 71
+
+	 Item number: 60134, name: ylhscesucthgvqllizvmlt, Supplier warehouse: 5, quantity: 10, Order-line amount: 212.10, Adjusted quantity: 40
+
+	 Item number: 89511, name: oblapsureemwx, Supplier warehouse: 6, quantity: 10, Order-line amount: 103.10, Adjusted quantity: 86
+
+	 Item number: 98021, name: lapkivqyltuzha, Supplier warehouse: 1, quantity: 10, Order-line amount: 323.60, Adjusted quantity: 77
+
+=======================================
+=======================================
+Transaction ID: 31
+49
+=======================================
+=======================================
+Transaction ID: 32
+********** Payment Transaction *********
+Customer info: 
+Identifier: (10, 5, 2047)
+Name: (tcmkueyazjjp, OE, ANTIANTIATION)
+Address: (teihdrxjviozvp, drbygcoajhtgx, hfqfciawttzdjm, HH, 345911111)
+Phone: 4963917246027410
+Since: 2022-08-02T09:16:12.238Z
+Credit status: GC
+Credit limit: 50000.0
+Discount: 0.1048
+Balance: -3335.35
+Warehouse address: (qkmofdqspkknurf, orjlbpcbiwtsjnprbni, tkjywahwgkzyn, SF, 123456789)
+district address: (ugrkbjertzejm, qzxvdtwortp, hrwbizkkl, PJ, 123456789)
+Payment: 3325.35
+
+=======================================
+=======================================
+Transaction ID: 33
+********** Payment Transaction *********
+Customer info: 
+Identifier: (1, 1, 2289)
+Name: (ruxaogn, OE, EINGCALLYABLE)
+Address: (lgoktnkiwiluqunbqpt, ahczzmjri, edocjzcmghrtysvg, CA, 857711111)
+Phone: 2692699536117006
+Since: 2022-08-02T09:16:05.319Z
+Credit status: GC
+Credit limit: 50000.0
+Discount: 0.1753
+Balance: -745.55
+Warehouse address: (dxvcrastvybcwvmgnyk, xvzxkgxtspsjdgylue, qflaqlocfljbepowfn, OM, 123456789)
+district address: (tbbvflmyew, fpezdooohykpmx, oelrbuwtpmf, JV, 123456789)
+Payment: 735.55
+
+=======================================
+=======================================
+Transaction ID: 34
+*** New Order Transaction Summary ***
+Customer ID: (10, 3, 327), Last name:PRIABLEANTI, Credit:GC, C_DISCOUNT:0.4890
+
+Warehouse tax:0.1803, District tax:0.1539
+
+Order ID:3006, Order entry date:2022-11-05 17:31:32.820
+
+#items:7, Total amount:2285.62
+
+Items information:
+	 Item number: 38045, name: mjutmlqlbmtpyctgjo, Supplier warehouse: 3, quantity: 10, Order-line amount: 830.80, Adjusted quantity: 60
+
+	 Item number: 55911, name: qbehxxvqkvpytrgrclx, Supplier warehouse: 9, quantity: 10, Order-line amount: 517.90, Adjusted quantity: 107
+
+	 Item number: 56911, name: qdupieajjsklrpp, Supplier warehouse: 8, quantity: 10, Order-line amount: 149.50, Adjusted quantity: 58
+
+	 Item number: 65223, name: bhjspgayhqbbbv, Supplier warehouse: 5, quantity: 5, Order-line amount: 359.45, Adjusted quantity: 49
+
+	 Item number: 72286, name: miqazbmtrihyalfzmyjbz, Supplier warehouse: 1, quantity: 10, Order-line amount: 638.30, Adjusted quantity: 52
+
+	 Item number: 80487, name: qssrcscmqyknvg, Supplier warehouse: 3, quantity: 10, Order-line amount: 325.60, Adjusted quantity: 35
+
+	 Item number: 88161, name: zyllyovbotquhsrexa, Supplier warehouse: 10, quantity: 10, Order-line amount: 530.90, Adjusted quantity: 88
+
+=======================================
+=======================================
+Transaction ID: 35
+*** New Order Transaction Summary ***
+Customer ID: (10, 2, 135), Last name:OUGHTPRIPRES, Credit:GC, C_DISCOUNT:0.4654
+
+Warehouse tax:0.1803, District tax:0.0819
+
+Order ID:3004, Order entry date:2022-11-05 17:31:32.894
+
+#items:11, Total amount:3041.81
+
+Items information:
+	 Item number: 36327, name: ygnzkmhhjzsfacdxwvgmyg, Supplier warehouse: 3, quantity: 10, Order-line amount: 177.40, Adjusted quantity: 62
+
+	 Item number: 5191, name: vfhlscdsnazqbwbxzcvgyr, Supplier warehouse: 8, quantity: 10, Order-line amount: 496.50, Adjusted quantity: 39
+
+	 Item number: 13895, name: cctihyoseceqnrhzy, Supplier warehouse: 1, quantity: 10, Order-line amount: 823.40, Adjusted quantity: 10
+
+	 Item number: 14179, name: uddbcpfbpdwcbxlblu, Supplier warehouse: 10, quantity: 10, Order-line amount: 304.80, Adjusted quantity: 69
+
+	 Item number: 24092, name: dsuqqhusuauuddqwdwkqlw, Supplier warehouse: 9, quantity: 10, Order-line amount: 21.80, Adjusted quantity: 11
+
+	 Item number: 31838, name: bcbtvcygwhgnhy, Supplier warehouse: 3, quantity: 10, Order-line amount: 367.90, Adjusted quantity: 19
+
+	 Item number: 35297, name: ljqkxgrgrwszuspertapnn, Supplier warehouse: 7, quantity: 10, Order-line amount: 104.90, Adjusted quantity: 19
+
+	 Item number: 40663, name: myduryoatcdmtvtap, Supplier warehouse: 10, quantity: 10, Order-line amount: 714.90, Adjusted quantity: 70
+
+	 Item number: 71654, name: nuviopdytpswcejteprfeg, Supplier warehouse: 2, quantity: 10, Order-line amount: 929.70, Adjusted quantity: 81
+
+	 Item number: 72903, name: zyhpytfdfylfojehr, Supplier warehouse: 9, quantity: 10, Order-line amount: 260.90, Adjusted quantity: 77
+
+	 Item number: 77492, name: kwaquxqahjdsuyvbaqkcdal, Supplier warehouse: 3, quantity: 10, Order-line amount: 305.70, Adjusted quantity: 103
+
+=======================================
+=======================================
+Transaction ID: 36
+*** New Order Transaction Summary ***
+Customer ID: (10, 2, 2106), Last name:ANTIBARABLE, Credit:GC, C_DISCOUNT:0.0295
+
+Warehouse tax:0.1803, District tax:0.0819
+
+Order ID:3005, Order entry date:2022-11-05 17:31:33.005
+
+#items:13, Total amount:8754.83
+
+Items information:
+	 Item number: 64731, name: ftbuwdgntsjlfvbpzjg, Supplier warehouse: 2, quantity: 10, Order-line amount: 272.90, Adjusted quantity: 80
+
+	 Item number: 96943, name: wlrozdntkhppwuhw, Supplier warehouse: 6, quantity: 10, Order-line amount: 646.20, Adjusted quantity: 64
+
+	 Item number: 79495, name: nbudjihtfbcmys, Supplier warehouse: 9, quantity: 10, Order-line amount: 845.20, Adjusted quantity: 31
+
+	 Item number: 6215, name: blombyfazeaqytfl, Supplier warehouse: 2, quantity: 10, Order-line amount: 394.00, Adjusted quantity: 16
+
+	 Item number: 16092, name: nacchzhnobrcghbbplbiiff, Supplier warehouse: 6, quantity: 10, Order-line amount: 145.70, Adjusted quantity: 33
+
+	 Item number: 32215, name: ibomwrrdazpetsjpcbvlfe, Supplier warehouse: 4, quantity: 10, Order-line amount: 462.10, Adjusted quantity: 68
+
+	 Item number: 32471, name: tyqtvvyvysweyao, Supplier warehouse: 8, quantity: 10, Order-line amount: 835.90, Adjusted quantity: 72
+
+	 Item number: 39507, name: fmdpomefswrdpwluj, Supplier warehouse: 1, quantity: 10, Order-line amount: 737.70, Adjusted quantity: 109
+
+	 Item number: 40405, name: iyejhoqydlutsotbheoyhfw, Supplier warehouse: 3, quantity: 10, Order-line amount: 913.40, Adjusted quantity: 67
+
+	 Item number: 40645, name: lbpgwfkneaikzrram, Supplier warehouse: 4, quantity: 10, Order-line amount: 469.70, Adjusted quantity: 66
+
+	 Item number: 65207, name: scvspcnqukdyjqorcthb, Supplier warehouse: 3, quantity: 10, Order-line amount: 414.80, Adjusted quantity: 77
+
+	 Item number: 73363, name: ktsxubxmkeiggbujajdkk, Supplier warehouse: 7, quantity: 10, Order-line amount: 661.00, Adjusted quantity: 18
+
+	 Item number: 88789, name: oomrhlqlsridbnqfm, Supplier warehouse: 1, quantity: 10, Order-line amount: 348.40, Adjusted quantity: 48
+
+=======================================
+=======================================
+Transaction ID: 37
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 1) is 2105
+Updated the info of customer (10, 1, 1081)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 2) is 2105
+Updated the info of customer (10, 2, 969)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 3) is 2105
+Updated the info of customer (10, 3, 2329)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 4) is 2105
+Updated the info of customer (10, 4, 593)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 5) is 2105
+Updated the info of customer (10, 5, 930)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 6) is 2105
+Updated the info of customer (10, 6, 1131)
+********** Delivery Transaction *********
+
+The next order to deliver in (10, 7) is 2105
+Updated the info of customer (10, 7, 560)
+********Updated order line warehouse 10, district 8, order 2105, order line 1
+Updated order line warehouse 10, district 8, order 2105, order line 2
+Updated order line warehouse 10, district 8, order 2105, order line 3
+Updated order line warehouse 10, district 8, order 2105, order line 4
+Updated order line warehouse 10, district 8, order 2105, order line 5
+Updated order line warehouse 10, district 8, order 2105, order line 6
+Updated order line warehouse 10, district 8, order 2105, order line 7
+Updated order line warehouse 10, district 8, order 2105, order line 8
+Updated order line warehouse 10, district 8, order 2105, order line 9
+Updated order line warehouse 10, district 9, order 2105, order line 1
+Updated order line warehouse 10, district 9, order 2105, order line 2
+Updated order line warehouse 10, district 9, order 2105, order line 3
+Updated order line warehouse 10, district 9, order 2105, order line 4
+Updated order line warehouse 10, district 9, order 2105, order line 5
+Updated order line warehouse 10, district 9, order 2105, order line 6
+Updated order line warehouse 10, district 9, order 2105, order line 7
+Updated order line warehouse 10, district 9, order 2105, order line 8
+Updated order line warehouse 10, district 9, order 2105, order line 9
+Updated order line warehouse 10, district 9, order 2105, order line 10
+Updated order line warehouse 10, district 9, order 2105, order line 11
+Updated order line warehouse 10, district 9, order 2105, order line 12
+Updated order line warehouse 10, district 9, order 2105, order line 13
+Updated order line warehouse 10, district 9, order 2105, order line 14
+Updated order line warehouse 10, district 9, order 2105, order line 15
+Updated order line warehouse 10, district 10, order 2105, order line 1
+Updated order line warehouse 10, district 10, order 2105, order line 2
+Updated order line warehouse 10, district 10, order 2105, order line 3
+Updated order line warehouse 10, district 10, order 2105, order line 4
+Updated order line warehouse 10, district 10, order 2105, order line 5
+Updated order line warehouse 10, district 10, order 2105, order line 6
+Updated order line warehouse 10, district 10, order 2105, order line 7
+Updated order line warehouse 10, district 10, order 2105, order line 8
+Updated order line warehouse 10, district 10, order 2105, order line 9
+Updated order line warehouse 10, district 10, order 2105, order line 10
+Updated order line warehouse 10, district 10, order 2105, order line 11
+Updated order line warehouse 10, district 10, order 2105, order line 12
+Updated order line warehouse 10, district 10, order 2105, order line 13
+Updated order line warehouse 10, district 10, order 2105, order line 14
+Time used: 0
+Updated order line warehouse 10, district 1, order 2106, order line 1
+Updated order line warehouse 10, district 1, order 2106, order line 2
+Updated order line warehouse 10, district 1, order 2106, order line 3
+Updated order line warehouse 10, district 1, order 2106, order line 4
+Updated order line warehouse 10, district 1, order 2106, order line 5
+Updated order line warehouse 10, district 1, order 2106, order line 6
+Updated order line warehouse 10, district 1, order 2106, order line 7
+Updated order line warehouse 10, district 1, order 2106, order line 8
+Updated order line warehouse 10, district 1, order 2106, order line 9
+Updated order line warehouse 10, district 2, order 2106, order line 1
+Updated order line warehouse 10, district 2, order 2106, order line 2
+Updated order line warehouse 10, district 2, order 2106, order line 3
+Updated order line warehouse 10, district 2, order 2106, order line 4
+Updated order line warehouse 10, district 2, order 2106, order line 5
+Updated order line warehouse 10, district 2, order 2106, order line 6
+Updated order line warehouse 10, district 3, order 2106, order line 1
+Updated order line warehouse 10, district 3, order 2106, order line 2
+Updated order line warehouse 10, district 3, order 2106, order line 3
+Updated order line warehouse 10, district 3, order 2106, order line 4
+Updated order line warehouse 10, district 3, order 2106, order line 5
+Updated order line warehouse 10, district 3, order 2106, order line 6
+Updated order line warehouse 10, district 4, order 2106, order line 1
+Updated order line warehouse 10, district 4, order 2106, order line 2
+Updated order line warehouse 10, district 4, order 2106, order line 3
+Updated order line warehouse 10, district 4, order 2106, order line 4
+Updated order line warehouse 10, district 4, order 2106, order line 5
+Updated order line warehouse 10, district 4, order 2106, order line 6
+Updated order line warehouse 10, district 4, order 2106, order line 7
+Updated order line warehouse 10, district 4, order 2106, order line 8
+Updated order line warehouse 10, district 4, order 2106, order line 9
+Updated order line warehouse 10, district 4, order 2106, order line 10
+Updated order line warehouse 10, district 4, order 2106, order line 11
+Updated order line warehouse 10, district 4, order 2106, order line 12
+Updated order line warehouse 10, district 4, order 2106, order line 13
+Updated order line warehouse 10, district 4, order 2106, order line 14
+Updated order line warehouse 10, district 4, order 2106, order line 15
+Updated order line warehouse 10, district 4, order 2106, order line 16
+Updated order line warehouse 10, district 4, order 2106, order line 17
+Updated order line warehouse 10, district 4, order 2106, order line 18
+Updated order line warehouse 10, district 5, order 2106, order line 1
+Updated order line warehouse 10, district 5, order 2106, order line 2
+Updated order line warehouse 10, district 5, order 2106, order line 3
+Updated order line warehouse 10, district 5, order 2106, order line 4
+Updated order line warehouse 10, district 5, order 2106, order line 5
+Updated order line warehouse 10, district 5, order 2106, order line 6
+Updated order line warehouse 10, district 5, order 2106, order line 7
+Updated order line warehouse 10, district 5, order 2106, order line 8
+Updated order line warehouse 10, district 5, order 2106, order line 9
+Updated order line warehouse 10, district 5, order 2106, order line 10
+Updated order line warehouse 10, district 5, order 2106, order line 11
+Updated order line warehouse 10, district 5, order 2106, order line 12
+Updated order line warehouse 10, district 5, order 2106, order line 13
+Updated order line warehouse 10, district 5, order 2106, order line 14
+Updated order line warehouse 10, district 5, order 2106, order line 15
+Updated order line warehouse 10, district 5, order 2106, order line 16
+Updated order line warehouse 10, district 5, order 2106, order line 17
+Updated order line warehouse 10, district 5, order 2106, order line 18
+Updated order line warehouse 10, district 6, order 2106, order line 1
+Updated order line warehouse 10, district 6, order 2106, order line 2
+Updated order line warehouse 10, district 6, order 2106, order line 3
+Updated order line warehouse 10, district 6, order 2106, order line 4
+Updated order line warehouse 10, district 6, order 2106, order line 5
+Updated order line warehouse 10, district 6, order 2106, order line 6
+Updated order line warehouse 10, district 6, order 2106, order line 7
+Updated order line warehouse 10, district 6, order 2106, order line 8
+Updated order line warehouse 10, district 6, order 2106, order line 9
+Updated order line warehouse 10, district 6, order 2106, order line 10
+Updated order line warehouse 10, district 6, order 2106, order line 11
+Updated order line warehouse 10, district 6, order 2106, order line 12
+Updated order line warehouse 10, district 6, order 2106, order line 13
+Updated order line warehouse 10, district 6, order 2106, order line 14
+Updated order line warehouse 10, district 6, order 2106, order line 15
+Updated order line warehouse 10, district 6, order 2106, order line 16
+Updated order line warehouse 10, district 6, order 2106, order line 17
+Updated order line warehouse 10, district 6, order 2106, order line 18
+Updated order line warehouse 10, district 6, order 2106, order line 19
+Updated order line warehouse 10, district 7, order 2106, order line 1
+Updated order line warehouse 10, district 7, order 2106, order line 2
+Updated order line warehouse 10, district 7, order 2106, order line 3
+Updated order line warehouse 10, district 7, order 2106, order line 4
+Updated order line warehouse 10, district 7, order 2106, order line 5
+Updated order line warehouse 10, district 7, order 2106, order line 6
+Updated order line warehouse 10, district 7, order 2106, order line 7
+Updated order line warehouse 10, district 7, order 2106, order line 8
+Updated order line warehouse 10, district 7, order 2106, order line 9
+Updated order line warehouse 10, district 7, order 2106, order line 10
+Updated order line warehouse 10, district 7, order 2106, order line 11
+Updated order line warehouse 10, district 7, order 2106, order line 12
+Updated order line warehouse 10, district 7, order 2106, order line 13
+Updated order line warehouse 10, district 7, order 2106, order line 14
+Updated order line warehouse 10, district 7, order 2106, order line 15
+Updated order line warehouse 10, district 7, order 2106, order line 16
+Updated order line warehouse 10, district 7, order 2106, order line 17
+Updated order line warehouse 10, district 7, order 2106, order line 18
+Updated order line warehouse 10, district 7, order 2106, order line 19
+Updated order line warehouse 10, district 8, order 2106, order line 1
+Updated order line warehouse 10, district 8, order 2106, order line 2
+Updated order line warehouse 10, district 8, order 2106, order line 3
+Updated order line warehouse 10, district 8, order 2106, order line 4
+Updated order line warehouse 10, district 8, order 2106, order line 5
+Updated order line warehouse 10, district 9, order 2106, order line 1
+Updated order line warehouse 10, district 9, order 2106, order line 2
+Updated order line warehouse 10, district 9, order 2106, order line 3
+Updated order line warehouse 10, district 9, order 2106, order line 4
+Updated order line warehouse 10, district 9, order 2106, order line 5
+Updated order line warehouse 10, district 9, order 2106, order line 6
+Updated order line warehouse 10, district 9, order 2106, order line 7
+Updated order line warehouse 10, district 9, order 2106, order line 8
+Updated order line warehouse 10, district 9, order 2106, order line 9
+Updated order line warehouse 10, district 9, order 2106, order line 10
+Updated order line warehouse 10, district 9, order 2106, order line 11
+Updated order line warehouse 10, district 9, order 2106, order line 12
+Updated order line warehouse 10, district 9, order 2106, order line 13
+Updated order line warehouse 10, district 10, order 2106, order line 1
+Updated order line warehouse 10, district 10, order 2106, order line 2
+Updated order line warehouse 10, district 10, order 2106, order line 3
+Updated order line warehouse 10, district 10, order 2106, order line 4
+Updated order line warehouse 10, district 10, order 2106, order line 5
+Updated order line warehouse 10, district 10, order 2106, order line 6
+Updated order line warehouse 10, district 10, order 2106, order line 7
+Updated order line warehouse 10, district 10, order 2106, order line 8
+Updated order line warehouse 10, district 10, order 2106, order line 9
+Time used: 0
+Time used: 0
+Time used: 0
+Updated order line warehouse 10, district 1, order 2107, order line 1
+Updated order line warehouse 10, district 1, order 2107, order line 2
+Updated order line warehouse 10, district 1, order 2107, order line 3
+Updated order line warehouse 10, district 1, order 2107, order line 4
+Updated order line warehouse 10, district 1, order 2107, order line 5
+Updated order line warehouse 10, district 1, order 2107, order line 6
+Updated order line warehouse 10, district 1, order 2107, order line 7
+Updated order line warehouse 10, district 1, order 2107, order line 8
+Updated order line warehouse 10, district 1, order 2107, order line 9
+Updated order line warehouse 10, district 2, order 2107, order line 1
+Updated order line warehouse 10, district 2, order 2107, order line 2
+Updated order line warehouse 10, district 2, order 2107, order line 3
+Updated order line warehouse 10, district 2, order 2107, order line 4
+Updated order line warehouse 10, district 2, order 2107, order line 5
+Updated order line warehouse 10, district 2, order 2107, order line 6
+Updated order line warehouse 10, district 2, order 2107, order line 7
+Updated order line warehouse 10, district 2, order 2107, order line 8
+Updated order line warehouse 10, district 2, order 2107, order line 9
+Updated order line warehouse 10, district 3, order 2107, order line 1
+Updated order line warehouse 10, district 3, order 2107, order line 2
+Updated order line warehouse 10, district 3, order 2107, order line 3
+Updated order line warehouse 10, district 3, order 2107, order line 4
+Updated order line warehouse 10, district 3, order 2107, order line 5
+Updated order line warehouse 10, district 3, order 2107, order line 6
+Updated order line warehouse 10, district 3, order 2107, order line 7
+Updated order line warehouse 10, district 3, order 2107, order line 8
+Updated order line warehouse 10, district 3, order 2107, order line 9
+Updated order line warehouse 10, district 3, order 2107, order line 10
+Updated order line warehouse 10, district 3, order 2107, order line 11
+Updated order line warehouse 10, district 3, order 2107, order line 12
+Updated order line warehouse 10, district 3, order 2107, order line 13
+Updated order line warehouse 10, district 3, order 2107, order line 14
+Updated order line warehouse 10, district 3, order 2107, order line 15
+Updated order line warehouse 10, district 3, order 2107, order line 16
+Updated order line warehouse 10, district 3, order 2107, order line 17
+Updated order line warehouse 10, district 3, order 2107, order line 18
+Updated order line warehouse 10, district 3, order 2107, order line 19
+Updated order line warehouse 10, district 3, order 2107, order line 20
+Updated order line warehouse 10, district 4, order 2107, order line 1
+Updated order line warehouse 10, district 4, order 2107, order line 2
+Updated order line warehouse 10, district 4, order 2107, order line 3
+Updated order line warehouse 10, district 4, order 2107, order line 4
+Updated order line warehouse 10, district 4, order 2107, order line 5
+Updated order line warehouse 10, district 4, order 2107, order line 6
+Updated order line warehouse 10, district 4, order 2107, order line 7
+Updated order line warehouse 10, district 4, order 2107, order line 8
+Updated order line warehouse 10, district 4, order 2107, order line 9
+Updated order line warehouse 10, district 4, order 2107, order line 10
+Updated order line warehouse 10, district 4, order 2107, order line 11
+Updated order line warehouse 10, district 4, order 2107, order line 12
+Updated order line warehouse 10, district 4, order 2107, order line 13
+Updated order line warehouse 10, district 5, order 2107, order line 1
+Updated order line warehouse 10, district 5, order 2107, order line 2
+Updated order line warehouse 10, district 5, order 2107, order line 3
+Updated order line warehouse 10, district 5, order 2107, order line 4
+Updated order line warehouse 10, district 5, order 2107, order line 5
+Updated order line warehouse 10, district 5, order 2107, order line 6
+Updated order line warehouse 10, district 5, order 2107, order line 7
+Updated order line warehouse 10, district 5, order 2107, order line 8
+Updated order line warehouse 10, district 5, order 2107, order line 9
+Updated order line warehouse 10, district 5, order 2107, order line 10
+Updated order line warehouse 10, district 6, order 2107, order line 1
+Updated order line warehouse 10, district 6, order 2107, order line 2
+Updated order line warehouse 10, district 6, order 2107, order line 3
+Updated order line warehouse 10, district 6, order 2107, order line 4
+Updated order line warehouse 10, district 6, order 2107, order line 5
+Updated order line warehouse 10, district 6, order 2107, order line 6
+Updated order line warehouse 10, district 6, order 2107, order line 7
+Updated order line warehouse 10, district 6, order 2107, order line 8
+Updated order line warehouse 10, district 6, order 2107, order line 9

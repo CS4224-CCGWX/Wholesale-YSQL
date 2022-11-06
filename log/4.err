@@ -1,0 +1,23 @@
+******** Current Client: 4 **********
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:267, WID:3, DID:3, num order-lines:11
+Item IDs are:,15967,15998,24159,40071,61115,61159,64199,65250,71142,89447,92902
+Quantities:,3,3,3,3,3,3,3,3,3,3,3
+Supply warehouse IDs:,6,3,10,9,6,12,1,2,9,4,4
+
+[Error]: NewOrder getStockQty are missing
+java.sql.SQLException
+	at transactions.NewOrderTransaction.execute(NewOrderTransaction.java:170)
+	at SampleApp.run(SampleApp.java:101)
+	at SampleApp.main(SampleApp.java:64)
+[Error]: New Order Abort New **** New Order Transaction Information ****
+CID:1122, WID:3, DID:3, num order-lines:18
+Item IDs are:,57058,59803,24277,72021,65238,34022,62917,54487,4094,31446,37311,40423,59494,63175,64871,73443,73446,97250
+Quantities:,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+Supply warehouse IDs:,3,10,5,8,2,5,7,7,10,7,1,13,4,2,1,5,9,4
+

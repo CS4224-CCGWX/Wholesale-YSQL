@@ -1,0 +1,16 @@
+Transaction files: 5, Total Count: 5073,Time Taken: 1216s, Throughput: 4.17, Average: 239.65ms, Median: 107ms, 95: 345ms, 99: 1139ms
+Transaction name: Ord, Total time: 0, Total count: 128 
+
+Transaction name: Pop, Total time: 0, Total count: 120 
+
+Transaction name: New, Total time: 0, Total count: 2825 
+
+Transaction name: Rel, Total time: 519, Total count: 56 
+
+Transaction name: Pay, Total time: 11, Total count: 806 
+
+Transaction name: Del, Total time: 0, Total count: 1013 
+
+Transaction name: Sto, Total time: 0, Total count: 125 
+
+Total transaction count: 5073
