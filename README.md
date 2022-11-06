@@ -4,7 +4,7 @@
 Refer to the Cluster setup section of our [YCQL repository](https://github.com/CS4224-CCGWX/Wholesale-YCQL).
 
 ### Setup steps
-Assume the current working directory is the root directory of this repo (Wholesale-YCQL)
+Assume the current working directory is the root directory of this repo (Wholesale-YSQL)
 
 
 ## Run YSQL Java application benchmark
