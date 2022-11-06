@@ -33,7 +33,7 @@ load_data() {
 }
 
 
-# load_data
+load_data
 for ((c=0; c<5; c++))
 do
   submit_job $c &
