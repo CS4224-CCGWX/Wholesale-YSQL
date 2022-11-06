@@ -58,7 +58,7 @@ public class PreparedQueries {
         getWarehouseTax =  conn.prepareStatement("SELECT W_TAX FROM warehouse WHERE W_ID = ?;");
         getCustomerLastAndCreditAndDiscount = conn.prepareStatement("SELECT C_LAST, C_CREDIT, C_DISCOUNT FROM customer " +
                 "WHERE C_W_ID = ? AND C_D_ID = ? AND C_ID = ?;");
-        updateWarehouseYearToDateAmount = conn.prepareStatement("UPDATE warehouse SET W_YTD = ? WHERE W_ID = ?;");
+        updateWarehouseYearToDateAmount = conn.prepareStatement("UPDATE warehouse SET W_YTD = W_YTD + ? WHERE W_ID = ?;");
         getDistrictAddressAndYtd = conn.prepareStatement("SELECT D_STREET_1, D_STREET_2, D_CITY, D_STATE, D_ZIP, D_YTD "
                 + "FROM district WHERE D_W_ID = ? AND D_ID = ?;");
         getWarehouseAddressAndYtd = conn.prepareStatement("SELECT W_STREET_1, W_STREET_2, W_CITY, W_STATE, W_ZIP, W_YTD "
@@ -71,13 +71,14 @@ public class PreparedQueries {
                 " WHERE C_W_ID = ? AND C_D_ID = ? AND C_ID = ?;");
         updateCustomerBalanceAndDcount = conn.prepareStatement("UPDATE customer SET C_BALANCE = ? , C_DELIVERY_CNT = C_DELIVERY_CNT + 1 "
                 + "WHERE C_W_ID = ? AND C_D_ID = ? AND C_ID = ?;");
-        updateDistrictYearToDateAmount =  conn.prepareStatement("UPDATE district SET D_YTD = ? "
+        updateDistrictYearToDateAmount =  conn.prepareStatement("UPDATE district SET D_YTD = D_YTD + ? "
                 + "WHERE D_W_ID = ? AND D_ID = ?;");
         getOrderLineInOrder = conn.prepareStatement("SELECT OL_AMOUNT, OL_C_ID, OL_NUMBER FROM order_line " +
                 "WHERE OL_W_ID = ? AND OL_D_ID = ? AND OL_O_ID = ?;");
         getCustomerBalance = conn.prepareStatement("SELECT C_BALANCE FROM customer WHERE C_W_ID = ? AND C_D_ID = ? AND C_ID = ?;");
+
         updateCustomerPaymentInfo =  conn.prepareStatement("UPDATE customer "
-                + "SET C_BALANCE = ?, C_YTD_PAYMENT = ?, C_PAYMENT_CNT = C_PAYMENT_CNT + 1 "
+                + "SET C_BALANCE = C_BALANCE - ?, C_YTD_PAYMENT =  C_YTD_PAYMENT + ?, C_PAYMENT_CNT = C_PAYMENT_CNT + 1 "
                 + "WHERE C_W_ID = ? AND C_D_ID = ? AND C_ID = ?;");
         getFullCustomerInfo = conn.prepareStatement("SELECT C_W_ID, C_D_ID, C_ID, C_FIRST, C_MIDDLE, C_LAST, C_STREET_1, C_STREET_2, "
                         + "C_CITY, C_STATE, C_ZIP, C_PHONE, C_SINCE, C_CREDIT, C_CREDIT_LIM, C_DISCOUNT, C_BALANCE, C_YTD_PAYMENT "

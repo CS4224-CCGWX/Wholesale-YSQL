@@ -42,35 +42,18 @@ public class PaymentTransaction extends AbstractTransaction{
             // 1.  Update the warehouse C W ID by incrementing W YTD by PAYMENT
 
             // Output Customer Last Order for each item
-            PreparedQueries.getWarehouseAddressAndYtd.setInt(1, warehouseId);
+           PreparedQueries.getWarehouseAddressAndYtd.setInt(1, warehouseId);
+//
+//            double warehouseYtd = warehouseResult.getBigDecimal("W_YTD").doubleValue();
+//            warehouseYtd += payment;
 
-            ResultSet warehouseResult = this.executeQuery(PreparedQueries.getWarehouseAddressAndYtd);
-
-            if (!warehouseResult.next()) {
-                error("formattedGetWarehouseAddressAndYtd");
-                throw new SQLException();
-            }
-            double warehouseYtd = warehouseResult.getBigDecimal("W_YTD").doubleValue();
-            warehouseYtd += payment;
-
-            PreparedQueries.updateWarehouseYearToDateAmount.setBigDecimal(1, BigDecimal.valueOf(warehouseYtd));
+            PreparedQueries.updateWarehouseYearToDateAmount.setBigDecimal(1, BigDecimal.valueOf(payment));
             PreparedQueries.updateWarehouseYearToDateAmount.setInt(2, warehouseId);
             this.executeUpdate(PreparedQueries.updateWarehouseYearToDateAmount);
 
 
-            PreparedQueries.getDistrictAddressAndYtd.setInt(1, warehouseId);
-            PreparedQueries.getDistrictAddressAndYtd.setInt(2, districtId);
-            ResultSet districtResult = this.executeQuery(PreparedQueries.getDistrictAddressAndYtd);
-
-            if (!districtResult.next()) {
-                error("formattedGetDistrictAddressAndYtd");
-                throw new SQLException();
-            }
-            double districtYtd = districtResult.getBigDecimal("D_YTD").doubleValue();
-            districtYtd += payment;
-
             // 2. Update the district (C W ID,C D ID) by incrementing D YTD by PAYMENT
-            PreparedQueries.updateDistrictYearToDateAmount.setBigDecimal(1, BigDecimal.valueOf(districtYtd));
+            PreparedQueries.updateDistrictYearToDateAmount.setBigDecimal(1, BigDecimal.valueOf(payment));
             PreparedQueries.updateDistrictYearToDateAmount.setInt(2, warehouseId);
             PreparedQueries.updateDistrictYearToDateAmount.setInt(3, districtId);
             this.executeUpdate(PreparedQueries.updateDistrictYearToDateAmount);
@@ -82,6 +65,31 @@ public class PaymentTransaction extends AbstractTransaction{
             • Increment C YTD PAYMENT by PAYMENT
             • Increment C PAYMENT CNT by 1
          */
+
+            PreparedQueries.updateCustomerPaymentInfo.setBigDecimal(1, BigDecimal.valueOf(payment));
+            PreparedQueries.updateCustomerPaymentInfo.setBigDecimal(2, BigDecimal.valueOf(payment));
+            PreparedQueries.updateCustomerPaymentInfo.setInt(3, warehouseId);
+            PreparedQueries.updateCustomerPaymentInfo.setInt(4, districtId);
+            PreparedQueries.updateCustomerPaymentInfo.setInt(5, customerId);
+            this.executeUpdate(PreparedQueries.updateCustomerPaymentInfo);
+
+
+            PreparedQueries.getDistrictAddressAndYtd.setInt(1, warehouseId);
+            PreparedQueries.getDistrictAddressAndYtd.setInt(2, districtId);
+            ResultSet districtResult = this.executeQuery(PreparedQueries.getDistrictAddressAndYtd);
+
+            if (!districtResult.next()) {
+                error("formattedGetDistrictAddressAndYtd");
+                throw new SQLException();
+            }
+
+            ResultSet warehouseResult = this.executeQuery(PreparedQueries.getWarehouseAddressAndYtd);
+
+            if (!warehouseResult.next()) {
+                error("formattedGetWarehouseAddressAndYtd");
+                throw new SQLException();
+            }
+
             PreparedQueries.getFullCustomerInfo.setInt(1, warehouseId);
             PreparedQueries.getFullCustomerInfo.setInt(2, districtId);
             PreparedQueries.getFullCustomerInfo.setInt(3, customerId);
@@ -92,17 +100,7 @@ public class PaymentTransaction extends AbstractTransaction{
             }
 
             double customerBalance = customerRes.getBigDecimal("C_BALANCE").doubleValue();
-            customerBalance -= payment;
-            float customerYtd = customerRes.getFloat("C_YTD_PAYMENT");
-            customerYtd += payment;
 
-            PreparedQueries.updateCustomerPaymentInfo.setBigDecimal(1, BigDecimal.valueOf(customerBalance));
-            PreparedQueries.updateCustomerPaymentInfo.setFloat(2, customerYtd);
-            PreparedQueries.updateCustomerPaymentInfo.setInt(3, warehouseId);
-            PreparedQueries.updateCustomerPaymentInfo.setInt(4, districtId);
-            PreparedQueries.updateCustomerPaymentInfo.setInt(5, customerId);
-            this.executeUpdate(PreparedQueries.updateCustomerPaymentInfo);
-            connection.commit();
 
             // Output Customer Information
 
@@ -130,6 +128,8 @@ public class PaymentTransaction extends AbstractTransaction{
             sb.append(delimiter);
 
             io.println(sb);
+
+            connection.commit();
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("[Error out]: Payment Abort " + " Counter: " + counter + this.toString());
