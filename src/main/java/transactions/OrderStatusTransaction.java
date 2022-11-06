@@ -5,7 +5,6 @@ import utils.OutputFormatter;
 import utils.PreparedQueries;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.Instant;
@@ -100,6 +99,7 @@ public class OrderStatusTransaction extends AbstractTransaction {
             System.out.println("[Error]:  Order Status Abort " + this.toString());
             System.err.println("[Error]: Order Status Abort " + this.toString());
             connection.rollback();
+            throw new SQLException();
         }
     }
 

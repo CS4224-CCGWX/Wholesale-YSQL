@@ -133,6 +133,7 @@ public class PaymentTransaction extends AbstractTransaction{
             System.out.println("[Error]:  Payment Abort " + this.toString());
             System.err.println("[Error]: Payment Abort " + this.toString());
             connection.rollback();
+            throw new SQLException();
         }
 
     }

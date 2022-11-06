@@ -329,6 +329,7 @@ public class NewOrderTransaction extends AbstractTransaction {
             System.out.println("[Error]:  New Order Abort " + this.toString());
             System.err.println("[Error]: New Order Abort " + this.toString());
             connection.rollback();
+            throw new SQLException();
         }
 
     }

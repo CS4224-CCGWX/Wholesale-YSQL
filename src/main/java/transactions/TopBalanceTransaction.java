@@ -103,6 +103,7 @@ public class TopBalanceTransaction extends AbstractTransaction {
             e.printStackTrace();
             System.out.println("[Error]:  Top Balance Abort " + this.toString());
             System.err.println("[Error]: Top Balance Abort " + this.toString());
+            throw new SQLException();
         }
     }
 }

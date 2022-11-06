@@ -144,6 +144,7 @@ public class DeliveryTransaction extends AbstractTransaction {
             System.out.println("[Error]: Delivery Abort " + this.toString());
             System.err.println("[Error]: Delivery Abort " + this.toString());
             connection.rollback();
+            throw new SQLException();
         }
     }
 

@@ -109,6 +109,7 @@ public class PopularItemTransaction extends AbstractTransaction {
             System.out.println("[Error]:  Popular Item Abort " + this.toString());
             System.err.println("[Error]: Popular Item Abort " + this.toString());
             connection.rollback();
+            throw new SQLException();
         }
 
 

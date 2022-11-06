@@ -5,7 +5,6 @@ import utils.PreparedQueries;
 import utils.QueryUtils;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -63,6 +62,7 @@ public class StockLevelTransaction extends AbstractTransaction {
             System.err.println("[Error]: Stock level Abort " + this.toString());
 
             connection.rollback();
+            throw new SQLException();
         }
     }
 }
